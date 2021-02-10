@@ -1,11 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:mvskoke_language_app/bus/databaseHelper.dart';
-import 'package:mvskoke_language_app/model/searchResult.dart';
-import 'package:mvskoke_language_app/widget/listItem.dart';
-import 'package:mvskoke_language_app/widget/search-bar/app_bar_controller.dart';
-import 'package:mvskoke_language_app/widget/search-bar/simple_search_bar.dart';
+import 'package:mvskoke_language_app/bus/database_helper.dart';
+import 'package:mvskoke_language_app/model/search_result.dart';
+import 'package:mvskoke_language_app/widget/list_item.dart';
+import 'package:mvskoke_language_app/widget/search_bar/app_bar_controller.dart';
+import 'package:mvskoke_language_app/widget/search_bar/simple_search_bar.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -31,32 +31,50 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    _getHistory();
+    _getAllEntries();
   }
 
-  Future<void> _getTerms(String searchTerm) async {
-    var results = await DatabaseHelper.instance.querySearch(searchTerm);
-    /*for (SearchResult term in results) {
-      print("getTerms: ${term.lexeme}");
-    }*/
+  @override
+  void dispose() {
+    _termsController.close();
+    super.dispose();
+  }
+
+  /// Get terms for search query
+  Future<void> _getTerms(String query) async {
+    if (query.isEmpty) {
+
+      _getAllEntries();
+
+    } else {
+      var results = await DatabaseHelper.instance.querySearch(query);
+
+      setState(() {
+        _inTerms.add(results);
+      });
+    }
+
+  }
+
+  /// Get all the entries in the dictionary
+  Future<void> _getAllEntries() async {
+    var results = await DatabaseHelper.instance.getAllEntries();
 
     setState(() {
       _inTerms.add(results);
     });
   }
 
+  /// Get previously viewed cards
   Future<void> _getHistory() async {
     var results = await DatabaseHelper.instance.querySearchHistory();
-    /*for (SearchResult term in results) {
-      print("getHistory: ${term.lexeme}");
-    }*/
 
     setState(() {
       _inTerms.add(results);
     });
   }
 
-  _searchResults(List<SearchResult> terms) {
+  _termsView(List<SearchResult> terms) {
     return ListView.builder(
       key: ObjectKey(terms[0]),
       shrinkWrap: true,
@@ -66,7 +84,7 @@ class _HomeState extends State<Home> {
         SearchResult term = terms[index];
         //print("_searchResults LIST ITEM: ${term.lexeme}");
         return Padding(
-          padding: const EdgeInsets.fromLTRB(16.0, 2.0, 16.0, 2.0),
+          padding: const EdgeInsets.fromLTRB(10.0, 2.0, 10.0, 2.0),
           child: ListItem(
               term: term,
               searchTerm: _searchTerm
@@ -76,6 +94,7 @@ class _HomeState extends State<Home> {
     );
   }
 
+  // TODO: Use this?
   _welcomeView() {
     return Padding(padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
         child: Column(
@@ -122,14 +141,11 @@ class _HomeState extends State<Home> {
           case ConnectionState.waiting:
             return _loadingView();
           default:
-            if (snapshot.data.isEmpty) {
-              if (_searchTerm.isEmpty) {
-                return  _welcomeView();
-              } else {
-                return  _noTermsView();
-              }
+            // searched, but no result
+            if (snapshot.data.isEmpty && _searchTerm.isNotEmpty) {
+              return  _noTermsView();
             } else {
-              return _searchResults(snapshot.data);
+              return _termsView(snapshot.data);
               //return Container();
             }
         }
@@ -148,7 +164,7 @@ class _HomeState extends State<Home> {
         // You could load the bar with search already active
         autoSelected: false,
         searchHint: "Search",
-        mainTextColor: Colors.black,
+        mainTextColor: Colors.white,
         onChange: (String value) {
           //Your function to filter list. It should interact with
           //the Stream that generate the final list
@@ -158,12 +174,13 @@ class _HomeState extends State<Home> {
           _getTerms(value);
         },
         onTap: () {
-          _getHistory();
+          _getAllEntries();
           setState(() {
             _searchTerm = '';
             _isSearchMode = false;
           });
         },
+
         //Will show when SEARCH MODE wasn't active
         mainAppBar: AppBar(
           title: Text(

@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:mvskoke_language_app/model/example.dart';
-import 'package:mvskoke_language_app/model/searchResult.dart';
+import 'package:mvskoke_language_app/model/search_result.dart';
 import 'package:mvskoke_language_app/model/term.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
@@ -131,7 +131,33 @@ class DatabaseHelper {
     return await db.query(table);
   }
 
-Future<List<SearchResult>> querySearch(String searchTerm) async {
+  Future<List<SearchResult>> getAllEntries() async {
+
+    final Database db = await database;
+    final sql = 'SELECT * FROM terms '
+        + 'JOIN definitions ON terms.id = definitions.term_id '
+        + 'LEFT JOIN examples ON definitions.id = examples.def_id '
+        + 'GROUP BY term_id '
+        + 'ORDER BY terms.lexeme ASC';
+    final List<Map<String, dynamic>> maps = await db.rawQuery(sql);
+
+    // Convert the List<Map<String, dynamic> into a List<SearchResult>.
+    return List.generate(maps.length, (i) {
+      return SearchResult(
+          id: maps[i]['term_id'],
+          lexeme: maps[i]['lexeme'],
+          phonetics: maps[i]['phonetics'],
+          soundFile: maps[i]['term_sound_file'],
+          definition: maps[i]['definition'],
+          exampleTarget: maps[i]['exampleTarget'],
+          exampleSource: maps[i]['exampleSource'],
+          rank: maps[i]['rank'],
+          defRank: maps[i]['defRank']
+      );
+    });
+  }
+
+  Future<List<SearchResult>> querySearch(String searchTerm) async {
     // Get a reference to the database.
     final Database db = await database;
     var args = List.filled(19, searchTerm);

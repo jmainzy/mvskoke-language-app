@@ -1,8 +1,8 @@
 
-import 'package:mvskoke_language_app/bus/databaseHelper.dart';
+import 'package:mvskoke_language_app/bus/database_helper.dart';
 import 'package:mvskoke_language_app/model/example.dart';
 import 'package:mvskoke_language_app/model/term.dart';
-import 'package:mvskoke_language_app/model/searchResult.dart';
+import 'package:mvskoke_language_app/model/search_result.dart';
 import 'package:mvskoke_language_app/screens/details.dart';
 import 'package:flutter/material.dart';
 

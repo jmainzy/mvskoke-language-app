@@ -1,9 +1,9 @@
 import 'dart:ui';
-import 'package:mvskoke_language_app/bus/databaseHelper.dart';
+import 'package:mvskoke_language_app/bus/database_helper.dart';
 import 'package:mvskoke_language_app/model/term.dart';
-import 'package:mvskoke_language_app/model/searchResult.dart';
+import 'package:mvskoke_language_app/model/search_result.dart';
 import 'package:mvskoke_language_app/screens/home.dart';
-import 'package:mvskoke_language_app/widget/definitionItem.dart';
+import 'package:mvskoke_language_app/widget/definition_item.dart';
 import 'package:flutter/material.dart';
 
 class Details extends StatefulWidget {
@@ -68,7 +68,7 @@ class _DetailsState extends State<Details> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Theme.of(context).primaryColor,
           elevation: 0.0,
           actions: <Widget>[
             PopupMenuButton<Choice>(

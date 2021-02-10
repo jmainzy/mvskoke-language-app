@@ -1,4 +1,4 @@
-import 'package:mvskoke_language_app/bus/databaseHelper.dart';
+import 'package:mvskoke_language_app/bus/database_helper.dart';
 
 class SearchResult {
   final int id;
