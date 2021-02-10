@@ -243,7 +243,7 @@ class DatabaseHelper {
     });
   }
 
-  Future<List<Term>> getTermForId(int termId) async {
+  Future<List<Term>> getDefinitionForId(int termId) async {
     // Get a reference to the database.
     final Database db =  await database;
     // Query the table for all The Terms.

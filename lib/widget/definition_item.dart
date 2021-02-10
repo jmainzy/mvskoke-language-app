@@ -189,15 +189,16 @@ class DefinitionItem extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    def.pos.isNotEmpty ?
                                     Padding(
                                       padding: EdgeInsets.fromLTRB(0, 0, 0, 4.0),
                                       child: SelectableText.rich(
                                         TextSpan(
                                           style: textTheme.bodyText2,
                                           children: [
+
                                             TextSpan(
-                                              text: def.pos + "  ",
+                                              text: def.pos!=null && def.pos.isNotEmpty ?
+                                                def.pos + "  " : "",
                                               style: TextStyle(
                                                 color: Colors.cyan[800],
                                               ),
@@ -209,10 +210,10 @@ class DefinitionItem extends StatelessWidget {
                                           ],
                                         )
                                       )
-                                    ): Container(),
+                                    ),
                                     for (Example ex in def.examples)
                                       _buildExampleContainer(textTheme, ex),
-                                    if (def.relatedTerm.isNotEmpty)
+                                    if (def.relatedTerm!=null && def.relatedTerm.isNotEmpty)
                                       _buildRelatedTerm(context, def.relatedTerm),
                                   ],
                                 ),

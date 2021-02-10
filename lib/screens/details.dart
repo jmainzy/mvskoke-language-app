@@ -23,7 +23,7 @@ class _DetailsState extends State<Details> {
   @override
   void initState() {
     super.initState();
-    _getTermForId(widget.term.id);
+    _getDefinitionForId(widget.term.id);
   }
 
   // _play(String audioFile) async {
@@ -32,14 +32,14 @@ class _DetailsState extends State<Details> {
   //   audioPlayer.play(url);
   // }
 
-  Future<List<Term>> _getTermForId(int termId) async {
-    var results = await DatabaseHelper.instance.getTermForId(termId);
+  Future<List<Term>> _getDefinitionForId(int termId) async {
+    var results = await DatabaseHelper.instance.getDefinitionForId(termId);
     return results;
   }
 
   _buildItems() {
     return FutureBuilder<List<Term>>(
-          future: _getTermForId(widget.term.id),
+          future: _getDefinitionForId(widget.term.id),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
