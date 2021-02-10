@@ -26,8 +26,10 @@ class DatabaseHelper {
 
   static final maxSearchRows = 10;
 
-  static const RESULT_LEXEME_ONLY = 9;
-  static const RESULT_LEXEME_START = 8;
+  static const RESULT_LEXEME_ONLY = 11;
+  static const RESULT_TAG = 10;
+  static const RESULT_LEXEME_START = 9;
+  static const RESULT_TAG_START = 9;
   static const RESULT_LEXEME_SIMILAR = 7;
   static const RESULT_DEFINITION_ONLY = 6;
   static const RESULT_DEFINITION_SPECIAL = 5;
@@ -160,13 +162,15 @@ class DatabaseHelper {
   Future<List<SearchResult>> querySearch(String searchTerm) async {
     // Get a reference to the database.
     final Database db = await database;
-    var args = List.filled(19, searchTerm);
+    var args = List.filled(20, searchTerm);
     args[5] = "\"$searchTerm\"";
     args[6] = "\"$searchTerm\"";
-    final sql = 'SELECT term_id, lexeme, phonetics, terms.soundFile AS term_sound_file, definitions.definition, examples.soundFile AS ex_sound_file, examples.exampleTarget, examples.exampleSource, '
+    final sql = 'SELECT terms.id, lexeme, phonetics, terms.soundFile AS term_sound_file, definitions.definition, examples.soundFile AS ex_sound_file, examples.exampleTarget, examples.exampleSource, tags.tag as tag, '
               + 'CASE '
               + 'WHEN lexeme = ? THEN $RESULT_LEXEME_ONLY '
               + 'WHEN lexeme LIKE ? || "%" THEN $RESULT_LEXEME_START '
+              + 'WHEN tag = ? THEN $RESULT_TAG '
+              + 'WHEN tag LIKE ? || "%" THEN $RESULT_TAG_START '
               + 'WHEN lexeme LIKE "%" || ? || "%" THEN $RESULT_LEXEME_SIMILAR '
               + 'WHEN definition = ? || "." THEN $RESULT_DEFINITION_ONLY '
               // this one is special case to include quotes ""
@@ -188,9 +192,10 @@ class DatabaseHelper {
               + 'FROM terms '
               + 'JOIN definitions ON terms.id = definitions.term_id '
               + 'LEFT JOIN examples ON definitions.id = examples.def_id '
-              + 'WHERE lexeme LIKE "%" || ? || "%" OR definition LIKE "%" || ? || "%" OR exampleTarget LIKE "%" || ? || "%" OR exampleSource LIKE "%" || ? || "%"'
-              + 'GROUP BY term_id '
-              + 'ORDER BY rank DESC, defRank ASC, term_id ASC';
+              + 'JOIN tags ON terms.id = tags.term_id '
+              + 'WHERE lexeme LIKE "%" || ? || "%" OR tag LIKE "%" || ? || "%" OR definition LIKE "%" || ? || "%" OR exampleTarget LIKE "%" || ? || "%" OR exampleSource LIKE "%" || ? || "%"'
+              + 'GROUP BY terms.id '
+              + 'ORDER BY rank DESC, defRank ASC, terms.id ASC';
     final List<Map<String, dynamic>> maps = await db.rawQuery(sql, args);
     
     // Convert the List<Map<String, dynamic> into a List<SearchResult>.
