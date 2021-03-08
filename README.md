@@ -2,6 +2,8 @@
 
 Dictionary for the Mvskoke Language
 
+Mobile component to the Mvskoke Web App.  Read more here: [Mvskoke Web App](https://github.com/jmainzy/mvskoke-web-app/)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
