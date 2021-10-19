@@ -231,8 +231,6 @@ class Choice {
 }
 
 const List<Choice> choices = const <Choice>[
-  const Choice(title: 'Overview', route: '/overview'),
-  const Choice(title: 'Reference', route: '/reference'),
   const Choice(title: 'About', route: '/about'),
 ];
 
@@ -243,7 +241,7 @@ class ChoiceCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle textStyle = Theme.of(context).textTheme.display1;
+    final TextStyle textStyle = Theme.of(context).textTheme.bodyText2;
     return Card(
       color: Colors.white,
       child: Center(

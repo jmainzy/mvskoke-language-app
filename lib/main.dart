@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mvskoke_language_app/screens/about.dart';
 import 'package:mvskoke_language_app/screens/home.dart';
 
 void main() {
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => Home(),
+        '/about': (context) => About()
       }
     );
   }
