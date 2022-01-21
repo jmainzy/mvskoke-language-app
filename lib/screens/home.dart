@@ -21,7 +21,6 @@ class _HomeState extends State<Home> {
   StreamSink<List<SearchResult>> get _inTerms => _termsController.sink;
 
   String _searchTerm = '';
-  bool _isSearchMode;
 
   Stream<List<SearchResult>> get terms => _termsController.stream;
 
@@ -177,7 +176,6 @@ class _HomeState extends State<Home> {
           _getAllEntries();
           setState(() {
             _searchTerm = '';
-            _isSearchMode = false;
           });
         },
 
@@ -193,9 +191,6 @@ class _HomeState extends State<Home> {
                 //This is where You change to SEARCH MODE. To hide, just
                 //add FALSE as value on the stream
                 appBarController.stream.add(true);
-                setState(() {
-                  _isSearchMode = true;
-                });
               } ,
             ),
             // overflow menu

@@ -165,7 +165,7 @@ class DatabaseHelper {
     var args = List.filled(20, searchTerm);
     args[5] = "\"$searchTerm\"";
     args[6] = "\"$searchTerm\"";
-    final sql = 'SELECT terms.id, lexeme, phonetics, terms.soundFile AS term_sound_file, definitions.definition, examples.soundFile AS ex_sound_file, examples.exampleTarget, examples.exampleSource, tags.tag as tag, '
+    final sql = 'SELECT terms.id as term_id, lexeme, phonetics, terms.soundFile AS term_sound_file, definitions.definition, examples.soundFile AS ex_sound_file, examples.exampleTarget, examples.exampleSource, tags.tag as tag, '
               + 'CASE '
               + 'WHEN lexeme = ? THEN $RESULT_LEXEME_ONLY '
               + 'WHEN lexeme LIKE ? || "%" THEN $RESULT_LEXEME_START '
