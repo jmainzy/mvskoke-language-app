@@ -21,7 +21,7 @@ This app is built with Flutter interacting with a local SQLite database.  Future
 - About Page
 
 ## Data
-The dictionary data was originally scraped using python from the [English and Muskokee Dictionary - Loughridge and Hodge, 1914](https://library.si.edu/digital-library/book/englishmuskokeed00loug)
+The dictionary data was originally scraped using python from the [English and Muskokee Dictionary - Loughridge and Hodge, 1914](https://library.si.edu/digital-library/book/englishmuskokeed00loug)  
 Plans are to update using the shared database from [creekdictionary.com](https://github.com/muscogee-language-foundation/creekdictionary.com), which hosts a community-maintained and validated data set.
 
 ## Search
