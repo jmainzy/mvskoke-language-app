@@ -1,40 +1,43 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
+import 'package:mvskoke_language_app/models/content_item.dart';
+import 'package:mvskoke_language_app/services/content_service.dart';
+import 'package:mvskoke_language_app/services/navigation_helper.dart';
 import 'package:mvskoke_language_app/utilities/dimens.dart';
 import 'package:watch_it/watch_it.dart';
 
 Logger log = Logger();
 
-class ReadalongScreen extends StatefulWidget {
-  const ReadalongScreen({super.key});
+class SearchWrapper extends StatefulWidget {
+  const SearchWrapper({super.key});
 
   @override
-  ReadalongScreenState createState() => ReadalongScreenState();
+  SearchWrapperState createState() => SearchWrapperState();
 }
 
-class ReadalongScreenState extends State<ReadalongScreen> with WidgetsBindingObserver {
+class SearchWrapperState extends State<SearchWrapper>
+    with WidgetsBindingObserver {
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   late Future<void> _loadingFuture;
+  final contentService = sl<ContentService>();
+  var stories = <ContentItem>[];
 
   @override
   void initState() {
     WidgetsBinding.instance.addObserver(this);
     super.initState();
     _loadingFuture = _init();
+    fetch();
   }
 
   Future<void> _init() async {
     await sl.allReady();
-    // await sl<ConfigService>().initConfig();
-    // await sl<SongManager>().init();
     if (!mounted) return;
   }
 
   Future<void> fetch() async {
-    // get songs again
-    // final songManager = sl<SongManager>();
-    // await songManager.init();
+    stories = contentService.getStories();
   }
 
   @override
@@ -67,13 +70,13 @@ class ReadalongScreenState extends State<ReadalongScreen> with WidgetsBindingObs
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
-            log.e('Error loading songs: ${snapshot.error}');
+            log.e('Error loading content: ${snapshot.error}');
             return Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    'Error loading songs',
+                    'Error loading content',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 20),
@@ -87,7 +90,7 @@ class ReadalongScreenState extends State<ReadalongScreen> with WidgetsBindingObs
               ),
             );
           } else {
-            return const HomeContent();
+            return ContentList(stories: stories);
           }
         },
       ),
@@ -101,15 +104,16 @@ class ReadalongScreenState extends State<ReadalongScreen> with WidgetsBindingObs
   }
 }
 
-class HomeContent extends WatchingStatefulWidget {
-  const HomeContent({super.key});
+class ContentList extends WatchingStatefulWidget {
+  final List<ContentItem> stories;
+  const ContentList({super.key, required this.stories});
 
   @override
-  HomeContentState createState() => HomeContentState();
+  ContentListState createState() => ContentListState();
 }
 
-class HomeContentState extends State<HomeContent> {
-  HomeContentState();
+class ContentListState extends State<ContentList> {
+  ContentListState();
 
   final SearchController controller = SearchController();
   var isSearching = false;
@@ -196,18 +200,23 @@ class HomeContentState extends State<HomeContent> {
                 ];
               },
         ),
-        Flexible(
-          child: const Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Readalongs',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(height: 20),
-              ],
-            ),
+        Expanded(
+          child: ListView.separated(
+            scrollDirection: Axis.vertical,
+            itemCount: widget.stories.length,
+            separatorBuilder: (BuildContext context, int index) {
+              return SizedBox(height: 2);
+            },
+            itemBuilder: (BuildContext context, int index) {
+              return ListTile(
+                title: Text(widget.stories[index].title),
+                onTap: () {
+                  NavigationHelper.router.go(
+                    '${NavigationHelper.contentPath}/${widget.stories[index].id}',
+                  );
+                },
+              );
+            },
           ),
         ),
       ],

@@ -229,9 +229,9 @@ class AudioPlayerService extends BaseAudioHandler {
     // get application directory
     final appDir = await getApplicationDocumentsDirectory();
     // use the app logo as the album art
-    const artPath = 'assets/images/icon.png';
+    const artPath = 'assets/images/icon.svg';
     // write the asset to the application directory
-    final file = File('${appDir.path}/icon.png');
+    final file = File('${appDir.path}/icon.svg');
     // write the file
     await file.writeAsBytes(
       (await rootBundle.load(artPath)).buffer.asUint8List(),

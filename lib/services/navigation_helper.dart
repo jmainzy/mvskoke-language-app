@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:logger/logger.dart';
-import 'package:mvskoke_language_app/ui/about_screen.dart';
-import 'package:mvskoke_language_app/ui/alphabet_screen.dart';
-import 'package:mvskoke_language_app/ui/readalong_screen.dart';
-import 'package:mvskoke_language_app/ui/more_screen.dart';
+import 'package:mvskoke_language_app/ui/more/about_screen.dart';
+import 'package:mvskoke_language_app/ui/more/alphabet_screen.dart';
+import 'package:mvskoke_language_app/ui/content/content_list.dart';
+import 'package:mvskoke_language_app/ui/content/content_page.dart';
+import 'package:mvskoke_language_app/ui/more/more_screen.dart';
 import 'package:mvskoke_language_app/ui/home_screen.dart';
 
 Logger log = Logger();
@@ -35,8 +36,7 @@ class NavigationHelper {
       router.routeInformationParser;
 
   static const String homePath = '/';
-  static const String playlistPath = '/playlist';
-  static const String songsPath = '/songs';
+  static const String contentPath = '/content';
   static const String aboutPath = 'about';
   static const String morePath = '/more';
   static const String glossaryPath = 'glossary';
@@ -71,13 +71,30 @@ class NavigationHelper {
             navigatorKey: playlistTabNavigatorKey,
             routes: [
               GoRoute(
-                path: playlistPath,
+                path: contentPath,
                 pageBuilder: (context, state) {
                   return MaterialPage(
                     key: state.pageKey,
-                    child: const ReadalongScreen(),
+                    child: const SearchWrapper(),
                   );
                 },
+                routes: [
+                  GoRoute(
+                    path: '/:contentId',
+                    pageBuilder: (context, state) {
+                      final id = state.pathParameters['contentId'];
+                      if (id == null) {
+                        throw Exception('Invalid entity id');
+                      } else {
+                        log.i('navvy content id: $id');
+                      }
+                      return MaterialPage(
+                        key: state.pageKey,
+                        child: ContentPage(contentId: id),
+                      );
+                    },
+                  ),
+                ],
               ),
             ],
           ),
