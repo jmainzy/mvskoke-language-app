@@ -34,7 +34,7 @@ class AudioPlayerService extends BaseAudioHandler {
   ///
   final _player = AudioPlayer();
 
-  late final Uri albumArtUri;
+  Uri? albumArtUri;
 
   bool get hasNext => _player.hasNext;
   bool get hasPrevious => _player.hasPrevious;
@@ -42,9 +42,9 @@ class AudioPlayerService extends BaseAudioHandler {
   /// The audio player service constructor.
   ///
   AudioPlayerService() {
+    _initAlbumArt();
     _notifyAudioHandlerAboutPlaybackEvents();
     _listenForDurationChanges();
-    _initAlbumArt();
   }
 
   /// Initializes the audio player service.
