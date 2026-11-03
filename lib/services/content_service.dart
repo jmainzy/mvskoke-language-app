@@ -9,8 +9,8 @@ final List<MediaObject> mediaItems = [
   MediaObject(
     id: '1',
     title: 'Day/Night Onvkuce',
-    filename: 'day_night_onvkuce.mp3',
-    performer: 'Mvskoke Language App',
+    filename: 'chipbear.mp3',
+    performer: 'Rebecca Barnett',
     copyright: '© 2023 Mvskoke Language Program',
     lastUpdate: Timestamp.now(),
   ),

@@ -10,6 +10,7 @@ import 'package:mvskoke_language_app/models/enums.dart';
 import 'package:mvskoke_language_app/models/media_item.dart';
 import 'package:mvskoke_language_app/notifiers/progress_notifier.dart';
 import 'package:mvskoke_language_app/services/service_locator.dart';
+import 'package:mvskoke_language_app/ui/components/play_button.dart';
 import 'package:mvskoke_language_app/utilities/dimens.dart';
 
 class AudioPlayerWidget extends StatefulWidget {
@@ -115,10 +116,10 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
                       //     },
                       //   ),
 
-                      IconButton(
-                        onPressed: widget.onClose,
-                        icon: const Icon(Icons.close, color: Colors.black54),
-                      ),
+                      // IconButton(
+                      //   onPressed: widget.onClose,
+                      //   icon: const Icon(Icons.close, color: Colors.black54),
+                      // ),
                     ],
                   ),
                   if (snapshot.connectionState == ConnectionState.waiting) ...[
@@ -179,7 +180,11 @@ class _PlayerTitle extends StatelessWidget {
           ),
           if (performer != null)
             _AutoMarquee(text: performer!, style: subtitleStyle),
-          if (album != null) _AutoMarquee(text: album!, style: subtitleStyle),
+          if (album != null)
+            _AutoMarquee(
+              text: album!,
+              style: subtitleStyle.copyWith(fontSize: 12),
+            ),
         ],
       ),
     );
@@ -239,7 +244,7 @@ class _PlayerControls extends StatelessWidget {
       builder: (context, value, child) {
         return Row(
           children: [
-            const SizedBox(width: Dimens.marginLarge),
+            PlayButton(),
             Expanded(
               child: ProgressBar(
                 progress: value.current,
