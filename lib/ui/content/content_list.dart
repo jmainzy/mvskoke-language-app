@@ -169,7 +169,7 @@ class ContentListState extends State<ContentList> {
                           ]
                         : [],
                     backgroundColor: WidgetStateProperty.all(
-                      Theme.of(context).colorScheme.surfaceContainer,
+                      Theme.of(context).colorScheme.surfaceContainerLow,
                     ),
                   ),
                 ],
@@ -204,6 +204,7 @@ class ContentListState extends State<ContentList> {
           child: ListView.separated(
             scrollDirection: Axis.vertical,
             itemCount: widget.stories.length,
+            padding: const EdgeInsets.symmetric(vertical: Dimens.marginShort),
             separatorBuilder: (BuildContext context, int index) {
               return SizedBox(height: 2);
             },
