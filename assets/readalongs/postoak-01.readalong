@@ -1,0 +1,3432 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<read-along version="1.2">
+    <meta
+    name="generator"
+    content="@readalongs/studio (cli) 1.2.2"
+    id="meta0"
+  />
+    <text xml:lang="und" fallback-langs="und" id="t0">
+        <body id="t0b0">
+            <div type="page" id="t0b0d0">
+                <p id="t0b0d0p0">
+                    <s id="t0b0d0p0s0"><w
+              id="t0b0d0p0s0w0"
+              ARPABET="F OW D T"
+              time="0"
+              dur="0.82"
+            >Fort</w> <w
+              id="t0b0d0p0s0w1"
+              ARPABET="S M IY T HH"
+              time="0.82"
+              dur="0.59"
+            >Smith</w> <w
+              id="t0b0d0p0s0w2"
+              ARPABET="D EY CH"
+              time="1.74"
+              dur="0.26"
+            >Dec</w> <w
+              id="t0b0d0p0s0w3"
+              ARPABET="EY L EY V EY N T HH HH"
+              time="2"
+              dur="1.01"
+            >11,</w> <w
+              id="t0b0d0p0s0w4"
+              ARPABET="EY IY G HH T EY EY N"
+              time="3.01"
+              dur="0.6"
+            >18</w> <w
+              id="t0b0d0p0s0w5"
+              ARPABET="S EY V EY N T Y"
+              time="3.61"
+              dur="0.55"
+            >78</w><w
+              id="t0b0d0p0s0w6"
+              ARPABET="EY IY G HH T"
+              time="4.16"
+              dur="0.39"
+            /></s>
+                    <s id="t0b0d0p0s1"><w
+              id="t0b0d0p0s1w0"
+              ARPABET="M Y"
+              time="5.71"
+              dur="0.06"
+            >my</w> <w
+              id="t0b0d0p0s1w1"
+              ARPABET="T EY AA CH HH EY D"
+              time="5.77"
+              dur="0.68"
+            >teacher</w></s>
+                    <s id="t0b0d0p0s2"><w
+              id="t0b0d0p0s2w0"
+              ARPABET="M D S"
+              time="7.65"
+              dur="0.6"
+            >Mrs</w>. <w
+              id="t0b0d0p0s2w1"
+              ARPABET="EY"
+              time="8.25"
+              dur="0.64"
+            >A</w>. <w
+              id="t0b0d0p0s2w2"
+              ARPABET="AA"
+              time="8.89"
+              dur="0.28"
+            >E</w>. <w
+              id="t0b0d0p0s2w3"
+              ARPABET="W"
+              time="9.17"
+              dur="0.42"
+            >W</w>. <w
+              id="t0b0d0p0s2w4"
+              ARPABET="D OW B EY D T S OW N"
+              time="9.59"
+              dur="0.6"
+            >Robertson</w></s>
+                    <s id="t0b0d0p0s3"><w
+              id="t0b0d0p0s3w0"
+              ARPABET="HH IY Y OW M AA T"
+              time="12.73"
+              dur="0.73"
+            >Hiyomat</w> <w
+              id="t0b0d0p0s3w1"
+              ARPABET="V M"
+              time="14.16"
+              dur="0.09"
+            >vm</w> <w
+              id="t0b0d0p0s3w2"
+              ARPABET="OW P UW N V K V"
+              time="14.25"
+              dur="0.52"
+            >opunvkv</w> <w
+              id="t0b0d0p0s3w3"
+              ARPABET="M AA HH UW S AA N"
+              time="14.77"
+              dur="0.92"
+            >mahusan</w> <w
+              id="t0b0d0p0s3w4"
+              ARPABET="EY S"
+              time="16.09"
+              dur="0.25"
+            >es</w> <w
+              id="t0b0d0p0s3w5"
+              ARPABET="CH EY N"
+              time="16.34"
+              dur="0.34"
+            >cen</w> <w
+              id="t0b0d0p0s3w6"
+              ARPABET="CH OW Y EY T"
+              time="16.68"
+              dur="0.57"
+            >coyet</w> <w
+              id="t0b0d0p0s3w7"
+              ARPABET="OW M IY S"
+              time="17.25"
+              dur="0.55"
+            >omis</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s3"
+            sentence-id="t0b0d0p0s3"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >At this time I am writing you in my very own language.</s>
+                    <s id="t0b0d0p0s4"><w
+              id="t0b0d0p0s4w0"
+              ARPABET="V M"
+              time="17.8"
+              dur="0.06"
+            >Vm</w> <w
+              id="t0b0d0p0s4w1"
+              ARPABET="V N OW K EY CH K V"
+              time="19.14"
+              dur="0.65"
+            >vnokeckv</w> <w
+              id="t0b0d0p0s4w2"
+              ARPABET="V M"
+              time="19.79"
+              dur="0.31"
+            >vm</w> <w
+              id="t0b0d0p0s4w3"
+              ARPABET="V HH AA Y V"
+              time="20.47"
+              dur="0.47"
+            >vhayv</w> <w
+              id="t0b0d0p0s4w4"
+              ARPABET="T AA T EY"
+              time="20.94"
+              dur="0.5"
+            >tate</w> <w
+              id="t0b0d0p0s4w5"
+              ARPABET="T OW Y EY T S K AA T HH"
+              time="21.44"
+              dur="0.89"
+            >toyetskat,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s4"
+            sentence-id="t0b0d0p0s4"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >My beloved former teacher,</s>
+                    <s id="t0b0d0p0s5"><w
+              id="t0b0d0p0s5w0"
+              ARPABET="M UW CH V"
+              time="23.07"
+              dur="0.24"
+            >mucv</w> <w
+              id="t0b0d0p0s5w1"
+              ARPABET="HH V T HH IY Y V T K EY"
+              time="23.31"
+              dur="1.23"
+            >hvthiyvtke</w> <w
+              id="t0b0d0p0s5w2"
+              ARPABET="EY M"
+              time="24.97"
+              dur="0.22"
+            >em</w> <w
+              id="t0b0d0p0s5w3"
+              ARPABET="OW F V T"
+              time="25.19"
+              dur="0.31"
+            >ofvt</w> <w
+              id="t0b0d0p0s5w4"
+              ARPABET="OW N"
+              time="25.5"
+              dur="0.29"
+            >on</w> <w
+              id="t0b0d0p0s5w5"
+              ARPABET="OW M AA T"
+              time="25.79"
+              dur="0.48"
+            >omat</w> <w
+              id="t0b0d0p0s5w6"
+              ARPABET="CH V"
+              time="26.27"
+              dur="0.06"
+            >cv</w> <w
+              id="t0b0d0p0s5w7"
+              ARPABET="CH V F EY K N UW S EY T"
+              time="26.33"
+              dur="1.62"
+            >cvfeknusēt</w> <w
+              id="t0b0d0p0s5w8"
+              ARPABET="OW M EY S"
+              time="27.95"
+              dur="0.6"
+            >omes</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s5"
+            sentence-id="t0b0d0p0s5"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >This morning I am in the very best of health.</s>
+                    <s id="t0b0d0p0s6"><w
+              id="t0b0d0p0s6w0"
+              ARPABET="M OW M EY N"
+              time="29.45"
+              dur="0.56"
+            >Momen</w> <w
+              id="t0b0d0p0s6w1"
+              ARPABET="CH EY N"
+              time="30.26"
+              dur="0.27"
+            >cen</w> <w
+              id="t0b0d0p0s6w2"
+              ARPABET="T AA K EY UW"
+              time="30.53"
+              dur="0.68"
+            >takeu</w> <w
+              id="t0b0d0p0s6w3"
+              ARPABET="M AA T V P OW M EY N"
+              time="31.64"
+              dur="0.9"
+            >matvpomen</w> <w
+              id="t0b0d0p0s6w4"
+              ARPABET="V P OW K AA T S K IY S"
+              time="32.74"
+              dur="1.19"
+            >vpokatskis</w> <w
+              id="t0b0d0p0s6w5"
+              ARPABET="OW M EY S"
+              time="33.93"
+              dur="0.67"
+            >omēs</w> <w
+              id="t0b0d0p0s6w6"
+              ARPABET="K OW M IY Y EY T"
+              time="34.6"
+              dur="0.76"
+            >komiyēt</w> <w
+              id="t0b0d0p0s6w7"
+              ARPABET="OW S"
+              time="35.36"
+              dur="0.24"
+            >os</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s6"
+            sentence-id="t0b0d0p0s6"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >And that all of you are in like health is my thoughts.</s>
+                    <s id="t0b0d0p0s7"><w
+              id="t0b0d0p0s7w0"
+              ARPABET="M OW M EY N"
+              time="37.33"
+              dur="0.59"
+            >Momen</w> <w
+              id="t0b0d0p0s7w1"
+              ARPABET="EY N"
+              time="37.92"
+              dur="0.27"
+            >en</w> <w
+              id="t0b0d0p0s7w2"
+              ARPABET="HH OW M M V"
+              time="38.19"
+              dur="0.64"
+            >hommv</w> <w
+              id="t0b0d0p0s7w3"
+              ARPABET="CH OW K V"
+              time="38.83"
+              dur="0.48"
+            >cokv</w> <w
+              id="t0b0d0p0s7w4"
+              ARPABET="S UW L K EY N"
+              time="39.31"
+              dur="0.73"
+            >sulkēn</w> <w
+              id="t0b0d0p0s7w5"
+              ARPABET="CH EY M"
+              time="40.18"
+              dur="0.22"
+            >cem</w> <w
+              id="t0b0d0p0s7w6"
+              ARPABET="V T OW T IY Y V N K S"
+              time="40.5"
+              dur="1"
+            >vtotiyvnks</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s7"
+            sentence-id="t0b0d0p0s7"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Not long ago I sent you a very long letter.</s>
+                    <s id="t0b0d0p0s8"><w
+              id="t0b0d0p0s8w0"
+              ARPABET="M OW M IY S"
+              time="42.28"
+              dur="0.62"
+            >Momis</w> <w
+              id="t0b0d0p0s8w1"
+              ARPABET="HH V T EY"
+              time="42.9"
+              dur="0.45"
+            >hvte</w> <w
+              id="t0b0d0p0s8w2"
+              ARPABET="CH OW K V"
+              time="43.35"
+              dur="0.72"
+            >cokv</w> <w
+              id="t0b0d0p0s8w3"
+              ARPABET="CH EY N"
+              time="44.07"
+              dur="0.18"
+            >cen</w> <w
+              id="t0b0d0p0s8w4"
+              ARPABET="HH EY CH V K OW"
+              time="44.25"
+              dur="0.66"
+            >hecvko</w> <w
+              id="t0b0d0p0s8w5"
+              ARPABET="EY M OW N K EY T"
+              time="44.91"
+              dur="0.8"
+            >emonket</w> <w
+              id="t0b0d0p0s8w6"
+              ARPABET="OW M IY S HH"
+              time="45.71"
+              dur="1.34"
+            >omis,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s8"
+            sentence-id="t0b0d0p0s8"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Although I have not received a reply from you,</s>
+                    <s id="t0b0d0p0s9"><w
+              id="t0b0d0p0s9w0"
+              ARPABET="HH V T V M"
+              time="47.05"
+              dur="0.37"
+            >hvtvm</w> <w
+              id="t0b0d0p0s9w1"
+              ARPABET="OW P UW N V K V"
+              time="47.42"
+              dur="0.67"
+            >opunvkv</w> <w
+              id="t0b0d0p0s9w2"
+              ARPABET="CH EY M"
+              time="48.09"
+              dur="0.23"
+            >cem</w> <w
+              id="t0b0d0p0s9w3"
+              ARPABET="V T OW T EY T"
+              time="48.41"
+              dur="0.47"
+            >vtotet</w> <w
+              id="t0b0d0p0s9w4"
+              ARPABET="OW M IY S"
+              time="48.88"
+              dur="0.46"
+            >omis</w> <w
+              id="t0b0d0p0s9w5"
+              ARPABET="CH EY"
+              time="49.34"
+              dur="0.38"
+            >ce</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s9"
+            sentence-id="t0b0d0p0s9"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >I am writing you again.</s>
+                    <s id="t0b0d0p0s10"><w
+              id="t0b0d0p0s10w0"
+              ARPABET="HH IY Y OW M AA T"
+              time="51.5"
+              dur="0.88"
+            >Hiyomat</w> <w
+              id="t0b0d0p0s10w1"
+              ARPABET="EY M"
+              time="52.38"
+              dur="0.22"
+            >em</w> <w
+              id="t0b0d0p0s10w2"
+              ARPABET="M EY K UW S V P K V T"
+              time="52.6"
+              dur="0.89"
+            >mēkusvpkvt</w> <w
+              id="t0b0d0p0s10w3"
+              ARPABET="OW N"
+              time="53.49"
+              dur="0.14"
+            >on</w> <w
+              id="t0b0d0p0s10w4"
+              ARPABET="OW M AA T HH"
+              time="53.63"
+              dur="0.56"
+            >omat,</w> <w
+              id="t0b0d0p0s10w5"
+              ARPABET="EY S T OW N K OW N"
+              time="54.43"
+              dur="0.86"
+            >estonkon</w> <w
+              id="t0b0d0p0s10w6"
+              ARPABET="AA Y IY Y EY T"
+              time="55.71"
+              dur="0.94"
+            >ayiyēt</w> <w
+              id="t0b0d0p0s10w7"
+              ARPABET="OW S"
+              time="56.65"
+              dur="0.32"
+            >os</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s10"
+            sentence-id="t0b0d0p0s10"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >At the present time I am attending church services regularly.</s>
+                    <s id="t0b0d0p0s11"><w
+              id="t0b0d0p0s11w0"
+              ARPABET="M OW M IY S"
+              time="59.12"
+              dur="0.64"
+            >Momis</w> <w
+              id="t0b0d0p0s11w1"
+              ARPABET="N AA K EY"
+              time="59.76"
+              dur="0.45"
+            >nake</w> <w
+              id="t0b0d0p0s11w2"
+              ARPABET="HH V M K UW S AA T"
+              time="60.21"
+              dur="0.97"
+            >hvmkusat</w> <w
+              id="t0b0d0p0s11w3"
+              ARPABET="V M"
+              time="61.67"
+              dur="0.15"
+            >vm</w> <w
+              id="t0b0d0p0s11w4"
+              ARPABET="V K EY D D IY CH K V"
+              time="61.82"
+              dur="0.7"
+            >vkerrickv</w> <w
+              id="t0b0d0p0s11w5"
+              ARPABET="V N"
+              time="62.52"
+              dur="0.3"
+            >vn</w> <w
+              id="t0b0d0p0s11w6"
+              ARPABET="Y V M AA K K UW EY CH EY T"
+              time="63.02"
+              dur="1.08"
+            >yvmakkuecēt</w> <w
+              id="t0b0d0p0s11w7"
+              ARPABET="OW S"
+              time="64.1"
+              dur="0.27"
+            >os</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s11"
+            sentence-id="t0b0d0p0s11"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >However, there is one thing that disturbs me severely.</s>
+                    <s id="t0b0d0p0s12"><w
+              id="t0b0d0p0s12w0"
+              ARPABET="HH EY Y V N"
+              time="65.94"
+              dur="0.33"
+            >Heyvn</w> <w
+              id="t0b0d0p0s12w1"
+              ARPABET="OW K IY S"
+              time="66.27"
+              dur="0.35"
+            >okis</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s12"
+            sentence-id="t0b0d0p0s12"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Here is what I mean.</s>
+                    <s id="t0b0d0p0s13"><w
+              id="t0b0d0p0s13w0"
+              ARPABET="EY S T EY"
+              time="66.62"
+              dur="2.39"
+            >Este</w> <w
+              id="t0b0d0p0s13w1"
+              ARPABET="S V L V F K EY"
+              time="69.01"
+              dur="0.28"
+            >svlvfke</w> <w
+              id="t0b0d0p0s13w2"
+              ARPABET="S UW L K EY"
+              time="69.29"
+              dur="0.65"
+            >sulke</w>-<w
+              id="t0b0d0p0s13w3"
+              ARPABET="M AA HH EY"
+              time="69.94"
+              dur="0.72"
+            >mahē</w> <w
+              id="t0b0d0p0s13w4"
+              ARPABET="Y V M V"
+              time="70.8"
+              dur="0.25"
+            >yvmv</w> <w
+              id="t0b0d0p0s13w5"
+              ARPABET="L IY K IY Y AA T"
+              time="71.44"
+              dur="0.59"
+            >likiyat</w> <w
+              id="t0b0d0p0s13w6"
+              ARPABET="V P OW K AA T"
+              time="72.83"
+              dur="0.82"
+            >vpokat</w> <w
+              id="t0b0d0p0s13w7"
+              ARPABET="OW M EY S"
+              time="73.65"
+              dur="0.97"
+            >omes</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s13"
+            sentence-id="t0b0d0p0s13"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >There are many prisoners here, where I live also.</s>
+                    <s id="t0b0d0p0s14"><w
+              id="t0b0d0p0s14w0"
+              ARPABET="M OW M EY T"
+              time="75.46"
+              dur="0.64"
+            >Momet</w> <w
+              id="t0b0d0p0s14w1"
+              ARPABET="N EY T T V"
+              time="76.1"
+              dur="0.53"
+            >nettv</w> <w
+              id="t0b0d0p0s14w2"
+              ARPABET="OW M V L K V N"
+              time="76.63"
+              dur="0.66"
+            >omvlkvn</w> <w
+              id="t0b0d0p0s14w3"
+              ARPABET="OW P UW N V K V"
+              time="77.29"
+              dur="0.47"
+            >opunvkv</w> <w
+              id="t0b0d0p0s14w4"
+              ARPABET="HH OW L W AA HH OW K AA T"
+              time="77.76"
+              dur="2.08"
+            >holwahokat</w> <w
+              id="t0b0d0p0s14w5"
+              ARPABET="OW P UW N AA HH OW Y EY T"
+              time="79.84"
+              dur="1.18"
+            >opunahoyet</w> <w
+              id="t0b0d0p0s14w6"
+              ARPABET="OW M EY N HH"
+              time="81.02"
+              dur="0.55"
+            >omen,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s14"
+            sentence-id="t0b0d0p0s14"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >All of every day they speak very foul language and</s>
+                    <s id="t0b0d0p0s15"><w
+              id="t0b0d0p0s15w0"
+              ARPABET="EY M"
+              time="82.41"
+              dur="0.27"
+            >em</w> <w
+              id="t0b0d0p0s15w1"
+              ARPABET="V S EY HH IY T"
+              time="82.78"
+              dur="0.93"
+            >vsehit</w> <w
+              id="t0b0d0p0s15w2"
+              ARPABET="OW M V Y IY S"
+              time="83.71"
+              dur="0.96"
+            >omvyis</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s15"
+            sentence-id="t0b0d0p0s15"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >though I reprimand them,</s>
+                    <s id="t0b0d0p0s16"><w
+              id="t0b0d0p0s16w0"
+              ARPABET="EY S T OW F V N"
+              time="85.25"
+              dur="0.91"
+            >estofvn</w> <w
+              id="t0b0d0p0s16w1"
+              ARPABET="W IY K V K EY K OW"
+              time="86.16"
+              dur="0.83"
+            >wikvkeko</w> <w
+              id="t0b0d0p0s16w2"
+              ARPABET="T AA Y UW S EY T"
+              time="86.99"
+              dur="0.89"
+            >tayuset</w> <w
+              id="t0b0d0p0s16w3"
+              ARPABET="OW M EY N HH"
+              time="87.88"
+              dur="0.51"
+            >omen,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s16"
+            sentence-id="t0b0d0p0s16"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >they will not quit</s>
+                    <s id="t0b0d0p0s17"><w
+              id="t0b0d0p0s17w0"
+              ARPABET="M V T"
+              time="89.17"
+              dur="0.17"
+            >mvt</w> <w
+              id="t0b0d0p0s17w1"
+              ARPABET="V M"
+              time="89.94"
+              dur="0.11"
+            >vm</w> <w
+              id="t0b0d0p0s17w2"
+              ARPABET="V K EY D D IY CH K V"
+              time="90.05"
+              dur="0.85"
+            >vkerrickv</w> <w
+              id="t0b0d0p0s17w3"
+              ARPABET="T AA Y EY N"
+              time="90.9"
+              dur="0.73"
+            >tayen</w> <w
+              id="t0b0d0p0s17w4"
+              ARPABET="V M"
+              time="91.8"
+              dur="0.1"
+            >vm</w> <w
+              id="t0b0d0p0s17w5"
+              ARPABET="V HH OW P V N EY T"
+              time="91.9"
+              dur="0.77"
+            >vhopvnēt</w> <w
+              id="t0b0d0p0s17w6"
+              ARPABET="OW M EY S"
+              time="92.67"
+              dur="0.47"
+            >omes</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s17"
+            sentence-id="t0b0d0p0s17"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >and that is very damaging to my mind.</s>
+                    <s id="t0b0d0p0s18"><w
+              id="t0b0d0p0s18w0"
+              ARPABET="M OW M IY S"
+              time="94.36"
+              dur="0.76"
+            >Momis</w> <w
+              id="t0b0d0p0s18w1"
+              ARPABET="EY S T OW HH M V K OW T"
+              time="96.01"
+              dur="1.1"
+            >estohmvkot</w> <w
+              id="t0b0d0p0s18w2"
+              ARPABET="OW K HH"
+              time="97.11"
+              dur="0.35"
+            >ok,</w> <w
+              id="t0b0d0p0s18w3"
+              ARPABET="M V N"
+              time="98.09"
+              dur="0.21"
+            >mvn</w> <w
+              id="t0b0d0p0s18w4"
+              ARPABET="V P AA K IY T"
+              time="98.52"
+              dur="0.93"
+            >vpakit</w> <w
+              id="t0b0d0p0s18w5"
+              ARPABET="L IY K EY T"
+              time="99.45"
+              dur="0.64"
+            >liket</w> <w
+              id="t0b0d0p0s18w6"
+              ARPABET="OW M IY S"
+              time="100.09"
+              dur="0.81"
+            >omis</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s18"
+            sentence-id="t0b0d0p0s18"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >But I can do nothing, so I just exist among them.</s>
+                    <s id="t0b0d0p0s19"><w
+              id="t0b0d0p0s19w0"
+              ARPABET="EY T IY M V T"
+              time="102.31"
+              dur="0.36"
+            >Etimvt</w> <w
+              id="t0b0d0p0s19w1"
+              ARPABET="OW N"
+              time="102.67"
+              dur="0.52"
+            >on</w> <w
+              id="t0b0d0p0s19w2"
+              ARPABET="OW M AA T HH"
+              time="103.19"
+              dur="0.67"
+            >omat,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s19"
+            sentence-id="t0b0d0p0s19"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Among other things,</s>
+                    <s id="t0b0d0p0s20"><w
+              id="t0b0d0p0s20w0"
+              ARPABET="EY S T EY"
+              time="104.3"
+              dur="0.74"
+            >este</w> <w
+              id="t0b0d0p0s20w1"
+              ARPABET="V T V D K V D AA N EY N"
+              time="105.26"
+              dur="1.02"
+            >vtvrkvranen</w> <w
+              id="t0b0d0p0s20w2"
+              ARPABET="K IY HH OW CH EY N"
+              time="106.28"
+              dur="0.92"
+            >kihocen</w> <w
+              id="t0b0d0p0s20w3"
+              ARPABET="OW M AA T HH"
+              time="107.2"
+              dur="0.6"
+            >omat,</w> <w
+              id="t0b0d0p0s20w4"
+              ARPABET="V P V L W V N"
+              time="108.85"
+              dur="0.53"
+            >vpvlwvn</w> <w
+              id="t0b0d0p0s20w5"
+              ARPABET="CH UW K OW"
+              time="109.47"
+              dur="0.29"
+            >cuko</w>-<w
+              id="t0b0d0p0s20w6"
+              ARPABET="Y EY K CH V"
+              time="109.76"
+              dur="0.43"
+            >yēkcv</w> <w
+              id="t0b0d0p0s20w7"
+              ARPABET="EY T IY M V N"
+              time="110.19"
+              dur="1.11"
+            >etimvn</w> <w
+              id="t0b0d0p0s20w8"
+              ARPABET="V T EY HH OW HH EY N HH"
+              time="112.09"
+              dur="0.88"
+            >vtēhohen,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s20"
+            sentence-id="t0b0d0p0s20"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >a person sentenced to hang is usually kept in another cell, apart from the other inmates</s>
+                    <s id="t0b0d0p0s21"><w
+              id="t0b0d0p0s21w0"
+              ARPABET="M V"
+              time="112.97"
+              dur="0.12"
+            >mv</w> <w
+              id="t0b0d0p0s21w1"
+              ARPABET="V T V D K V D AA N AA T"
+              time="113.48"
+              dur="1.57"
+            >vtvrkvranat</w>-<w
+              id="t0b0d0p0s21w2"
+              ARPABET="T V L K UW S EY T"
+              time="115.37"
+              dur="0.63"
+            >tvlkuset</w> <w
+              id="t0b0d0p0s21w3"
+              ARPABET="CH UW K OW"
+              time="116.74"
+              dur="0.43"
+            >cuko</w>-<w
+              id="t0b0d0p0s21w4"
+              ARPABET="Y EY K CH V"
+              time="117.17"
+              dur="0.83"
+            >yekcv</w> <w
+              id="t0b0d0p0s21w5"
+              ARPABET="M V D AA HH K V N"
+              time="118"
+              dur="0.78"
+            >mvrahkvn</w> <w
+              id="t0b0d0p0s21w6"
+              ARPABET="V P OW Y EY T"
+              time="119.1"
+              dur="0.77"
+            >vpoyet</w> <w
+              id="t0b0d0p0s21w7"
+              ARPABET="OW M EY HH OW Y EY T V N K EY T"
+              time="119.87"
+              dur="1.66"
+            >omēhoyētvnket</w> <w
+              id="t0b0d0p0s21w8"
+              ARPABET="OW M IY S"
+              time="121.53"
+              dur="1.01"
+            >omis</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s21"
+            sentence-id="t0b0d0p0s21"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >and only those who are to hang are housed together</s>
+                    <s id="t0b0d0p0s22"><w
+              id="t0b0d0p0s22w0"
+              ARPABET="EY S T OW M EY T"
+              time="122.96"
+              dur="0.81"
+            >estomēt</w> <w
+              id="t0b0d0p0s22w1"
+              ARPABET="OW N"
+              time="123.77"
+              dur="0.17"
+            >on</w> <w
+              id="t0b0d0p0s22w2"
+              ARPABET="OW M AA T"
+              time="123.94"
+              dur="0.47"
+            >omat</w> <w
+              id="t0b0d0p0s22w3"
+              ARPABET="K EY D D V K OW N"
+              time="124.41"
+              dur="0.89"
+            >kerrvkon</w> <w
+              id="t0b0d0p0s22w4"
+              ARPABET="L IY K IY Y AA T"
+              time="126.18"
+              dur="0.62"
+            >likiyat</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s22"
+            sentence-id="t0b0d0p0s22"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >but for reasons I don't understand,</s>
+                    <s id="t0b0d0p0s23"><w
+              id="t0b0d0p0s23w0"
+              ARPABET="EY T AA N"
+              time="127.22"
+              dur="0.67"
+            >etan</w> <w
+              id="t0b0d0p0s23w1"
+              ARPABET="V P OW Y EY P EY T"
+              time="128.13"
+              dur="0.91"
+            >vpoyepet</w> <w
+              id="t0b0d0p0s23w2"
+              ARPABET="OW M HH OW Y EY N HH"
+              time="129.04"
+              dur="0.77"
+            >omhoyen,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s23"
+            sentence-id="t0b0d0p0s23"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >we are all being kept in the same place</s>
+                    <s id="t0b0d0p0s24"><w
+              id="t0b0d0p0s24w0"
+              ARPABET="T AA Y EY N"
+              time="130.29"
+              dur="0.62"
+            >tayen</w> <w
+              id="t0b0d0p0s24w1"
+              ARPABET="V M"
+              time="130.91"
+              dur="0.47"
+            >vm</w> <w
+              id="t0b0d0p0s24w2"
+              ARPABET="V K EY D D IY CH K V"
+              time="131.38"
+              dur="0.88"
+            >vkerrickv</w> <w
+              id="t0b0d0p0s24w3"
+              ARPABET="V N"
+              time="132.91"
+              dur="0.14"
+            >vn</w> <w
+              id="t0b0d0p0s24w4"
+              ARPABET="Y V M AA K K UW S EY N"
+              time="133.05"
+              dur="0.99"
+            >yvmakkusen</w> <w
+              id="t0b0d0p0s24w5"
+              ARPABET="L IY K IY T"
+              time="134.18"
+              dur="0.6"
+            >likit</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s24"
+            sentence-id="t0b0d0p0s24"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >and that is disturbing my mind</s>
+                    <s id="t0b0d0p0s25"><w
+              id="t0b0d0p0s25w0"
+              ARPABET="OW P UW N V K V"
+              time="134.78"
+              dur="0.77"
+            >opunvkv</w> <w
+              id="t0b0d0p0s25w1"
+              ARPABET="CH EY M"
+              time="135.55"
+              dur="0.21"
+            >cem</w> <w
+              id="t0b0d0p0s25w2"
+              ARPABET="V T OW T IY T"
+              time="135.85"
+              dur="0.58"
+            >vtotit</w> <w
+              id="t0b0d0p0s25w3"
+              ARPABET="OW M IY S"
+              time="136.43"
+              dur="0.45"
+            >omis</w> <w
+              id="t0b0d0p0s25w4"
+              ARPABET="CH EY"
+              time="136.88"
+              dur="0.48"
+            >cē</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s25"
+            sentence-id="t0b0d0p0s25"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >so I am writing to let you know.</s>
+                    <s id="t0b0d0p0s26"><w
+              id="t0b0d0p0s26w0"
+              ARPABET="M OW M EY N"
+              time="138.99"
+              dur="0.53"
+            >Momen</w> <w
+              id="t0b0d0p0s26w1"
+              ARPABET="CH OW K V"
+              time="139.87"
+              dur="0.36"
+            >cokv</w>-<w
+              id="t0b0d0p0s26w2"
+              ARPABET="S V K OW P V N K V"
+              time="140.23"
+              dur="1"
+            >svkopvnkv</w> <w
+              id="t0b0d0p0s26w3"
+              ARPABET="T IY S"
+              time="141.23"
+              dur="0.44"
+            >tis</w> <w
+              id="t0b0d0p0s26w4"
+              ARPABET="V F EY K HH OW N N EY K OW"
+              time="142.21"
+              dur="0.87"
+            >vfekhonneko</w>-<w
+              id="t0b0d0p0s26w5"
+              ARPABET="T AA Y EY N"
+              time="143.08"
+              dur="0.55"
+            >tayen</w> <w
+              id="t0b0d0p0s26w6"
+              ARPABET="M V"
+              time="144.38"
+              dur="0.07"
+            >mv</w> <w
+              id="t0b0d0p0s26w7"
+              ARPABET="T AA W V T"
+              time="144.45"
+              dur="0.54"
+            >tawvt</w> <w
+              id="t0b0d0p0s26w8"
+              ARPABET="HH OW L W V K EY N"
+              time="144.99"
+              dur="1.11"
+            >holwvkēn</w> <w
+              id="t0b0d0p0s26w9"
+              ARPABET="L IY K IY S"
+              time="146.1"
+              dur="0.54"
+            >likis</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s26"
+            sentence-id="t0b0d0p0s26"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >They also play card games continuously and it is so evil to me.</s>
+                    <s id="t0b0d0p0s27"><w
+              id="t0b0d0p0s27w0"
+              ARPABET="M OW M IY S"
+              time="147.91"
+              dur="0.82"
+            >Momis</w> <w
+              id="t0b0d0p0s27w1"
+              ARPABET="EY S T IY M V N"
+              time="149.93"
+              dur="1"
+            >estimvn</w> <w
+              id="t0b0d0p0s27w2"
+              ARPABET="OW P UW N V K V"
+              time="151.02"
+              dur="0.86"
+            >opunvkv</w> <w
+              id="t0b0d0p0s27w3"
+              ARPABET="HH OW L W V K EY N"
+              time="151.88"
+              dur="1.09"
+            >holwvkēn</w> <w
+              id="t0b0d0p0s27w4"
+              ARPABET="K IY CH V K OW T"
+              time="152.97"
+              dur="0.58"
+            >kicvkot</w> <w
+              id="t0b0d0p0s27w5"
+              ARPABET="L IY K EY P IY T"
+              time="153.55"
+              dur="0.97"
+            >likēpit</w> <w
+              id="t0b0d0p0s27w6"
+              ARPABET="OW M IY K V"
+              time="154.52"
+              dur="0.7"
+            >omikv</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s27"
+            sentence-id="t0b0d0p0s27"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >But I do not get involved in vulgar exchanges with anyone</s>
+                    <s id="t0b0d0p0s28"><w
+              id="t0b0d0p0s28w0"
+              ARPABET="EY M EY K UW S V P K V"
+              time="155.92"
+              dur="1.18"
+            >emekusvpkv</w> <w
+              id="t0b0d0p0s28w1"
+              ARPABET="CH V F EY K EY N"
+              time="157.1"
+              dur="0.93"
+            >cvfēken</w> <w
+              id="t0b0d0p0s28w2"
+              ARPABET="V F AA S T V Y EY T"
+              time="158.66"
+              dur="1.08"
+            >vfastvyēt</w> <w
+              id="t0b0d0p0s28w3"
+              ARPABET="OW M EY S"
+              time="159.74"
+              dur="0.46"
+            >omes</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s28"
+            sentence-id="t0b0d0p0s28"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >and I pray always in my heart.</s>
+                    <s id="t0b0d0p0s29"><w
+              id="t0b0d0p0s29w0"
+              ARPABET="M OW M EY N"
+              time="161.47"
+              dur="0.51"
+            >Momen</w> <w
+              id="t0b0d0p0s29w1"
+              ARPABET="HH V T V M"
+              time="161.98"
+              dur="0.31"
+            >hvtvm</w> <w
+              id="t0b0d0p0s29w2"
+              ARPABET="V N"
+              time="162.52"
+              dur="0.18"
+            >vn</w> <w
+              id="t0b0d0p0s29w3"
+              ARPABET="T V L K UW S EY T"
+              time="163.4"
+              dur="0.54"
+            >tvlkuset</w> <w
+              id="t0b0d0p0s29w4"
+              ARPABET="EY M"
+              time="164.34"
+              dur="0.11"
+            >em</w> <w
+              id="t0b0d0p0s29w5"
+              ARPABET="M EY K UW S V P K V"
+              time="164.45"
+              dur="1.13"
+            >mekusvpkv</w> <w
+              id="t0b0d0p0s29w6"
+              ARPABET="V F AA S T EY T"
+              time="165.58"
+              dur="0.88"
+            >vfastet</w> <w
+              id="t0b0d0p0s29w7"
+              ARPABET="OW M V Y EY"
+              time="166.46"
+              dur="0.82"
+            >omvyē</w> <w
+              id="t0b0d0p0s29w8"
+              ARPABET="T V N K EY N"
+              time="167.28"
+              dur="0.61"
+            >tvnken</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s29"
+            sentence-id="t0b0d0p0s29"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >I was the only one here that was practicing Christianity</s>
+                    <s id="t0b0d0p0s30"><w
+              id="t0b0d0p0s30w0"
+              ARPABET="EY S T EY"
+              time="168.7"
+              dur="0.65"
+            >este</w>-<w
+              id="t0b0d0p0s30w1"
+              ARPABET="L V S T EY"
+              time="169.35"
+              dur="0.35"
+            >lvste</w> <w
+              id="t0b0d0p0s30w2"
+              ARPABET="HH V M K EY N"
+              time="169.7"
+              dur="0.76"
+            >hvmken</w> <w
+              id="t0b0d0p0s30w3"
+              ARPABET="P AA K S V N K EY"
+              time="171.36"
+              dur="0.95"
+            >paksvnkē</w> <w
+              id="t0b0d0p0s30w4"
+              ARPABET="AA K S UW M EY CH IY HH OW CH V N K S"
+              time="172.41"
+              dur="1.83"
+            >aksumecihocvnks</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s30"
+            sentence-id="t0b0d0p0s30"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >until yesterday when they baptized a black man.</s>
+                    <s id="t0b0d0p0s31"><w
+              id="t0b0d0p0s31w0"
+              ARPABET="CH UW K OW"
+              time="175.36"
+              dur="0.29"
+            >Cuko</w>-<w
+              id="t0b0d0p0s31w1"
+              ARPABET="Y EY K CH V"
+              time="175.65"
+              dur="0.48"
+            >yekcv</w> <w
+              id="t0b0d0p0s31w2"
+              ARPABET="OW F V N"
+              time="176.13"
+              dur="0.54"
+            >ofvn</w> <w
+              id="t0b0d0p0s31w3"
+              ARPABET="OW M HH OW Y V N K S"
+              time="176.67"
+              dur="1.03"
+            >omhoyvnks</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s31"
+            sentence-id="t0b0d0p0s31"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >They did this within the prison.</s>
+                    <s id="t0b0d0p0s32"><w
+              id="t0b0d0p0s32w0"
+              ARPABET="P EY D D OW"
+              time="178.3"
+              dur="0.41"
+            >Perro</w> <w
+              id="t0b0d0p0s32w1"
+              ARPABET="OW M EY N"
+              time="178.71"
+              dur="0.9"
+            >omēn</w> <w
+              id="t0b0d0p0s32w2"
+              ARPABET="UW EY W V"
+              time="179.7"
+              dur="0.44"
+            >uewv</w> <w
+              id="t0b0d0p0s32w3"
+              ARPABET="F AA CH K EY N"
+              time="180.14"
+              dur="0.76"
+            >facken</w> <w
+              id="t0b0d0p0s32w4"
+              ARPABET="V CH AA HH N EY T"
+              time="181.62"
+              dur="0.69"
+            >vcahnet</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s32"
+            sentence-id="t0b0d0p0s32"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >They filled a boat-like object with water</s>
+                    <s id="t0b0d0p0s33"><w
+              id="t0b0d0p0s33w0"
+              ARPABET="M V N"
+              time="182.31"
+              dur="0.33"
+            >mvn</w> <w
+              id="t0b0d0p0s33w1"
+              ARPABET="AA K S UW M EY CH IY CH EY T"
+              time="183.15"
+              dur="1.35"
+            >aksumecicet</w> <w
+              id="t0b0d0p0s33w2"
+              ARPABET="OW M HH OW Y V N K S"
+              time="184.5"
+              dur="0.89"
+            >omhoyvnks</w> <w
+              id="t0b0d0p0s33w3"
+              ARPABET="CH EY"
+              time="185.39"
+              dur="0.29"
+            >cē</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s33"
+            sentence-id="t0b0d0p0s33"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >and baptized him in that.</s>
+                    <s id="t0b0d0p0s34"><w
+              id="t0b0d0p0s34w0"
+              ARPABET="OW HH HH V T V L AA K AA T"
+              time="189.33"
+              dur="1.32"
+            >Ohhvtvlakat</w> <w
+              id="t0b0d0p0s34w1"
+              ARPABET="M V"
+              time="190.75"
+              dur="0.13"
+            >mv</w> <w
+              id="t0b0d0p0s34w2"
+              ARPABET="EY S T EY"
+              time="191.19"
+              dur="0.64"
+            >este</w> <w
+              id="t0b0d0p0s34w3"
+              ARPABET="AA K S UW M EY CH IY HH OW CH V N K S"
+              time="191.98"
+              dur="1.73"
+            >aksumecihocvnks</w> <w
+              id="t0b0d0p0s34w4"
+              ARPABET="M AA K IY Y AA T HH"
+              time="193.71"
+              dur="0.82"
+            >makiyat,</w> <w
+              id="t0b0d0p0s34w5"
+              ARPABET="EY S T EY"
+              time="195.17"
+              dur="0.74"
+            >este</w>-<w
+              id="t0b0d0p0s34w6"
+              ARPABET="EY L EY CH V T"
+              time="195.91"
+              dur="0.58"
+            >elēcvt</w> <w
+              id="t0b0d0p0s34w7"
+              ARPABET="OW M EY N"
+              time="196.49"
+              dur="0.54"
+            >omen</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s34"
+            sentence-id="t0b0d0p0s34"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Furthermore, this man who got baptized is a convicted murderer</s>
+                    <s id="t0b0d0p0s35"><w
+              id="t0b0d0p0s35w0"
+              ARPABET="V T V D K V D AA N EY"
+              time="197.85"
+              dur="1.2"
+            >vtvrkvranē</w> <w
+              id="t0b0d0p0s35w1"
+              ARPABET="EY T AA T"
+              time="199.05"
+              dur="0.54"
+            >ētat</w> <w
+              id="t0b0d0p0s35w2"
+              ARPABET="OW M EY N HH"
+              time="199.59"
+              dur="0.44"
+            >omen,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s35"
+            sentence-id="t0b0d0p0s35"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >and is to hang also</s>
+                    <s id="t0b0d0p0s36"><w
+              id="t0b0d0p0s36w0"
+              ARPABET="M EY K UW S V P K V"
+              time="200.72"
+              dur="0.93"
+            >mekusvpkv</w> <w
+              id="t0b0d0p0s36w1"
+              ARPABET="OW HH V P AA Y EY T"
+              time="202.11"
+              dur="1.31"
+            >ohvpayet</w> <w
+              id="t0b0d0p0s36w2"
+              ARPABET="OW M HH OW Y V N K S"
+              time="203.42"
+              dur="1.11"
+            >omhoyvnks</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s36"
+            sentence-id="t0b0d0p0s36"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >but is now a church member.</s>
+                    <s id="t0b0d0p0s37"><w
+              id="t0b0d0p0s37w0"
+              ARPABET="V N EY"
+              time="205.89"
+              dur="0.47"
+            >Vne</w> <w
+              id="t0b0d0p0s37w1"
+              ARPABET="V CH"
+              time="206.52"
+              dur="0.1"
+            >vc</w> <w
+              id="t0b0d0p0s37w2"
+              ARPABET="V T V D HH OW Y V D AA N EY"
+              time="206.62"
+              dur="1.32"
+            >vtvrhoyvranē</w> <w
+              id="t0b0d0p0s37w3"
+              ARPABET="OW CH AA T"
+              time="207.94"
+              dur="0.68"
+            >ocat</w> <w
+              id="t0b0d0p0s37w4"
+              ARPABET="M AA HH UW S AA N"
+              time="208.62"
+              dur="0.82"
+            >mahusan</w> <w
+              id="t0b0d0p0s37w5"
+              ARPABET="EY M"
+              time="210.35"
+              dur="0.27"
+            >em</w> <w
+              id="t0b0d0p0s37w6"
+              ARPABET="OW N V Y V Y EY T"
+              time="210.62"
+              dur="0.97"
+            >onvyvyēt</w> <w
+              id="t0b0d0p0s37w7"
+              ARPABET="OW S"
+              time="211.59"
+              dur="0.46"
+            >os</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s37"
+            sentence-id="t0b0d0p0s37"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          > I have told him the exact day and time I am to hang.</s>
+                    <s id="t0b0d0p0s38"><w
+              id="t0b0d0p0s38w0"
+              ARPABET="M OW M EY T"
+              time="213.02"
+              dur="0.87"
+            >Momet</w> <w
+              id="t0b0d0p0s38w1"
+              ARPABET="CH V D K EY UW"
+              time="213.89"
+              dur="0.78"
+            >cvrkeu</w> <w
+              id="t0b0d0p0s38w2"
+              ARPABET="M AA T V P OW M EY N"
+              time="215.16"
+              dur="1.04"
+            >matvpomēn</w> <w
+              id="t0b0d0p0s38w3"
+              ARPABET="EY M"
+              time="216.69"
+              dur="0.22"
+            >em</w> <w
+              id="t0b0d0p0s38w4"
+              ARPABET="P UW N AA Y AA T S K EY T"
+              time="216.91"
+              dur="1.23"
+            >punayatskēt</w> <w
+              id="t0b0d0p0s38w5"
+              ARPABET="OW M V D EY S"
+              time="218.14"
+              dur="0.62"
+            >omvrēs</w> <w
+              id="t0b0d0p0s38w6"
+              ARPABET="CH EY"
+              time="218.76"
+              dur="0.41"
+            >cē</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s38"
+            sentence-id="t0b0d0p0s38"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Now please give my father this information.</s>
+                    <s id="t0b0d0p0s39"><w
+              id="t0b0d0p0s39w0"
+              ARPABET="OW HH HH V T V L AA K AA T"
+              time="220.51"
+              dur="1.26"
+            >Ohhvtvlakat</w> <w
+              id="t0b0d0p0s39w1"
+              ARPABET="CH AA W V N W V"
+              time="221.89"
+              dur="1.15"
+            >cawvnwv</w> <w
+              id="t0b0d0p0s39w2"
+              ARPABET="EY N"
+              time="223.04"
+              dur="0.21"
+            >en</w> <w
+              id="t0b0d0p0s39w3"
+              ARPABET="T V L K UW S IY S"
+              time="223.25"
+              dur="0.94"
+            >tvlkusis</w> <w
+              id="t0b0d0p0s39w4"
+              ARPABET="V HH OW S K V D EY"
+              time="224.68"
+              dur="1.08"
+            >vhoskvrē</w> <w
+              id="t0b0d0p0s39w5"
+              ARPABET="OW CH EY T"
+              time="226"
+              dur="0.52"
+            >ocet</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s39"
+            sentence-id="t0b0d0p0s39"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Further, there is a possibility that my little sister might end up all alone,</s>
+                    <s id="t0b0d0p0s40"><w
+              id="t0b0d0p0s40w0"
+              ARPABET="M OW M EY T"
+              time="227.31"
+              dur="0.89"
+            >momet</w> <w
+              id="t0b0d0p0s40w1"
+              ARPABET="OW M EY N"
+              time="228.2"
+              dur="0.52"
+            >omen</w> <w
+              id="t0b0d0p0s40w2"
+              ARPABET="OW M AA T"
+              time="228.72"
+              dur="0.55"
+            >omat</w> <w
+              id="t0b0d0p0s40w3"
+              ARPABET="CH EY M EY T"
+              time="229.95"
+              dur="0.67"
+            >cēmet</w> <w
+              id="t0b0d0p0s40w4"
+              ARPABET="CH EY CH CH UW S W V"
+              time="231.35"
+              dur="0.66"
+            >ceccuswv</w> <w
+              id="t0b0d0p0s40w5"
+              ARPABET="OW M EY CH EY T"
+              time="232.35"
+              dur="0.91"
+            >omēcet</w> <w
+              id="t0b0d0p0s40w6"
+              ARPABET="EY M"
+              time="233.72"
+              dur="0.23"
+            >em</w> <w
+              id="t0b0d0p0s40w7"
+              ARPABET="P UW N AA Y EY T S K EY N"
+              time="233.95"
+              dur="1.19"
+            >punayetsken</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s40"
+            sentence-id="t0b0d0p0s40"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >so I want you to talk with her as you would your own daughter,</s>
+                    <s id="t0b0d0p0s41"><w
+              id="t0b0d0p0s41w0"
+              ARPABET="Y V M V"
+              time="235.56"
+              dur="0.26"
+            >yvmv</w> <w
+              id="t0b0d0p0s41w1"
+              ARPABET="EY K V N V"
+              time="235.82"
+              dur="0.54"
+            >ēkvnv</w> <w
+              id="t0b0d0p0s41w2"
+              ARPABET="EY N"
+              time="236.36"
+              dur="0.57"
+            >en</w> <w
+              id="t0b0d0p0s41w3"
+              ARPABET="HH OW L W V K EY T V"
+              time="236.93"
+              dur="0.7"
+            >holwvketv</w> <w
+              id="t0b0d0p0s41w4"
+              ARPABET="EY S P OW Y AA D EY S"
+              time="237.63"
+              dur="1.58"
+            >espoyarēs</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s41"
+            sentence-id="t0b0d0p0s41"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >about me and console her.</s>
+                    <s id="t0b0d0p0s42"><w
+              id="t0b0d0p0s42w0"
+              ARPABET="M OW M OW F"
+              time="242.29"
+              dur="0.72"
+            >Momof</w> <w
+              id="t0b0d0p0s42w1"
+              ARPABET="HH V L W EY"
+              time="243.01"
+              dur="0.47"
+            >hvlwe</w>-<w
+              id="t0b0d0p0s42w2"
+              ARPABET="T V L OW F V N"
+              time="243.48"
+              dur="0.77"
+            >tvlofvn</w> <w
+              id="t0b0d0p0s42w3"
+              ARPABET="EY T EY HH EY CH EY Y EY"
+              time="244.68"
+              dur="1.17"
+            >etehēceyē</w> <w
+              id="t0b0d0p0s42w4"
+              ARPABET="OW CH V D AA N IY S"
+              time="245.85"
+              dur="1.01"
+            >ocvranis</w> <w
+              id="t0b0d0p0s42w5"
+              ARPABET="OW M EY S"
+              time="246.86"
+              dur="0.56"
+            >omēs</w> <w
+              id="t0b0d0p0s42w6"
+              ARPABET="K OW M IY T"
+              time="247.42"
+              dur="0.71"
+            >komit</w> <w
+              id="t0b0d0p0s42w7"
+              ARPABET="EY N"
+              time="248.13"
+              dur="0.15"
+            >en</w> <w
+              id="t0b0d0p0s42w8"
+              ARPABET="HH OW N D K V"
+              time="248.28"
+              dur="0.64"
+            >honrkv</w> <w
+              id="t0b0d0p0s42w9"
+              ARPABET="OW CH IY Y EY T"
+              time="248.92"
+              dur="0.86"
+            >ociyēt</w> <w
+              id="t0b0d0p0s42w10"
+              ARPABET="OW S"
+              time="249.78"
+              dur="0.26"
+            >os</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s42"
+            sentence-id="t0b0d0p0s42"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >It is also my belief that we shall all meet one day in heaven.</s>
+                    <s id="t0b0d0p0s43"><w
+              id="t0b0d0p0s43w0"
+              ARPABET="M OW M EY N"
+              time="251.14"
+              dur="0.76"
+            >Momen</w> <w
+              id="t0b0d0p0s43w1"
+              ARPABET="N AA K EY"
+              time="251.9"
+              dur="0.38"
+            >nake</w> <w
+              id="t0b0d0p0s43w2"
+              ARPABET="HH V M K EY N"
+              time="252.28"
+              dur="0.79"
+            >hvmken</w> <w
+              id="t0b0d0p0s43w3"
+              ARPABET="T AA Y EY N"
+              time="253.31"
+              dur="0.77"
+            >tayen</w> <w
+              id="t0b0d0p0s43w4"
+              ARPABET="V M"
+              time="254.76"
+              dur="0.09"
+            >vm</w> <w
+              id="t0b0d0p0s43w5"
+              ARPABET="EY T EY HH OW S K EY T"
+              time="254.85"
+              dur="1.08"
+            >etehoskēt</w> <w
+              id="t0b0d0p0s43w6"
+              ARPABET="CH EY M"
+              time="255.93"
+              dur="0.27"
+            >cem</w> <w
+              id="t0b0d0p0s43w7"
+              ARPABET="OW N AA Y IY Y V T"
+              time="256.2"
+              dur="0.94"
+            >onayiyvt</w> <w
+              id="t0b0d0p0s43w8"
+              ARPABET="EY T"
+              time="257.14"
+              dur="0.55"
+            >ēt</w> <w
+              id="t0b0d0p0s43w9"
+              ARPABET="OW M AA T EY T"
+              time="257.69"
+              dur="0.63"
+            >omatet</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s43"
+            sentence-id="t0b0d0p0s43"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Now there is one thing that I told you in error,</s>
+                    <s id="t0b0d0p0s44"><w
+              id="t0b0d0p0s44w0"
+              ARPABET="HH V T V W OW L EY N"
+              time="258.97"
+              dur="0.97"
+            >hvtvwolēn</w> <w
+              id="t0b0d0p0s44w1"
+              ARPABET="K EY D D IY Y V N K S"
+              time="259.94"
+              dur="1.01"
+            >kerriyvnks</w> <w
+              id="t0b0d0p0s44w2"
+              ARPABET="CH EY"
+              time="260.95"
+              dur="0.36"
+            >cē</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s44"
+            sentence-id="t0b0d0p0s44"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >and only recently did I learn the truth.</s>
+                    <s id="t0b0d0p0s45"><w
+              id="t0b0d0p0s45w0"
+              ARPABET="L AA K S IY T"
+              time="262.39"
+              dur="0.85"
+            >Laksit</w> <w
+              id="t0b0d0p0s45w1"
+              ARPABET="OW M V K OW T"
+              time="263.46"
+              dur="0.65"
+            >omvkot</w> <w
+              id="t0b0d0p0s45w2"
+              ARPABET="OW M IY S HH"
+              time="264.11"
+              dur="1.23"
+            >omis,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s45"
+            sentence-id="t0b0d0p0s45"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >I did not lie to you,</s>
+                    <s id="t0b0d0p0s46"><w
+              id="t0b0d0p0s46w0"
+              ARPABET="EY"
+              time="265.55"
+              dur="0.38"
+            >ē</w> <w
+              id="t0b0d0p0s46w1"
+              ARPABET="V M"
+              time="265.93"
+              dur="0.26"
+            >vm</w> <w
+              id="t0b0d0p0s46w2"
+              ARPABET="EY T EY HH OW S K EY T"
+              time="266.19"
+              dur="1.02"
+            >etehoskēt</w> <w
+              id="t0b0d0p0s46w3"
+              ARPABET="OW M AA T EY T"
+              time="267.21"
+              dur="0.74"
+            >omatēt</w> <w
+              id="t0b0d0p0s46w4"
+              ARPABET="OW M EY S"
+              time="267.95"
+              dur="0.62"
+            >omes</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s46"
+            sentence-id="t0b0d0p0s46"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >I was confused.</s>
+                    <s id="t0b0d0p0s47"><w
+              id="t0b0d0p0s47w0"
+              ARPABET="HH EY Y V"
+              time="269.87"
+              dur="0.35"
+            >Heyv</w> <w
+              id="t0b0d0p0s47w1"
+              ARPABET="T IY S"
+              time="270.22"
+              dur="0.62"
+            >tis</w> <w
+              id="t0b0d0p0s47w2"
+              ARPABET="EY M EY K UW S V P K V N"
+              time="271.45"
+              dur="1.06"
+            >emekusvpkvn</w> <w
+              id="t0b0d0p0s47w3"
+              ARPABET="OW HH"
+              time="272.8"
+              dur="0.32"
+            >oh</w> <w
+              id="t0b0d0p0s47w4"
+              ARPABET="V P V K EY T V N"
+              time="273.17"
+              dur="0.78"
+            >vpvketvn</w> <w
+              id="t0b0d0p0s47w5"
+              ARPABET="CH IY Y AA CH EY T"
+              time="274.32"
+              dur="0.69"
+            >ciyacet</w> <w
+              id="t0b0d0p0s47w6"
+              ARPABET="OW M AA N"
+              time="275.01"
+              dur="0.55"
+            >oman</w> <w
+              id="t0b0d0p0s47w7"
+              ARPABET="OW N K V HH"
+              time="275.56"
+              dur="0.55"
+            >onkv,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s47"
+            sentence-id="t0b0d0p0s47"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >I said that I wished to become a Christian and join a church,
+
+</s>
+                    <s id="t0b0d0p0s48"><w
+              id="t0b0d0p0s48w0"
+              ARPABET="V N"
+              time="276.92"
+              dur="0.27"
+            >vn</w> <w
+              id="t0b0d0p0s48w1"
+              ARPABET="Y V T EY K EY T S K EY N HH"
+              time="277.19"
+              dur="1.27"
+            >yvtēketsken,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s48"
+            sentence-id="t0b0d0p0s48"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >so if you will interpret for me
+
+</s>
+                    <s id="t0b0d0p0s49"><w
+              id="t0b0d0p0s49w0"
+              ARPABET="OW HH"
+              time="278.46"
+              dur="0.11"
+            >oh</w> <w
+              id="t0b0d0p0s49w1"
+              ARPABET="F EY S K V L K EY N"
+              time="278.57"
+              dur="1.04"
+            >fēskvlken</w> <w
+              id="t0b0d0p0s49w2"
+              ARPABET="OW HH"
+              time="279.61"
+              dur="0.3"
+            >oh</w> <w
+              id="t0b0d0p0s49w3"
+              ARPABET="V P V K V D AA N IY S"
+              time="279.96"
+              dur="0.9"
+            >vpvkvranis</w> <w
+              id="t0b0d0p0s49w4"
+              ARPABET="K IY CH IY N HH"
+              time="280.86"
+              dur="0.69"
+            >kicin,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s49"
+            sentence-id="t0b0d0p0s49"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >I want to join the Presbyterian church.
+
+</s>
+                    <s id="t0b0d0p0s50"><w
+              id="t0b0d0p0s50w0"
+              ARPABET="EY S T EY"
+              time="282.27"
+              dur="0.39"
+            >este</w> <w
+              id="t0b0d0p0s50w1"
+              ARPABET="K EY D D EY CH K EY S"
+              time="282.66"
+              dur="0.94"
+            >kērreckēs</w> <w
+              id="t0b0d0p0s50w2"
+              ARPABET="K OW M IY S HH"
+              time="283.6"
+              dur="0.93"
+            >komis,</w> <w
+              id="t0b0d0p0s50w3"
+              ARPABET="ZH OW"
+              time="284.53"
+              dur="0.15"
+            >Jo</w> <w
+              id="t0b0d0p0s50w4"
+              ARPABET="P OW S T OW AA K"
+              time="284.68"
+              dur="0.62"
+            >Postoak</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s50"
+            sentence-id="t0b0d0p0s50"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >I think you know this person, Joe Postoak.
+
+</s>
+                    <s id="t0b0d0p0s51"><w
+              id="t0b0d0p0s51w0"
+              ARPABET="M V T"
+              time="285.3"
+              dur="0.12"
+            >Mvt</w> <w
+              id="t0b0d0p0s51w1"
+              ARPABET="V N"
+              time="287.66"
+              dur="0.06"
+            >vn</w> <w
+              id="t0b0d0p0s51w2"
+              ARPABET="Y V T EY K EY N"
+              time="287.72"
+              dur="0.84"
+            >yvtēken</w> <w
+              id="t0b0d0p0s51w3"
+              ARPABET="UW EY W V"
+              time="288.61"
+              dur="0.57"
+            >uewv</w> <w
+              id="t0b0d0p0s51w4"
+              ARPABET="V CH"
+              time="289.52"
+              dur="0.14"
+            >vc</w> <w
+              id="t0b0d0p0s51w5"
+              ARPABET="OW HH K V L HH OW Y EY M V T IY S"
+              time="289.66"
+              dur="1.65"
+            >ohkvlhoyemvtis</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s51"
+            sentence-id="t0b0d0p0s51"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >He interpreted for me and I was sprinkled with water.</s>
+                    <s id="t0b0d0p0s52"><w
+              id="t0b0d0p0s52w0"
+              ARPABET="M OW M OW F"
+              time="292.59"
+              dur="0.76"
+            >Momof</w> <w
+              id="t0b0d0p0s52w1"
+              ARPABET="K EY"
+              time="293.35"
+              dur="0.26"
+            >Ke</w>-<w
+              id="t0b0d0p0s52w2"
+              ARPABET="HH V S EY"
+              time="293.61"
+              dur="0.58"
+            >hvse</w> <w
+              id="t0b0d0p0s52w3"
+              ARPABET="N EY T T V"
+              time="294.19"
+              dur="0.55"
+            >nettv</w> <w
+              id="t0b0d0p0s52w4"
+              ARPABET="T W EY L V EY"
+              time="294.74"
+              dur="0.71"
+            >twelve</w> <w
+              id="t0b0d0p0s52w5"
+              ARPABET="EY M"
+              time="295.45"
+              dur="0.23"
+            >em</w> <w
+              id="t0b0d0p0s52w6"
+              ARPABET="OW F V T"
+              time="295.68"
+              dur="0.54"
+            >ofvt</w> <w
+              id="t0b0d0p0s52w7"
+              ARPABET="OW M EY M V T IY S"
+              time="296.67"
+              dur="1.14"
+            >omemvtis</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s52"
+            sentence-id="t0b0d0p0s52"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >The date was the 12th day of May.</s>
+                    <s id="t0b0d0p0s53"><w
+              id="t0b0d0p0s53w0"
+              ARPABET="M OW M EY T"
+              time="299.58"
+              dur="0.8"
+            >Momet</w> <w
+              id="t0b0d0p0s53w1"
+              ARPABET="CH OW K V"
+              time="300.38"
+              dur="0.56"
+            >cokv</w> <w
+              id="t0b0d0p0s53w2"
+              ARPABET="CH EY M"
+              time="300.94"
+              dur="0.2"
+            >cem</w> <w
+              id="t0b0d0p0s53w3"
+              ARPABET="V T OW T IY Y AA T"
+              time="301.21"
+              dur="0.81"
+            >vtotiyat</w> <w
+              id="t0b0d0p0s53w4"
+              ARPABET="OW HH F EY S K V L K EY N"
+              time="302.33"
+              dur="1.21"
+            >Ohfēskvlken</w> <w
+              id="t0b0d0p0s53w5"
+              ARPABET="OW HH"
+              time="304"
+              dur="0.35"
+            >oh</w> <w
+              id="t0b0d0p0s53w6"
+              ARPABET="V P AA K IY S"
+              time="304.39"
+              dur="0.63"
+            >vpakis</w> <w
+              id="t0b0d0p0s53w7"
+              ARPABET="CH EY K IY CH IY T"
+              time="305.02"
+              dur="0.88"
+            >cekicit</w> <w
+              id="t0b0d0p0s53w8"
+              ARPABET="CH OW K V"
+              time="305.9"
+              dur="0.45"
+            >cokv</w> <w
+              id="t0b0d0p0s53w9"
+              ARPABET="S UW L K EY N"
+              time="306.35"
+              dur="0.63"
+            >sulkēn</w> <w
+              id="t0b0d0p0s53w10"
+              ARPABET="CH EY M"
+              time="309.13"
+              dur="0.55"
+            >cem</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s53"
+            sentence-id="t0b0d0p0s53"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >So I wrote you a long letter telling you I had joined the Presbyterian church.</s>
+                    <s id="t0b0d0p0s54"><w
+              id="t0b0d0p0s54w0"
+              ARPABET="M OW M EY N"
+              time="309.88"
+              dur="0.4"
+            >Momen</w> <w
+              id="t0b0d0p0s54w1"
+              ARPABET="HH V T OW S V N K EY N"
+              time="312.7"
+              dur="1.13"
+            >hvtosvnkēn</w> <w
+              id="t0b0d0p0s54w2"
+              ARPABET="EY M EY K UW S V P K V"
+              time="314.19"
+              dur="1.21"
+            >emekusvpkv</w> <w
+              id="t0b0d0p0s54w3"
+              ARPABET="EY S"
+              time="315.4"
+              dur="0.23"
+            >es</w> <w
+              id="t0b0d0p0s54w4"
+              ARPABET="EY M"
+              time="315.63"
+              dur="0.16"
+            >em</w> <w
+              id="t0b0d0p0s54w5"
+              ARPABET="V P EY Y EY T V"
+              time="315.9"
+              dur="0.84"
+            >vpeyetv</w> <w
+              id="t0b0d0p0s54w6"
+              ARPABET="EY S T OW M AA N"
+              time="317.01"
+              dur="0.98"
+            >estoman</w> <w
+              id="t0b0d0p0s54w7"
+              ARPABET="OW HH"
+              time="318.22"
+              dur="0.29"
+            >oh</w> <w
+              id="t0b0d0p0s54w8"
+              ARPABET="V P AA K EY T"
+              time="318.56"
+              dur="0.72"
+            >vpaket</w> <w
+              id="t0b0d0p0s54w9"
+              ARPABET="OW M IY Y V T"
+              time="319.28"
+              dur="0.62"
+            >omiyvt</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s54"
+            sentence-id="t0b0d0p0s54"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >I inquired of the preacher concerning the denomination</s>
+                    <s id="t0b0d0p0s55"><w
+              id="t0b0d0p0s55w0"
+              ARPABET="HH AA K S"
+              time="319.9"
+              dur="0.9"
+            >haks</w> <w
+              id="t0b0d0p0s55w1"
+              ARPABET="K IY CH IY T HH"
+              time="320.8"
+              dur="0.29"
+            >kicit,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s55"
+            sentence-id="t0b0d0p0s55"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >I might have joined</s>
+                    <s id="t0b0d0p0s56"><w
+              id="t0b0d0p0s56w0"
+              ARPABET="EY D K EY N V K V"
+              time="321.09"
+              dur="0.64"
+            >erkenvkv</w> <w
+              id="t0b0d0p0s56w1"
+              ARPABET="EY M"
+              time="323.32"
+              dur="0.32"
+            >em</w> <w
+              id="t0b0d0p0s56w2"
+              ARPABET="P OW HH IY N HH"
+              time="323.64"
+              dur="0.75"
+            >pohin,</w> <w
+              id="t0b0d0p0s56w3"
+              ARPABET="OW HH K AA L V L K EY"
+              time="325.45"
+              dur="1.15"
+            >Ohkalvlke</w> <w
+              id="t0b0d0p0s56w4"
+              ARPABET="EY S"
+              time="326.89"
+              dur="0.18"
+            >es</w> <w
+              id="t0b0d0p0s56w5"
+              ARPABET="EY M"
+              time="327.07"
+              dur="0.11"
+            >em</w> <w
+              id="t0b0d0p0s56w6"
+              ARPABET="V P EY Y EY T V N"
+              time="327.18"
+              dur="0.77"
+            >vpeyetvn</w> <w
+              id="t0b0d0p0s56w7"
+              ARPABET="OW HH"
+              time="328.49"
+              dur="0.15"
+            >oh</w> <w
+              id="t0b0d0p0s56w8"
+              ARPABET="V P AA K EY T"
+              time="328.64"
+              dur="0.72"
+            >vpaket</w> <w
+              id="t0b0d0p0s56w9"
+              ARPABET="OW M EY T S K EY M V T"
+              time="329.36"
+              dur="0.79"
+            >ometskemvt</w> <w
+              id="t0b0d0p0s56w10"
+              ARPABET="OW S HH"
+              time="330.15"
+              dur="0.76"
+            >os,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s56"
+            sentence-id="t0b0d0p0s56"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >and he informed me that it was the Methodist denomination I had become a member of,</s>
+                    <s id="t0b0d0p0s57"><w
+              id="t0b0d0p0s57w0"
+              ARPABET="CH V"
+              time="330.94"
+              dur="0.06"
+            >cv</w> <w
+              id="t0b0d0p0s57w1"
+              ARPABET="K IY CH EY N"
+              time="331"
+              dur="0.46"
+            >kicen</w> <w
+              id="t0b0d0p0s57w2"
+              ARPABET="K EY D D IY Y V N K S"
+              time="331.86"
+              dur="0.82"
+            >kerriyvnks</w> <w
+              id="t0b0d0p0s57w3"
+              ARPABET="CH EY"
+              time="332.68"
+              dur="0.39"
+            >cē</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s57"
+            sentence-id="t0b0d0p0s57"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >so now I know.</s>
+                    <s id="t0b0d0p0s58"><w
+              id="t0b0d0p0s58w0"
+              ARPABET="Y V T EY K V T"
+              time="335.48"
+              dur="0.91"
+            >Yvtekvt</w> <w
+              id="t0b0d0p0s58w1"
+              ARPABET="T AA Y EY N"
+              time="336.39"
+              dur="0.62"
+            >tayen</w> <w
+              id="t0b0d0p0s58w2"
+              ARPABET="EY M"
+              time="337.35"
+              dur="0.19"
+            >em</w> <w
+              id="t0b0d0p0s58w3"
+              ARPABET="EY T EY HH OW S K V T EY S"
+              time="337.54"
+              dur="1.35"
+            >etehoskvtēs</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s58"
+            sentence-id="t0b0d0p0s58"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >My interpreter made a grave error.</s>
+                    <s id="t0b0d0p0s59"><w
+              id="t0b0d0p0s59w0"
+              ARPABET="M V N"
+              time="340.52"
+              dur="0.23"
+            >Mvn</w> <w
+              id="t0b0d0p0s59w1"
+              ARPABET="T EY P AA K EY N"
+              time="342.72"
+              dur="0.5"
+            >tepakēn</w> <w
+              id="t0b0d0p0s59w2"
+              ARPABET="EY P UW T V D T IY CH V D AA N EY T"
+              time="343.22"
+              dur="1.49"
+            >eputvrticvranet</w> <w
+              id="t0b0d0p0s59w3"
+              ARPABET="OW M HH OW S"
+              time="344.71"
+              dur="1.45"
+            >omhos</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s59"
+            sentence-id="t0b0d0p0s59"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >So it is the two of us they are going to hang.</s>
+                    <s id="t0b0d0p0s60"><w
+              id="t0b0d0p0s60w0"
+              ARPABET="HH IY Y OW M AA T"
+              time="346.81"
+              dur="0.78"
+            >Hiyomat</w> <w
+              id="t0b0d0p0s60w1"
+              ARPABET="N EY T T V"
+              time="347.79"
+              dur="0.48"
+            >nettv</w> <w
+              id="t0b0d0p0s60w2"
+              ARPABET="P AA L EY N"
+              time="348.53"
+              dur="0.58"
+            >palen</w>-<w
+              id="t0b0d0p0s60w3"
+              ARPABET="CH AA HH K EY P OW HH K AA K UW S EY T"
+              time="349.21"
+              dur="1.61"
+            >cahkepohkakuset</w> <w
+              id="t0b0d0p0s60w4"
+              ARPABET="P UW M"
+              time="350.82"
+              dur="0.37"
+            >pum</w> <w
+              id="t0b0d0p0s60w5"
+              ARPABET="V HH OW S K EY N"
+              time="351.19"
+              dur="0.65"
+            >vhosken</w> <w
+              id="t0b0d0p0s60w6"
+              ARPABET="K AA K EY T"
+              time="351.84"
+              dur="0.54"
+            >kaket</w> <w
+              id="t0b0d0p0s60w7"
+              ARPABET="OW M EY N HH"
+              time="352.38"
+              dur="0.5"
+            >omēn,</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s60"
+            sentence-id="t0b0d0p0s60"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >And now there remains only fifteen days as we sit and wait.</s>
+                    <s id="t0b0d0p0s61"><w
+              id="t0b0d0p0s61w0"
+              ARPABET="OW P UW N V K V"
+              time="353.32"
+              dur="0.59"
+            >opunvkv</w> <w
+              id="t0b0d0p0s61w1"
+              ARPABET="EY Y AA S K UW S EY N"
+              time="353.91"
+              dur="1.36"
+            >eyaskusen</w> <w
+              id="t0b0d0p0s61w2"
+              ARPABET="CH EY M"
+              time="355.34"
+              dur="0.19"
+            >cem</w> <w
+              id="t0b0d0p0s61w3"
+              ARPABET="V T OW T IY T"
+              time="355.65"
+              dur="0.75"
+            >vtotit</w> <w
+              id="t0b0d0p0s61w4"
+              ARPABET="OW M IY S"
+              time="356.4"
+              dur="0.35"
+            >omis</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s61"
+            sentence-id="t0b0d0p0s61"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >I write this most humble letter to you.</s>
+                    <s id="t0b0d0p0s62"><w
+              id="t0b0d0p0s62w0"
+              ARPABET="M V"
+              time="356.75"
+              dur="0.15"
+            >Mv</w> <w
+              id="t0b0d0p0s62w1"
+              ARPABET="N EY T T V"
+              time="358.69"
+              dur="0.82"
+            >nettv</w> <w
+              id="t0b0d0p0s62w2"
+              ARPABET="CH EY M"
+              time="359.51"
+              dur="0.29"
+            >cem</w> <w
+              id="t0b0d0p0s62w3"
+              ARPABET="OW N IY Y V D AA N IY S"
+              time="359.8"
+              dur="1.12"
+            >oniyvranis</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s62"
+            sentence-id="t0b0d0p0s62"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Let me tell you the day.</s>
+                    <s id="t0b0d0p0s63"><w
+              id="t0b0d0p0s63w0"
+              ARPABET="D EY CH"
+              time="361.2"
+              dur="0.3"
+            >Dec</w>. <w
+              id="t0b0d0p0s63w1"
+              ARPABET="T W EY N T Y"
+              time="361.81"
+              dur="0.6"
+            >20</w> <w
+              id="t0b0d0p0s63w2"
+              ARPABET="OW M OW F"
+              time="362.41"
+              dur="0.98"
+            >omof</w> <w
+              id="t0b0d0p0s63w3"
+              ARPABET="F V L IY T EY"
+              time="363.99"
+              dur="0.44"
+            >Fvlite</w> <w
+              id="t0b0d0p0s63w4"
+              ARPABET="HH V T HH IY Y V T K EY"
+              time="364.82"
+              dur="1.04"
+            >hvthiyvtke</w> <w
+              id="t0b0d0p0s63w5"
+              ARPABET="HH V S EY"
+              time="365.86"
+              dur="0.61"
+            >hvse</w>-<w
+              id="t0b0d0p0s63w6"
+              ARPABET="V K EY D K V"
+              time="366.47"
+              dur="0.42"
+            >vkerkv</w> <w
+              id="t0b0d0p0s63w7"
+              ARPABET="N IY N EY"
+              time="366.89"
+              dur="0.24"
+            >9</w> <w
+              id="t0b0d0p0s63w8"
+              ARPABET="M AA HH UW S AA N"
+              time="367.13"
+              dur="1.23"
+            >mahusan</w> <w
+              id="t0b0d0p0s63w9"
+              ARPABET="P UW K IY HH OW CH EY T"
+              time="368.77"
+              dur="1.21"
+            >pukihocēt</w> <w
+              id="t0b0d0p0s63w10"
+              ARPABET="OW M EY N"
+              time="369.98"
+              dur="0.49"
+            >omen</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s63"
+            sentence-id="t0b0d0p0s63"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >They have informed us that it will be Dec. 20th at 9 o'clock on Friday morning,</s>
+                    <s id="t0b0d0p0s64"><w
+              id="t0b0d0p0s64w0"
+              ARPABET="K AA K EY T"
+              time="370.47"
+              dur="0.71"
+            >kaket</w> <w
+              id="t0b0d0p0s64w1"
+              ARPABET="OW M EY S"
+              time="371.18"
+              dur="0.59"
+            >omēs</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s64"
+            sentence-id="t0b0d0p0s64"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >so we wait.</s>
+                    <s id="t0b0d0p0s65"><w
+              id="t0b0d0p0s65w0"
+              ARPABET="M OW M IY S"
+              time="372.89"
+              dur="0.65"
+            >Momis</w> <w
+              id="t0b0d0p0s65w1"
+              ARPABET="CH V N AA"
+              time="373.54"
+              dur="0.57"
+            >cvna</w> <w
+              id="t0b0d0p0s65w2"
+              ARPABET="EY S T EY M EY D K EY P V D AA N EY T"
+              time="374.51"
+              dur="1.68"
+            >estemerkepvranet</w> <w
+              id="t0b0d0p0s65w3"
+              ARPABET="OW M EY S"
+              time="376.19"
+              dur="0.83"
+            >omes</w> <w
+              id="t0b0d0p0s65w4"
+              ARPABET="M UW CH V"
+              time="377.12"
+              dur="0.26"
+            >mucv</w>-<w
+              id="t0b0d0p0s65w5"
+              ARPABET="HH V S EY"
+              time="377.38"
+              dur="0.49"
+            >hvse</w> <w
+              id="t0b0d0p0s65w6"
+              ARPABET="OW F V"
+              time="377.87"
+              dur="0.55"
+            >ofv</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s65"
+            sentence-id="t0b0d0p0s65"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >So within this month, my body is to bear suffering.</s>
+                    <s id="t0b0d0p0s66"><w
+              id="t0b0d0p0s66w0"
+              ARPABET="M OW M IY S"
+              time="379.98"
+              dur="0.68"
+            >Momis</w> <w
+              id="t0b0d0p0s66w1"
+              ARPABET="P UW Y V F EY K CH V"
+              time="380.66"
+              dur="0.79"
+            >puyvfekcv</w> <w
+              id="t0b0d0p0s66w2"
+              ARPABET="CH V N AA"
+              time="381.45"
+              dur="0.51"
+            >cvna</w> <w
+              id="t0b0d0p0s66w3"
+              ARPABET="V P IY K AA T"
+              time="381.96"
+              dur="0.62"
+            >vpikat</w> <w
+              id="t0b0d0p0s66w4"
+              ARPABET="CH V"
+              time="383.22"
+              dur="0.06"
+            >cv</w> <w
+              id="t0b0d0p0s66w5"
+              ARPABET="N EY S V T EY"
+              time="383.28"
+              dur="1.05"
+            >nesvtē</w> <w
+              id="t0b0d0p0s66w6"
+              ARPABET="EY HH UW T EY N"
+              time="384.33"
+              dur="0.64"
+            >ehuten</w> <w
+              id="t0b0d0p0s66w7"
+              ARPABET="EY CH EY Y EY P AA D EY S"
+              time="385.4"
+              dur="1.1"
+            >ecēyeparēs</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s66"
+            sentence-id="t0b0d0p0s66"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >And the spirit that now lives in me will enter the home of the one who bought me</s>
+                    <s id="t0b0d0p0s67"><w
+              id="t0b0d0p0s67w0"
+              ARPABET="CH V F EY K EY"
+              time="386.98"
+              dur="0.65"
+            >cvfēke</w> <w
+              id="t0b0d0p0s67w1"
+              ARPABET="OW D EY N"
+              time="387.63"
+              dur="0.59"
+            >oren</w> <w
+              id="t0b0d0p0s67w2"
+              ARPABET="K OW M IY Y EY T"
+              time="388.31"
+              dur="0.81"
+            >komiyēt</w> <w
+              id="t0b0d0p0s67w3"
+              ARPABET="OW S"
+              time="389.12"
+              dur="1.2"
+            >os</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s67"
+            sentence-id="t0b0d0p0s67"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >I believe with all my heart.</s>
+                    <s id="t0b0d0p0s68"><w
+              id="t0b0d0p0s68w0"
+              ARPABET="HH V T V M"
+              time="391.58"
+              dur="0.68"
+            >Hvtvm</w> <w
+              id="t0b0d0p0s68w1"
+              ARPABET="M OW M EY K V D AA N EY K IY S"
+              time="392.26"
+              dur="1.68"
+            >momekvranekis</w> <w
+              id="t0b0d0p0s68w2"
+              ARPABET="OW K EY P IY Y IY S"
+              time="394.18"
+              dur="1.15"
+            >okēpiyis</w> <w
+              id="t0b0d0p0s68w3"
+              ARPABET="OW M EY P EY S"
+              time="395.33"
+              dur="0.75"
+            >omēpēs</w> <w
+              id="t0b0d0p0s68w4"
+              ARPABET="K OW M IY Y EY T"
+              time="396.36"
+              dur="0.73"
+            >komiyēt</w> <w
+              id="t0b0d0p0s68w5"
+              ARPABET="OW S"
+              time="397.09"
+              dur="0.36"
+            >os</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s68"
+            sentence-id="t0b0d0p0s68"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Sometimes I wonder if this might not happen at all.</s>
+                    <s id="t0b0d0p0s69"><w
+              id="t0b0d0p0s69w0"
+              ARPABET="M OW M EY N"
+              time="399.55"
+              dur="0.54"
+            >Momen</w> <w
+              id="t0b0d0p0s69w1"
+              ARPABET="EY T IY M V"
+              time="400.09"
+              dur="0.34"
+            >etimv</w> <w
+              id="t0b0d0p0s69w2"
+              ARPABET="N AA K EY T"
+              time="400.79"
+              dur="0.45"
+            >naket</w> <w
+              id="t0b0d0p0s69w3"
+              ARPABET="K OW M V K EY N"
+              time="401.24"
+              dur="0.75"
+            >komvken</w> <w
+              id="t0b0d0p0s69w4"
+              ARPABET="CH UW K OW"
+              time="402.44"
+              dur="0.31"
+            >cuko</w>-<w
+              id="t0b0d0p0s69w5"
+              ARPABET="Y EY K CH V"
+              time="402.75"
+              dur="0.72"
+            >yekcv</w> <w
+              id="t0b0d0p0s69w6"
+              ARPABET="OW F V"
+              time="403.47"
+              dur="0.46"
+            >ofv</w> <w
+              id="t0b0d0p0s69w7"
+              ARPABET="S UW L K EY T"
+              time="403.93"
+              dur="0.68"
+            >sulkēt</w> <w
+              id="t0b0d0p0s69w8"
+              ARPABET="V CH"
+              time="405.43"
+              dur="0.16"
+            >vc</w> <w
+              id="t0b0d0p0s69w9"
+              ARPABET="V N D V P EY T"
+              time="405.59"
+              dur="0.4"
+            >vnrvpēt</w> <w
+              id="t0b0d0p0s69w10"
+              ARPABET="OW S"
+              time="405.99"
+              dur="0.36"
+            >os</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s69"
+            sentence-id="t0b0d0p0s69"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Regarding other matters here in prison, there are many that hate me.</s>
+                    <s id="t0b0d0p0s70"><w
+              id="t0b0d0p0s70w0"
+              ARPABET="M OW M IY S HH"
+              time="407.46"
+              dur="0.68"
+            >Momis,</w> <w
+              id="t0b0d0p0s70w1"
+              ARPABET="M OW M IY S"
+              time="409.49"
+              dur="0.6"
+            >momis</w> <w
+              id="t0b0d0p0s70w2"
+              ARPABET="K OW M EY T"
+              time="410.09"
+              dur="0.66"
+            >komet</w> <w
+              id="t0b0d0p0s70w3"
+              ARPABET="L IY K EY T"
+              time="410.75"
+              dur="0.52"
+            >liket</w> <w
+              id="t0b0d0p0s70w4"
+              ARPABET="OW M IY S"
+              time="411.27"
+              dur="0.74"
+            >omis</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s70"
+            sentence-id="t0b0d0p0s70"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >But I am determined to keep on going.</s>
+                    <s id="t0b0d0p0s71">"<w
+              id="t0b0d0p0s71w0"
+              ARPABET="EY S T IY M V T"
+              time="413.57"
+              dur="0.82"
+            >Estimvt</w> <w
+              id="t0b0d0p0s71w1"
+              ARPABET="M OW M IY S"
+              time="414.85"
+              dur="0.73"
+            >momis</w> <w
+              id="t0b0d0p0s71w2"
+              ARPABET="K OW M EY T"
+              time="415.58"
+              dur="0.41"
+            >komet</w> <w
+              id="t0b0d0p0s71w3"
+              ARPABET="V M"
+              time="415.99"
+              dur="0.06"
+            >vm</w> <w
+              id="t0b0d0p0s71w4"
+              ARPABET="V HH AA K V N"
+              time="417.13"
+              dur="0.6"
+            >vhakvn</w> <w
+              id="t0b0d0p0s71w5"
+              ARPABET="V F AA S T EY T"
+              time="417.73"
+              dur="0.61"
+            >vfastet</w> <w
+              id="t0b0d0p0s71w6"
+              ARPABET="EY D EY S P OW Y EY N"
+              time="419.11"
+              dur="1.06"
+            >erespoyen</w> <w
+              id="t0b0d0p0s71w7"
+              ARPABET="OW M AA T"
+              time="420.17"
+              dur="0.63"
+            >omat</w> <w
+              id="t0b0d0p0s71w8"
+              ARPABET="AA F V CH K EY T V N"
+              time="421.08"
+              dur="1.07"
+            >afvcketvn</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s71"
+            sentence-id="t0b0d0p0s71"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >"Whoever keeps my commandments to the end shall win eternal life,”</s>
+                    <s id="t0b0d0p0s72"><w
+              id="t0b0d0p0s72w0"
+              ARPABET="Y OW K S V"
+              time="422.6"
+              dur="0.58"
+            >yoksv</w>-<w
+              id="t0b0d0p0s72w1"
+              ARPABET="S EY K OW N"
+              time="423.18"
+              dur="0.57"
+            >sekon</w> <w
+              id="t0b0d0p0s72w2"
+              ARPABET="EY P OW Y V D EY S HH"
+              time="424.2"
+              dur="0.91"
+            >epoyvrēs,</w>”</s>
+                    <s id="t0b0d0p0s73"><w
+              id="t0b0d0p0s73w0"
+              ARPABET="CH EY S V S"
+              time="425.59"
+              dur="0.77"
+            >Cesvs</w> <w
+              id="t0b0d0p0s73w1"
+              ARPABET="V M"
+              time="426.6"
+              dur="0.09"
+            >vm</w> <w
+              id="t0b0d0p0s73w2"
+              ARPABET="EY S T EY M EY D K V T EY T"
+              time="426.69"
+              dur="1.16"
+            >estemerkvtēt</w> <w
+              id="t0b0d0p0s73w3"
+              ARPABET="CH V"
+              time="428.36"
+              dur="0.06"
+            >cv</w> <w
+              id="t0b0d0p0s73w4"
+              ARPABET="K IY CH V T EY T"
+              time="428.42"
+              dur="0.8"
+            >kicvtēt</w> <w
+              id="t0b0d0p0s73w5"
+              ARPABET="OW M EY K V"
+              time="429.22"
+              dur="0.6"
+            >omekv</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s73"
+            sentence-id="t0b0d0p0s73"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >the Jesus who suffered for me has assured me.</s>
+                    <s id="t0b0d0p0s74"><w
+              id="t0b0d0p0s74w0"
+              ARPABET="M V N"
+              time="430.72"
+              dur="0.2"
+            >Mvn</w> <w
+              id="t0b0d0p0s74w1"
+              ARPABET="EY S T OW F IY S"
+              time="430.92"
+              dur="1.33"
+            >estofis</w> <w
+              id="t0b0d0p0s74w2"
+              ARPABET="CH V"
+              time="432.25"
+              dur="0.13"
+            >cv</w> <w
+              id="t0b0d0p0s74w3"
+              ARPABET="HH OW S EY K AA D EY S"
+              time="432.38"
+              dur="1.02"
+            >hosekarēs</w> <w
+              id="t0b0d0p0s74w4"
+              ARPABET="K OW M IY Y EY T"
+              time="433.62"
+              dur="0.96"
+            >komiyēt</w> <w
+              id="t0b0d0p0s74w5"
+              ARPABET="OW M EY S"
+              time="434.58"
+              dur="0.56"
+            >omes</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s74"
+            sentence-id="t0b0d0p0s74"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >There, I will live forever is my belief.</s>
+                    <s id="t0b0d0p0s75"><w
+              id="t0b0d0p0s75w0"
+              ARPABET="OW HH HH V T V L AA K AA T"
+              time="437.58"
+              dur="1.15"
+            >Ohhvtvlakat</w> <w
+              id="t0b0d0p0s75w1"
+              ARPABET="CH AA W V N W V"
+              time="439.42"
+              dur="0.91"
+            >cawvnwv</w> <w
+              id="t0b0d0p0s75w2"
+              ARPABET="CH EY M"
+              time="441.07"
+              dur="0.22"
+            >cem</w> <w
+              id="t0b0d0p0s75w3"
+              ARPABET="AA P OW HH IY CH AA K EY T"
+              time="441.29"
+              dur="1.74"
+            >apohicaket</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s75"
+            sentence-id="t0b0d0p0s75"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Further, I have heard that my sister is being obedient in your guidance</s>
+                    <s id="t0b0d0p0s76"><w
+              id="t0b0d0p0s76w0"
+              ARPABET="M OW M EY T"
+              time="443.03"
+              dur="0.5"
+            >momet</w> <w
+              id="t0b0d0p0s76w1"
+              ARPABET="EY CH EY F V CH EY CH IY CH AA K EY T"
+              time="444.22"
+              dur="2.02"
+            >ecēfvcecicaket</w> <w
+              id="t0b0d0p0s76w2"
+              ARPABET="AA D V CH OW K EY N"
+              time="446.24"
+              dur="0.96"
+            >arvcoken</w> <w
+              id="t0b0d0p0s76w3"
+              ARPABET="P OW HH IY Y AA T"
+              time="447.2"
+              dur="0.78"
+            >pohiyat</w> <w
+              id="t0b0d0p0s76w4"
+              ARPABET="V CH"
+              time="448.48"
+              dur="0.1"
+            >vc</w> <w
+              id="t0b0d0p0s76w5"
+              ARPABET="AA F V CH K EY T"
+              time="448.58"
+              dur="0.98"
+            >afvckēt</w> <w
+              id="t0b0d0p0s76w6"
+              ARPABET="OW M EY S"
+              time="449.56"
+              dur="1.39"
+            >omes</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s76"
+            sentence-id="t0b0d0p0s76"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >and that makes me very happy.</s>
+                    <s id="t0b0d0p0s77"><w
+              id="t0b0d0p0s77w0"
+              ARPABET="M OW M IY S"
+              time="452.13"
+              dur="1.01"
+            >Momis</w> <w
+              id="t0b0d0p0s77w1"
+              ARPABET="EY N T V L K EY N"
+              time="453.88"
+              dur="0.86"
+            >entvlken</w> <w
+              id="t0b0d0p0s77w2"
+              ARPABET="EY S"
+              time="455"
+              dur="0.2"
+            >es</w> <w
+              id="t0b0d0p0s77w3"
+              ARPABET="W IY HH K EY T S K V S"
+              time="455.2"
+              dur="1.97"
+            >wihketskvs</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s77"
+            sentence-id="t0b0d0p0s77"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >However, do not leave her on her own.</s>
+                    <s id="t0b0d0p0s78"><w
+              id="t0b0d0p0s78w0"
+              ARPABET="HH OW P OW D D EY N K V"
+              time="457.36"
+              dur="0.9"
+            >Hoporrenkv</w> <w
+              id="t0b0d0p0s78w1"
+              ARPABET="OW HH HH V T V L AA K EY N"
+              time="458.7"
+              dur="1.23"
+            >ohhvtvlaken</w> <w
+              id="t0b0d0p0s78w2"
+              ARPABET="S EY M"
+              time="460.42"
+              dur="0.55"
+            >sem</w> <w
+              id="t0b0d0p0s78w3"
+              ARPABET="P UW N V Y EY T S K AA T"
+              time="460.97"
+              dur="1.37"
+            >punvyetskat</w> <w
+              id="t0b0d0p0s78w4"
+              ARPABET="OW M V D EY S"
+              time="462.34"
+              dur="0.66"
+            >omvrēs</w> <w
+              id="t0b0d0p0s78w5"
+              ARPABET="CH EY"
+              time="463"
+              dur="0.33"
+            >cē</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s78"
+            sentence-id="t0b0d0p0s78"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Encouraging further education, talk with her always.</s>
+                    <s id="t0b0d0p0s79"><w
+              id="t0b0d0p0s79w0"
+              ARPABET="V N EY UW"
+              time="464.68"
+              dur="0.45"
+            >Vneu</w> <w
+              id="t0b0d0p0s79w1"
+              ARPABET="CH OW K V"
+              time="465.99"
+              dur="0.4"
+            >cokv</w> <w
+              id="t0b0d0p0s79w2"
+              ARPABET="EY M"
+              time="466.39"
+              dur="0.22"
+            >em</w> <w
+              id="t0b0d0p0s79w3"
+              ARPABET="V T OW T IY Y AA T"
+              time="467.15"
+              dur="0.88"
+            >vtotiyat</w> <w
+              id="t0b0d0p0s79w4"
+              ARPABET="N AA K EY T"
+              time="468.25"
+              dur="0.54"
+            >naket</w> <w
+              id="t0b0d0p0s79w5"
+              ARPABET="HH EY D EY"
+              time="469.31"
+              dur="1.1"
+            >herē</w> <w
+              id="t0b0d0p0s79w6"
+              ARPABET="T AA Y AA T"
+              time="470.67"
+              dur="0.35"
+            >tayat</w> <w
+              id="t0b0d0p0s79w7"
+              ARPABET="OW M V L K V N"
+              time="471.02"
+              dur="0.53"
+            >omvlkvn</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s79"
+            sentence-id="t0b0d0p0s79"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >I too, write in my letters to her, all the better things</s>
+                    <s id="t0b0d0p0s80">(<w
+              id="t0b0d0p0s80w0"
+              ARPABET="T HH EY"
+              time="472.94"
+              dur="0.1"
+            >The</w> <w
+              id="t0b0d0p0s80w1"
+              ARPABET="L EY T T EY D"
+              time="473.04"
+              dur="0.27"
+            >letter</w> <w
+              id="t0b0d0p0s80w2"
+              ARPABET="S T OW P S"
+              time="473.31"
+              dur="0.42"
+            >stops</w> <w
+              id="t0b0d0p0s80w3"
+              ARPABET="HH EY D EY HH"
+              time="473.73"
+              dur="0.52"
+            >here,</w> <w
+              id="t0b0d0p0s80w4"
+              ARPABET="IY N CH OW M P L EY T EY"
+              time="474.25"
+              dur="0.78"
+            >incomplete</w>. <w
+              id="t0b0d0p0s80w5"
+              ARPABET="AA T"
+              time="476.53"
+              dur="0.19"
+            >At</w> <w
+              id="t0b0d0p0s80w6"
+              ARPABET="T HH EY"
+              time="476.72"
+              dur="0.49"
+            >the</w> <w
+              id="t0b0d0p0s80w7"
+              ARPABET="T OW P"
+              time="477.21"
+              dur="0.21"
+            >top</w> <w
+              id="t0b0d0p0s80w8"
+              ARPABET="OW F"
+              time="477.42"
+              dur="0.06"
+            >of</w> <w
+              id="t0b0d0p0s80w9"
+              ARPABET="P AA G EY"
+              time="477.48"
+              dur="0.31"
+            >page</w> <w
+              id="t0b0d0p0s80w10"
+              ARPABET="OW N EY HH"
+              time="478.21"
+              dur="0.14"
+            >one,</w> <w
+              id="t0b0d0p0s80w11"
+              ARPABET="T HH EY D EY"
+              time="478.35"
+              dur="0.27"
+            >there</w> <w
+              id="t0b0d0p0s80w12"
+              ARPABET="IY S"
+              time="478.62"
+              dur="0.41"
+            >is</w> <w
+              id="t0b0d0p0s80w13"
+              ARPABET="OW N EY"
+              time="479.03"
+              dur="0.16"
+            >one</w> <w
+              id="t0b0d0p0s80w14"
+              ARPABET="S EY N T EY N CH EY"
+              time="479.19"
+              dur="0.48"
+            >sentence</w>.)</s>
+                    <s id="t0b0d0p0s81"><w
+              id="t0b0d0p0s81w0"
+              ARPABET="V P AA S T V L V L K"
+              time="481.49"
+              dur="0.79"
+            >Vpastvlvlk</w> <w
+              id="t0b0d0p0s81w1"
+              ARPABET="EY N"
+              time="482.28"
+              dur="0.15"
+            >en</w> <w
+              id="t0b0d0p0s81w2"
+              ARPABET="F UW L L EY T V"
+              time="482.43"
+              dur="0.77"
+            >fulletv</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s81"
+            sentence-id="t0b0d0p0s81"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >The Acts of the Apostles</s>
+                    <s id="t0b0d0p0s82"><w
+              id="t0b0d0p0s82w0"
+              ARPABET="M AA K EY T S K EY M AA"
+              time="483.2"
+              dur="1.03"
+            >maketskema</w> <w
+              id="t0b0d0p0s82w1"
+              ARPABET="OW K IY S"
+              time="484.57"
+              dur="0.65"
+            >Okis</w> <w
+              id="t0b0d0p0s82w2"
+              ARPABET="CH EY"
+              time="485.22"
+              dur="0.38"
+            >ce</w>.</s>
+                    <s id="t0b0d0p0s83"><w
+              id="t0b0d0p0s83w0"
+              ARPABET="OW M AA T"
+              time="486.63"
+              dur="0.66"
+            >Omat</w> <w
+              id="t0b0d0p0s83w1"
+              ARPABET="M V N"
+              time="487.29"
+              dur="0.25"
+            >mvn</w> <w
+              id="t0b0d0p0s83w2"
+              ARPABET="AA N T OW T EY T S K EY N"
+              time="487.54"
+              dur="1.08"
+            >antotetsken</w> <w
+              id="t0b0d0p0s83w3"
+              ARPABET="HH EY CH AA D EY S"
+              time="488.62"
+              dur="0.61"
+            >hecarēs</w> <w
+              id="t0b0d0p0s83w4"
+              ARPABET="CH EY"
+              time="489.23"
+              dur="0.11"
+            >cē</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s83"
+            sentence-id="t0b0d0p0s83"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >If you send to me, I will receive.</s>
+                    <s id="t0b0d0p0s84">(<w
+              id="t0b0d0p0s84w0"
+              ARPABET="F D OW M"
+              time="489.34"
+              dur="0.21"
+            >From</w> <w
+              id="t0b0d0p0s84w1"
+              ARPABET="T HH EY"
+              time="489.55"
+              dur="0.3"
+            >the</w> <w
+              id="t0b0d0p0s84w2"
+              ARPABET="T OW P"
+              time="493.03"
+              dur="0.18"
+            >top</w> <w
+              id="t0b0d0p0s84w3"
+              ARPABET="OW F"
+              time="493.21"
+              dur="0.13"
+            >of</w> <w
+              id="t0b0d0p0s84w4"
+              ARPABET="P AA G EY"
+              time="493.34"
+              dur="0.38"
+            >page</w> <w
+              id="t0b0d0p0s84w5"
+              ARPABET="T W OW"
+              time="493.72"
+              dur="0.21"
+            >two</w>)</s>
+                    <s id="t0b0d0p0s85"><w
+              id="t0b0d0p0s85w0"
+              ARPABET="EY S T IY M V T"
+              time="493.93"
+              dur="0.72"
+            >estimvt</w> <w
+              id="t0b0d0p0s85w1"
+              ARPABET="W AA S EY N T V"
+              time="496.86"
+              dur="0.64"
+            >Wasentv</w> <w
+              id="t0b0d0p0s85w2"
+              ARPABET="V P EY Y AA T EY N"
+              time="497.8"
+              dur="1.3"
+            >vpeyaten</w> <w
+              id="t0b0d0p0s85w3"
+              ARPABET="OW M AA T"
+              time="499.1"
+              dur="0.65"
+            >omat</w> <w
+              id="t0b0d0p0s85w4"
+              ARPABET="L V P K EY N"
+              time="499.75"
+              dur="0.71"
+            >lvpkēn</w> <w
+              id="t0b0d0p0s85w5"
+              ARPABET="EY S T EY"
+              time="500.54"
+              dur="0.37"
+            >este</w> <w
+              id="t0b0d0p0s85w6"
+              ARPABET="HH OW CH EY F K V"
+              time="500.91"
+              dur="0.76"
+            >hocefkv</w> <w
+              id="t0b0d0p0s85w7"
+              ARPABET="AA N T OW T EY T S K EY N"
+              time="501.67"
+              dur="1.12"
+            >antotetsken</w></s><s
+            do-not-align="true"
+            id="t0b0d0p0s85"
+            sentence-id="t0b0d0p0s85"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >concerning those going to Washington, hurriedly send me some names</s>
+                    <s id="t0b0d0p0s86"><w
+              id="t0b0d0p0s86w0"
+              ARPABET="CH OW K V N"
+              time="503.21"
+              dur="0.38"
+            >cokvn</w> <w
+              id="t0b0d0p0s86w1"
+              ARPABET="AA T OW T AA D EY S"
+              time="503.59"
+              dur="1.04"
+            >atotarēs</w> <w
+              id="t0b0d0p0s86w2"
+              ARPABET="CH EY"
+              time="504.63"
+              dur="0.31"
+            >cē</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s86"
+            sentence-id="t0b0d0p0s86"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >and I will respond quickly.</s>
+                    <s id="t0b0d0p0s87"><w
+              id="t0b0d0p0s87w0"
+              ARPABET="HH V T V M"
+              time="506.03"
+              dur="0.41"
+            >Hvtvm</w> <w
+              id="t0b0d0p0s87w1"
+              ARPABET="N EY W"
+              time="506.44"
+              dur="0.22"
+            >New</w> <w
+              id="t0b0d0p0s87w2"
+              ARPABET="Y OW D K"
+              time="506.66"
+              dur="0.46"
+            >York</w> <w
+              id="t0b0d0p0s87w3"
+              ARPABET="AA T OW T EY T S K EY N"
+              time="507.38"
+              dur="0.97"
+            >atotetsken</w> (<w
+              id="t0b0d0p0s87w4"
+              ARPABET="S K IY P"
+              time="508.96"
+              dur="0.42"
+            >skip</w>)</s><s
+            do-not-align="true"
+            id="t0b0d0p0s87"
+            sentence-id="t0b0d0p0s87"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Also write me from New York (unclear)</s>
+                    <s id="t0b0d0p0s88">(<w
+              id="t0b0d0p0s88w0"
+              ARPABET="AA T"
+              time="509.38"
+              dur="0.08"
+            >At</w> <w
+              id="t0b0d0p0s88w1"
+              ARPABET="T HH EY"
+              time="509.46"
+              dur="0.11"
+            >the</w> <w
+              id="t0b0d0p0s88w2"
+              ARPABET="T OW P"
+              time="509.57"
+              dur="0.11"
+            >top</w> <w
+              id="t0b0d0p0s88w3"
+              ARPABET="OW F"
+              time="510.41"
+              dur="3.02"
+            >of</w> <w
+              id="t0b0d0p0s88w4"
+              ARPABET="P AA G EY"
+              time="513.86"
+              dur="0.44"
+            >page</w> <w
+              id="t0b0d0p0s88w5"
+              ARPABET="T HH D EY EY"
+              time="514.3"
+              dur="0.96"
+            >three</w>)</s>
+                    <s id="t0b0d0p0s89"><w
+              id="t0b0d0p0s89w0"
+              ARPABET="K OW M IY Y EY T"
+              time="516.13"
+              dur="0.95"
+            >komiyēt</w> <w
+              id="t0b0d0p0s89w1"
+              ARPABET="OW S"
+              time="517.08"
+              dur="0.62"
+            >os</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s89"
+            sentence-id="t0b0d0p0s89"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >I believe.</s>
+                    <s id="t0b0d0p0s90"><w
+              id="t0b0d0p0s90w0"
+              ARPABET="Y OW M UW S EY N"
+              time="518.4"
+              dur="0.78"
+            >Yomusen</w> <w
+              id="t0b0d0p0s90w1"
+              ARPABET="CH EY M"
+              time="519.48"
+              dur="0.16"
+            >cem</w> <w
+              id="t0b0d0p0s90w2"
+              ARPABET="V T OW T IY S"
+              time="519.74"
+              dur="0.6"
+            >vtotis</w> <w
+              id="t0b0d0p0s90w3"
+              ARPABET="CH EY"
+              time="520.34"
+              dur="0.32"
+            >cē</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s90"
+            sentence-id="t0b0d0p0s90"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >This is all I am writing.</s>
+                    <s id="t0b0d0p0s91"><w
+              id="t0b0d0p0s91w0"
+              ARPABET="EY S T EY"
+              time="521.93"
+              dur="0.34"
+            >Este</w>-<w
+              id="t0b0d0p0s91w1"
+              ARPABET="CH AA T EY"
+              time="522.27"
+              dur="0.63"
+            >cate</w> <w
+              id="t0b0d0p0s91w2"
+              ARPABET="EY M"
+              time="523.09"
+              dur="0.41"
+            >em</w> <w
+              id="t0b0d0p0s91w3"
+              ARPABET="OW P UW N V K V N"
+              time="523.5"
+              dur="0.67"
+            >opunvkvn</w> <w
+              id="t0b0d0p0s91w4"
+              ARPABET="AA N T OW T EY T S K V D EY S"
+              time="524.17"
+              dur="1.19"
+            >antotetskvrēs</w> <w
+              id="t0b0d0p0s91w5"
+              ARPABET="CH EY"
+              time="525.36"
+              dur="0.33"
+            >cē</w>.</s><s
+            do-not-align="true"
+            id="t0b0d0p0s91"
+            sentence-id="t0b0d0p0s91"
+            class="sentence__translation editable__translation"
+            xml:lang="eng"
+          >Write your reply to me in Creek.</s>
+                    <s id="t0b0d0p0s92"><w
+              id="t0b0d0p0s92w0"
+              ARPABET="ZH"
+              time="526.72"
+              dur="0.09"
+            >J</w>. <w
+              id="t0b0d0p0s92w1"
+              ARPABET="D"
+              time="527.19"
+              dur="0.06"
+            >R</w>. <w
+              id="t0b0d0p0s92w2"
+              ARPABET="P OW S T OW AA K"
+              time="527.25"
+              dur="0.7"
+            >Postoak</w> <w
+              id="t0b0d0p0s92w3"
+              ARPABET="OW K IY S"
+              time="528.18"
+              dur="0.75"
+            >okis</w> <w
+              id="t0b0d0p0s92w4"
+              ARPABET="CH EY"
+              time="528.93"
+              dur="0.25"
+            >cē</w>.</s>
+                </p>
+                <graphic url="postoak-01.png" />
+                </div>
+        </body>
+    </text>
+</read-along>

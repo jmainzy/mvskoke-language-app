@@ -136,29 +136,4 @@ class AudioManager {
     });
   }
 
-  Future<(Uri, AssetLocation)> getAudioUri(MediaObject item) async {
-    String? localUri = await findInAssets(item);
-    if (localUri != null) {
-      return (Uri(path: localUri), AssetLocation.asset);
-    } else {
-      var uri = getAudioUrl(item);
-      return (uri, AssetLocation.remote);
-    }
-  }
-
-  Future<String?> findInAssets(MediaObject item) async {
-    var filename = 'assets/audio/${item.filename}';
-    try {
-      await rootBundle.load(filename);
-    } catch (e) {
-      logger.i('file not found locally $filename');
-      return null;
-    }
-    return filename;
-  }
-
-  Uri getAudioUrl(MediaObject item) {
-    // return webService!.getAudioUrl(item.filename);
-    return Uri.parse('https://example.com/audio/${item.filename}');
-  }
 }

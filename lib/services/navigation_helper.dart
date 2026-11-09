@@ -5,6 +5,7 @@ import 'package:mvskoke_language_app/ui/more/about_screen.dart';
 import 'package:mvskoke_language_app/ui/more/alphabet_screen.dart';
 import 'package:mvskoke_language_app/ui/content/content_list.dart';
 import 'package:mvskoke_language_app/ui/content/content_page.dart';
+import 'package:mvskoke_language_app/ui/components/reader_chrome_scope.dart';
 import 'package:mvskoke_language_app/ui/more/more_screen.dart';
 import 'package:mvskoke_language_app/ui/home_screen.dart';
 
@@ -53,20 +54,20 @@ class NavigationHelper {
       StatefulShellRoute.indexedStack(
         parentNavigatorKey: rootNavigatorKey,
         branches: [
-          StatefulShellBranch(
-            navigatorKey: homeTabNavigatorKey,
-            routes: [
-              GoRoute(
-                path: homePath,
-                pageBuilder: (context, state) {
-                  return MaterialPage(
-                    key: state.pageKey,
-                    child: const HomeScreen(),
-                  );
-                },
-              ),
-            ],
-          ),
+          // StatefulShellBranch(
+          //   navigatorKey: homeTabNavigatorKey,
+          //   routes: [
+          //     GoRoute(
+          //       path: homePath,
+          //       pageBuilder: (context, state) {
+          //         return MaterialPage(
+          //           key: state.pageKey,
+          //           child: const HomeScreen(),
+          //         );
+          //       },
+          //     ),
+          //   ],
+          // ),
           StatefulShellBranch(
             navigatorKey: playlistTabNavigatorKey,
             routes: [
@@ -144,7 +145,7 @@ class NavigationHelper {
 
     router = GoRouter(
       debugLogDiagnostics: true,
-      initialLocation: homePath,
+      initialLocation: contentPath,
       navigatorKey: rootNavigatorKey,
       errorPageBuilder: (context, state) {
         return MaterialPage(
@@ -156,7 +157,7 @@ class NavigationHelper {
                 children: [
                   Text(state.error.toString()),
                   TextButton(
-                    onPressed: () => context.go(homePath),
+                    onPressed: () => context.go(contentPath),
                     child: const Text('Go to Home page'),
                   ),
                 ],
@@ -180,30 +181,88 @@ class NavigationPage extends StatefulWidget {
 }
 
 class _NavigationPageState extends State<NavigationPage> {
+  final ValueNotifier<bool> _readerChromeVisibility = ValueNotifier(true);
+  bool? _wasLandscape;
+  bool? _wasReaderRoute;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _syncReaderChromeVisibility();
+  }
+
+  @override
+  void didUpdateWidget(covariant NavigationPage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    _syncReaderChromeVisibility();
+  }
+
+  void _syncReaderChromeVisibility() {
+    final isLandscape =
+        MediaQuery.orientationOf(context) == Orientation.landscape;
+    final currentPath =
+        NavigationHelper.router.routeInformationProvider.value.uri.path;
+    final isReaderRoute = currentPath.startsWith(
+      '${NavigationHelper.contentPath}/',
+    );
+    print(
+      'syncReaderChromeVisibility: isLandscape=$isLandscape, isReaderRoute=$isReaderRoute, wasLandscape=$_wasLandscape, wasReaderRoute=$_wasReaderRoute',
+    );
+    if (_wasLandscape == isLandscape && _wasReaderRoute == isReaderRoute) {
+      return;
+    }
+
+    _wasLandscape = isLandscape;
+    _wasReaderRoute = isReaderRoute;
+    _readerChromeVisibility.value = !(isLandscape && isReaderRoute);
+  }
+
+  @override
+  void dispose() {
+    _readerChromeVisibility.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: NavigationBar(
-        onDestinationSelected: (int index) {
-          widget.child.goBranch(
-            index,
-            initialLocation: index == widget.child.currentIndex,
-          );
-          setState(() {});
-        },
-        labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
-        selectedIndex: widget.child.currentIndex,
-        destinations: const <Widget>[
-          NavigationDestination(
-            selectedIcon: Icon(Icons.home),
-            icon: Icon(Icons.home_outlined),
-            label: 'Home',
-          ),
-          NavigationDestination(icon: Icon(Icons.list), label: 'Collections'),
-          NavigationDestination(icon: Icon(Icons.more_horiz), label: 'About'),
-        ],
+      bottomNavigationBar: ValueListenableBuilder<bool>(
+        valueListenable: _readerChromeVisibility,
+        builder: (context, visible, _) => visible
+            ? NavigationBar(
+                onDestinationSelected: (int index) {
+                  _readerChromeVisibility.value = true;
+                  widget.child.goBranch(
+                    index,
+                    initialLocation: index == widget.child.currentIndex,
+                  );
+                  setState(() {});
+                },
+                labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
+                selectedIndex: widget.child.currentIndex,
+                destinations: const <Widget>[
+                  // NavigationDestination(
+                  //   selectedIcon: Icon(Icons.home),
+                  //   icon: Icon(Icons.home_outlined),
+                  //   label: 'Home',
+                  // ),
+                  NavigationDestination(
+                    icon: Icon(Icons.list),
+                    label: 'Collections',
+                  ),
+                  NavigationDestination(
+                    icon: Icon(Icons.more_horiz),
+                    label: 'About',
+                  ),
+                ],
+              )
+            : const SizedBox.shrink(),
       ),
-      body: widget.child,
+      body: ReaderChromeScope(
+        visibility: _readerChromeVisibility,
+        isActive: widget.child.currentIndex == 1,
+        child: widget.child,
+      ),
     );
   }
 }

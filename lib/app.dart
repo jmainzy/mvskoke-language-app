@@ -19,17 +19,24 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
+    final colorScheme = ColorScheme.fromSeed(
+      seedColor: const Color.fromARGB(100, 25, 175, 65),
+      brightness: Brightness.light,
+    );
     return MaterialApp.router(
       title: 'Mvskoke Hymnal',
       theme: ThemeData(
         useMaterial3: true,
 
         // Define the default brightness and colors.
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(100, 25, 175, 65),
-          brightness: Brightness.light,
-        ),
+        colorScheme: colorScheme,
         textTheme: getTheme(sl<StoreService>().fontScale),
+        appBarTheme: AppBarTheme(
+          backgroundColor: colorScheme.surface,
+          foregroundColor: colorScheme.onSurface,
+          titleTextStyle: getTheme(sl<StoreService>().fontScale).titleMedium
+              ?.copyWith(fontWeight: FontWeight.bold),
+        ),
       ),
       debugShowCheckedModeBanner: false,
       routerConfig: NavigationHelper.router,

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<read-along version="1.2">
+    <meta
+    name="generator"
+    content="@readalongs/studio (cli) 1.2.2"
+    id="meta0"
+  />
+    <text xml:lang="und" fallback-langs="und" id="t0">
+        <body id="t0b0">
+            <div type="page" id="t0b0d0">
+                <p id="t0b0d0p0">
+                    <s id="t0b0d0p0s0"><w
+              id="t0b0d0p0s0w0"
+              ARPABET="HH EY L L OW"
+              time="1.03"
+              dur="0.28"
+            >Hello</w> <w
+              id="t0b0d0p0s0w1"
+              ARPABET="HH EY D EY HH S"
+              time="1.31"
+              dur="0.46"
+            >here's</w> <w
+              id="t0b0d0p0s0w2"
+              ARPABET="T HH EY"
+              time="1.77"
+              dur="0.12008626130864686"
+            >the</w> <w
+              id="t0b0d0p0s0w3"
+              ARPABET="F IY D S T"
+              time="1.8922427940248263"
+              dur="0.32117820324005875"
+            >first</w> <w
+              id="t0b0d0p0s0w4"
+              ARPABET="P AA G EY"
+              time="2.2268735535451287"
+              dur="0.4666042499474021"
+            >page</w>.</s>
+                </p>
+                <p id="t0b0d0p1">
+                    <s id="t0b0d0p1s0"><w
+              id="t0b0d0p1s0w0"
+              ARPABET="HH EY D EY HH S"
+              time="2.693477803492531"
+              dur="0.816545339785399"
+            >Here's</w> <w
+              id="t0b0d0p1s0w1"
+              ARPABET="AA N OW T HH EY D"
+              time="3.51002314327793"
+              dur="0.3034651798863863"
+            >another</w> <w
+              id="t0b0d0p1s0w2"
+              ARPABET="L IY N EY"
+              time="3.840372396381233"
+              dur="0.8832021880917313"
+            >line</w></s>
+                </p>
+            <graphic url="chipmunk.webp" /></div>
+            <div type="page" id="t0b0d1">
+                <p id="t0b0d1p0">
+                    <s id="t0b0d1p0s0"><w
+              id="t0b0d1p0s0w0"
+              ARPABET="HH EY D EY"
+              time="4.723574584472964"
+              dur="1.13981695771092"
+            >Here</w> <w
+              id="t0b0d1p0s0w1"
+              ARPABET="IY S"
+              time="5.8633915421838845"
+              dur="0.1799747527877109"
+            >is</w> <w
+              id="t0b0d1p0s0w2"
+              ARPABET="T HH EY"
+              time="6.043366294971595"
+              dur="0.13665895224069136"
+            >the</w> <w
+              id="t0b0d1p0s0w3"
+              ARPABET="S EY CH OW N D"
+              time="6.180025247212287"
+              dur="0.30997475278771347"
+            >second</w> <w
+              id="t0b0d1p0s0w4"
+              ARPABET="P AA G EY"
+              time="6.49"
+              dur="0.62"
+            >page</w>.</s>
+                </p>
+            <graphic url="example02.jpg" /></div>
+        </body>
+    </text>
+</read-along>

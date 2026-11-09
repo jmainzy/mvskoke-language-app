@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 import 'package:mvskoke_language_app/models/content_item.dart';
@@ -46,22 +45,20 @@ class SearchWrapperState extends State<SearchWrapper>
       key: scaffoldKey,
       appBar: AppBar(
         title: const Text('Mvskoke Opunvkv'),
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        foregroundColor: Theme.of(context).colorScheme.onPrimary,
-        actions: [
-          kDebugMode
-              ? IconButton(
-                  icon: const Icon(Icons.refresh),
-                  onPressed: () {
-                    setState(() {});
-                    _loadingFuture = fetch();
-                  },
-                )
-              : Container(),
-          kDebugMode
-              ? IconButton(onPressed: () {}, icon: const Icon(Icons.save))
-              : Container(),
-        ],
+        // actions: [
+        //   kDebugMode
+        //       ? IconButton(
+        //           icon: const Icon(Icons.refresh),
+        //           onPressed: () {
+        //             setState(() {});
+        //             _loadingFuture = fetch();
+        //           },
+        //         )
+        //       : Container(),
+        //   kDebugMode
+        //       ? IconButton(onPressed: () {}, icon: const Icon(Icons.save))
+        //       : Container(),
+        // ],
       ),
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: FutureBuilder(
@@ -142,7 +139,9 @@ class ContentListState extends State<ContentList> {
           searchController: controller,
           builder: (BuildContext context, SearchController controller) {
             return Padding(
-              padding: const EdgeInsets.all(Dimens.marginShort),
+              padding: const EdgeInsets.symmetric(
+                horizontal: Dimens.marginLarge,
+              ),
               child: Column(
                 children: [
                   SearchBar(
@@ -150,6 +149,7 @@ class ContentListState extends State<ContentList> {
                     padding: const WidgetStatePropertyAll<EdgeInsets>(
                       EdgeInsets.symmetric(horizontal: 16.0),
                     ),
+                    elevation: const WidgetStatePropertyAll<double>(0.0),
                     onTap: () {
                       controller.openView();
                     },
@@ -169,7 +169,7 @@ class ContentListState extends State<ContentList> {
                           ]
                         : [],
                     backgroundColor: WidgetStateProperty.all(
-                      Theme.of(context).colorScheme.surface,
+                      Theme.of(context).colorScheme.surfaceContainer,
                     ),
                   ),
                 ],
@@ -189,14 +189,14 @@ class ContentListState extends State<ContentList> {
           suggestionsBuilder:
               (BuildContext context, SearchController controller) {
                 return [
-                  ListTile(
-                    title: Text('suggestion'),
-                    onTap: () {
-                      controller.text = 'suggestion';
-                      search('suggestion');
-                      controller.closeView('suggestion');
-                    },
-                  ),
+                  // ListTile(
+                  //   title: Text('suggestion'),
+                  //   onTap: () {
+                  //     controller.text = 'suggestion';
+                  //     search('suggestion');
+                  //     controller.closeView('suggestion');
+                  //   },
+                  // ),
                 ];
               },
         ),

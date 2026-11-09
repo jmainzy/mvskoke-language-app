@@ -557,6 +557,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.1"
+  readalong:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "2c43917d0d0be2c91117e49a6a3ed833180cb343"
+      url: "https://github.com/jmainzy/readalong-flutter.git"
+    source: git
+    version: "0.0.1"
   record_use:
     dependency: transitive
     description:
@@ -859,5 +868,5 @@ packages:
     source: hosted
     version: "3.1.4"
 sdks:
-  dart: ">=3.13.2 <4.0.0"
+  dart: ">=3.13.3 <4.0.0"
   flutter: ">=3.44.0"

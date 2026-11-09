@@ -8,11 +8,7 @@ class MoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('More'),
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        foregroundColor: Theme.of(context).colorScheme.onPrimary,
-      ),
+      appBar: AppBar(title: const Text('More')),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -25,15 +21,15 @@ class MoreScreen extends StatelessWidget {
                 );
               },
             ),
-            MoreItem(
-              title: 'Glossary',
-              icon: Icons.book,
-              onTap: () {
-                NavigationHelper.router.go(
-                  '${NavigationHelper.morePath}/${NavigationHelper.glossaryPath}',
-                );
-              },
-            ),
+            // MoreItem(
+            //   title: 'Glossary',
+            //   icon: Icons.book,
+            //   onTap: () {
+            //     NavigationHelper.router.go(
+            //       '${NavigationHelper.morePath}/${NavigationHelper.glossaryPath}',
+            //     );
+            //   },
+            // ),
             MoreItem(
               title: 'Mvskoke Alphabet',
               icon: Icons.abc,

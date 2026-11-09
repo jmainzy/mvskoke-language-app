@@ -9,6 +9,7 @@ import 'package:mvskoke_language_app/managers/audio_manager.dart';
 import 'package:mvskoke_language_app/models/enums.dart';
 import 'package:mvskoke_language_app/models/media_item.dart';
 import 'package:mvskoke_language_app/notifiers/progress_notifier.dart';
+import 'package:mvskoke_language_app/services/content_service.dart';
 import 'package:mvskoke_language_app/services/service_locator.dart';
 import 'package:mvskoke_language_app/ui/components/play_button.dart';
 import 'package:mvskoke_language_app/utilities/dimens.dart';
@@ -37,7 +38,7 @@ class _AudioPlayerWidgetState extends State<AudioPlayerWidget> {
   }
 
   Future<void> initializeAudio() async {
-    var (Uri uri, AssetLocation location) = await sl<AudioManager>()
+    var (Uri uri, AssetLocation location) = await sl<ContentService>()
         .getAudioUri(currentMedia);
     logger.i("uri = $uri, location = $location");
     if (!mounted) return;

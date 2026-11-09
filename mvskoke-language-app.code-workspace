@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "path": ".",
+    },
+    {
+      "path": "../readalong",
+    },
+    {
+      "path": "../../../Code/Studio-Web",
+    },
+  ],
+  "settings": {
+    "java.compile.nullAnalysis.mode": "automatic",
+  },
+}

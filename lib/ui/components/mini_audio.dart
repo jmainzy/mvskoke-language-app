@@ -8,6 +8,7 @@ import 'package:mvskoke_language_app/models/enums.dart';
 import 'package:mvskoke_language_app/models/media_item.dart';
 import 'package:mvskoke_language_app/notifiers/play_button_notifier.dart';
 import 'package:mvskoke_language_app/notifiers/progress_notifier.dart';
+import 'package:mvskoke_language_app/services/content_service.dart';
 import 'package:mvskoke_language_app/services/service_locator.dart';
 import 'package:mvskoke_language_app/ui/components/play_button.dart';
 import 'package:mvskoke_language_app/utilities/dimens.dart';
@@ -39,7 +40,7 @@ class _MiniAudioWidgetState extends State<MiniAudioWidget> {
 
   Future<void> initializeAudio() async {
     var (Uri uri, AssetLocation location) =
-        await sl<AudioManager>().getAudioUri(currentMedia);
+        await sl<ContentService>().getAudioUri(currentMedia);
     if (!mounted) return;
     initAudioFuture = sl<AudioManager>().setMedia(
       uri,
