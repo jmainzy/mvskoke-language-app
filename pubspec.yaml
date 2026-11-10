@@ -51,9 +51,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   xml: ^7.1.0
   readalong:
-    # git:
-    #   url: https://github.com/jmainzy/readalong-flutter.git
-    path: ../readalong
+    git:
+      url: https://github.com/jmainzy/readalong-flutter.git
+    # path: ../readalong
 
 dev_dependencies:
   flutter_test:

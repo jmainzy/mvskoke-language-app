@@ -616,9 +616,11 @@ packages:
   readalong:
     dependency: "direct main"
     description:
-      path: "../readalong"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: c4ada32f8076c44ed464fea26f512ea41f2417fc
+      url: "https://github.com/jmainzy/readalong-flutter.git"
+    source: git
     version: "0.0.1"
   record_use:
     dependency: transitive
