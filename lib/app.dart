@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
       brightness: Brightness.light,
     );
     return MaterialApp.router(
-      title: 'Mvskoke Hymnal',
+      title: 'Mvskoke Opunvkv',
       theme: ThemeData(
         useMaterial3: true,
 

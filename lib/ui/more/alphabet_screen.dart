@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gpt_markdown/gpt_markdown.dart';
 import 'package:mvskoke_language_app/models/media_item.dart';
+import 'package:mvskoke_language_app/ui/components/web_tab_menu.dart';
 import 'package:mvskoke_language_app/ui/components/mini_audio.dart';
 import 'package:mvskoke_language_app/utilities/dimens.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -24,94 +25,108 @@ class _AlphabetScreenState extends State<AlphabetScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Mvskoke Alphabet'),
+        actions: const [WebTabMenu()],
       ),
       body: SingleChildScrollView(
-          child: Padding(
-              padding: const EdgeInsets.all(Dimens.marginLarge),
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Row(children: [
-                      Expanded(
-                          child: Text('Mvskoke\nLetter',
-                              style: Theme.of(context).textTheme.bodyLarge)),
-                      Expanded(
-                          child: Text('English\nExample',
-                              style: Theme.of(context).textTheme.bodyLarge)),
-                      Expanded(
-                          child: Text('Mvskoke\nExample',
-                              style: Theme.of(context).textTheme.bodyLarge)),
-                    ]),
-                    GptMarkdown(
-                      alphabet,
-                      tableBuilder: (context, tableRows, textStyle, config) {
-                        return Table(
-                          children: tableRows.map((e) {
-                            return TableRow(
-                              children: e.fields.map((e) {
-                                return Text(e.data,
-                                    style:
-                                        Theme.of(context).textTheme.bodyMedium);
-                              }).toList(),
-                            );
-                          }).toList(),
-                        );
-                      },
+        child: Padding(
+          padding: const EdgeInsets.all(Dimens.marginLarge),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      'Mvskoke\nLetter',
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
-                    Row(children: [
-                      SizedBox(
-                        width: Dimens.marginShort,
-                      ),
-                      Expanded(
-                          child: Text(
-                              '\nAlphabet reading by Linda Sulpher Bear:')),
-                    ]),
-                    MiniAudioWidget(
-                        mediaItem: MediaObject(
-                            id: '1',
-                            title: 'Mvskoke Alphabet',
-                            filename: 'alphabet.mp3',
-                            performer: '',
-                            copyright: '',
-                            lastUpdate: null)),
-                    GptMarkdown(
-                      copyright,
-                      linkBuilder: (context, text, url, style) => RichText(
-                        text: TextSpan(
-                            text: text.toPlainText(),
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyMedium
-                                ?.copyWith(color: Colors.blue)),
-                      ),
-                      onLinkTap: (url, title) {
-                        launchUrl(Uri.parse(url));
-                      },
+                  ),
+                  Expanded(
+                    child: Text(
+                      'English\nExample',
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
-                    SizedBox(
-                      height: Dimens.marginLarge,
+                  ),
+                  Expanded(
+                    child: Text(
+                      'Mvskoke\nExample',
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
-                    GptMarkdown(
-                      dipthongs,
-                      tableBuilder: (context, tableRows, textStyle, config) {
-                        return Table(
-                          children: tableRows.map((e) {
-                            return TableRow(
-                              children: e.fields.map((e) {
-                                return Text(e.data,
-                                    style:
-                                        Theme.of(context).textTheme.bodyMedium);
-                              }).toList(),
-                            );
-                          }).toList(),
-                        );
-                      },
-                    ),
-                    SizedBox(
-                      height: Dimens.marginLarge,
-                    ),
-                    GptMarkdown(apostrophe)
-                  ]))),
+                  ),
+                ],
+              ),
+              GptMarkdown(
+                alphabet,
+                tableBuilder: (context, tableRows, textStyle, config) {
+                  return Table(
+                    children: tableRows.map((e) {
+                      return TableRow(
+                        children: e.fields.map((e) {
+                          return Text(
+                            e.data,
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          );
+                        }).toList(),
+                      );
+                    }).toList(),
+                  );
+                },
+              ),
+              Row(
+                children: [
+                  SizedBox(width: Dimens.marginShort),
+                  Expanded(
+                    child: Text('\nAlphabet reading by Linda Sulpher Bear:'),
+                  ),
+                ],
+              ),
+              MiniAudioWidget(
+                mediaItem: MediaObject(
+                  id: '1',
+                  title: 'Mvskoke Alphabet',
+                  filename: 'alphabet.mp3',
+                  performer: '',
+                  copyright: '',
+                  lastUpdate: null,
+                ),
+              ),
+              GptMarkdown(
+                copyright,
+                linkBuilder: (context, text, url, style) => RichText(
+                  text: TextSpan(
+                    text: text.toPlainText(),
+                    style: Theme.of(context).textTheme.bodyMedium
+                        ?.copyWith(color: Colors.blue),
+                  ),
+                ),
+                onLinkTap: (url, title) {
+                  launchUrl(Uri.parse(url));
+                },
+              ),
+              SizedBox(height: Dimens.marginLarge),
+              GptMarkdown(
+                dipthongs,
+                tableBuilder: (context, tableRows, textStyle, config) {
+                  return Table(
+                    children: tableRows.map((e) {
+                      return TableRow(
+                        children: e.fields.map((e) {
+                          return Text(
+                            e.data,
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          );
+                        }).toList(),
+                      );
+                    }).toList(),
+                  );
+                },
+              ),
+              SizedBox(height: Dimens.marginLarge),
+              GptMarkdown(apostrophe),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

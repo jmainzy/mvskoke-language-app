@@ -4,6 +4,7 @@ import 'package:mvskoke_language_app/models/content_item.dart';
 import 'package:mvskoke_language_app/services/content_service.dart';
 import 'package:mvskoke_language_app/services/navigation_helper.dart';
 import 'package:mvskoke_language_app/utilities/dimens.dart';
+import 'package:mvskoke_language_app/ui/components/web_tab_menu.dart';
 import 'package:watch_it/watch_it.dart';
 
 Logger log = Logger();
@@ -45,6 +46,7 @@ class SearchWrapperState extends State<SearchWrapper>
       key: scaffoldKey,
       appBar: AppBar(
         title: const Text('Mvskoke Opunvkv'),
+        actions: const [WebTabMenu()],
         // actions: [
         //   kDebugMode
         //       ? IconButton(
@@ -212,7 +214,7 @@ class ContentListState extends State<ContentList> {
               return ListTile(
                 title: Text(widget.stories[index].title),
                 onTap: () {
-                  NavigationHelper.router.go(
+                  NavigationHelper.router.push(
                     '${NavigationHelper.contentPath}/${widget.stories[index].id}',
                   );
                 },

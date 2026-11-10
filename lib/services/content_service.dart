@@ -21,7 +21,7 @@ final List<MediaObject> mediaItems = [
     id: '2',
     title: '1878 Postoak letter to A.E.W. Robertson',
     filename: 'postoak-01.mp3',
-    performer: 'Julia',
+    performer: 'Margaret McKane Mauldin',
     copyright: '© 2026 MCN',
     lastUpdate: Timestamp.now(),
   ),
@@ -33,9 +33,23 @@ final List<MediaObject> mediaItems = [
     copyright: '© 2026 MCN',
     lastUpdate: Timestamp.now(),
   ),
+  MediaObject(
+    id: '4',
+    title: 'Eco ton momen Cufe',
+    filename: 'eco-cufe.mp3',
+    performer: 'Margaret McKane Mauldin',
+    copyright: '© 2026 MCN',
+    lastUpdate: Timestamp.now(),
+  ),
 ];
 
 final List<ContentItem> stories = [
+  ContentItem(
+    id: '3',
+    title: 'Eco ton momen Cufe',
+    textFile: 'eco-cufe.readalong',
+    mediaId: '4',
+  ),
   ContentItem(
     id: '1',
     title: 'Day/Night Onvkuce',
@@ -47,12 +61,6 @@ final List<ContentItem> stories = [
     title: '1878 Postoak letter to A.E.W. Robertson',
     textFile: 'postoak-01.readalong',
     mediaId: '2',
-  ),
-  ContentItem(
-    id: '3',
-    title: 'Nokose Oklane',
-    textFile: 'example.readalong',
-    mediaId: '3',
   ),
 ];
 

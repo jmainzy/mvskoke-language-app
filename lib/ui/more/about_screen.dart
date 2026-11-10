@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mvskoke_language_app/ui/components/web_tab_menu.dart';
 import 'package:mvskoke_language_app/utilities/dimens.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 
@@ -22,7 +23,7 @@ class AboutScreenState extends State<AboutScreen> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('About')),
+      appBar: AppBar(title: const Text('About'), actions: const [WebTabMenu()]),
       body: Padding(
         padding: EdgeInsets.all(Dimens.marginLarge),
         child: Column(

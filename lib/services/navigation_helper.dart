@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:go_router/go_router.dart';
 import 'package:logger/logger.dart';
 import 'package:mvskoke_language_app/ui/more/about_screen.dart';
@@ -82,6 +83,7 @@ class NavigationHelper {
                 routes: [
                   GoRoute(
                     path: '/:contentId',
+                    parentNavigatorKey: rootNavigatorKey,
                     pageBuilder: (context, state) {
                       final id = state.pathParameters['contentId'];
                       if (id == null) {
@@ -226,38 +228,36 @@ class _NavigationPageState extends State<NavigationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: ValueListenableBuilder<bool>(
-        valueListenable: _readerChromeVisibility,
-        builder: (context, visible, _) => visible
-            ? NavigationBar(
-                onDestinationSelected: (int index) {
-                  _readerChromeVisibility.value = true;
-                  widget.child.goBranch(
-                    index,
-                    initialLocation: index == widget.child.currentIndex,
-                  );
-                  setState(() {});
-                },
-                labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
-                selectedIndex: widget.child.currentIndex,
-                destinations: const <Widget>[
-                  // NavigationDestination(
-                  //   selectedIcon: Icon(Icons.home),
-                  //   icon: Icon(Icons.home_outlined),
-                  //   label: 'Home',
-                  // ),
-                  NavigationDestination(
-                    icon: Icon(Icons.list),
-                    label: 'Collections',
-                  ),
-                  NavigationDestination(
-                    icon: Icon(Icons.more_horiz),
-                    label: 'About',
-                  ),
-                ],
-              )
-            : const SizedBox.shrink(),
-      ),
+      bottomNavigationBar: kIsWeb
+          ? null
+          : ValueListenableBuilder<bool>(
+              valueListenable: _readerChromeVisibility,
+              builder: (context, visible, _) => visible
+                  ? NavigationBar(
+                      onDestinationSelected: (int index) {
+                        _readerChromeVisibility.value = true;
+                        widget.child.goBranch(
+                          index,
+                          initialLocation: index == widget.child.currentIndex,
+                        );
+                        setState(() {});
+                      },
+                      labelBehavior:
+                          NavigationDestinationLabelBehavior.alwaysHide,
+                      selectedIndex: widget.child.currentIndex,
+                      destinations: const <Widget>[
+                        NavigationDestination(
+                          icon: Icon(Icons.list),
+                          label: 'Collections',
+                        ),
+                        NavigationDestination(
+                          icon: Icon(Icons.more_horiz),
+                          label: 'About',
+                        ),
+                      ],
+                    )
+                  : const SizedBox.shrink(),
+            ),
       body: ReaderChromeScope(
         visibility: _readerChromeVisibility,
         isActive: widget.child.currentIndex == 1,

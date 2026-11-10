@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mvskoke_language_app/services/navigation_helper.dart';
+import 'package:mvskoke_language_app/ui/components/web_tab_menu.dart';
 import 'package:mvskoke_language_app/utilities/dimens.dart';
 
 class MoreScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class MoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('More')),
+      appBar: AppBar(title: const Text('More'), actions: const [WebTabMenu()]),
       body: SingleChildScrollView(
         child: Column(
           children: [

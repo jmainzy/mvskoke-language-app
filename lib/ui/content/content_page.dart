@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:just_audio/just_audio.dart';
 import 'package:logger/logger.dart';
 import 'package:mvskoke_language_app/models/content_item.dart';
@@ -60,7 +61,7 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
     if (isActive && (_wasLandscape != isLandscape || _wasActive != isActive)) {
       _wasLandscape = isLandscape;
       _wasActive = isActive;
-      _chromeVisibility.value = !isLandscape;
+      _chromeVisibility.value = !isLandscape || kIsWeb;
     } else if (!isActive) {
       _wasActive = false;
     }

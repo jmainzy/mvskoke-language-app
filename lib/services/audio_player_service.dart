@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:just_audio/just_audio.dart';
@@ -226,6 +227,8 @@ class AudioPlayerService extends BaseAudioHandler {
   }
 
   Future<void> _initAlbumArt() async {
+    if (kIsWeb) return;
+
     // get application directory
     final appDir = await getApplicationDocumentsDirectory();
     // use the app logo as the album art
@@ -276,7 +279,7 @@ class AudioPlayerService extends BaseAudioHandler {
       playbackState.add(
         playbackState.value.copyWith(
           androidCompactActionIndices: const [0, 1, 3],
-          controls: Platform.isAndroid
+          controls: !kIsWeb && Platform.isAndroid
               ? [
                   MediaControl.skipToPrevious,
                   if (playing) MediaControl.pause else MediaControl.play,
