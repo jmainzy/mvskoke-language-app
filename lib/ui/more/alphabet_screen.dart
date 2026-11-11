@@ -84,7 +84,7 @@ class _AlphabetScreenState extends State<AlphabetScreen> {
                 mediaItem: MediaObject(
                   id: '1',
                   title: 'Mvskoke Alphabet',
-                  filename: 'alphabet.mp3',
+                  uri: 'alphabet.mp3',
                   performer: '',
                   copyright: '',
                   lastUpdate: null,

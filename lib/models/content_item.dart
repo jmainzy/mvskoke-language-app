@@ -3,11 +3,13 @@ class ContentItem {
   final String title;
   final String? textFile;
   final String? mediaId;
+  final String? thumbnail;
 
   ContentItem({
     required this.id,
     required this.title,
     this.textFile,
     this.mediaId,
+    this.thumbnail,
   });
 }

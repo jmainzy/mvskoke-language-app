@@ -12,7 +12,7 @@ final List<MediaObject> mediaItems = [
   MediaObject(
     id: '1',
     title: 'Day/Night Onvkuce',
-    filename: 'chipbear.mp3',
+    uri: 'chipbear.mp3',
     performer: 'Rebecca Barnett',
     copyright: '© 2026 Mvskoke Language Program',
     lastUpdate: Timestamp.now(),
@@ -20,7 +20,7 @@ final List<MediaObject> mediaItems = [
   MediaObject(
     id: '2',
     title: '1878 Postoak letter to A.E.W. Robertson',
-    filename: 'postoak-01.mp3',
+    uri: 'postoak-01.mp3',
     performer: 'Margaret McKane Mauldin',
     copyright: '© 2026 MCN',
     lastUpdate: Timestamp.now(),
@@ -28,7 +28,7 @@ final List<MediaObject> mediaItems = [
   MediaObject(
     id: '3',
     title: 'Nokose Oklane',
-    filename: 'example.wav',
+    uri: 'example.wav',
     performer: 'Margaret McKane Mauldin',
     copyright: '© 2026 MCN',
     lastUpdate: Timestamp.now(),
@@ -36,9 +36,18 @@ final List<MediaObject> mediaItems = [
   MediaObject(
     id: '4',
     title: 'Eco ton momen Cufe',
-    filename: 'eco-cufe.mp3',
+    uri: 'eco-cufe.mp3',
     performer: 'Margaret McKane Mauldin',
     copyright: '© 2026 MCN',
+    lastUpdate: Timestamp.now(),
+  ),
+  MediaObject(
+    id: '5',
+    title: 'Interview with Bessie Spencer',
+    uri: 'https://vimeo.com/253875203',
+    performer: 'Bessie Spencer',
+    copyright: '© 2026 MCN',
+    mediaType: MediaType.video,
     lastUpdate: Timestamp.now(),
   ),
 ];
@@ -49,18 +58,27 @@ final List<ContentItem> stories = [
     title: 'Eco ton momen Cufe',
     textFile: 'eco-cufe.readalong',
     mediaId: '4',
+    thumbnail: 'image-eco-ton-momen-c-20261110164718-0.png',
   ),
   ContentItem(
     id: '1',
     title: 'Day/Night Onvkuce',
     textFile: 'chipbear.readalong',
     mediaId: '1',
+    thumbnail: 'chipmunk.webp',
+  ),
+  ContentItem(
+    id: '4',
+    title: 'Interview',
+    textFile: 'mus16051.eaf',
+    mediaId: '5',
   ),
   ContentItem(
     id: '2',
     title: '1878 Postoak letter to A.E.W. Robertson',
     textFile: 'postoak-01.readalong',
     mediaId: '2',
+    thumbnail: 'postoak-01.png',
   ),
 ];
 
@@ -105,7 +123,7 @@ class ContentService {
   Future<String?> findInAssets(MediaObject item) async {
     var dirs = ['assets/audio/', 'assets/readalongs/'];
     for (var dir in dirs) {
-      var filename = '$dir${item.filename}';
+      var filename = '$dir${item.uri}';
       try {
         await rootBundle.load(filename);
         return filename;
@@ -118,6 +136,6 @@ class ContentService {
 
   Uri getAudioUrl(MediaObject item) {
     // return webService!.getAudioUrl(item.filename);
-    return Uri.parse('https://example.com/audio/${item.filename}');
+    return Uri.parse('https://example.com/audio/${item.uri}');
   }
 }

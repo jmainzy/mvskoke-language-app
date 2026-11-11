@@ -3,18 +3,20 @@ import 'package:mvskoke_language_app/utilities/timestamp.dart';
 import 'package:mvskoke_language_app/utilities/utils.dart';
 
 class MediaObject extends MediaItem {
-  final String? filename;
+  final String? uri;
   final String? performer;
   final String copyright;
   final Timestamp? lastUpdate;
+  final MediaType? mediaType;
 
   MediaObject({
     required super.id,
     required super.title,
-    required this.filename,
+    required this.uri,
     required this.performer,
     required this.copyright,
     required this.lastUpdate,
+    this.mediaType = MediaType.audio,
   });
 
   @override
@@ -22,10 +24,11 @@ class MediaObject extends MediaItem {
     return '''
     MediaItem(id: $id, 
       title: $title, 
-      filename: $filename,
+      filename: $uri,
       performer: $performer,
       copyright: $copyright,
-      lastUpdate: $lastUpdate)
+      lastUpdate: $lastUpdate,
+      mediaType: $mediaType
     ''';
   }
 
@@ -34,7 +37,7 @@ class MediaObject extends MediaItem {
     return MediaObject(
       id: map['id'],
       title: map['title'],
-      filename: map['filename'],
+      uri: map['filename'],
       performer: map['performer'],
       copyright: map['copyright'],
       lastUpdate: lastUpdate,
@@ -46,10 +49,12 @@ class MediaObject extends MediaItem {
     return {
       'id': object.id,
       'title': object.title,
-      'filename': object.filename,
+      'filename': object.uri,
       'performer': object.performer,
       'copyright': object.copyright,
       'lastUpdate': object.lastUpdate.toString(),
     };
   }
 }
+
+enum MediaType { audio, video }

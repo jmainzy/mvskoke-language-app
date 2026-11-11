@@ -211,13 +211,51 @@ class ContentListState extends State<ContentList> {
               return SizedBox(height: 2);
             },
             itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                title: Text(widget.stories[index].title),
-                onTap: () {
-                  NavigationHelper.router.push(
-                    '${NavigationHelper.contentPath}/${widget.stories[index].id}',
-                  );
-                },
+              final story = widget.stories[index];
+              return Card(
+                margin: const EdgeInsets.symmetric(
+                  horizontal: Dimens.marginLarge,
+                  vertical: Dimens.marginShort / 4,
+                ),
+                clipBehavior: Clip.antiAlias,
+                elevation: 0,
+                child: InkWell(
+                  onTap: () {
+                    NavigationHelper.router.push(
+                      '${NavigationHelper.contentPath}/${story.id}',
+                    );
+                  },
+                  child: IntrinsicHeight(
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        SizedBox(
+                          width: 72,
+                          child: story.thumbnail == null
+                              ? const Icon(Icons.book)
+                              : Image.asset(
+                                  'assets/images/${story.thumbnail}',
+                                  fit: BoxFit.cover,
+                                  errorBuilder: (context, error, stackTrace) =>
+                                      const Icon(Icons.image),
+                                ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: Dimens.marginLarge,
+                              vertical: Dimens.marginLarge,
+                            ),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(story.title),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               );
             },
           ),
