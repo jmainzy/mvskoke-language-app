@@ -53,9 +53,9 @@ dependencies:
   direct_link: ^0.3.3
   flutter_inappwebview: ^6.1.5
   readalong:
-    # git:
-    # url: https://github.com/jmainzy/readalong-flutter.git
-    path: ../readalong
+    git:
+    url: https://github.com/jmainzy/readalong-flutter.git
+    # path: ../readalong
 
 dev_dependencies:
   flutter_test:
