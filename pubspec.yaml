@@ -54,7 +54,7 @@ dependencies:
   flutter_inappwebview: ^6.1.5
   readalong:
     git:
-    url: https://github.com/jmainzy/readalong-flutter.git
+      url: https://github.com/jmainzy/readalong-flutter.git
     # path: ../readalong
 
 dev_dependencies:
