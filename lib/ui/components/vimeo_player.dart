@@ -56,10 +56,10 @@ class VimeoPlaybackController implements PlaybackController {
   void handlePlayerEvent(Object? event) {
     if (_disposed || event is! Map) return;
     final type = event['type'];
-    if (type == 'time' || type == 'loaded' || type == 'ended') {
+    if (type == 'time' || type == 'loaded' || type == 'ready' || type == 'ended') {
       final seconds = _number(event['seconds']);
       if (seconds != null &&
-          !(type == 'loaded' &&
+          !((type == 'loaded' || type == 'ready') &&
               initialPosition > Duration.zero &&
               !_restoredInitialPosition)) {
         _position = Duration(milliseconds: (seconds * 1000).round());
@@ -73,6 +73,7 @@ class VimeoPlaybackController implements PlaybackController {
     }
 
     switch (type) {
+      case 'ready':
       case 'loaded':
         if (initialPosition > Duration.zero && !_restoredInitialPosition) {
           _restoredInitialPosition = true;
@@ -81,6 +82,10 @@ class VimeoPlaybackController implements PlaybackController {
           _updateState(PlayerState(false, ProcessingState.ready));
         }
       case 'play':
+        if (initialPosition > Duration.zero && !_restoredInitialPosition) {
+          _restoredInitialPosition = true;
+          unawaited(_restoreInitialPosition());
+        }
         _updateState(PlayerState(true, ProcessingState.ready));
       case 'pause':
         _updateState(PlayerState(false, ProcessingState.ready));
@@ -127,11 +132,13 @@ class VimeoPlaybackController implements PlaybackController {
   Future<void> _run(String command, [Object? value]) async {
     final webView = _webViewController;
     if (webView == null) {
-      log.w('run(play) called but Vimeo player not ready yet');
+      log.w('run($command) called but Vimeo player not ready yet');
+      return;
     }
     final argument = value == null ? '' : ',${jsonEncode(value)}';
-    await webView?.evaluateJavascript(
-      source: 'window.readAlongVimeo.$command($argument)',
+    await webView.evaluateJavascript(
+      source:
+          'if (window.readAlongVimeo && window.readAlongVimeo.$command) { window.readAlongVimeo.$command($argument); }',
     );
   }
 
@@ -177,7 +184,12 @@ class VimeoPlayer extends StatelessWidget {
   final VimeoPlaybackController controller;
 
   String get _playerHtml {
-    final safeUrl = jsonEncode(embedUrl);
+    final initialSeconds = controller.initialPosition.inSeconds;
+    final urlWithFragment = initialSeconds > 0 && !embedUrl.contains('#')
+        ? '$embedUrl#t=${initialSeconds}s'
+        : embedUrl;
+    final safeUrl = jsonEncode(urlWithFragment);
+    final safeInitialSeconds = initialSeconds > 0 ? initialSeconds : 0;
     return '''
 <!doctype html>
 <html>
@@ -200,6 +212,9 @@ class VimeoPlayer extends StatelessWidget {
     document.getElementById('player').appendChild(iframe);
 
     const player = new Vimeo.Player(iframe);
+    const initialPositionSeconds = $safeInitialSeconds;
+    let initialSeekPerformed = false;
+
     function send(type, details = {}) {
       if (window.flutter_inappwebview) {
         window.flutter_inappwebview.callHandler(
@@ -208,6 +223,16 @@ class VimeoPlayer extends StatelessWidget {
         );
       }
     }
+
+    function checkAndRestorePosition() {
+      if (!initialSeekPerformed && initialPositionSeconds > 0) {
+        initialSeekPerformed = true;
+        player.setCurrentTime(initialPositionSeconds).catch(function(err) {
+          console.warn('setCurrentTime failed', err);
+        });
+      }
+    }
+
     window.readAlongVimeo = {
       play: () => player.play(),
       pause: () => player.pause(),
@@ -215,14 +240,26 @@ class VimeoPlayer extends StatelessWidget {
       setSpeed: (rate) => player.setPlaybackRate(rate)
     };
 
-    player.on('loaded', () => Promise.all([
-      player.getDuration(),
-      player.getCurrentTime()
-    ]).then(([duration, seconds]) => send('loaded', {
-      duration: duration,
-      seconds: seconds
-    })));
-    player.on('play', () => send('play'));
+    function notifyReady() {
+      Promise.all([
+        player.getDuration(),
+        player.getCurrentTime()
+      ]).then(([duration, seconds]) => {
+        checkAndRestorePosition();
+        send('ready', {
+          duration: duration,
+          seconds: initialPositionSeconds > 0 ? Math.max(seconds, initialPositionSeconds) : seconds
+        });
+      }).catch((e) => send('error', {message: e.message}));
+    }
+
+    player.ready().then(notifyReady);
+    player.on('loaded', notifyReady);
+
+    player.on('play', () => {
+      checkAndRestorePosition();
+      send('play');
+    });
     player.on('pause', () => send('pause'));
     player.on('bufferstart', () => send('bufferstart'));
     player.on('bufferend', () => send('bufferend'));

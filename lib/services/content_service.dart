@@ -50,9 +50,25 @@ final List<MediaObject> mediaItems = [
     mediaType: MediaType.video,
     lastUpdate: Timestamp.now(),
   ),
+  MediaObject(
+    id: '6',
+    title: 'cvyacetos',
+    uri: 'cvyacetos.mp3',
+    performer: 'Gracine Hicks',
+    copyright: '© 2026 MCN',
+    lastUpdate: Timestamp.now(),
+  ),
 ];
 
 final List<ContentItem> stories = [
+  ContentItem(
+    id: '5',
+    title: 'Cvyacetos',
+    subtitle: 'I like',
+    textFile: 'cvyacetos.readalong',
+    mediaId: '6',
+    thumbnail: 'image-cvyacetos-20261112170953-0.jpg',
+  ),
   ContentItem(
     id: '3',
     title: 'Eco ton momen Cufe',

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<read-along version="1.2">
+    <meta name="generator" content="@readalongs/studio (cli) 1.2.2" id="meta0"/>
+    <text xml:lang="und" fallback-langs="und" id="t0">
+        <body id="t0b0">
+            <div type="page" id="t0b0d0">
+                <p id="t0b0d0p0">
+                    <s id="t0b0d0p0s0"><w id="t0b0d0p0s0w0" ARPABET="AA HH K OW P V N EY T V" time="0.38" dur="1.18">Ahkopvnetv</w> <w id="t0b0d0p0s0w1" ARPABET="CH V Y AA CH EY T OW S" time="1.56" dur="1.22">cvyacētos</w>.</s><s do-not-align="true" id="t0b0d0p0s0" sentence-id="t0b0d0p0s0" class="sentence__translation editable__translation" xml:lang="eng">I like to play.</s>
+                </p>
+            <graphic url="image-cvyacetos-20261112170953-0.jpg"/></div>
+            <div type="page" id="t0b0d1">
+                <p id="t0b0d1p0">
+                    <s id="t0b0d1p0s0"><w id="t0b0d1p0s0w0" ARPABET="L EY T K EY T V" time="5.45" dur="0.71">Letketv</w> <w id="t0b0d1p0s0w1" ARPABET="CH V Y AA CH EY T OW S" time="6.16" dur="1.24">cvyacētos</w>.</s><s do-not-align="true" id="t0b0d1p0s0" sentence-id="t0b0d1p0s0" class="sentence__translation editable__translation" xml:lang="eng">I like to run.</s>
+                </p>
+            <graphic url="image-cvyacetos-20261112170953-1.jpg"/></div>
+            <div type="page" id="t0b0d2">
+                <p id="t0b0d2p0">
+                    <s id="t0b0d2p0s0"><w id="t0b0d2p0s0w0" ARPABET="EY S HH OW CH IY CH K V" time="10.22" dur="0.97">Eshocickv</w> <w id="t0b0d2p0s0w1" ARPABET="CH V Y AA CH EY T OW S" time="11.54" dur="1.23">cvyacētos</w>.</s><s do-not-align="true" id="t0b0d2p0s0" sentence-id="t0b0d2p0s0" class="sentence__translation editable__translation" xml:lang="eng">I need a pencil.</s>
+                </p>
+            <graphic url="image-cvyacetos-20261112170953-2.jpg"/></div>
+            <div type="page" id="t0b0d3">
+                <p id="t0b0d3p0">
+                    <s id="t0b0d3p0s0"><w id="t0b0d3p0s0w0" ARPABET="Y V HH IY K EY T V" time="16.33" dur="0.66">Yvhiketv</w> <w id="t0b0d3p0s0w1" ARPABET="CH V Y AA CH EY T OW S" time="16.99" dur="1.25">cvyacētos</w>.</s><s do-not-align="true" id="t0b0d3p0s0" sentence-id="t0b0d3p0s0" class="sentence__translation editable__translation" xml:lang="eng">I like to sing.</s>
+                </p>
+            <graphic url="image-cvyacetos-20261112170953-3.jpg"/></div>
+            <div type="page" id="t0b0d4">
+                <p id="t0b0d4p0">
+                    <s id="t0b0d4p0s0"><w id="t0b0d4p0s0w0" ARPABET="L IY K EY T V" time="20.89" dur="0.67">Liketv</w> <w id="t0b0d4p0s0w1" ARPABET="CH V Y AA CH EY T OW S" time="21.79" dur="1.25">cvyacētos</w>.</s><s do-not-align="true" id="t0b0d4p0s0" sentence-id="t0b0d4p0s0" class="sentence__translation editable__translation" xml:lang="eng">I like to sit.</s>
+                </p>
+            <graphic url="image-cvyacetos-20261112170953-4.jpg"/></div>
+            <div type="page" id="t0b0d5">
+                <p id="t0b0d5p0">
+                    <s id="t0b0d5p0s0"><w id="t0b0d5p0s0w0" ARPABET="P V N EY T V" time="25.52" dur="0.8">Pvnetv</w> <w id="t0b0d5p0s0w1" ARPABET="CH V Y AA CH EY T OW S" time="26.47" dur="1.32">cvyacētos</w>.</s><s do-not-align="true" id="t0b0d5p0s0" sentence-id="t0b0d5p0s0" class="sentence__translation editable__translation" xml:lang="eng">I like to dance.</s>
+                </p>
+            <graphic url="image-cvyacetos-20261112170953-5.png"/></div>
+            <div type="page" id="t0b0d6">
+                <p id="t0b0d6p0">
+                    <s id="t0b0d6p0s0"><w id="t0b0d6p0s0w0" ARPABET="Y V K V P EY T V" time="30.91" dur="0.81">Yvkvpetv</w> <w id="t0b0d6p0s0w1" ARPABET="CH V Y AA CH EY T OW S" time="31.89" dur="1.26">cvyacētos</w>.</s><s do-not-align="true" id="t0b0d6p0s0" sentence-id="t0b0d6p0s0" class="sentence__translation editable__translation" xml:lang="eng">I like to walk.</s>
+                </p>
+            <graphic url="image-cvyacetos-20261112170953-6.jpg"/></div>
+            <div type="page" id="t0b0d7">
+                <p id="t0b0d7p0">
+                    <s id="t0b0d7p0s0"><w id="t0b0d7p0s0w0" ARPABET="K EY D D EY T V" time="36.64" dur="0.84">Kerretv</w> <w id="t0b0d7p0s0w1" ARPABET="CH V Y AA CH EY T OW S" time="37.48" dur="1.16">cvyacētos</w>.</s><s do-not-align="true" id="t0b0d7p0s0" sentence-id="t0b0d7p0s0" class="sentence__translation editable__translation" xml:lang="eng">I want to learn.</s>
+                </p>
+            <graphic url="image-cvyacetos-20261112170953-7.jpg"/></div>
+        </body>
+    </text>
+</read-along>

@@ -123,7 +123,8 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
               .listen(_handleVideoPosition);
           _videoStateSubscription = _vimeoPlaybackController!.stateStream
               .listen((state) {
-                if (state.processingState == ProcessingState.completed) {
+                if (state.processingState == ProcessingState.completed ||
+                    !state.playing) {
                   unawaited(_saveVideoProgress());
                 }
               });
