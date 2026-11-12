@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:logger/logger.dart';
 import 'package:mvskoke_language_app/models/content_item.dart';
 import 'package:mvskoke_language_app/services/content_service.dart';
 import 'package:mvskoke_language_app/services/navigation_helper.dart';
+import 'package:mvskoke_language_app/services/service_locator.dart';
+import 'package:mvskoke_language_app/services/store_service.dart';
 import 'package:mvskoke_language_app/utilities/dimens.dart';
 import 'package:mvskoke_language_app/ui/components/web_tab_menu.dart';
-import 'package:watch_it/watch_it.dart';
+import 'package:watch_it/watch_it.dart' show WatchingStatefulWidget;
 
 Logger log = Logger();
 
@@ -115,6 +118,7 @@ class ContentListState extends State<ContentList> {
   ContentListState();
 
   final SearchController controller = SearchController();
+  final StoreService storeService = sl<StoreService>();
   var isSearching = false;
 
   @override
@@ -212,55 +216,104 @@ class ContentListState extends State<ContentList> {
             },
             itemBuilder: (BuildContext context, int index) {
               final story = widget.stories[index];
-              return Card(
-                margin: const EdgeInsets.symmetric(
-                  horizontal: Dimens.marginLarge,
-                  vertical: Dimens.marginShort / 4,
+              if (!story.isVideo) return _buildStoryCard(story);
+
+              final progressKey = storeService.videoProgressKey(story.id);
+              return ValueListenableBuilder<Box>(
+                valueListenable: storeService.box.listenable(
+                  keys: [progressKey],
                 ),
-                clipBehavior: Clip.antiAlias,
-                elevation: 0,
-                child: InkWell(
-                  onTap: () {
-                    NavigationHelper.router.push(
-                      '${NavigationHelper.contentPath}/${story.id}',
-                    );
-                  },
-                  child: IntrinsicHeight(
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        SizedBox(
-                          width: 72,
-                          child: story.thumbnail == null
-                              ? const Icon(Icons.book)
-                              : Image.asset(
-                                  'assets/images/${story.thumbnail}',
-                                  fit: BoxFit.cover,
-                                  errorBuilder: (context, error, stackTrace) =>
-                                      const Icon(Icons.image),
-                                ),
-                        ),
-                        Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: Dimens.marginLarge,
-                              vertical: Dimens.marginLarge,
-                            ),
-                            child: Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text(story.title),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                builder: (context, box, child) {
+                  final progress = storeService.getVideoProgress(story.id);
+                  return _buildStoryCard(
+                    story,
+                    progress: progress?.fraction ?? 0,
+                  );
+                },
               );
             },
           ),
         ),
       ],
+    );
+  }
+
+  Widget _buildStoryCard(ContentItem story, {double? progress}) {
+    final subtitleTheme = Theme.of(context).textTheme.labelSmall?.copyWith(
+      color: Theme.of(context).textTheme.labelSmall?.color?.withAlpha(150),
+    );
+    return SizedBox(
+      height: 90,
+      child: Card(
+        margin: const EdgeInsets.symmetric(
+          horizontal: Dimens.marginLarge,
+          vertical: Dimens.marginShort / 4,
+        ),
+        clipBehavior: Clip.antiAlias,
+        elevation: 0,
+        child: InkWell(
+          onTap: () {
+            NavigationHelper.router.push(
+              '${NavigationHelper.contentPath}/${story.id}',
+            );
+          },
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Expanded(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    SizedBox(
+                      width: 96,
+                      child: story.thumbnail == null
+                          ? const Icon(Icons.book)
+                          : Image.asset(
+                              'assets/images/${story.thumbnail}',
+                              fit: BoxFit.cover,
+                              errorBuilder: (context, error, stackTrace) =>
+                                  const Icon(Icons.image),
+                            ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: Dimens.marginLarge,
+                          vertical: Dimens.marginLarge,
+                        ),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                story.title,
+                                style: Theme.of(context).textTheme.bodyMedium,
+                              ),
+                              story.subtitle != null
+                                  ? Text(story.subtitle!, style: subtitleTheme)
+                                  : Container(),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              if (progress != null)
+                LinearProgressIndicator(
+                  value: progress,
+                  minHeight: 4,
+                  backgroundColor: Theme.of(context)
+                      .colorScheme
+                      .surfaceContainerHighest,
+                ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

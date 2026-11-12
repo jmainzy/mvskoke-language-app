@@ -1,11 +1,14 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
-import 'package:just_audio/just_audio.dart';
+import 'package:just_audio/just_audio.dart' hide PlayerState, ProcessingState;
 import 'package:logger/logger.dart';
 import 'package:mvskoke_language_app/models/content_item.dart';
 import 'package:mvskoke_language_app/models/media_item.dart';
 import 'package:mvskoke_language_app/services/content_service.dart';
 import 'package:mvskoke_language_app/services/service_locator.dart';
+import 'package:mvskoke_language_app/services/store_service.dart';
 import 'package:mvskoke_language_app/ui/components/reader_chrome_scope.dart';
 import 'package:mvskoke_language_app/ui/components/vimeo_player.dart';
 import 'package:mvskoke_language_app/utilities/utils.dart';
@@ -27,6 +30,10 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
   late Future<ContentItem?> contentItemFuture;
   Future<String?>? _videoUrlFuture;
   VimeoPlaybackController? _vimeoPlaybackController;
+  StreamSubscription<Duration>? _videoPositionSubscription;
+  StreamSubscription<PlayerState>? _videoStateSubscription;
+  Timer? _progressSaveTimer;
+  Duration? _latestVideoPosition;
   MediaObject? mediaItem;
   AudioSource? audioSource;
   final ValueNotifier<bool> _localChromeVisibility = ValueNotifier(true);
@@ -57,6 +64,16 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
     });
   }
 
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.inactive ||
+        state == AppLifecycleState.paused ||
+        state == AppLifecycleState.hidden ||
+        state == AppLifecycleState.detached) {
+      unawaited(_saveVideoProgress());
+    }
+  }
+
   void _syncChromeVisibility(ReaderChromeScope? chromeScope) {
     _chromeVisibility = chromeScope?.visibility ?? _localChromeVisibility;
     final isLandscape =
@@ -74,6 +91,10 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
+    _progressSaveTimer?.cancel();
+    unawaited(_videoPositionSubscription?.cancel());
+    unawaited(_videoStateSubscription?.cancel());
+    unawaited(_saveVideoProgress());
     _localChromeVisibility.dispose();
     _vimeoPlaybackController?.dispose();
     super.dispose();
@@ -92,7 +113,20 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
       if (mediaItem?.mediaType == MediaType.video && mediaItem?.uri != null) {
         final embedUrl = Utils.getVimeoEmbedUrl(mediaItem!.uri!);
         if (embedUrl != null) {
-          _vimeoPlaybackController = VimeoPlaybackController();
+          final progress = sl<StoreService>().getVideoProgress(item.id);
+          _latestVideoPosition = progress?.position ?? Duration.zero;
+          _vimeoPlaybackController = VimeoPlaybackController(
+            initialPosition: _latestVideoPosition!,
+          );
+          _videoPositionSubscription = _vimeoPlaybackController!
+              .positionStream
+              .listen(_handleVideoPosition);
+          _videoStateSubscription = _vimeoPlaybackController!.stateStream
+              .listen((state) {
+                if (state.processingState == ProcessingState.completed) {
+                  unawaited(_saveVideoProgress());
+                }
+              });
         } else {
           _videoUrlFuture = Utils.getVideoUrl(mediaItem!.uri!);
         }
@@ -101,6 +135,38 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
       }
     }
     return item;
+  }
+
+  void _handleVideoPosition(Duration position) {
+    _latestVideoPosition = position;
+    _progressSaveTimer ??= Timer(const Duration(seconds: 5), () {
+      _progressSaveTimer = null;
+      unawaited(_saveVideoProgress());
+    });
+  }
+
+  Future<void> _saveVideoProgress() async {
+    final controller = _vimeoPlaybackController;
+    final position = _latestVideoPosition;
+    if (controller == null ||
+        position == null ||
+        mediaItem?.mediaType != MediaType.video) {
+      return;
+    }
+
+    try {
+      await sl<StoreService>().saveVideoProgress(
+        widget.contentId,
+        position: position,
+        duration: controller.duration,
+      );
+    } catch (error, stackTrace) {
+      log.e(
+        'Unable to save video progress',
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
   }
 
   Widget _buildVideoPlayer() {
@@ -164,22 +230,54 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
                       mediaItem!.performer!.isNotEmpty
                   ? '${contentItem.title} reading by ${mediaItem!.performer}'
                   : null;
+              final videoPlayer = _buildVideoPlayer();
+              final reader = contentItem.textFile != null
+                  ? ReadAlong(
+                      xmlAsset: 'assets/readalongs/${contentItem.textFile}',
+                      imagesFolder: 'assets/images',
+                      audioSource: audioSource,
+                      playbackController: _vimeoPlaybackController,
+                      audioTitle: infoTitle,
+                      onReaderSurfaceTap: _toggleReaderChrome,
+                    )
+                  : const SizedBox.shrink();
+              final showSideBySide =
+                  MediaQuery.orientationOf(context) == Orientation.landscape &&
+                  mediaItem?.mediaType == MediaType.video;
+
+              if (mediaItem?.mediaType == MediaType.video) {
+                return Flex(
+                  direction: showSideBySide ? Axis.horizontal : Axis.vertical,
+                  children: [
+                    Flexible(
+                      flex: showSideBySide ? 1 : 0,
+                      fit: showSideBySide ? FlexFit.tight : FlexFit.loose,
+                      child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: videoPlayer,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: showSideBySide ? 1 : 0,
+                      height: showSideBySide ? 0 : 1,
+                      child: showSideBySide
+                          ? VerticalDivider(
+                              width: 1,
+                              color: Theme.of(context).dividerColor,
+                            )
+                          : null,
+                    ),
+                    Expanded(child: reader),
+                  ],
+                );
+              }
+
               return Column(
                 children: [
-                  _buildVideoPlayer(),
-                  Expanded(
-                    child: contentItem.textFile != null
-                        ? ReadAlong(
-                            xmlAsset:
-                                'assets/readalongs/${contentItem.textFile}',
-                            imagesFolder: 'assets/images',
-                            audioSource: audioSource,
-                            playbackController: _vimeoPlaybackController,
-                            audioTitle: infoTitle,
-                            onReaderSurfaceTap: _toggleReaderChrome,
-                          )
-                        : Container(),
-                  ),
+                  videoPlayer,
+                  Expanded(child: reader),
                 ],
               );
             }

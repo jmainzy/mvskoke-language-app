@@ -56,22 +56,26 @@ final List<ContentItem> stories = [
   ContentItem(
     id: '3',
     title: 'Eco ton momen Cufe',
+    subtitle: 'How Deer Fooled Rabbit',
     textFile: 'eco-cufe.readalong',
     mediaId: '4',
     thumbnail: 'image-eco-ton-momen-c-20261110164718-0.png',
   ),
   ContentItem(
     id: '1',
-    title: 'Day/Night Onvkuce',
+    title: 'Nere nettv Onvkuce',
+    subtitle: 'A story of day and night',
     textFile: 'chipbear.readalong',
     mediaId: '1',
     thumbnail: 'chipmunk.webp',
   ),
   ContentItem(
     id: '4',
-    title: 'Interview',
+    title: 'Interview with Bessie Spencer',
     textFile: 'mus16051.eaf',
     mediaId: '5',
+    thumbnail: 'mus16051-thumb.png',
+    mediaType: MediaType.video,
   ),
   ContentItem(
     id: '2',

@@ -9,6 +9,10 @@ import 'package:readalong/readalong.dart';
 Logger log = Logger();
 
 class VimeoPlaybackController implements PlaybackController {
+  VimeoPlaybackController({this.initialPosition = Duration.zero})
+    : _position = initialPosition;
+
+  final Duration initialPosition;
   final StreamController<Duration> _positionEvents =
       StreamController<Duration>.broadcast(sync: true);
   final StreamController<Duration?> _durationEvents =
@@ -22,6 +26,7 @@ class VimeoPlaybackController implements PlaybackController {
   double _speed = 1;
   PlayerState _state = PlayerState(false, ProcessingState.loading);
   bool _disposed = false;
+  bool _restoredInitialPosition = false;
 
   @override
   Duration get position => _position;
@@ -53,7 +58,10 @@ class VimeoPlaybackController implements PlaybackController {
     final type = event['type'];
     if (type == 'time' || type == 'loaded' || type == 'ended') {
       final seconds = _number(event['seconds']);
-      if (seconds != null) {
+      if (seconds != null &&
+          !(type == 'loaded' &&
+              initialPosition > Duration.zero &&
+              !_restoredInitialPosition)) {
         _position = Duration(milliseconds: (seconds * 1000).round());
         _positionEvents.add(_position);
       }
@@ -66,7 +74,12 @@ class VimeoPlaybackController implements PlaybackController {
 
     switch (type) {
       case 'loaded':
-        _updateState(PlayerState(false, ProcessingState.ready));
+        if (initialPosition > Duration.zero && !_restoredInitialPosition) {
+          _restoredInitialPosition = true;
+          unawaited(_restoreInitialPosition());
+        } else {
+          _updateState(PlayerState(false, ProcessingState.ready));
+        }
       case 'play':
         _updateState(PlayerState(true, ProcessingState.ready));
       case 'pause':
@@ -79,6 +92,27 @@ class VimeoPlaybackController implements PlaybackController {
         _updateState(PlayerState(false, ProcessingState.completed));
       case 'error':
         _updateState(PlayerState(false, ProcessingState.idle));
+    }
+  }
+
+  Future<void> _restoreInitialPosition() async {
+    final duration = _duration;
+    final target = duration == null
+        ? initialPosition
+        : Duration(
+            milliseconds: initialPosition.inMilliseconds
+                .clamp(0, duration.inMilliseconds)
+                .toInt(),
+          );
+    _position = target;
+    _positionEvents.add(target);
+    try {
+      await _run('seek', target.inMilliseconds / 1000);
+    } catch (error, stackTrace) {
+      log.e('Unable to restore Vimeo playback position', error: error, stackTrace: stackTrace);
+    }
+    if (!_disposed) {
+      _updateState(PlayerState(false, ProcessingState.ready));
     }
   }
 
