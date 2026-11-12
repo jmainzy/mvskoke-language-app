@@ -7,6 +7,8 @@ import 'package:mvskoke_language_app/models/media_item.dart';
 import 'package:mvskoke_language_app/services/content_service.dart';
 import 'package:mvskoke_language_app/services/service_locator.dart';
 import 'package:mvskoke_language_app/ui/components/reader_chrome_scope.dart';
+import 'package:mvskoke_language_app/ui/components/vimeo_player.dart';
+import 'package:mvskoke_language_app/utilities/utils.dart';
 import 'package:readalong/readalong.dart';
 
 Logger log = Logger();
@@ -23,8 +25,10 @@ class ContentPage extends StatefulWidget {
 class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
   final contentService = sl<ContentService>();
   late Future<ContentItem?> contentItemFuture;
-  late MediaObject? mediaItem;
-  late AudioSource? audioSource;
+  Future<String?>? _videoUrlFuture;
+  VimeoPlaybackController? _vimeoPlaybackController;
+  MediaObject? mediaItem;
+  AudioSource? audioSource;
   final ValueNotifier<bool> _localChromeVisibility = ValueNotifier(true);
   late ValueNotifier<bool> _chromeVisibility = _localChromeVisibility;
   bool? _wasActive;
@@ -71,6 +75,7 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     _localChromeVisibility.dispose();
+    _vimeoPlaybackController?.dispose();
     super.dispose();
   }
 
@@ -84,9 +89,57 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
     title = item?.title ?? '';
     if (item?.mediaId != null && item!.mediaId!.isNotEmpty) {
       mediaItem = await contentService.getMediaById(item.mediaId!);
-      audioSource = await contentService.getAudioSource(item.mediaId!);
+      if (mediaItem?.mediaType == MediaType.video && mediaItem?.uri != null) {
+        final embedUrl = Utils.getVimeoEmbedUrl(mediaItem!.uri!);
+        if (embedUrl != null) {
+          _vimeoPlaybackController = VimeoPlaybackController();
+        } else {
+          _videoUrlFuture = Utils.getVideoUrl(mediaItem!.uri!);
+        }
+      } else {
+        audioSource = await contentService.getAudioSource(item.mediaId!);
+      }
     }
     return item;
+  }
+
+  Widget _buildVideoPlayer() {
+    final media = mediaItem;
+    final sourceUrl = media?.uri;
+    if (media?.mediaType != MediaType.video || sourceUrl == null) {
+      return const SizedBox.shrink();
+    }
+
+    final vimeoEmbedUrl = Utils.getVimeoEmbedUrl(sourceUrl);
+    if (vimeoEmbedUrl != null) {
+      return VimeoPlayer(
+        embedUrl: vimeoEmbedUrl,
+        controller: _vimeoPlaybackController!,
+      );
+    }
+
+    return FutureBuilder<String?>(
+      future: _videoUrlFuture,
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const AspectRatio(
+            aspectRatio: 16 / 9,
+            child: Center(child: CircularProgressIndicator()),
+          );
+        }
+        if (snapshot.hasError) {
+          return Center(child: Text('Error: ${snapshot.error}'));
+        }
+        final videoUrl = snapshot.data;
+        if (videoUrl == null) {
+          return const Center(child: Text('No video found.'));
+        }
+        return AspectRatio(
+          aspectRatio: 16 / 9,
+          child: Center(child: Text('Video player for $videoUrl')),
+        );
+      },
+    );
   }
 
   @override
@@ -111,15 +164,24 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
                       mediaItem!.performer!.isNotEmpty
                   ? '${contentItem.title} reading by ${mediaItem!.performer}'
                   : null;
-              return contentItem.textFile != null
-                  ? ReadAlong(
-                      xmlAsset: 'assets/readalongs/${contentItem.textFile}',
-                      imagesFolder: 'assets/images',
-                      audioSource: audioSource,
-                      audioTitle: infoTitle,
-                      onReaderSurfaceTap: _toggleReaderChrome,
-                    )
-                  : Container();
+              return Column(
+                children: [
+                  _buildVideoPlayer(),
+                  Expanded(
+                    child: contentItem.textFile != null
+                        ? ReadAlong(
+                            xmlAsset:
+                                'assets/readalongs/${contentItem.textFile}',
+                            imagesFolder: 'assets/images',
+                            audioSource: audioSource,
+                            playbackController: _vimeoPlaybackController,
+                            audioTitle: infoTitle,
+                            onReaderSurfaceTap: _toggleReaderChrome,
+                          )
+                        : Container(),
+                  ),
+                ],
+              );
             }
           },
         ),

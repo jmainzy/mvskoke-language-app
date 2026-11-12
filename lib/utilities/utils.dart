@@ -1,8 +1,28 @@
+import 'dart:async';
+
+import 'package:direct_link/direct_link.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:logger/logger.dart';
 import 'package:mvskoke_language_app/utilities/timestamp.dart';
 
+Logger log = Logger();
+const _directLinkTimeout = Duration(seconds: 45);
+
 class Utils {
+  static String? getVimeoEmbedUrl(String url) {
+    final uri = Uri.tryParse(url);
+    if (uri == null ||
+        (uri.host != 'vimeo.com' && !uri.host.endsWith('.vimeo.com'))) {
+      return null;
+    }
+
+    final videoId = uri.pathSegments.where(RegExp(r'^\d+$').hasMatch).firstOrNull;
+    if (videoId == null) return null;
+    return Uri.https('player.vimeo.com', '/video/$videoId', {'dnt': '1'})
+        .toString();
+  }
+
   static Timestamp getFormattedDate(dynamic date) {
     if (date is String) {
       if (date.startsWith('Timestamp')) {
@@ -20,6 +40,45 @@ class Utils {
     }
 
     return Timestamp(1644393087, 0);
+  }
+
+  static Future<String?> getVideoUrl(String url) async {
+    log.d('getVideoUrl: $url');
+
+    /// Gets the direct video link from a URL.
+    /// If the URL is already a direct link, it will return the same URL.
+    if (url.endsWith('.mp4')) {
+      return url;
+    } else {
+      final directLink = DirectLink();
+      log.d('checking for direct link...');
+      final data = await directLink
+          .check(url, timeoutInterval: 30)
+          .timeout(
+            _directLinkTimeout,
+            onTimeout: () {
+              throw TimeoutException(
+                'Timed out while resolving a direct video link.',
+              );
+            },
+          )
+          .catchError((Object error, StackTrace stackTrace) {
+            log.e('Unable to resolve direct video link', error: error);
+            Error.throwWithStackTrace(error, stackTrace);
+          });
+      if (data == null) {
+        // No media link was found, or the upstream service could not resolve it.
+        log.e('No media link found for $url');
+        return null;
+      } else {
+        log.d('Direct link data: ${data.links}');
+      }
+
+      for (final link in data.links ?? []) {
+        return link.link;
+      }
+    }
+    return null;
   }
 
   static String? getChordTabs(String chord) {
