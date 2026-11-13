@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mvskoke_language_app/ui/components/vimeo_player.dart';
+import 'package:mvskoke_language_app/ui/components/video_player.dart';
 import 'package:readalong/readalong.dart';
 
 void main() {
@@ -79,44 +79,20 @@ void main() {
       expect(find.textContaining('Hēsci'), findsOneWidget);
 
       // Vimeo can report the old time after the saved position is restored.
-      controller.handlePlayerEvent({
-        'type': 'ready',
-        'seconds': 0.0,
-        'duration': 180.0,
-      });
+      controller.handleReady();
       await tester.pump();
       expect(lastPosition?.activeWordId, 'a406779');
 
-      controller.handlePlayerEvent({
-        'type': 'loaded',
-        'seconds': 0.0,
-        'duration': 180.0,
-      });
+      controller.handlePosition(0);
       await tester.pump();
       expect(lastPosition?.activeWordId, 'a406779');
 
-      controller.handlePlayerEvent({
-        'type': 'time',
-        'seconds': 0.0,
-        'duration': 180.0,
-      });
-      await tester.pump();
-      expect(lastPosition?.activeWordId, 'a406779');
-
-      controller.handlePlayerEvent({
-        'type': 'seeked',
-        'seconds': 10.0,
-        'duration': 180.0,
-      });
+      controller.handlePosition(10);
       await tester.pump();
       expect(lastPosition?.activeWordId, 'a406779');
 
       // Continue emitting time updates inside the first annotation.
-      controller.handlePlayerEvent({
-        'type': 'time',
-        'seconds': 11.0,
-        'duration': 180.0,
-      });
+      controller.handlePosition(11);
       await tester.pump();
 
       expect(lastPosition?.activeWordId, 'a406779');

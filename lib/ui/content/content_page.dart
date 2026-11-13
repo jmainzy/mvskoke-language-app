@@ -10,7 +10,7 @@ import 'package:mvskoke_language_app/services/content_service.dart';
 import 'package:mvskoke_language_app/services/service_locator.dart';
 import 'package:mvskoke_language_app/services/store_service.dart';
 import 'package:mvskoke_language_app/ui/components/reader_chrome_scope.dart';
-import 'package:mvskoke_language_app/ui/components/vimeo_player.dart';
+import 'package:mvskoke_language_app/ui/components/video_player.dart';
 import 'package:mvskoke_language_app/utilities/dimens.dart';
 import 'package:mvskoke_language_app/utilities/utils.dart';
 import 'package:readalong/readalong.dart';
@@ -175,36 +175,7 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
       return const SizedBox.shrink();
     }
 
-    final vimeoEmbedUrl = Utils.getVimeoEmbedUrl(sourceUrl);
-    if (vimeoEmbedUrl != null) {
-      return VimeoPlayer(
-        embedUrl: vimeoEmbedUrl,
-        controller: _vimeoPlaybackController!,
-      );
-    }
-
-    return FutureBuilder<String?>(
-      future: _videoUrlFuture,
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const AspectRatio(
-            aspectRatio: 16 / 9,
-            child: Center(child: CircularProgressIndicator()),
-          );
-        }
-        if (snapshot.hasError) {
-          return Center(child: Text('Error: ${snapshot.error}'));
-        }
-        final videoUrl = snapshot.data;
-        if (videoUrl == null) {
-          return const Center(child: Text('No video found.'));
-        }
-        return AspectRatio(
-          aspectRatio: 16 / 9,
-          child: Center(child: Text('Video player for $videoUrl')),
-        );
-      },
-    );
+    return VideoPlayer(url: sourceUrl, controller: _vimeoPlaybackController!);
   }
 
   @override
@@ -302,7 +273,7 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
                 }
               },
             ),
-            if (!appBarVisible)
+            if (!appBarVisible && !kIsWeb)
               IconButton(
                 icon: Icon(Icons.arrow_back),
                 onPressed: () {
