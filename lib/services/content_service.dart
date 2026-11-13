@@ -51,6 +51,15 @@ final List<MediaObject> mediaItems = [
     lastUpdate: Timestamp.now(),
   ),
   MediaObject(
+    id: '7',
+    title: 'Interview with Ella Colman',
+    uri: 'https://vimeo.com/169627576',
+    performer: 'Ella Colman',
+    copyright: '© 2026 MCN',
+    mediaType: MediaType.video,
+    lastUpdate: Timestamp.now(),
+  ),
+  MediaObject(
     id: '6',
     title: 'cvyacetos',
     uri: 'cvyacetos.mp3',
@@ -83,7 +92,7 @@ final List<ContentItem> stories = [
     subtitle: 'A story of day and night',
     textFile: 'chipbear.readalong',
     mediaId: '1',
-    thumbnail: 'chipmunk.webp',
+    thumbnail: 'nere-p1.png',
   ),
   ContentItem(
     id: '4',
@@ -99,6 +108,14 @@ final List<ContentItem> stories = [
     textFile: 'postoak-01.readalong',
     mediaId: '2',
     thumbnail: 'postoak-01.png',
+  ),
+  ContentItem(
+    id: '6',
+    title: 'Interview with Ella Colman',
+    textFile: 'mus16019.eaf',
+    mediaId: '7',
+    thumbnail: 'mus16019-thumb.png',
+    mediaType: MediaType.video,
   ),
 ];
 

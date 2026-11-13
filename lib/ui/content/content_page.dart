@@ -118,8 +118,7 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
           _vimeoPlaybackController = VimeoPlaybackController(
             initialPosition: _latestVideoPosition!,
           );
-          _videoPositionSubscription = _vimeoPlaybackController!
-              .positionStream
+          _videoPositionSubscription = _vimeoPlaybackController!.positionStream
               .listen(_handleVideoPosition);
           _videoStateSubscription = _vimeoPlaybackController!.stateStream
               .listen((state) {
@@ -232,14 +231,21 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
                   ? '${contentItem.title} reading by ${mediaItem!.performer}'
                   : null;
               final videoPlayer = _buildVideoPlayer();
+              final safePadding = MediaQuery.paddingOf(context).bottom; // Will cause a rebuild only if padding changes (requires Flutter > 3.10)
               final reader = contentItem.textFile != null
-                  ? ReadAlong(
-                      xmlAsset: 'assets/readalongs/${contentItem.textFile}',
-                      imagesFolder: 'assets/images',
-                      audioSource: audioSource,
-                      playbackController: _vimeoPlaybackController,
-                      audioTitle: infoTitle,
-                      onReaderSurfaceTap: _toggleReaderChrome,
+                  ? Container(
+                      color: Theme.of(context).scaffoldBackgroundColor,
+                      child: Padding(
+                        padding: EdgeInsets.only(bottom: safePadding + 8),
+                        child: ReadAlong(
+                          xmlAsset: 'assets/readalongs/${contentItem.textFile}',
+                          imagesFolder: 'assets/images',
+                          audioSource: audioSource,
+                          playbackController: _vimeoPlaybackController,
+                          audioTitle: infoTitle,
+                          onReaderSurfaceTap: _toggleReaderChrome,
+                        ),
+                      ),
                     )
                   : const SizedBox.shrink();
               final showSideBySide =
@@ -253,12 +259,7 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
                     Flexible(
                       flex: showSideBySide ? 1 : 0,
                       fit: showSideBySide ? FlexFit.tight : FlexFit.loose,
-                      child: Center(
-                        child: Padding(
-                          padding: const EdgeInsets.all(8),
-                          child: videoPlayer,
-                        ),
-                      ),
+                      child: Center(child: videoPlayer),
                     ),
                     SizedBox(
                       width: showSideBySide ? 1 : 0,

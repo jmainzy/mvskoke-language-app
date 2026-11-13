@@ -10,7 +10,8 @@ Logger log = Logger();
 
 class VimeoPlaybackController implements PlaybackController {
   VimeoPlaybackController({this.initialPosition = Duration.zero})
-    : _position = initialPosition;
+    : _position = initialPosition,
+      _initialPositionSeekPending = initialPosition > Duration.zero;
 
   final Duration initialPosition;
   final StreamController<Duration> _positionEvents =
@@ -27,6 +28,7 @@ class VimeoPlaybackController implements PlaybackController {
   PlayerState _state = PlayerState(false, ProcessingState.loading);
   bool _disposed = false;
   bool _restoredInitialPosition = false;
+  bool _initialPositionSeekPending;
 
   @override
   Duration get position => _position;
@@ -56,13 +58,31 @@ class VimeoPlaybackController implements PlaybackController {
   void handlePlayerEvent(Object? event) {
     if (_disposed || event is! Map) return;
     final type = event['type'];
-    if (type == 'time' || type == 'loaded' || type == 'ready' || type == 'ended') {
+    if (type == 'time' ||
+        type == 'loaded' ||
+        type == 'ready' ||
+        type == 'seeked' ||
+        type == 'ended') {
       final seconds = _number(event['seconds']);
+      final position = seconds == null
+          ? null
+          : Duration(milliseconds: (seconds * 1000).round());
+      if (type == 'seeked' ||
+          (type == 'time' &&
+              position != null &&
+              position >= initialPosition)) {
+        _initialPositionSeekPending = false;
+      }
+      final isStaleInitialPosition =
+          initialPosition > Duration.zero &&
+          ((type == 'loaded' || type == 'ready') ||
+              (type == 'time' &&
+                  _initialPositionSeekPending &&
+                  position != null &&
+                  position < initialPosition));
       if (seconds != null &&
-          !((type == 'loaded' || type == 'ready') &&
-              initialPosition > Duration.zero &&
-              !_restoredInitialPosition)) {
-        _position = Duration(milliseconds: (seconds * 1000).round());
+          !isStaleInitialPosition) {
+        _position = position!;
         _positionEvents.add(_position);
       }
       final durationSeconds = _number(event['duration']);
@@ -114,7 +134,11 @@ class VimeoPlaybackController implements PlaybackController {
     try {
       await _run('seek', target.inMilliseconds / 1000);
     } catch (error, stackTrace) {
-      log.e('Unable to restore Vimeo playback position', error: error, stackTrace: stackTrace);
+      log.e(
+        'Unable to restore Vimeo playback position',
+        error: error,
+        stackTrace: stackTrace,
+      );
     }
     if (!_disposed) {
       _updateState(PlayerState(false, ProcessingState.ready));
@@ -264,6 +288,10 @@ class VimeoPlayer extends StatelessWidget {
     player.on('bufferstart', () => send('bufferstart'));
     player.on('bufferend', () => send('bufferend'));
     player.on('timeupdate', (data) => send('time', {
+      seconds: data.seconds,
+      duration: data.duration
+    }));
+    player.on('seeked', (data) => send('seeked', {
       seconds: data.seconds,
       duration: data.duration
     }));

@@ -115,6 +115,11 @@
             class="sentence__translation editable__translation"
             xml:lang="eng"
           >How can day and night be divided?</s>
+          </p>
+
+            <graphic url="nere-p1.png" /></div>
+            <div type="page" id="t0b0d1">
+                <p id="t0b0d1p0">
                     <s id="t0b0d0p0s3"><w
               id="t0b0d0p0s3w0"
               ARPABET="F UW S W V"
@@ -157,6 +162,10 @@
             class="sentence__translation editable__translation"
             xml:lang="eng"
           >Bird and Deer wanted it to be daytime always.</s>
+          </p>
+            <graphic url="nere-p2.png" /></div>
+            <div type="page" id="t0b0d2">
+                <p id="t0b0d2p0">
                     <s id="t0b0d0p0s4"><w
               id="t0b0d0p0s4w0"
               ARPABET="K OW N OW"
@@ -236,6 +245,10 @@
             class="sentence__translation editable__translation"
             xml:lang="eng"
           >The animals quarreled, and no decision could be reached.</s>
+          </p>
+            <graphic url="nere-p3.png" /></div>
+            <div type="page" id="t0b0d3">
+                <p id="t0b0d3p0">
                     <s id="t0b0d0p0s6"><w
               id="t0b0d0p0s6w0"
               ARPABET="N OW K OW S EY T"
@@ -283,6 +296,10 @@
             class="sentence__translation editable__translation"
             xml:lang="eng"
           >Bear proposed a vote to have night all the time.</s>
+          </p>
+            <graphic url="nere-p4.png" /></div>
+            <div type="page" id="t0b0d4">
+                <p id="t0b0d4p0">
                     <s id="t0b0d0p0s7"><w
               id="t0b0d0p0s7w0"
               ARPABET="EY T EY M P OW N AA HH OW Y EY"
@@ -305,6 +322,7 @@
             class="sentence__translation editable__translation"
             xml:lang="eng"
           >After much talk</s>
+          
                     <s id="t0b0d0p0s8"><w
               id="t0b0d0p0s8w0"
               ARPABET="CH EY D OW K K UW CH EY T"
@@ -416,6 +434,10 @@
             class="sentence__translation editable__translation"
             xml:lang="eng"
           >We can divide day and night like this.</s>
+          </p>
+            <graphic url="nere-p5.png" /></div>
+            <div type="page" id="t0b0d5">
+                <p id="t0b0d5p0">
                     <s id="t0b0d0p0s11"><w
               id="t0b0d0p0s11w0"
               ARPABET="N EY T T V"
@@ -497,6 +519,10 @@
             class="sentence__translation editable__translation"
             xml:lang="eng"
           >and dream.</s>
+          </p>
+            <graphic url="nere-p6.png" /></div>
+            <div type="page" id="t0b0d6">
+                <p id="t0b0d6p0">
                     <s id="t0b0d0p0s14"><w
               id="t0b0d0p0s14w0"
               ARPABET="P UW N V T T V"
@@ -590,6 +616,10 @@
             class="sentence__translation editable__translation"
             xml:lang="eng"
           >that doing this would be best.</s>
+          </p>
+            <graphic url="nere-p7.png" /></div>
+            <div type="page" id="t0b0d7">
+                <p id="t0b0d7p0">
                     <s id="t0b0d0p0s18"><w
               id="t0b0d0p0s18w0"
               ARPABET="W OW T K OW"
@@ -617,6 +647,7 @@
             class="sentence__translation editable__translation"
             xml:lang="eng"
           >They did it like the racoon's tail.</s>
+          
                     <s id="t0b0d0p0s19"><w
               id="t0b0d0p0s19w0"
               ARPABET="N EY D EY T"
@@ -644,7 +675,11 @@
             class="sentence__translation editable__translation"
             xml:lang="eng"
           >Day and night was divided (followed each other in regular order).</s>
-                    <s id="t0b0d0p0s20"><w
+          </p>
+            <graphic url="nere-p8.png" /></div>
+            <div type="page" id="t0b0d8">
+                <p id="t0b0d8p0">
+                    <s id="t0b0d8p0s20"><w
               id="t0b0d0p0s20w0"
               ARPABET="N OW K OW S EY T"
               time="87.86"
@@ -708,6 +743,10 @@
             class="sentence__translation editable__translation"
             xml:lang="eng"
           >that he scratched the chimpunk's back with his sharp claws.</s>
+          </p>
+            <graphic url="nere-p9.png" /></div>
+            <div type="page" id="t0b0d9">
+                <p id="t0b0d9p0">
                     <s id="t0b0d0p0s22"><w
               id="t0b0d0p0s22w0"
               ARPABET="M OW M AA T"
@@ -758,7 +797,7 @@
             xml:lang="eng"
           >are on all his descendents.</s>
                 </p>
-            <graphic url="chipmunk.webp" /></div>
+            <graphic url="nere-p10.png" /></div>
         </body>
     </text>
 </read-along>
