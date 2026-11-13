@@ -11,6 +11,7 @@ import 'package:mvskoke_language_app/services/service_locator.dart';
 import 'package:mvskoke_language_app/services/store_service.dart';
 import 'package:mvskoke_language_app/ui/components/reader_chrome_scope.dart';
 import 'package:mvskoke_language_app/ui/components/vimeo_player.dart';
+import 'package:mvskoke_language_app/utilities/dimens.dart';
 import 'package:mvskoke_language_app/utilities/utils.dart';
 import 'package:readalong/readalong.dart';
 
@@ -36,8 +37,7 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
   Duration? _latestVideoPosition;
   MediaObject? mediaItem;
   AudioSource? audioSource;
-  final ValueNotifier<bool> _localChromeVisibility = ValueNotifier(true);
-  late ValueNotifier<bool> _chromeVisibility = _localChromeVisibility;
+  late ValueNotifier<bool> _chromeVisibility;
   bool? _wasActive;
   bool? _wasLandscape;
   String title = '';
@@ -53,7 +53,7 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
   void didChangeDependencies() {
     super.didChangeDependencies();
     final chromeScope = ReaderChromeScope.maybeOf(context);
-    _chromeVisibility = chromeScope?.visibility ?? _localChromeVisibility;
+    _chromeVisibility = chromeScope?.visibility ?? ValueNotifier(true);
     _syncChromeVisibility(chromeScope);
   }
 
@@ -75,7 +75,7 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
   }
 
   void _syncChromeVisibility(ReaderChromeScope? chromeScope) {
-    _chromeVisibility = chromeScope?.visibility ?? _localChromeVisibility;
+    _chromeVisibility = chromeScope?.visibility ?? ValueNotifier(true);
     final isLandscape =
         MediaQuery.orientationOf(context) == Orientation.landscape;
     final isActive = chromeScope?.isActive ?? true;
@@ -95,7 +95,6 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
     unawaited(_videoPositionSubscription?.cancel());
     unawaited(_videoStateSubscription?.cancel());
     unawaited(_saveVideoProgress());
-    _localChromeVisibility.dispose();
     _vimeoPlaybackController?.dispose();
     super.dispose();
   }
@@ -210,80 +209,107 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
+    final appBarVisible = _chromeVisibility.value && !kIsWeb;
     return AnimatedBuilder(
       animation: _chromeVisibility,
       builder: (context, _) => Scaffold(
-        appBar: _chromeVisibility.value ? AppBar(title: Text(title)) : null,
-        body: FutureBuilder(
-          future: contentItemFuture,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
-            } else if (snapshot.hasError) {
-              return Center(child: Text('Error: ${snapshot.error}'));
-            } else if (!snapshot.hasData || snapshot.data == null) {
-              return const Center(child: Text('No content found.'));
-            } else {
-              final contentItem = snapshot.data!;
-              final infoTitle =
-                  mediaItem?.performer != null &&
-                      mediaItem!.performer!.isNotEmpty
-                  ? '${contentItem.title} reading by ${mediaItem!.performer}'
-                  : null;
-              final videoPlayer = _buildVideoPlayer();
-              final safePadding = MediaQuery.paddingOf(context).bottom; // Will cause a rebuild only if padding changes (requires Flutter > 3.10)
-              final reader = contentItem.textFile != null
-                  ? Container(
-                      color: Theme.of(context).scaffoldBackgroundColor,
-                      child: Padding(
-                        padding: EdgeInsets.only(bottom: safePadding + 8),
-                        child: ReadAlong(
-                          xmlAsset: 'assets/readalongs/${contentItem.textFile}',
-                          imagesFolder: 'assets/images',
-                          audioSource: audioSource,
-                          playbackController: _vimeoPlaybackController,
-                          audioTitle: infoTitle,
-                          onReaderSurfaceTap: _toggleReaderChrome,
+        appBar: appBarVisible ? AppBar(title: Text(title)) : null,
+        body: Stack(
+          children: [
+            FutureBuilder(
+              future: contentItemFuture,
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                } else if (snapshot.hasError) {
+                  return Center(child: Text('Error: ${snapshot.error}'));
+                } else if (!snapshot.hasData || snapshot.data == null) {
+                  return const Center(child: Text('No content found.'));
+                } else {
+                  final contentItem = snapshot.data!;
+                  final infoTitle =
+                      mediaItem?.performer != null &&
+                          mediaItem!.performer!.isNotEmpty
+                      ? '${contentItem.title} reading by ${mediaItem!.performer}'
+                      : null;
+                  final videoPlayer = _buildVideoPlayer();
+                  final safePadding = MediaQuery.paddingOf(context).bottom; // Will cause a rebuild only if padding changes (requires Flutter > 3.10)
+                  final reader = contentItem.textFile != null
+                      ? Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Expanded(
+                              child: ReadAlong(
+                                xmlAsset:
+                                    'assets/readalongs/${contentItem.textFile}',
+                                imagesFolder: 'assets/images',
+                                audioSource: audioSource,
+                                playbackController: _vimeoPlaybackController,
+                                audioTitle: infoTitle,
+                                onReaderSurfaceTap: _toggleReaderChrome,
+                              ),
+                            ),
+                            mediaItem?.mediaType != MediaType.video
+                                ? SizedBox(
+                                    height: safePadding + Dimens.marginLarge,
+                                    child: Container(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .surfaceContainerLow,
+                                    ),
+                                  )
+                                : const SizedBox.shrink(),
+                          ],
+                        )
+                      : const SizedBox.shrink();
+                  final showSideBySide =
+                      MediaQuery.orientationOf(context) ==
+                          Orientation.landscape &&
+                      mediaItem?.mediaType == MediaType.video;
+
+                  if (mediaItem?.mediaType == MediaType.video) {
+                    return Flex(
+                      direction: showSideBySide
+                          ? Axis.horizontal
+                          : Axis.vertical,
+                      children: [
+                        Flexible(
+                          flex: showSideBySide ? 1 : 0,
+                          fit: showSideBySide ? FlexFit.tight : FlexFit.loose,
+                          child: Center(child: videoPlayer),
                         ),
-                      ),
-                    )
-                  : const SizedBox.shrink();
-              final showSideBySide =
-                  MediaQuery.orientationOf(context) == Orientation.landscape &&
-                  mediaItem?.mediaType == MediaType.video;
+                        SizedBox(
+                          width: showSideBySide ? 1 : 0,
+                          height: showSideBySide ? 0 : 1,
+                          child: showSideBySide
+                              ? VerticalDivider(
+                                  width: 1,
+                                  color: Theme.of(context).dividerColor,
+                                )
+                              : null,
+                        ),
+                        Expanded(child: reader),
+                      ],
+                    );
+                  }
 
-              if (mediaItem?.mediaType == MediaType.video) {
-                return Flex(
-                  direction: showSideBySide ? Axis.horizontal : Axis.vertical,
-                  children: [
-                    Flexible(
-                      flex: showSideBySide ? 1 : 0,
-                      fit: showSideBySide ? FlexFit.tight : FlexFit.loose,
-                      child: Center(child: videoPlayer),
-                    ),
-                    SizedBox(
-                      width: showSideBySide ? 1 : 0,
-                      height: showSideBySide ? 0 : 1,
-                      child: showSideBySide
-                          ? VerticalDivider(
-                              width: 1,
-                              color: Theme.of(context).dividerColor,
-                            )
-                          : null,
-                    ),
-                    Expanded(child: reader),
-                  ],
-                );
-              }
-
-              return Column(
-                children: [
-                  videoPlayer,
-                  Expanded(child: reader),
-                ],
-              );
-            }
-          },
+                  return Column(
+                    children: [
+                      videoPlayer,
+                      Expanded(child: reader),
+                    ],
+                  );
+                }
+              },
+            ),
+            if (!appBarVisible)
+              IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+          ],
         ),
       ),
     );

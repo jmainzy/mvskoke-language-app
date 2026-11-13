@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:mvskoke_language_app/services/navigation_helper.dart';
 import 'package:window_size/window_size.dart';
@@ -15,8 +16,7 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   if (!kIsWeb && Platform.isMacOS) {
     setWindowTitle("Mvskoke Opunvkv");
   }
-
-  // Keep the default hash URL strategy so story deep links survive static-host reloads.
+  GoRouter.optionURLReflectsImperativeAPIs = true;
   await Hive.initFlutter();
   final box = await Hive.openBox('settings');
   setupServiceLocator(box: box);
