@@ -254,7 +254,7 @@ class ContentListState extends State<ContentList> {
         child: InkWell(
           onTap: () {
             NavigationHelper.router.push(
-              '${NavigationHelper.contentPath}/${story.id}',
+              NavigationHelper.contentPagePath(story.id),
             );
           },
           child: Column(
@@ -302,7 +302,7 @@ class ContentListState extends State<ContentList> {
                   ],
                 ),
               ),
-              if (progress != null)
+              if (progress != null && progress > 0)
                 LinearProgressIndicator(
                   value: progress,
                   minHeight: 4,

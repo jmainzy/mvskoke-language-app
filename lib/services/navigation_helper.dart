@@ -39,6 +39,8 @@ class NavigationHelper {
 
   static const String homePath = '/';
   static const String contentPath = '/content';
+  static String contentPagePath(String contentId) =>
+      '$contentPath/${Uri.encodeComponent(contentId)}';
   static const String aboutPath = 'about';
   static const String morePath = '/more';
   static const String glossaryPath = 'glossary';
@@ -82,7 +84,7 @@ class NavigationHelper {
                 },
                 routes: [
                   GoRoute(
-                    path: '/:contentId',
+                    path: ':contentId',
                     parentNavigatorKey: rootNavigatorKey,
                     pageBuilder: (context, state) {
                       final id = state.pathParameters['contentId'];
