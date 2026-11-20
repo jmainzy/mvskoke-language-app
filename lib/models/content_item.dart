@@ -5,6 +5,7 @@ class ContentItem {
   final String title;
   final String? subtitle;
   final String? textFile;
+  final String? wordIndexFile;
   final String? mediaId;
   final String? thumbnail;
   final MediaType mediaType;
@@ -15,6 +16,7 @@ class ContentItem {
     required this.title,
     this.subtitle,
     this.textFile,
+    this.wordIndexFile,
     this.mediaId,
     this.thumbnail,
     this.mediaType = MediaType.audio,

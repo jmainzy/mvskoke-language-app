@@ -91,6 +91,7 @@ final List<ContentItem> stories = [
     title: 'Nere nettv Onvkuce',
     subtitle: 'A story of day and night',
     textFile: 'chipbear.readalong',
+    wordIndexFile: 'chipbear_index.json',
     mediaId: '1',
     thumbnail: 'nere-p1.png',
   ),
