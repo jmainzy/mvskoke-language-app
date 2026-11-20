@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:direct_link/direct_link.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:intl/intl.dart';
 import 'package:logger/logger.dart';
 import 'package:mvskoke_language_app/utilities/timestamp.dart';

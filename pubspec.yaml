@@ -59,6 +59,7 @@ dependencies:
       url: https://github.com/jmainzy/readalong-flutter.git
     # path: ../readalong
 
+  material_ui: any
 dev_dependencies:
   flutter_test:
     sdk: flutter

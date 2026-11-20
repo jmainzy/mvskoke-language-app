@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:logger/logger.dart';
 import 'package:watch_it/watch_it.dart' hide sl;
 

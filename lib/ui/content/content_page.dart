@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:just_audio/just_audio.dart' hide PlayerState, ProcessingState;
 import 'package:logger/logger.dart';

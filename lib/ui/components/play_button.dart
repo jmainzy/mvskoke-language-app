@@ -1,5 +1,5 @@
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:mvskoke_language_app/managers/audio_manager.dart';
 import 'package:mvskoke_language_app/notifiers/play_button_notifier.dart';
 import 'package:mvskoke_language_app/services/service_locator.dart';
