@@ -67,6 +67,14 @@ final List<MediaObject> mediaItems = [
     copyright: '© 2026 MCN',
     lastUpdate: Timestamp.now(),
   ),
+  MediaObject(
+    id: '8',
+    title: 'Mvhakv-cukon Ayis',
+    uri: 'school-day-story.mp3',
+    performer: 'Gracine Hicks',
+    copyright: '© 2026 MCN',
+    lastUpdate: Timestamp.now(),
+  ),
 ];
 
 final List<ContentItem> stories = [
@@ -77,6 +85,14 @@ final List<ContentItem> stories = [
     textFile: 'cvyacetos.readalong',
     mediaId: '6',
     thumbnail: 'image-cvyacetos-20261112170953-0.jpg',
+  ),
+  ContentItem(
+    id: '6',
+    title: 'Mvhakv-cukon Ayis',
+    subtitle: 'I go to school',
+    textFile: 'school-day-story.readalong',
+    mediaId: '8',
+    thumbnail: 'image-mvhakv-cukon-ay-20261124101641-0.png',
   ),
   ContentItem(
     id: '3',
