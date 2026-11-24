@@ -1,17 +1,22 @@
 {
   "folders": [
     {
+      "name": "mvskoke-language-app",
       "path": ".",
     },
     {
-      "path": "../readalong",
+      "name": "punvyvs",
+      "path": "../../../Code/punvyvs",
     },
     {
-      "path": "../../../Code/Studio-Web",
+      "name": "mvskoke-dictionary",
+      "path": "../mvskoke-dictionary",
+    },
+    {
+      "path": "../mus_segmenter",
     },
   ],
   "settings": {
     "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "interactive",
   },
 }
