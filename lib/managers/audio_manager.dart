@@ -1,10 +1,8 @@
 import 'dart:async';
 
 import 'package:audio_service/audio_service.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:mvskoke_language_app/models/enums.dart';
-import 'package:mvskoke_language_app/models/media_item.dart';
 import 'package:mvskoke_language_app/notifiers/play_button_notifier.dart';
 import 'package:mvskoke_language_app/notifiers/progress_notifier.dart';
 import 'package:mvskoke_language_app/services/audio_player_service.dart';

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:go_router/go_router.dart';
 import 'package:logger/logger.dart';
@@ -8,7 +8,6 @@ import 'package:mvskoke_language_app/ui/content/content_list.dart';
 import 'package:mvskoke_language_app/ui/content/content_page.dart';
 import 'package:mvskoke_language_app/ui/components/reader_chrome_scope.dart';
 import 'package:mvskoke_language_app/ui/more/more_screen.dart';
-import 'package:mvskoke_language_app/ui/home_screen.dart';
 
 Logger log = Logger();
 

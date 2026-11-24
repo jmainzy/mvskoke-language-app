@@ -1,12 +1,11 @@
 import 'dart:async';
 
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:logger/logger.dart';
 import 'package:mvskoke_language_app/managers/audio_manager.dart';
 import 'package:mvskoke_language_app/models/enums.dart';
 import 'package:mvskoke_language_app/models/media_item.dart';
-import 'package:mvskoke_language_app/notifiers/play_button_notifier.dart';
 import 'package:mvskoke_language_app/notifiers/progress_notifier.dart';
 import 'package:mvskoke_language_app/services/content_service.dart';
 import 'package:mvskoke_language_app/services/service_locator.dart';

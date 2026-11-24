@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:logger/logger.dart';
 import 'package:mvskoke_language_app/services/navigation_helper.dart';
 import 'package:mvskoke_language_app/services/service_locator.dart';

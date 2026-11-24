@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<read-along version="1.2">
+    <meta name="generator" content="@readalongs/studio (cli) 1.2.2" id="meta0"/>
+    <text xml:lang="und" fallback-langs="und" id="t0">
+        <body id="t0b0">
+            <div type="page" id="t0b0d0">
+                <p id="t0b0d0p0">
+                    <s id="t0b0d0p0s0"><w id="t0b0d0p0s0w0" ARPABET="HH EY S CH IY" time="1.31" dur="0.83">Hesci</w>! <w id="t0b0d0p0s0w1" ARPABET="CH OW K V" time="2.64" dur="0.28">Cokv</w>-<w id="t0b0d0p0s0w2" ARPABET="HH EY CH V" time="2.92" dur="0.5">hēcv</w> <w id="t0b0d0p0s0w3" ARPABET="T OW W IY S" time="3.42" dur="0.82">towis</w>.</s><s do-not-align="true" id="t0b0d0p0s0" sentence-id="t0b0d0p0s0" class="sentence__translation editable__translation" xml:lang="eng">Hello!  I am a student.</s>
+                </p>
+            <graphic url="image-mvhakv-cukon-ay-20261124101641-0.png"/></div>
+            <div type="page" id="t0b0d1">
+                <p id="t0b0d1p0">
+                    <s id="t0b0d1p0s0"><w id="t0b0d1p0s0w0" ARPABET="M UW CH V" time="8.52" dur="0.26">Mucv</w> <w id="t0b0d1p0s0w1" ARPABET="N EY T T V" time="8.78" dur="0.5869279363308486">nettv</w> <w id="t0b0d1p0s0w2" ARPABET="M V N T EY" time="9.39119731332696" dur="0.6488026866730383">Mvnte</w> <w id="t0b0d1p0s0w3" ARPABET="T OW S" time="10.04" dur="0.59">tos</w>.</s><s do-not-align="true" id="t0b0d1p0s0" sentence-id="t0b0d1p0s0" class="sentence__translation editable__translation" xml:lang="eng">Today is Monday.</s>
+                </p>
+            <graphic url="image-mvhakv-cukon-ay-20261124101641-1.png"/></div>
+            <div type="page" id="t0b0d2">
+                <p id="t0b0d2p0">
+                    <s id="t0b0d2p0s0"><w id="t0b0d2p0s0w0" ARPABET="M V HH AA K V" time="14.66" dur="0.69">Mvhakv</w>-<w id="t0b0d2p0s0w1" ARPABET="CH UW K OW N" time="15.35" dur="0.42155007599908956">cukon</w> <w id="t0b0d2p0s0w2" ARPABET="AA Y IY S" time="15.86" dur="0.89">ayis</w>.</s><s do-not-align="true" id="t0b0d2p0s0" sentence-id="t0b0d2p0s0" class="sentence__translation editable__translation" xml:lang="eng">I am going to school.</s>
+                </p>
+            <graphic url="image-mvhakv-cukon-ay-20261124101641-2.png"/></div>
+            <div type="page" id="t0b0d3">
+                <p id="t0b0d3p0">
+                    <s id="t0b0d3p0s0"><w id="t0b0d3p0s0w0" ARPABET="M V HH AA Y V" time="20.967244309334955" dur="0.7746502279972631">Mvhayv</w> <w id="t0b0d3p0s0w1" ARPABET="L OW P IY CH EY" time="21.741894537332218" dur="0.7181054626677827">lopicē</w> <w id="t0b0d3p0s0w2" ARPABET="T OW S" time="22.46" dur="0.59">tos</w>.</s><s do-not-align="true" id="t0b0d3p0s0" sentence-id="t0b0d3p0s0" class="sentence__translation editable__translation" xml:lang="eng">The teacher is nice.</s>
+                </p>
+            <graphic url="image-mvhakv-cukon-ay-20261124101641-3.png"/></div>
+            <div type="page" id="t0b0d4">
+                <p id="t0b0d4p0">
+                    <s id="t0b0d4p0s0"><w id="t0b0d4p0s0w0" ARPABET="L IY K EY P V S HH" time="27.63" dur="0.89">Likepvs,</w> <w id="t0b0d4p0s0w1" ARPABET="HH EY D EY N" time="29.78" dur="0.56">hē̜ren</w> <w id="t0b0d4p0s0w2" ARPABET="M AA P OW HH EY CH V S" time="30.34" dur="1.24">mapohecvs</w>.</s><s do-not-align="true" id="t0b0d4p0s0" sentence-id="t0b0d4p0s0" class="sentence__translation editable__translation" xml:lang="eng">Sit down, listen well.</s>
+                </p>
+            <graphic url="image-mvhakv-cukon-ay-20261124101641-4.png"/></div>
+            <div type="page" id="t0b0d5">
+                <p id="t0b0d5p0">
+                    <s id="t0b0d5p0s0"><w id="t0b0d5p0s0w0" ARPABET="CH OW K V" time="35.54" dur="0.8068892266626122">Cokv</w> <w id="t0b0d5p0s0w1" ARPABET="HH V W EY CH V S" time="36.49" dur="0.93">hvwecvs</w>.</s><s do-not-align="true" id="t0b0d5p0s0" sentence-id="t0b0d5p0s0" class="sentence__translation editable__translation" xml:lang="eng">Open your book.</s>
+                    <s id="t0b0d5p0s1"><w id="t0b0d5p0s1w0" ARPABET="N AA K EY N" time="38.95" dur="0.53">Naken</w> <w id="t0b0d5p0s1w1" ARPABET="M AA K AA" time="39.48" dur="0.9031001519981885">maka</w>?</s><s do-not-align="true" id="t0b0d5p0s1" sentence-id="t0b0d5p0s1" class="sentence__translation editable__translation" xml:lang="eng">What does it say?</s>
+                </p>
+            <graphic url="image-mvhakv-cukon-ay-20261124101641-5.png"/></div>
+            <div type="page" id="t0b0d6">
+                <p id="t0b0d6p0">
+                    <s id="t0b0d6p0s0"><w id="t0b0d6p0s0w0" ARPABET="CH OW K V" time="44.89" dur="0.8579226106620155">Cokv</w> <w id="t0b0d6p0s0w1" ARPABET="AA K HH OW T T V S" time="45.8" dur="1.0832723826647381">akhottvs</w>.</s><s do-not-align="true" id="t0b0d6p0s0" sentence-id="t0b0d6p0s0" class="sentence__translation editable__translation" xml:lang="eng">Close your book.</s>
+                </p>
+            <graphic url="image-mvhakv-cukon-ay-20261124101641-6.png"/></div>
+            <div type="page" id="t0b0d7">
+                <p id="t0b0d7p0">
+                    <s id="t0b0d7p0s0"><w id="t0b0d7p0s0w0" ARPABET="CH OW K V" time="51.12" dur="0.8480948413285745">Cokv</w> <w id="t0b0d7p0s0w1" ARPABET="AA CH V W V K S" time="52.17" dur="1.08">acvwvks</w>.</s><s do-not-align="true" id="t0b0d7p0s0" sentence-id="t0b0d7p0s0" class="sentence__translation editable__translation" xml:lang="eng">Take out some paper.</s>
+                </p>
+            <graphic url="image-mvhakv-cukon-ay-20261124101641-7.png"/></div>
+            <div type="page" id="t0b0d8">
+                <p id="t0b0d8p0">
+                    <s id="t0b0d8p0s0"><w id="t0b0d8p0s0w0" ARPABET="Y EY K CH EY N" time="58.4" dur="0.7310333839993888">Yekcēn</w> <w id="t0b0d8p0s0w1" ARPABET="V T OW T K EY T OW W IY S" time="59.12793323200122" dur="1.4320667679987835">vtotkētowis</w>.</s><s do-not-align="true" id="t0b0d8p0s0" sentence-id="t0b0d8p0s0" class="sentence__translation editable__translation" xml:lang="eng">I work hard.</s>
+                </p>
+            <graphic url="image-mvhakv-cukon-ay-20261124101641-8.png"/></div>
+            <div type="page" id="t0b0d9">
+                <p id="t0b0d9p0">
+                    <s id="t0b0d9p0s0"><w id="t0b0d9p0s0w0" ARPABET="HH OW M P V K EY S" time="65.71" dur="1.1944779973307078">Hompvkēs</w>.</s><s do-not-align="true" id="t0b0d9p0s0" sentence-id="t0b0d9p0s0" class="sentence__translation editable__translation" xml:lang="eng">Let's eat.</s>
+                </p>
+            <graphic url="image-mvhakv-cukon-ay-20261124101641-9.png"/></div>
+            <div type="page" id="t0b0d10">
+                <p id="t0b0d10p0">
+                    <s id="t0b0d10p0s0"><w id="t0b0d10p0s0w0" ARPABET="F EY T T V" time="71.18" dur="0.32">Fettv</w> <w id="t0b0d10p0s0w1" ARPABET="OW S S V S" time="71.5" dur="0.93">ossvs</w>!</s><s do-not-align="true" id="t0b0d10p0s0" sentence-id="t0b0d10p0s0" class="sentence__translation editable__translation" xml:lang="eng">Go outside!</s>
+                    <s id="t0b0d10p0s1"><w id="t0b0d10p0s1w0" ARPABET="AA Y EY T" time="73.5" dur="0.72">Ayet</w> <w id="t0b0d10p0s1w1" ARPABET="AA K K OW P V N V S" time="74.22" dur="1.07">akkopvnvs</w>.</s><s do-not-align="true" id="t0b0d10p0s1" sentence-id="t0b0d10p0s1" class="sentence__translation editable__translation" xml:lang="eng">Go and play.</s>
+                </p>
+            <graphic url="image-mvhakv-cukon-ay-20261124101641-10.png"/></div>
+            <div type="page" id="t0b0d11">
+                <p id="t0b0d11p0">
+                    <s id="t0b0d11p0s0"><w id="t0b0d11p0s0w0" ARPABET="N UW CH EY T" time="80.03" dur="0.62">Nuckv</w> <w id="t0b0d11p0s0w1" ARPABET="CH V Y AA CH EY T OW S" time="80.65" dur="1.21">cvyacetos</w>.</s><s do-not-align="true" id="t0b0d11p0s0" sentence-id="t0b0d11p0s0" class="sentence__translation editable__translation" xml:lang="eng">I am tired.</s>
+                </p>
+            <graphic url="image-mvhakv-cukon-ay-20261124101641-11.png"/></div>
+            <div type="page" id="t0b0d12">
+                <p id="t0b0d12p0">
+                    <s id="t0b0d12p0s0"><w id="t0b0d12p0s0w0" ARPABET="M UW CH V" time="85.52" dur="0.35206676799879233">Mucv</w> <w id="t0b0d12p0s0w1" ARPABET="N EY T T V" time="85.87206676799879" dur="0.6041335359975761">nettv</w> <w id="t0b0d12p0s0w2" ARPABET="N AA K EY N" time="86.51" dur="0.56">naken</w> <w id="t0b0d12p0s0w3" ARPABET="K EY D D EY CH CH AA" time="87.07" dur="0.9">kerrecca</w>?</s><s do-not-align="true" id="t0b0d12p0s0" sentence-id="t0b0d12p0s0" class="sentence__translation editable__translation" xml:lang="eng">What are you learning today?</s>
+                </p>
+            <graphic url="image-mvhakv-cukon-ay-20261124101641-12.png"/></div>
+        </body>
+    </text>
+</read-along>

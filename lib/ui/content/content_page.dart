@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'dart:convert';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/services.dart';
 import 'package:just_audio/just_audio.dart' hide PlayerState, ProcessingState;
 import 'package:logger/logger.dart';
 import 'package:mvskoke_language_app/models/content_item.dart';
@@ -16,6 +18,50 @@ import 'package:mvskoke_language_app/utilities/utils.dart';
 import 'package:readalong/readalong.dart';
 
 Logger log = Logger();
+
+class _WordDefinitionPosition extends SingleChildLayoutDelegate {
+  const _WordDefinitionPosition(this.word, this.safePadding);
+
+  final Rect word;
+  final EdgeInsets safePadding;
+  static const double gap = 8;
+
+  @override
+  BoxConstraints getConstraintsForChild(BoxConstraints constraints) {
+    return BoxConstraints(
+      maxWidth: (constraints.maxWidth - safePadding.horizontal - 2 * gap).clamp(
+        0,
+        280,
+      ),
+      maxHeight: (constraints.maxHeight - safePadding.vertical - 2 * gap).clamp(
+        0,
+        double.infinity,
+      ),
+    );
+  }
+
+  @override
+  Offset getPositionForChild(Size size, Size childSize) {
+    final left = safePadding.left + gap;
+    final right = size.width - safePadding.right - gap;
+    final top = safePadding.top + gap;
+    final bottom = size.height - safePadding.bottom - gap;
+    final preferredX = word.right + gap;
+    final preferredY = word.top - gap - childSize.height;
+    final x = preferredX + childSize.width <= right
+        ? preferredX
+        : word.left - gap - childSize.width;
+    final y = preferredY >= top ? preferredY : word.bottom + gap;
+    return Offset(
+      x.clamp(left, (right - childSize.width).clamp(left, double.infinity)),
+      y.clamp(top, (bottom - childSize.height).clamp(top, double.infinity)),
+    );
+  }
+
+  @override
+  bool shouldRelayout(covariant _WordDefinitionPosition oldDelegate) =>
+      word != oldDelegate.word || safePadding != oldDelegate.safePadding;
+}
 
 class ContentPage extends StatefulWidget {
   const ContentPage({super.key, required this.contentId});
@@ -41,6 +87,9 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
   bool? _wasActive;
   bool? _wasLandscape;
   String title = '';
+  Map<String, String> _wordDefinitions = const {};
+  OverlayEntry? _wordDefinitionOverlay;
+  int _readerPageIndex = 0;
 
   @override
   initState() {
@@ -90,6 +139,7 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
 
   @override
   void dispose() {
+    _hideWordDefinition();
     WidgetsBinding.instance.removeObserver(this);
     _progressSaveTimer?.cancel();
     unawaited(_videoPositionSubscription?.cancel());
@@ -107,6 +157,29 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
     final item = await contentService.getContentById(widget.contentId);
     log.i('getContentItem: item = $item');
     title = item?.title ?? '';
+    if (item?.wordIndexFile case final indexFile?) {
+      final source = await rootBundle.loadString(
+        'assets/readalongs/$indexFile',
+      );
+      final entries = jsonDecode(source);
+      if (entries is! List) {
+        throw const FormatException('Word index must be a list of objects.');
+      }
+      final definitions = <String, String>{};
+      for (final entry in entries) {
+        if (entry is! Map ||
+            entry.length != 1 ||
+            entry.keys.single is! String ||
+            entry.values.single is! String) {
+          throw const FormatException(
+            'Each word index entry must contain one word and definition.',
+          );
+        }
+        definitions[(entry.keys.single as String).toLowerCase()] =
+            entry.values.single as String;
+      }
+      _wordDefinitions = definitions;
+    }
     if (item?.mediaId != null && item!.mediaId!.isNotEmpty) {
       mediaItem = await contentService.getMediaById(item.mediaId!);
       if (mediaItem?.mediaType == MediaType.video && mediaItem?.uri != null) {
@@ -142,6 +215,70 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
       _progressSaveTimer = null;
       unawaited(_saveVideoProgress());
     });
+  }
+
+  void _handleReaderPosition(ReadAlongPosition position) {
+    if (position.pageIndex != _readerPageIndex) {
+      _hideWordDefinition();
+      _readerPageIndex = position.pageIndex;
+    }
+  }
+
+  void _hideWordDefinition() {
+    _wordDefinitionOverlay?.remove();
+    _wordDefinitionOverlay?.dispose();
+    _wordDefinitionOverlay = null;
+  }
+
+  void _showWordDefinition(String word, Rect bounds) {
+    final definition = _wordDefinitions[word.trim().toLowerCase()];
+    if (definition == null) return;
+    _hideWordDefinition();
+    final overlay = Overlay.of(context);
+    final overlayBox = overlay.context.findRenderObject() as RenderBox;
+    final rect = Rect.fromPoints(
+      overlayBox.globalToLocal(bounds.topLeft),
+      overlayBox.globalToLocal(bounds.bottomRight),
+    );
+    _wordDefinitionOverlay = OverlayEntry(
+      builder: (overlayContext) => Positioned.fill(
+        child: CustomSingleChildLayout(
+          delegate: _WordDefinitionPosition(
+            rect,
+            MediaQuery.paddingOf(overlayContext),
+          ),
+          child: TapRegion(
+            onTapOutside: (_) => _hideWordDefinition(),
+            child: Material(
+              key: const ValueKey('word-definition'),
+              elevation: 8,
+              borderRadius: BorderRadius.circular(8),
+              clipBehavior: Clip.antiAlias,
+              child: InkWell(
+                onTap: _hideWordDefinition,
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          word,
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        Text(definition),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+    overlay.insert(_wordDefinitionOverlay!);
   }
 
   Future<void> _saveVideoProgress() async {
@@ -218,6 +355,9 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
                                 playbackController: _vimeoPlaybackController,
                                 audioTitle: infoTitle,
                                 onReaderSurfaceTap: _toggleReaderChrome,
+                                onPositionChanged: _handleReaderPosition,
+                                indexedWords: _wordDefinitions.keys.toSet(),
+                                onWordTap: _showWordDefinition,
                               ),
                             ),
                             mediaItem?.mediaType != MediaType.video
