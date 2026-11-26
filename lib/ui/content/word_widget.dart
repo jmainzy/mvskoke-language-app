@@ -5,11 +5,7 @@ class WordWidget extends StatelessWidget {
   final Word word;
   final VoidCallback? onHide;
 
-  const WordWidget({
-    super.key,
-    required this.word,
-    this.onHide,
-  });
+  const WordWidget({super.key, required this.word, this.onHide});
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +25,13 @@ class WordWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(word.headword, style: Theme.of(context).textTheme.titleMedium),
+                  Text(
+                    word.headword,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
                   for (var entry in word.entries.values.expand((e) => e))
                     Text(entry),
+                  if (word.definition case final definition?) Text(definition),
                 ],
               ),
             ),

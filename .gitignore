@@ -115,3 +115,4 @@ app.*.symbols
 !.vscode/settings.json
 mvskoke-language-app.code-workspace
 tools/.venv
+sense_index.json

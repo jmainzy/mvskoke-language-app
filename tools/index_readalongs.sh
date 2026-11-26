@@ -21,6 +21,9 @@ while IFS= read -r -d '' source; do
   fi
   mkdir -p "$(dirname "$text")"
   python3 "$root/tools/extract_story_text.py" "$source" --output "$text"
+  if [[ -f "$source_dir/${stem}_words.tsv" ]]; then
+    cp "$source_dir/${stem}_words.tsv" "$temp_dir/${stem}_words.tsv"
+  fi
   sources+=("$text")
   destinations+=("$source_dir/${stem}_index.json")
   count=$((count + 1))

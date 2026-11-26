@@ -147,10 +147,11 @@
     }
   },
   "yacaket": {
-    "headword": "yvcaketv",
+    "headword": "eyacetv",
     "entries": {
-      "yvcaketv_811d8c4e-bf6d-4225-856e-6f1057b6b9e9": [
-        "to chew, chew on"
+      "eyacetv_ab2abf56-159c-45be-8c49-c28dffebbf72": [
+        "to want (something, to do something), like, need, desire",
+        "to want (someone else to do something)"
       ]
     }
   },
@@ -180,18 +181,20 @@
     }
   },
   "yacaken": {
-    "headword": "yvcaketv",
+    "headword": "eyacetv",
     "entries": {
-      "yvcaketv_811d8c4e-bf6d-4225-856e-6f1057b6b9e9": [
-        "to chew, chew on"
+      "eyacetv_ab2abf56-159c-45be-8c49-c28dffebbf72": [
+        "to want (something, to do something), like, need, desire",
+        "to want (someone else to do something)"
       ]
     }
   },
-  "ete": {
-    "headword": "tē",
+  "ete hvnaket": {
+    "headword": "etehvnetv",
     "entries": {
-      "tē_2678ed8f-f818-4918-93f9-035b7fc535aa": [
-        "t: the letter ‘t’"
+      "etehvnetv_b87bec11-c85f-4ab9-8bde-54616c396d44": [
+        "to quarrel, argue with each other",
+        "argument"
       ]
     }
   },
@@ -403,8 +406,12 @@
     }
   },
   "secakkahēt": {
-    "headword": null,
-    "entries": {}
+    "headword": "vcak-vyetv",
+    "entries": {
+      "vcak-vyetv_7198688c-93ea-4fbc-bfde-b0b9a165f2cc": [
+        "to follow (a person, tracks, the law, of one), go with (someone)"
+      ]
+    }
   },
   "setentayen": {
     "headword": null,
@@ -429,10 +436,10 @@
     }
   },
   "pumvhēcet": {
-    "headword": "mahēcetv",
+    "headword": "vhecetv",
     "entries": {
-      "mahēcetv_4e5a1f8f-5d0f-46ce-861b-17ee0456eb2a": [
-        "to raise (children, etc.), make tall"
+      "vhecetv_7fff07fb-5a91-451c-b6ed-43ae0b990c4c": [
+        "to face, look out (into the distance), look at (something in the distance)"
       ]
     }
   },
@@ -502,8 +509,9 @@
     }
   },
   "cerokkuce": {
-    "headword": null,
-    "entries": {}
+    "headword": "cerokkuce",
+    "entries": {},
+    "definition": "squirrel"
   },
   "enhoporrenkv": {
     "headword": "hoporrenkv",
@@ -581,24 +589,17 @@
     }
   },
   "omēs": {
-    "headword": "omē",
+    "headword": "ometv",
     "entries": {
-      "omē_26843db3-8b6e-419a-b354-cbe4f18778d4": [
-        "able"
-      ],
-      "omē_f4502aa3-912c-4f50-8687-059069567e52": [
-        "like, resembling, kind of"
-      ]
-    }
-  },
-  "omēn": {
-    "headword": "omē",
-    "entries": {
-      "omē_26843db3-8b6e-419a-b354-cbe4f18778d4": [
-        "able"
-      ],
-      "omē_f4502aa3-912c-4f50-8687-059069567e52": [
-        "like, resembling, kind of"
+      "ometv_2a35b484-6f6a-4d25-b2d2-c2dc9b23b11b": [
+        "to be (doing something, red, happy, etc.) (an auxiliary verb similar grammatically to English be, but used to inform someone of a fact)",
+        "to be (something, such as a book, a tree, a friend, a lawyer, etc.) (with a preceding noun phrase complement ending in -t /-t/)",
+        "to be like",
+        "to do",
+        "to use, do with (the hand, etc.) (with a preceding noun phrase complement ending in -n /-n/)",
+        "to have (something) (with a preceding noun phrase complement ending in -n /-n/)",
+        "to be the way (to do something) (after an infinitive, ometv can have the sense of ‘should’)",
+        "to be able"
       ]
     }
   },
@@ -621,10 +622,10 @@
     }
   },
   "on": {
-    "headword": "on",
+    "headword": "ton",
     "entries": {
-      "on_dd39794d-c5e9-4fcb-b725-70f6dd3a10ce": [
-        "(she/he/it) is (used in a subordinate clause)"
+      "ton_2c7e6281-b919-4552-8dbc-f5fba4d2adf5": [
+        "reduced form of -t omen ‘(it) is’, sometimes used like a conjunction to link noun phrases"
       ]
     }
   },
@@ -637,8 +638,10 @@
     "entries": {}
   },
   "emapohiceko": {
-    "headword": null,
-    "entries": {}
+    "headword": "em apohiceko",
+    "entries": {
+      "em apohiceko_8838ea00-7e6d-4d89-83ad-163f8178257d": []
+    }
   },
   "tayen": {
     "headword": "tąyen",
@@ -707,8 +710,12 @@
     }
   },
   "tucenofkaken": {
-    "headword": null,
-    "entries": {}
+    "headword": "tuccenohkaken",
+    "entries": {
+      "tuccenohkaken_50c77413-5bd7-4539-b0f4-a00cff207aca": [
+        "three added to (a multiple of ten)"
+      ]
+    }
   },
   "sapsvwēt": {
     "headword": "sapsvwē",

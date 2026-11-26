@@ -4,12 +4,14 @@ import 'dart:typed_data';
 
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:mvskoke_language_app/models/content_item.dart';
 import 'package:mvskoke_language_app/models/media_item.dart';
 import 'package:mvskoke_language_app/services/content_service.dart';
 import 'package:mvskoke_language_app/services/service_locator.dart';
 import 'package:mvskoke_language_app/services/store_service.dart';
 import 'package:mvskoke_language_app/ui/content/content_page_manager.dart';
+import 'package:mvskoke_language_app/ui/content/word_widget.dart';
 
 class _ContentService extends ContentService {
   _ContentService(this.item);
@@ -72,7 +74,7 @@ void main() {
             ContentItem(
               id: 'chipbear',
               title: 'Chipbear',
-              wordIndexFile: 'chipbear_index.json',
+              textFile: 'chipbear.readalong',
             ),
           ),
         ),
@@ -84,13 +86,15 @@ void main() {
       await manager.getContentItem('chipbear');
 
       expect(notifications, 1);
-      expect(manager.getWordDefinitions(' PUNVTTV '), ['animal, game']);
-      expect(manager.getWordDefinitions('nettv'), [
+      expect(manager.getWord(' PUNVTTV ')?.entries.values.expand((e) => e), [
+        'animal, game',
+      ]);
+      expect(manager.getWord('nettv')?.entries.values.expand((e) => e), [
         'day, date',
         'day of death, final day',
       ]);
-      expect(manager.getWordDefinitions('tepakat'), isEmpty);
-      expect(manager.getWordDefinitions('estowē'), isEmpty);
+      expect(manager.getWord('tepakat'), isNull);
+      expect(manager.getWord('estowē'), isNull);
       expect(manager.indexedWords, contains('punvttv'));
       expect(manager.indexedWords, isNot(contains('tepakat')));
       expect(manager.indexedWords, isNot(contains('estowē')));
@@ -110,19 +114,43 @@ void main() {
     });
     addTearDown(() => messenger.setMockMessageHandler('flutter/assets', null));
     sl.registerSingleton<ContentService>(
-      _ContentService(
-        Future.value(
-          ContentItem(
-            id: 'bad',
-            title: 'Bad index',
-            wordIndexFile: 'invalid-test-index.json',
-          ),
+      _ContentService(Future.value(ContentItem(id: 'bad', title: 'Bad index'))),
+    );
+    final manager = ContentPageManager();
+    addTearDown(manager.dispose);
+    await expectLater(
+      manager.getWordIndex('invalid-test-index.json'),
+      throwsFormatException,
+    );
+  });
+
+  testWidgets('loads and displays an override definition without an entry ID', (
+    tester,
+  ) async {
+    final messenger =
+        TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
+    messenger.setMockMessageHandler('flutter/assets', (message) async {
+      final bytes = Uint8List.fromList(
+        utf8.encode(
+          '{"word":{"headword":"root","entries":{},"definition":"custom meaning"}}',
         ),
+      );
+      return ByteData.sublistView(bytes);
+    });
+    addTearDown(() => messenger.setMockMessageHandler('flutter/assets', null));
+    sl.registerSingleton<ContentService>(
+      _ContentService(
+        Future.value(ContentItem(id: 'override', title: 'Override')),
       ),
     );
     final manager = ContentPageManager();
     addTearDown(manager.dispose);
-    await expectLater(manager.getContentItem('bad'), throwsFormatException);
+    final index = await manager.getWordIndex('override-test.json');
+    final word = index['word'];
+    expect(word?.entries, isEmpty);
+    await tester.pumpWidget(MaterialApp(home: WordWidget(word: word!)));
+    expect(find.text('root'), findsOneWidget);
+    expect(find.text('custom meaning'), findsOneWidget);
   });
 
   test('saves video progress on pause and disposal', () async {
@@ -143,6 +171,48 @@ void main() {
     controller.handlePosition(15);
     manager.dispose();
     expect(store.saved.last, const Duration(seconds: 15));
+  });
+
+  for (final textFile in ['mus16051.eaf', 'mus16019.eaf']) {
+    test('loads the JSON index and video for $textFile', () async {
+      sl.registerSingleton<StoreService>(_StoreService());
+      sl.registerSingleton<ContentService>(
+        _ContentService(
+          Future.value(
+            ContentItem(
+              id: 'video',
+              title: 'Video',
+              textFile: textFile,
+              mediaId: 'v',
+            ),
+          ),
+        ),
+      );
+      final manager = ContentPageManager();
+      addTearDown(manager.dispose);
+      final item = await manager.getContentItem('video');
+      expect(item?.textFile, textFile);
+      expect(manager.indexedWords, isNotEmpty);
+      expect(manager.playbackController, isNotNull);
+    });
+  }
+
+  test('continues loading a story without an index asset', () async {
+    sl.registerSingleton<ContentService>(
+      _ContentService(
+        Future.value(
+          ContentItem(
+            id: 'unindexed',
+            title: 'Unindexed',
+            textFile: 'unindexed.eaf',
+          ),
+        ),
+      ),
+    );
+    final manager = ContentPageManager();
+    addTearDown(manager.dispose);
+    expect(await manager.getContentItem('unindexed'), isNotNull);
+    expect(manager.indexedWords, isEmpty);
   });
 
   test(

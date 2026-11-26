@@ -23,7 +23,7 @@ class ContentPageManager extends ChangeNotifier {
   String contentId = '';
   MediaObject? mediaItem;
   AudioSource? audioSource;
-  Map<String, Word> _wordDefinitions = const {};
+  Map<String, Word> _wordIndex = const {};
   VimeoPlaybackController? _vimeoPlaybackController;
   StreamSubscription<Duration>? _videoPositionSubscription;
   StreamSubscription<PlayerState>? _videoStateSubscription;
@@ -37,51 +37,26 @@ class ContentPageManager extends ChangeNotifier {
   Future<ContentItem?> getContentItem(String contentId) async {
     final item = await contentService.getContentById(contentId);
     if (_disposed) return null;
-    log.i('getContentItem: item = $item');
     title = item?.title ?? '';
     this.contentId = contentId;
-    if (item?.wordIndexFile case final indexFile?) {
-      final source = await rootBundle.loadString(
-        'assets/readalongs/$indexFile',
-      );
+
+    if (item?.textFile case final textFile?) {
+      final extension = RegExp(r'\.[^./\\]+$').firstMatch(textFile);
+      if (extension == null) {
+        throw FormatException('Text file has no extension: $textFile');
+      }
+      final indexFile = '${textFile.substring(0, extension.start)}_index.json';
+      final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
       if (_disposed) return null;
-      final words = jsonDecode(source);
-      if (words is! Map<String, dynamic>) {
-        throw const FormatException('Word index must be an object.');
+      if (manifest.listAssets().contains('assets/readalongs/$indexFile')) {
+        _wordIndex = await getWordIndex(indexFile);
+        if (_disposed) return null;
+        indexedWords = _wordIndex.keys.toList();
+      } else {
+        log.i('No word index found for $textFile');
       }
-      final definitions = <String, Word>{};
-      for (final word in words.entries) {
-        final entry = word.value;
-        if (entry is! Map<String, dynamic> ||
-            !entry.containsKey('headword') ||
-            (entry['headword'] != null && entry['headword'] is! String) ||
-            entry['entries'] is! Map<String, dynamic>) {
-          throw const FormatException(
-            'Each word index entry must contain a headword and entries object.',
-          );
-        }
-        final wordDefinitions = <String>[];
-        for (final value in (entry['entries'] as Map<String, dynamic>).values) {
-          if (value is! List ||
-              value.any((definition) => definition is! String)) {
-            throw const FormatException(
-              'Each dictionary entry must contain a list of definitions.',
-            );
-          }
-          wordDefinitions.addAll(
-            value.cast<String>().where((text) => text.trim().isNotEmpty),
-          );
-        }
-        if (wordDefinitions.isNotEmpty) {
-          definitions[word.key.toLowerCase()] = Word(
-            headword: entry['headword'] as String,
-            entries: {for (var e in (entry['entries'] as Map<String, dynamic>).entries) e.key: (e.value as List).cast<String>()},
-          );
-        }
-      }
-      _wordDefinitions = definitions;
-      indexedWords = definitions.keys.toList();
     }
+
     if (item?.mediaId != null && item!.mediaId!.isNotEmpty) {
       mediaItem = await contentService.getMediaById(item.mediaId!);
       if (_disposed) return null;
@@ -116,8 +91,56 @@ class ContentPageManager extends ChangeNotifier {
     return item;
   }
 
+  Future<Map<String, Word>> getWordIndex(String indexFile) async {
+    final source = await rootBundle.loadString('assets/readalongs/$indexFile');
+    if (_disposed) return {};
+    final words = jsonDecode(source);
+    if (words is! Map<String, dynamic>) {
+      throw const FormatException('Word index must be an object.');
+    }
+    final definitions = <String, Word>{};
+    for (final word in words.entries) {
+      final entry = word.value;
+      if (entry is! Map<String, dynamic> ||
+          !entry.containsKey('headword') ||
+          (entry['headword'] != null && entry['headword'] is! String) ||
+          entry['entries'] is! Map<String, dynamic> ||
+          (entry['definition'] != null && entry['definition'] is! String)) {
+        throw const FormatException(
+          'Each word index entry must contain a headword, entries object, '
+          'and optional string definition.',
+        );
+      }
+      final wordDefinitions = <String>[];
+      for (final value in (entry['entries'] as Map<String, dynamic>).values) {
+        if (value is! List ||
+            value.any((definition) => definition is! String)) {
+          throw const FormatException(
+            'Each dictionary entry must contain a list of definitions.',
+          );
+        }
+        wordDefinitions.addAll(
+          value.cast<String>().where((text) => text.trim().isNotEmpty),
+        );
+      }
+      final definition = entry['definition'] as String?;
+      if (wordDefinitions.isNotEmpty ||
+          (definition != null && definition.trim().isNotEmpty)) {
+        definitions[word.key.toLowerCase()] = Word(
+          headword: entry['headword'] as String? ?? word.key,
+          entries: {
+            for (var e in (entry['entries'] as Map<String, dynamic>).entries)
+              e.key: (e.value as List).cast<String>(),
+          },
+          definition: definition,
+        );
+      }
+    }
+    return definitions;
+  }
+
   Word? getWord(String word) {
-    return _wordDefinitions[word.trim().toLowerCase()];
+    return _wordIndex[word.trim().toLowerCase()];
   }
 
   void _handleVideoPosition(Duration position) {

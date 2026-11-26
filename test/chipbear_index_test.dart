@@ -10,12 +10,7 @@ import 'package:readalong/readalong.dart';
 class _ChipbearContentService extends ContentService {
   @override
   Future<ContentItem?> getContentById(String id) async => id == 'chipbear'
-      ? ContentItem(
-          id: id,
-          title: 'Chipbear',
-          textFile: 'chipbear.readalong',
-          wordIndexFile: 'chipbear_index.json',
-        )
+      ? ContentItem(id: id, title: 'Chipbear', textFile: 'chipbear.readalong')
       : ContentItem(id: id, title: 'Other story');
 }
 
@@ -46,7 +41,7 @@ void main() {
     final wordRect = wordBox.toRect().shift(render.localToGlobal(Offset.zero));
     await tester.tapAt(wordCenter);
     await tester.pumpAndSettle();
-    expect(find.text('Punvttv'), findsOneWidget);
+    expect(find.text('ponvttv'), findsOneWidget);
     expect(find.text('animal, game'), findsOneWidget);
     final menuRect = tester.getRect(
       find.byKey(const ValueKey('word-definition')),

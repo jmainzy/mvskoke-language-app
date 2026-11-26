@@ -7,8 +7,9 @@ Language Learning App for the Mvskoke (Muscogee/Creek) Language
 Fork and PR!
 
 The app uses the sibling `../readalong` checkout as a local dependency.
-Story word indexes are optional assets: set `wordIndexFile` on a content item
-to a story morphology index in `assets/readalongs`.
+Story word indexes are optional assets in `assets/readalongs`. The app looks
+for an index named after the text file, for example `story_index.json` for
+`story.readalong` or `story.eaf`.
 
 To generate the sense ID to headword and definition index from a lexicon export, run:
 
@@ -85,6 +86,19 @@ dictionary version. It selects one lemma, preferring an exact match and then
 the longest candidate. Internal hyphens and apostrophes are retained; other
 punctuation separates words. Results are candidates, not verified translations.
 
+For per-story corrections, place `story_words.tsv` beside `story.txt` (or
+beside `story.readalong`/`story.eaf` for the batch script). Use three tab-separated
+columns, with no header: word or phrase, headword, and optional definition.
+Leave the third column empty if there is no definition. Matching is
+case-insensitive and NFC-normalized; duplicate words are an error. A `null`
+headword skips that word entirely. Other overrides bypass the lemmatizer and
+look up the supplied headword in the LIFT dictionary. If it has no entry, the
+index keeps `entries` empty and stores a nonempty supplied definition in a
+separate `definition` field. Existing dictionary definitions take precedence.
+Phrases match consecutive tokens separated only by whitespace; individual
+tokens are still indexed separately. The current reader does not display
+phrase entries spanning multiple word elements.
+
 The indexer reads `../mvskoke-dictionary/lexicon/lexicon.lift` by default.
 Pass `--lexicon` to select another LIFT file and `--output` to name the JSON
 result. Multiple text files can be indexed in one invocation.
@@ -95,5 +109,4 @@ environment. Pass `--lexicon` to that script if needed.
 It uses temporary text files and writes a JSON file beside each source. The
 extractor and indexers overwrite their output files; save any manual edits
 before rerunning. Existing story indexes are not automatically regenerated
-and may contain older formats until rerun. Set `wordIndexFile` to the generated
-filename to enable definitions in the reader.
+and may contain older formats until rerun.

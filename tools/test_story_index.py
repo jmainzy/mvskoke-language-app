@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from build_story_index import build_index, read_dictionary, tokenize
+from build_story_index import build_index, read_dictionary, read_overrides, tokenize
 from extract_story_text import extract_text
 
 
@@ -80,20 +80,61 @@ class StoryIndexTests(unittest.TestCase):
             index = build_index("Nere, nere NERET unmatched unknown", dictionary)
         self.assertEqual(lookup.call_count, 4)
         self.assertEqual(index, {
-            "nere": {"lemma": "NERĒ", "id": ["night1", "night2", "variant"],
-                     "definitions": {"night1": ["night time", "darkness"],
-                                     "night2": ["another night"], "variant": []}},
-            "neret": {"lemma": "nerē", "id": ["night1", "night2", "variant"],
-                      "definitions": {"night1": ["night time", "darkness"],
-                                      "night2": ["another night"], "variant": []}},
-            "unmatched": {"lemma": "missing", "id": [], "definitions": {}},
-            "unknown": {"lemma": None, "id": [], "definitions": {}},
+            "nere": {"headword": "NERĒ", "entries": {"night1": ["night time", "darkness"],
+                                                       "night2": ["another night"], "variant": []}},
+            "neret": {"headword": "nerē", "entries": {"night1": ["night time", "darkness"],
+                                                        "night2": ["another night"], "variant": []}},
+            "unmatched": {"headword": "missing", "entries": {}},
+            "unknown": {"headword": None, "entries": {}},
         })
-        index["nere"]["id"].clear()
-        index["nere"]["definitions"]["night1"].clear()
-        self.assertEqual(index["neret"]["id"], ["night1", "night2", "variant"])
-        self.assertEqual(index["neret"]["definitions"]["night1"], ["night time", "darkness"])
+        index["nere"]["entries"]["night1"].clear()
+        self.assertEqual(index["neret"]["entries"]["night1"], ["night time", "darkness"])
         self.assertEqual(dictionary["nerē"]["night1"], ["night time", "darkness"])
+
+    def test_overrides_match_words_and_phrases_and_skip_null(self):
+        source = self.root / "story_words.tsv"
+        source.write_text(
+            "NeRe\u0304\tNERĒ\tignored\n"
+            "skip\tnull\tignored\n"
+            "skip over\tmissing phrase\tphrase definition\n"
+            "other\tunknown\tcustom definition\n"
+            "empty\tunknown\t\n",
+            encoding="utf-8",
+        )
+        overrides = read_overrides(source)
+        dictionary = read_dictionary(self.lift)
+        with patch("build_story_index.lemmatize", return_value=[]) as lookup:
+            index = build_index("NERĒ skip over. skip, over other empty ordinary", dictionary, overrides)
+        self.assertEqual(index["nerē"], {
+            "headword": "NERĒ",
+            "entries": {"night1": ["night time", "darkness"], "night2": ["another night"], "variant": []},
+        })
+        self.assertNotIn("skip", index)
+        self.assertEqual(index["skip over"], {
+            "headword": "missing phrase", "entries": {}, "definition": "phrase definition",
+        })
+        self.assertEqual(index["other"], {
+            "headword": "unknown", "entries": {}, "definition": "custom definition",
+        })
+        self.assertEqual(index["empty"], {"headword": "unknown", "entries": {}})
+        self.assertEqual(index["ordinary"], {"headword": None, "entries": {}})
+        self.assertEqual(lookup.call_count, 2)
+
+        with patch("build_story_index.lemmatize", return_value=[]):
+            self.assertNotIn("skip over", build_index("skip, over", dictionary, overrides))
+
+    def test_override_file_rejects_bad_rows_and_normalized_duplicates(self):
+        source = self.root / "story_words.tsv"
+        for contents, error in (
+            ("word headword definition\n", "three tab-separated columns"),
+            ("word\t\tdefinition\n", "headword must not be empty"),
+            ("word!\theadword\t\n", "invalid override word"),
+            ("Nerē\tone\t\nnere\u0304\ttwo\t\n", "duplicate override word"),
+        ):
+            with self.subTest(contents=contents):
+                source.write_text(contents, encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, error):
+                    read_overrides(source)
 
     def test_cli_uses_real_lemmatizer_and_protects_inputs(self):
         source = self.root / "story.txt"
@@ -106,12 +147,11 @@ class StoryIndexTests(unittest.TestCase):
         result = subprocess.run(command, capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(json.loads(output.read_text(encoding="utf-8")), {
-            "punvttv": {"lemma": "ponvttv", "id": ["pon"], "definitions": {"pon": []}},
-            "neret": {"lemma": "nerē", "id": ["night1", "night2", "variant"],
-                      "definitions": {"night1": ["night time", "darkness"],
-                                      "night2": ["another night"], "variant": []}},
-            "hēces": {"lemma": "Hecetv", "id": ["see"], "definitions": {"see": []}},
-            "zzqxx": {"lemma": None, "id": [], "definitions": {}},
+            "punvttv": {"headword": "ponvttv", "entries": {"pon": []}},
+            "neret": {"headword": "nerē", "entries": {"night1": ["night time", "darkness"],
+                                                        "night2": ["another night"], "variant": []}},
+            "hēces": {"headword": "Hecetv", "entries": {"see": []}},
+            "zzqxx": {"headword": None, "entries": {}},
         })
         self.assertIn("1 without lemmas, 1 without entry IDs", result.stderr)
         linked_output = self.root / "hardlink.json"
@@ -136,7 +176,7 @@ class StoryIndexTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(
             json.loads((self.root / "two.json").read_text(encoding="utf-8")),
-            {"punvttv": {"lemma": "ponvttv", "id": ["pon"], "definitions": {"pon": []}}},
+            {"punvttv": {"headword": "ponvttv", "entries": {"pon": []}}},
         )
         collision = self.root / "one.md"
         collision.write_text("unchanged", encoding="utf-8")
@@ -148,6 +188,40 @@ class StoryIndexTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("outputs must be distinct", result.stderr)
         self.assertEqual(collision.read_text(encoding="utf-8"), "unchanged")
+
+    def test_cli_finds_each_story_override_and_protects_it_from_output(self):
+        first = self.root / "one.txt"
+        second = self.root / "two.txt"
+        first.write_text("punvttv unknown skip", encoding="utf-8")
+        second.write_text("punvttv", encoding="utf-8")
+        overrides = self.root / "one_words.tsv"
+        overrides.write_text(
+            "punvttv\tnerē\tignored\nunknown\tmissing\tcustom\nskip\tnull\t\n",
+            encoding="utf-8",
+        )
+        command = [
+            sys.executable, str(TOOLS / "build_story_index.py"), str(first), str(second),
+            "--lexicon", str(self.lift),
+        ]
+        result = subprocess.run(command, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        first_index = json.loads((self.root / "one.json").read_text(encoding="utf-8"))
+        second_index = json.loads((self.root / "two.json").read_text(encoding="utf-8"))
+        self.assertEqual(first_index["punvttv"]["headword"], "nerē")
+        self.assertEqual(list(first_index["punvttv"]["entries"]), ["night1", "night2", "variant"])
+        self.assertEqual(first_index["unknown"], {
+            "headword": "missing", "entries": {}, "definition": "custom",
+        })
+        self.assertNotIn("skip", first_index)
+        self.assertEqual(second_index["punvttv"]["headword"], "ponvttv")
+        result = subprocess.run(
+            [sys.executable, str(TOOLS / "build_story_index.py"), str(first),
+             "--lexicon", str(self.lift), "--output", str(overrides)],
+            capture_output=True, text=True,
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("must not overwrite", result.stderr)
+        self.assertTrue(overrides.read_text(encoding="utf-8").startswith("punvttv\t"))
 
     def test_extracts_only_readalong_words_and_selected_elan_tier(self):
         path = self.root / "story.xml"
