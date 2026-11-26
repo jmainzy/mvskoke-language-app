@@ -55,7 +55,9 @@ dependencies:
   vimeo_video_player: ^1.0.3
   web: ^1.1.1
   readalong:
-    path: ../readalong
+    git:
+      url: https://github.com/jmainzy/readalong-flutter.git
+    # path: ../readalong
 
   material_ui: any
 dev_dependencies:
