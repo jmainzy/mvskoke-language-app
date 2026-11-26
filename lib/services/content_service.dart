@@ -79,7 +79,7 @@ final List<MediaObject> mediaItems = [
 
 final List<ContentItem> stories = [
   ContentItem(
-    id: '5',
+    id: '1',
     title: 'Cvyacetos',
     subtitle: 'I like',
     textFile: 'cvyacetos.readalong',
@@ -87,7 +87,7 @@ final List<ContentItem> stories = [
     thumbnail: 'image-cvyacetos-20261112170953-0.jpg',
   ),
   ContentItem(
-    id: '6',
+    id: '2',
     title: 'Mvhakv-cukon Ayis',
     subtitle: 'I go to school',
     textFile: 'school-day-story.readalong',
@@ -103,7 +103,7 @@ final List<ContentItem> stories = [
     thumbnail: 'image-eco-ton-momen-c-20261110164718-0.png',
   ),
   ContentItem(
-    id: '1',
+    id: '4',
     title: 'Nere nettv Onvkuce',
     subtitle: 'A story of day and night',
     textFile: 'chipbear.readalong',
@@ -111,7 +111,7 @@ final List<ContentItem> stories = [
     thumbnail: 'nere-p1.png',
   ),
   ContentItem(
-    id: '4',
+    id: '5',
     title: 'Interview with Bessie Spencer',
     textFile: 'mus16051.eaf',
     mediaId: '5',
@@ -119,14 +119,14 @@ final List<ContentItem> stories = [
     mediaType: MediaType.video,
   ),
   ContentItem(
-    id: '2',
+    id: '6',
     title: '1878 Postoak letter to A.E.W. Robertson',
     textFile: 'postoak-01.readalong',
     mediaId: '2',
     thumbnail: 'postoak-01.png',
   ),
   ContentItem(
-    id: '6',
+    id: '7',
     title: 'Interview with Ella Colman',
     textFile: 'mus16019.eaf',
     mediaId: '7',
