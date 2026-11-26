@@ -1,4 +1,721 @@
-[{"tvlkosen":"always"},
-{"punvttv":"animals"},
-{"omvlkvt": "all"}
-]
+{
+  "nere": {
+    "headword": "nerē",
+    "entries": {
+      "nerē_9049e30a-26cb-49ad-a91a-d7ae01f15e5c": [
+        "night"
+      ]
+    }
+  },
+  "nettv": {
+    "headword": "nettv",
+    "entries": {
+      "nettv_a345599b-4822-4d9a-a294-19869f1fc803": [],
+      "netta_ecd9fb59-711c-4e95-bffd-80c6c6932355": [
+        "day, date",
+        "day of death, final day"
+      ]
+    }
+  },
+  "onvkuce": {
+    "headword": "onvkuce",
+    "entries": {
+      "onvkuce_75cd5907-9b4c-4e31-bb5a-0741879a6d24": [
+        "tale, short story"
+      ]
+    }
+  },
+  "punvttv": {
+    "headword": "ponvttv",
+    "entries": {
+      "ponvttv_016e3dae-470a-4c55-9646-81a6cf1b572e": [
+        "animal, game"
+      ]
+    }
+  },
+  "omvlkvt": {
+    "headword": "omvlkv",
+    "entries": {
+      "omvlkv_dc5dfffe-a39c-40f8-97a6-5f5306e5d549": [
+        "every (one), all (of them, of it)",
+        "every"
+      ]
+    }
+  },
+  "eto": {
+    "headword": "eto",
+    "entries": {
+      "eto_ed0bf615-2b36-4bf5-9f49-0fb63dc7bdef": [
+        "tree, wood, timber, log, stick, pole"
+      ]
+    }
+  },
+  "ofv": {
+    "headword": "ofv",
+    "entries": {
+      "ofv_442c08cd-e800-467e-b3fe-79028980be8b": [
+        "in (a location, water), inside, within",
+        "in (one’s thoughts, prayers, etc.)",
+        "the inside"
+      ]
+    }
+  },
+  "fullat": {
+    "headword": "fulletv",
+    "entries": {
+      "fulletv_de05c3c6-4c8a-4fbd-9d85-ee2545c440db": [
+        "to be around, be about, go around, be among (of three or more)",
+        "a get-together"
+      ]
+    }
+  },
+  "nvkaftvtēs": {
+    "headword": "nvkvftetv",
+    "entries": {
+      "nvkvftetv_a5cf0746-cebe-464f-bb44-2d3ff7fdd68f": [
+        "to assemble, meet, have a meeting, gather, convene",
+        "meeting"
+      ]
+    }
+  },
+  "estowē": {
+    "headword": "estowē",
+    "entries": {
+      "estowē_598c472b-f283-41fd-939f-518a82c00a99": []
+    }
+  },
+  "ton": {
+    "headword": "ton",
+    "entries": {
+      "ton_2c7e6281-b919-4552-8dbc-f5fba4d2adf5": [
+        "reduced form of -t omen ‘(it) is’, sometimes used like a conjunction to link noun phrases"
+      ]
+    }
+  },
+  "tepakat": {
+    "headword": null,
+    "entries": {}
+  },
+  "etekvpice": {
+    "headword": "etekvpicetv",
+    "entries": {
+      "etekvpicetv_e37679f7-4d25-4c55-acff-4b6c5e695b92": [
+        "to divide (a cake, etc.), share, split, allot",
+        "to separate (milk from cream, etc.)",
+        "to divide (in mathematics)"
+      ]
+    }
+  },
+  "taye": {
+    "headword": "tayē",
+    "entries": {
+      "tayē_94344e3a-3166-4653-ad79-35b8cc08596e": []
+    }
+  },
+  "te": {
+    "headword": "te",
+    "entries": {
+      "te_65c3cadf-8331-4b18-b219-49a9a789ad5e": [
+        "after a noun or adjective, indicates a ‘be’ question with a yes or no answer: is it? is he?",
+        "after verbs ending in -vrē ‘will’ or -vtē (distant past), indicates a question with a yes or no answer"
+      ]
+    }
+  },
+  "fuswv": {
+    "headword": "fuswv",
+    "entries": {
+      "fuswv_8438d61f-5740-4a4c-8215-11cfb666a482": [
+        "bird, fowl"
+      ]
+    }
+  },
+  "eco": {
+    "headword": "eco",
+    "entries": {
+      "eco_2fde7850-c829-466a-81bc-b35693d62be5": [
+        "deer"
+      ]
+    }
+  },
+  "tvlkosen": {
+    "headword": "tvlkē",
+    "entries": {
+      "tvlkē_41259274-734b-4a5b-ac1b-f4b30dfd2733": [
+        "only, just, nothing but",
+        "must (do), have (to do), surely (does), be certain (to do), should"
+      ]
+    }
+  },
+  "yacaket": {
+    "headword": "yvcaketv",
+    "entries": {
+      "yvcaketv_811d8c4e-bf6d-4225-856e-6f1057b6b9e9": [
+        "to chew, chew on"
+      ]
+    }
+  },
+  "kono": {
+    "headword": "kono",
+    "entries": {
+      "kono_c479bb59-e7df-4ddc-8556-38050fc662d2": [
+        "skunk"
+      ]
+    }
+  },
+  "opv": {
+    "headword": "opv",
+    "entries": {
+      "opv_bef398b2-55db-4c37-af11-4deecfb9fde6": [
+        "owl"
+      ]
+    }
+  },
+  "min": {
+    "headword": "mi",
+    "entries": {
+      "mi_c1448308-db9f-43e6-a50b-b274f5d4ae5d": [
+        "there, that way, that direction",
+        "an element indicating contrast: instead"
+      ]
+    }
+  },
+  "yacaken": {
+    "headword": "yvcaketv",
+    "entries": {
+      "yvcaketv_811d8c4e-bf6d-4225-856e-6f1057b6b9e9": [
+        "to chew, chew on"
+      ]
+    }
+  },
+  "ete": {
+    "headword": "tē",
+    "entries": {
+      "tē_2678ed8f-f818-4918-93f9-035b7fc535aa": [
+        "t: the letter ‘t’"
+      ]
+    }
+  },
+  "hvnaket": {
+    "headword": "hanetv",
+    "entries": {
+      "hanetv_d1bcf88c-5f81-4288-83fa-20681310a156": [
+        "to rock"
+      ]
+    }
+  },
+  "nake": {
+    "headword": "nake",
+    "entries": {
+      "nake_3316759f-f84d-42bc-b78a-da90b1107e48": [
+        "what",
+        "thing, something",
+        "(with a negative) anything",
+        ": indefinite nonhuman possessor of a noun that must be possessed"
+      ]
+    }
+  },
+  "etenfvccvkeko": {
+    "headword": null,
+    "entries": {}
+  },
+  "tayvtēs": {
+    "headword": "tayē",
+    "entries": {
+      "tayē_94344e3a-3166-4653-ad79-35b8cc08596e": []
+    }
+  },
+  "nokoset": {
+    "headword": "nokose",
+    "entries": {
+      "nokose_17264fe7-1aa1-45b7-9be7-bb1a5f2bb32f": [
+        "bear"
+      ]
+    }
+  },
+  "cokv": {
+    "headword": "cokv",
+    "entries": {
+      "cokv_5a54aded-e655-4a0b-9955-d9c19ccdd873": [
+        "writing or something with writing on it, especially paper, book, letter, certificate, diploma"
+      ]
+    }
+  },
+  "satkvn": {
+    "headword": "satkv",
+    "entries": {
+      "satkv_64650753-4687-4983-b766-6c066d9816fc": [
+        "something marked: mark, line, ruler, target (a mark made for practice shooting), point, a vote"
+      ]
+    }
+  },
+  "ocet": {
+    "headword": "ocetv",
+    "entries": {
+      "ocetv_065362cf-92d0-4c26-96de-e874cb449124": [
+        "to exist (of an inanimate), for there to be",
+        "to have (a knife, a cover, faith, children, etc.), keep (something)",
+        "to have (a baby), give birth to",
+        "to have (a ball game, election, etc.), hold (a meeting)",
+        "to have (time)",
+        "for there to be a time when (someone does something)"
+      ]
+    }
+  },
+  "hayvkēs": {
+    "headword": "hayetv",
+    "entries": {
+      "hayetv_9ae3c0c8-0e0d-488e-92f8-a01c440b6eec": [
+        "to make (one food, medicine, a house, a camp), build, create, establish, prepare, conduct (a census), develop (seeds), appoint (a chief)",
+        "to make (one) into (an officer, bedding, etc), elect, turn (something) into",
+        "to try (to do something), make as if to"
+      ]
+    }
+  },
+  "maken": {
+    "headword": "maketv",
+    "entries": {
+      "maketv_50922aaf-ad72-49e7-ac0e-6c6ed00c5a64": [
+        "to say (to a group or no one in particular), speak",
+        "what is called",
+        "saying"
+      ]
+    }
+  },
+  "etemponahoye": {
+    "headword": null,
+    "entries": {}
+  },
+  "hofonē": {
+    "headword": "hofonē",
+    "entries": {
+      "hofonē_490cf548-0b79-4df3-b00d-33a87b168cc5": [
+        "a long time, quite a while",
+        "long ago"
+      ]
+    }
+  },
+  "hakēn": {
+    "headword": "haketv",
+    "entries": {
+      "haketv_7894d725-8ae5-4202-bd76-d403471a3d3d": [
+        "to get, become (warm, etc.), turn (cold), grow (scrawny)",
+        "to become (winter), turn into (a snake, etc.), get to the point of",
+        "to make up, constitute",
+        "to begin (doing), start, break out (of war), be about to",
+        "to be made, be done"
+      ],
+      "haketv_b2488954-c39a-444b-99d5-e531a1c73ce8": [
+        "to sound, ring (of a bell), play, make a melodious noise (as of a drum, a cow, a songbird, a cicada: not a goose, duck, or crow)",
+        "to ring (of the ears)"
+      ]
+    }
+  },
+  "cerokkucet": {
+    "headword": null,
+    "entries": {}
+  },
+  "oket": {
+    "headword": "oketv",
+    "entries": {
+      "oketv_af552c97-a91f-43fd-842f-856bb92aa246": [
+        "to mean",
+        "to say",
+        "to say, speak (while doing something else) (an auxiliary verb similar to English be, but used after a verb of communication)",
+        "to speak (used with a name at the end of a letter to identify the author)",
+        "to make a noise",
+        "time, season",
+        "(one) time, instance"
+      ]
+    }
+  },
+  "wotko": {
+    "headword": "wotko",
+    "entries": {
+      "wotko_89bf4d4b-bbec-498f-a9b5-8bed1e003666": [
+        "raccoon"
+      ]
+    }
+  },
+  "hvce": {
+    "headword": "hvce",
+    "entries": {
+      "hvce_26e201c2-a74e-4094-9e41-f7b2097bde79": [
+        "its tail"
+      ]
+    }
+  },
+  "hēceccen": {
+    "headword": "Hecetv",
+    "entries": {
+      "Hecetv_86b5a02a-c0bb-45b6-8db5-07d6635c9c73": [],
+      "hecetv_fc14f869-ec69-4fc5-80dd-04ba5dc1085b": [
+        "to see, look at, watch, notice",
+        "to be able to see",
+        "to attend, go to (school)",
+        "to try, see if"
+      ]
+    }
+  },
+  "omat": {
+    "headword": "omat",
+    "entries": {
+      "omat_3244c24b-12ea-434b-8281-f187132a2546": [
+        "if (with a preceding sentence ending in -en /-in/)"
+      ]
+    }
+  },
+  "lvstat": {
+    "headword": "lvstē",
+    "entries": {
+      "lvstē_f7984ea8-35af-4f4f-91da-000b61cb7677": [
+        "black"
+      ]
+    }
+  },
+  "hvtkat": {
+    "headword": "hvtkē",
+    "entries": {
+      "hvtkē_f2c79910-a922-4b4c-bb95-6b6428dc2f97": [
+        "white",
+        "of peace"
+      ]
+    }
+  },
+  "setentayēt": {
+    "headword": null,
+    "entries": {}
+  },
+  "os": {
+    "headword": "os",
+    "entries": {
+      "os_8a06dbfc-5a33-4e9f-abe7-e39712a26fe7": [
+        "(she/he/it) is"
+      ]
+    }
+  },
+  "mvn": {
+    "headword": "mv",
+    "entries": {
+      "mv_ba18eddd-31d3-4586-89d0-750d7d89ba93": [
+        "that, the (referring to something in sight or mentioned)",
+        "that one, he, she, it, that (place), there"
+      ]
+    }
+  },
+  "secakkahēt": {
+    "headword": null,
+    "entries": {}
+  },
+  "setentayen": {
+    "headword": null,
+    "entries": {}
+  },
+  "hayēs": {
+    "headword": "hayetv",
+    "entries": {
+      "hayetv_9ae3c0c8-0e0d-488e-92f8-a01c440b6eec": [
+        "to make (one food, medicine, a house, a camp), build, create, establish, prepare, conduct (a census), develop (seeds), appoint (a chief)",
+        "to make (one) into (an officer, bedding, etc), elect, turn (something) into",
+        "to try (to do something), make as if to"
+      ]
+    }
+  },
+  "kulkē": {
+    "headword": "kulkē",
+    "entries": {
+      "kulkē_ca503ae5-3b2d-4dd5-aaec-7fba2b29e7df": [
+        "light, lamp, candle"
+      ]
+    }
+  },
+  "pumvhēcet": {
+    "headword": "mahēcetv",
+    "entries": {
+      "mahēcetv_4e5a1f8f-5d0f-46ce-861b-17ee0456eb2a": [
+        "to raise (children, etc.), make tall"
+      ]
+    }
+  },
+  "akkopvnetv": {
+    "headword": "akkopvnetv",
+    "entries": {
+      "akkopvnetv_dd97dc69-7193-41fb-aca6-3720361fe75c": []
+    }
+  },
+  "kulke": {
+    "headword": "kulkē",
+    "entries": {
+      "kulkē_ca503ae5-3b2d-4dd5-aaec-7fba2b29e7df": [
+        "light, lamp, candle"
+      ]
+    }
+  },
+  "pomēs": {
+    "headword": "emetv",
+    "entries": {
+      "emetv_d0ed4525-e821-4bc8-a825-546186defae7": [
+        "to give (something) to (someone)",
+        "to give (a cold, etc.) to, transmit"
+      ]
+    }
+  },
+  "nerē": {
+    "headword": "nerē",
+    "entries": {
+      "nerē_9049e30a-26cb-49ad-a91a-d7ae01f15e5c": [
+        "night"
+      ]
+    }
+  },
+  "fēkvpkv": {
+    "headword": "fēkvpkv",
+    "entries": {
+      "fēkvpkv_bd1925b8-2644-489e-8901-3ee07361e137": [
+        "rest, resting place"
+      ]
+    }
+  },
+  "pohmet": {
+    "headword": "emetv",
+    "entries": {
+      "emetv_d0ed4525-e821-4bc8-a825-546186defae7": [
+        "to give (something) to (someone)",
+        "to give (a cold, etc.) to, transmit"
+      ]
+    }
+  },
+  "vpueckv": {
+    "headword": "vpueckv",
+    "entries": {
+      "vpueckv_8d5ff7bd-c5ab-434f-a7b9-7da8bb52488f": [
+        "dream"
+      ]
+    }
+  },
+  "tis": {
+    "headword": "tis",
+    "entries": {
+      "tis_72483e05-24dc-4ff8-bfb6-7c5dc9fb55e0": [
+        "suffix indicating ‘even’",
+        "suffix indicating ‘also’"
+      ]
+    }
+  },
+  "cerokkuce": {
+    "headword": null,
+    "entries": {}
+  },
+  "enhoporrenkv": {
+    "headword": "hoporrenkv",
+    "entries": {
+      "hoporrenkv_e4e9bc02-d81f-486c-89ad-a12bcff9367e": [
+        "wisdom, sense, knowledge, cunning, cleverness"
+      ]
+    }
+  },
+  "ocat": {
+    "headword": "ocetv",
+    "entries": {
+      "ocetv_065362cf-92d0-4c26-96de-e874cb449124": [
+        "to exist (of an inanimate), for there to be",
+        "to have (a knife, a cover, faith, children, etc.), keep (something)",
+        "to have (a baby), give birth to",
+        "to have (a ball game, election, etc.), hold (a meeting)",
+        "to have (time)",
+        "for there to be a time when (someone does something)"
+      ]
+    }
+  },
+  "feksumkakvtēs": {
+    "headword": "feksomketv",
+    "entries": {
+      "feksomketv_82261603-8df1-463c-9181-a4ee2d070626": [
+        "to be startled, scared"
+      ]
+    }
+  },
+  "etenfaccvtes": {
+    "headword": "etenfvccetv",
+    "entries": {
+      "etenfvccetv_c9ac72ad-a219-43d9-b198-f2d4e2ea6aea": [
+        "to agree, make a contract, pact, commit to each other (of a couple)",
+        "to agree (to do something)",
+        "agreement, treaty"
+      ]
+    }
+  },
+  "momen": {
+    "headword": "momen",
+    "entries": {
+      "momen_17204be4-ab16-4d1b-8a44-bf501b3e8ac5": [
+        "and, then"
+      ]
+    }
+  },
+  "mehcēt": {
+    "headword": "mēcetv",
+    "entries": {
+      "mēcetv_1b547f03-048d-4917-b423-980e6576c478": [
+        "to do, perform a concrete activity (usually with the hands)",
+        "to do (an action) completely",
+        "to do (something) to (someone)"
+      ]
+    }
+  },
+  "mvt": {
+    "headword": "mv",
+    "entries": {
+      "mv_ba18eddd-31d3-4586-89d0-750d7d89ba93": [
+        "that, the (referring to something in sight or mentioned)",
+        "that one, he, she, it, that (place), there"
+      ]
+    }
+  },
+  "herēt": {
+    "headword": "herē",
+    "entries": {
+      "herē_1fbb3138-c226-4dfb-b36b-f49bd9be3416": [
+        "good, right, of good quality",
+        "good (in taste), delicious"
+      ]
+    }
+  },
+  "omēs": {
+    "headword": "omē",
+    "entries": {
+      "omē_26843db3-8b6e-419a-b354-cbe4f18778d4": [
+        "able"
+      ],
+      "omē_f4502aa3-912c-4f50-8687-059069567e52": [
+        "like, resembling, kind of"
+      ]
+    }
+  },
+  "omēn": {
+    "headword": "omē",
+    "entries": {
+      "omē_26843db3-8b6e-419a-b354-cbe4f18778d4": [
+        "able"
+      ],
+      "omē_f4502aa3-912c-4f50-8687-059069567e52": [
+        "like, resembling, kind of"
+      ]
+    }
+  },
+  "mecakvtēs": {
+    "headword": "mēcetv",
+    "entries": {
+      "mēcetv_1b547f03-048d-4917-b423-980e6576c478": [
+        "to do, perform a concrete activity (usually with the hands)",
+        "to do (an action) completely",
+        "to do (something) to (someone)"
+      ]
+    }
+  },
+  "neret": {
+    "headword": "nerē",
+    "entries": {
+      "nerē_9049e30a-26cb-49ad-a91a-d7ae01f15e5c": [
+        "night"
+      ]
+    }
+  },
+  "on": {
+    "headword": "on",
+    "entries": {
+      "on_dd39794d-c5e9-4fcb-b725-70f6dd3a10ce": [
+        "(she/he/it) is (used in a subordinate clause)"
+      ]
+    }
+  },
+  "secakkayēn": {
+    "headword": null,
+    "entries": {}
+  },
+  "cerokkucen": {
+    "headword": null,
+    "entries": {}
+  },
+  "emapohiceko": {
+    "headword": null,
+    "entries": {}
+  },
+  "tayen": {
+    "headword": "tąyen",
+    "entries": {
+      "tąyen_7877332c-ec39-4a93-ad46-92cafd98541d": []
+    }
+  },
+  "enhomehcet": {
+    "headword": "enhomecetv",
+    "entries": {
+      "enhomecetv_b7c5c60e-e9e2-42c0-b4a4-ba772891ab81": [
+        "to get mad at, be angry at (someone), get frustrated with"
+      ]
+    }
+  },
+  "ele": {
+    "headword": "ele",
+    "entries": {
+      "ele_deff0a37-3eb4-4cf2-8e99-4b79f58185fa": [
+        "his/her/its foot, leg, paw",
+        "wheel (on a car)"
+      ]
+    }
+  },
+  "rēfkat": {
+    "headword": "refketv",
+    "entries": {
+      "refketv_ac4c6b7a-ed87-4056-82ff-d88e4f38cfc2": [
+        "to kick out (as of a horse)"
+      ]
+    }
+  },
+  "era": {
+    "headword": "era",
+    "entries": {
+      "era_591c572f-9c7b-4893-b6cb-b32a093e1fe9": [],
+      "era_db6f998c-3ca9-4482-83ba-b49cdc3e4a0a": [
+        "his/her/its back"
+      ]
+    }
+  },
+  "enhoskvtēs": {
+    "headword": "enhosketv",
+    "entries": {
+      "enhosketv_3e63097d-3ebf-4e3a-ada3-13d55bc35689": [
+        "to scratch (another on a part of the body)"
+      ]
+    }
+  },
+  "momat": {
+    "headword": "mometv",
+    "entries": {
+      "mometv_55aef584-5ca9-4212-bc4b-e44ade773db0": [
+        "to happen, be like that",
+        "to happen to (someone)",
+        "to do, engage in an abstract activity (such as a concert)"
+      ]
+    }
+  },
+  "pale": {
+    "headword": "palen",
+    "entries": {
+      "palen_c865559e-7944-4f00-8619-bb27c44d01f2": [
+        "ten"
+      ]
+    }
+  },
+  "tucenofkaken": {
+    "headword": null,
+    "entries": {}
+  },
+  "sapsvwēt": {
+    "headword": "sapsvwē",
+    "entries": {
+      "sapsvwē_7ba3d54d-1466-4889-b4a3-480a0a564848": [
+        "striped"
+      ]
+    }
+  }
+}

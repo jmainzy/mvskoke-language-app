@@ -1,0 +1,631 @@
+{
+  "how": {
+    "headword": null,
+    "entries": {}
+  },
+  "deer": {
+    "headword": null,
+    "entries": {}
+  },
+  "fooled": {
+    "headword": null,
+    "entries": {}
+  },
+  "rabbit": {
+    "headword": "ra",
+    "entries": {
+      "ra_9048d891-0d89-4b15-8249-599f0da153fd": [
+        "prefix appearing before verbs and meaning ‘back again’",
+        "prefix (sometimes written as a separate word) appearing before verbs and meaning ‘a short distance away’"
+      ]
+    }
+  },
+  "eco": {
+    "headword": "eco",
+    "entries": {
+      "eco_2fde7850-c829-466a-81bc-b35693d62be5": [
+        "deer"
+      ]
+    }
+  },
+  "ton": {
+    "headword": "ton",
+    "entries": {
+      "ton_2c7e6281-b919-4552-8dbc-f5fba4d2adf5": [
+        "reduced form of -t omen ‘(it) is’, sometimes used like a conjunction to link noun phrases"
+      ]
+    }
+  },
+  "momen": {
+    "headword": "momen",
+    "entries": {
+      "momen_17204be4-ab16-4d1b-8a44-bf501b3e8ac5": [
+        "and, then"
+      ]
+    }
+  },
+  "cufe": {
+    "headword": "cufe",
+    "entries": {
+      "cufe_778a3c85-fd85-4695-9a17-1331642f40d6": [
+        "rabbit",
+        "hemorrhoids"
+      ]
+    }
+  },
+  "ecot": {
+    "headword": "eco",
+    "entries": {
+      "eco_2fde7850-c829-466a-81bc-b35693d62be5": [
+        "deer"
+      ]
+    }
+  },
+  "cufen": {
+    "headword": "cufe",
+    "entries": {
+      "cufe_778a3c85-fd85-4695-9a17-1331642f40d6": [
+        "rabbit",
+        "hemorrhoids"
+      ]
+    }
+  },
+  "mvkērrvtēs": {
+    "headword": null,
+    "entries": {}
+  },
+  "tat": {
+    "headword": "tat",
+    "entries": {
+      "tat_21abb862-84c9-4a68-b69a-b0c90f06e41f": [
+        "word adding mild focus to a preceding phrase, often to imply contrast or to resume an established topic"
+      ]
+    }
+  },
+  "hofonof": {
+    "headword": "hofonof",
+    "entries": {
+      "hofonof_7293ffff-43a0-47bf-b218-dc1189a852cc": [
+        "a long time from now"
+      ],
+      "hofonof_d8b794da-3aba-4f40-8819-2c32f356da84": [
+        "a long time ago"
+      ]
+    }
+  },
+  "elaksvn": {
+    "headword": "elaksv",
+    "entries": {
+      "elaksv_f6e6a4fe-c55c-4752-8600-32fa0a3fc057": []
+    }
+  },
+  "ocēt": {
+    "headword": "ocetv",
+    "entries": {
+      "ocetv_065362cf-92d0-4c26-96de-e874cb449124": [
+        "to exist (of an inanimate), for there to be",
+        "to have (a knife, a cover, faith, children, etc.), keep (something)",
+        "to have (a baby), give birth to",
+        "to have (a ball game, election, etc.), hold (a meeting)",
+        "to have (time)",
+        "for there to be a time when (someone does something)"
+      ]
+    }
+  },
+  "omvtēs": {
+    "headword": "omē",
+    "entries": {
+      "omē_26843db3-8b6e-419a-b354-cbe4f18778d4": [
+        "able"
+      ],
+      "omē_f4502aa3-912c-4f50-8687-059069567e52": [
+        "like, resembling, kind of"
+      ]
+    }
+  },
+  "ele": {
+    "headword": "ele",
+    "entries": {
+      "ele_deff0a37-3eb4-4cf2-8e99-4b79f58185fa": [
+        "his/her/its foot, leg, paw",
+        "wheel (on a car)"
+      ]
+    }
+  },
+  "hiyome": {
+    "headword": "hiyometv",
+    "entries": {
+      "hiyometv_d5f66398-6286-46a1-a11c-209f9ef99901": [
+        "to be this way, like this"
+      ]
+    }
+  },
+  "ocat": {
+    "headword": "ocetv",
+    "entries": {
+      "ocetv_065362cf-92d0-4c26-96de-e874cb449124": [
+        "to exist (of an inanimate), for there to be",
+        "to have (a knife, a cover, faith, children, etc.), keep (something)",
+        "to have (a baby), give birth to",
+        "to have (a ball game, election, etc.), hold (a meeting)",
+        "to have (time)",
+        "for there to be a time when (someone does something)"
+      ]
+    }
+  },
+  "omēt": {
+    "headword": "omē",
+    "entries": {
+      "omē_26843db3-8b6e-419a-b354-cbe4f18778d4": [
+        "able"
+      ],
+      "omē_f4502aa3-912c-4f50-8687-059069567e52": [
+        "like, resembling, kind of"
+      ]
+    }
+  },
+  "mestelepikvn": {
+    "headword": null,
+    "entries": {}
+  },
+  "svpenkvlēcetvn": {
+    "headword": null,
+    "entries": {}
+  },
+  "komvtēs": {
+    "headword": "kometv",
+    "entries": {
+      "kometv_2bceeacf-c6c0-43a6-b143-63f04470395d": [
+        "to think (a quoted thought), believe, consider, wonder, assume, guess",
+        "to want (to do something), wish, hope for, try",
+        "to think (of someone) (a quoted thought)",
+        "to hope, want (of someone) (a quoted thought)",
+        "the thought (of doing something)"
+      ]
+    }
+  },
+  "mont": {
+    "headword": "mont",
+    "entries": {
+      "mont_70c344d7-2799-4df7-a684-941871800fe4": [],
+      "momet_444e2850-fb7f-4506-865a-047ec8d83d14": [
+        "and, then"
+      ]
+    }
+  },
+  "estelepikv": {
+    "headword": null,
+    "entries": {}
+  },
+  "hera̜kusēn": {
+    "headword": null,
+    "entries": {}
+  },
+  "ontskes": {
+    "headword": null,
+    "entries": {}
+  },
+  "vnpaletsken": {
+    "headword": "pvletv",
+    "entries": {
+      "pvletv_e38b9603-be86-430b-b6a6-4a19abc6a87c": [
+        "to borrow",
+        "to lend",
+        "to hire"
+      ]
+    }
+  },
+  "cem": {
+    "headword": "cem",
+    "entries": {
+      "cem_b4d2410b-3916-4856-b5ae-e3402c0da4a6": [
+        "prefix indicating ‘your’, ‘to you’, ‘for you’, or ‘from you’"
+      ]
+    }
+  },
+  "vtehēpit": {
+    "headword": null,
+    "entries": {}
+  },
+  "hecvranis": {
+    "headword": null,
+    "entries": {}
+  },
+  "kihcen": {
+    "headword": null,
+    "entries": {}
+  },
+  "vnmehcewitēs": {
+    "headword": null,
+    "entries": {}
+  },
+  "kont": {
+    "headword": null,
+    "entries": {}
+  },
+  "omis": {
+    "headword": null,
+    "entries": {}
+  },
+  "mvkvsahmen": {
+    "headword": null,
+    "entries": {}
+  },
+  "vtehhet": {
+    "headword": "vtehetv",
+    "entries": {
+      "vtehetv_100655b4-8cca-4155-a903-439a6aa87a63": [
+        "to put (two or more) in (a container, a place), have in",
+        "to put on (two or more items of clothing into which a body part is inserted, such as gloves, socks, shoes, bracelets, or rings), have on",
+        "pairs, sets (of shoes, socks, or gloves)"
+      ]
+    }
+  },
+  "eslētket": {
+    "headword": "esletketv",
+    "entries": {
+      "esletketv_0e4c5780-3267-4922-821b-d3c5f13ea00d": [
+        "to run off with (something, as a book, or bearing something, as of a horse, of one)",
+        "bicycle, bike"
+      ]
+    }
+  },
+  "sarvtēs": {
+    "headword": null,
+    "entries": {}
+  },
+  "res": {
+    "headword": "res",
+    "entries": {
+      "res_4204bfdf-c394-4e85-96b7-aa8ce6bc116b": []
+    }
+  },
+  "kololuecet": {
+    "headword": "kololuecetv",
+    "entries": {
+      "kololuecetv_01d14f04-f32d-4047-9c27-665749d0052f": [
+        "to go around in circles, circle around"
+      ]
+    }
+  },
+  "hvtvm": {
+    "headword": "hvtvm",
+    "entries": {
+      "hvtvm_014d126a-d157-44a9-820a-b90ff46ad6b8": [
+        "again, once more, another, another time"
+      ]
+    }
+  },
+  "enhopvyusēn": {
+    "headword": null,
+    "entries": {}
+  },
+  "sayet": {
+    "headword": null,
+    "entries": {}
+  },
+  "saret": {
+    "headword": null,
+    "entries": {}
+  },
+  "enletkemahvtēs": {
+    "headword": null,
+    "entries": {}
+  },
+  "assēcet": {
+    "headword": "assēcetv",
+    "entries": {
+      "assēcetv_4b6b4375-c20b-4821-817f-cb44f53c70eb": [
+        "to chase (someone or something), run (someone) off"
+      ]
+    }
+  },
+  "ont": {
+    "headword": "on",
+    "entries": {
+      "on_dd39794d-c5e9-4fcb-b725-70f6dd3a10ce": [
+        "(she/he/it) is (used in a subordinate clause)"
+      ]
+    }
+  },
+  "cakkeko": {
+    "headword": "cakketv",
+    "entries": {
+      "cakketv_6f1b3db9-e7de-4620-a222-5b121151d503": [
+        "to catch up to, catch (a bus)",
+        "to be up to (a time)"
+      ]
+    }
+  },
+  "tayen": {
+    "headword": "tąyen",
+    "entries": {
+      "tąyen_7877332c-ec39-4a93-ad46-92cafd98541d": []
+    }
+  },
+  "sensumkēpvtēs": {
+    "headword": null,
+    "entries": {}
+  },
+  "yacekot": {
+    "headword": null,
+    "entries": {}
+  },
+  "svmonkhakvtēt": {
+    "headword": null,
+    "entries": {}
+  },
+  "omēs": {
+    "headword": "omē",
+    "entries": {
+      "omē_26843db3-8b6e-419a-b354-cbe4f18778d4": [
+        "able"
+      ],
+      "omē_f4502aa3-912c-4f50-8687-059069567e52": [
+        "like, resembling, kind of"
+      ]
+    }
+  },
+  "momvtēt": {
+    "headword": "momatē",
+    "entries": {
+      "momatē_f4c51131-80ff-4b71-862b-ab27e7ab4106": [
+        "that it might happen"
+      ]
+    }
+  },
+  "omen": {
+    "headword": "omē",
+    "entries": {
+      "omē_26843db3-8b6e-419a-b354-cbe4f18778d4": [
+        "able"
+      ],
+      "omē_f4502aa3-912c-4f50-8687-059069567e52": [
+        "like, resembling, kind of"
+      ]
+    }
+  },
+  "enpvlecetvn": {
+    "headword": "enpvlecetv",
+    "entries": {
+      "enpvlecetv_a0e57a80-b74f-447b-884b-ab80e917901b": []
+    }
+  },
+  "arvtētot": {
+    "headword": null,
+    "entries": {}
+  },
+  "tehecakvtēs": {
+    "headword": null,
+    "entries": {}
+  },
+  "tem": {
+    "headword": null,
+    "entries": {}
+  },
+  "opunvyēcvkekatēs": {
+    "headword": null,
+    "entries": {}
+  },
+  "nake": {
+    "headword": "nake",
+    "entries": {
+      "nake_3316759f-f84d-42bc-b78a-da90b1107e48": [
+        "what",
+        "thing, something",
+        "(with a negative) anything",
+        ": indefinite nonhuman possessor of a noun that must be possessed"
+      ]
+    }
+  },
+  "vkerrakvtē": {
+    "headword": "vkerretv",
+    "entries": {
+      "vkerretv_e9dad5c1-86b6-4b41-b79a-95660c30dcdc": [
+        "to cheat",
+        "cunning, duplicity, a trick, trickery"
+      ]
+    }
+  },
+  "ohfvccv": {
+    "headword": "ohfvccv",
+    "entries": {
+      "ohfvccv_311920f5-b1a6-4945-b381-3ca8bfe368b9": [
+        "about (a story, etc.), regarding, with regard to",
+        "toward"
+      ]
+    }
+  },
+  "cufet": {
+    "headword": "cufe",
+    "entries": {
+      "cufe_778a3c85-fd85-4695-9a17-1331642f40d6": [
+        "rabbit",
+        "hemorrhoids"
+      ]
+    }
+  },
+  "yvpen": {
+    "headword": "yvpe",
+    "entries": {
+      "yvpe_345fe84d-84a6-4ae9-94e0-360596e3ff6e": [
+        "its horn"
+      ]
+    }
+  },
+  "meyacētot": {
+    "headword": null,
+    "entries": {}
+  },
+  "mvkvsvmē": {
+    "headword": null,
+    "entries": {}
+  },
+  "tatēs": {
+    "headword": "tatē",
+    "entries": {
+      "tatē_26d240d8-87fe-4362-aee5-d189574157ea": [
+        "the late, the deceased",
+        "the former, which had been"
+      ]
+    }
+  },
+  "svnpaletsken": {
+    "headword": null,
+    "entries": {}
+  },
+  "sekohlicin": {
+    "headword": null,
+    "entries": {}
+  },
+  "hecvkēs": {
+    "headword": "Hecetv",
+    "entries": {
+      "Hecetv_86b5a02a-c0bb-45b6-8db5-07d6635c9c73": [],
+      "hecetv_fc14f869-ec69-4fc5-80dd-04ba5dc1085b": [
+        "to see, look at, watch, notice",
+        "to be able to see",
+        "to attend, go to (school)",
+        "to try, see if"
+      ]
+    }
+  },
+  "senpalvtēs": {
+    "headword": null,
+    "entries": {}
+  },
+  "sekohlicet": {
+    "headword": null,
+    "entries": {}
+  },
+  "eslētkit": {
+    "headword": null,
+    "entries": {}
+  },
+  "sarin": {
+    "headword": null,
+    "entries": {}
+  },
+  "hecvkēts": {
+    "headword": "Hecetv",
+    "entries": {
+      "Hecetv_86b5a02a-c0bb-45b6-8db5-07d6635c9c73": [],
+      "hecetv_fc14f869-ec69-4fc5-80dd-04ba5dc1085b": [
+        "to see, look at, watch, notice",
+        "to be able to see",
+        "to attend, go to (school)",
+        "to try, see if"
+      ]
+    }
+  },
+  "kicen": {
+    "headword": "kicetv",
+    "entries": {
+      "kicetv_6a9123e2-9308-4532-8b29-6fc11335cb02": [
+        "to tell, say to, call (something), ask (with a preceding question), order"
+      ]
+    }
+  },
+  "enka": {
+    "headword": "enka",
+    "entries": {
+      "enka_04401ddb-89b4-4a9d-bcea-bab18b5789e0": [
+        "okay, all right, yes"
+      ]
+    }
+  },
+  "senhopvyusēn": {
+    "headword": null,
+    "entries": {}
+  },
+  "ēmeu": {
+    "headword": null,
+    "entries": {}
+  },
+  "sen": {
+    "headword": "sē",
+    "entries": {
+      "sē_0dd9c57c-e2f4-4c0f-82e1-7b835ff189d0": [
+        "s: the letter ‘s’"
+      ]
+    }
+  },
+  "lētkvtēs": {
+    "headword": "letketv",
+    "entries": {
+      "letketv_b216818b-6336-4539-bbcb-645a73d2ffdd": [
+        "to run (of one), run away, flee"
+      ]
+    }
+  },
+  "svyēpet": {
+    "headword": null,
+    "entries": {}
+  },
+  "kērrof": {
+    "headword": null,
+    "entries": {}
+  },
+  "assēcvtēs": {
+    "headword": "assēcetv",
+    "entries": {
+      "assēcetv_4b6b4375-c20b-4821-817f-cb44f53c70eb": [
+        "to chase (someone or something), run (someone) off"
+      ]
+    }
+  },
+  "esletkusēhayet": {
+    "headword": null,
+    "entries": {}
+  },
+  "estonkomahhet": {
+    "headword": null,
+    "entries": {}
+  },
+  "cakkēpen": {
+    "headword": null,
+    "entries": {}
+  },
+  "eton": {
+    "headword": "eto",
+    "entries": {
+      "eto_ed0bf615-2b36-4bf5-9f49-0fb63dc7bdef": [
+        "tree, wood, timber, log, stick, pole"
+      ]
+    }
+  },
+  "ohsehket": {
+    "headword": null,
+    "entries": {}
+  },
+  "vyēpen": {
+    "headword": "vyepetv",
+    "entries": {
+      "vyepetv_af125e10-da1a-4207-9afb-1cfad2c68f59": [
+        "to get away (of one)"
+      ]
+    }
+  },
+  "eyvpe": {
+    "headword": "eyvpe",
+    "entries": {
+      "eyvpe_f630c91d-f5f4-4bc3-b517-474573230d6e": []
+    }
+  },
+  "resehpet": {
+    "headword": null,
+    "entries": {}
+  },
+  "sekohlicēpvtēs": {
+    "headword": null,
+    "entries": {}
+  },
+  "enpoyafkvtēs": {
+    "headword": "poyafketv",
+    "entries": {
+      "poyafketv_2f8a50fc-6a94-4206-91ec-03fcc7a62cba": [
+        "to fall short of"
+      ]
+    }
+  }
+}

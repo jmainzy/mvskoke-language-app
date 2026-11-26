@@ -6,7 +6,7 @@ source_dir="$root/assets/readalongs"
 temp_dir="$(mktemp -d)"
 trap 'rm -rf "$temp_dir"' EXIT
 
-source ../../mus_segmenter/.venv/bin/activate
+source .venv/bin/activate
 
 sources=()
 destinations=()
@@ -22,7 +22,7 @@ while IFS= read -r -d '' source; do
   mkdir -p "$(dirname "$text")"
   python3 "$root/tools/extract_story_text.py" "$source" --output "$text"
   sources+=("$text")
-  destinations+=("$source_dir/$stem.json")
+  destinations+=("$source_dir/${stem}_index.json")
   count=$((count + 1))
 done < <(find "$source_dir" -type f \( -name '*.readalong' -o -name '*.eaf' \) -print0)
 

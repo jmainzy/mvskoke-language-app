@@ -8,7 +8,7 @@ Fork and PR!
 
 The app uses the sibling `../readalong` checkout as a local dependency.
 Story word indexes are optional assets: set `wordIndexFile` on a content item
-to a JSON list of single-entry objects mapping words to definitions.
+to a story morphology index in `assets/readalongs`.
 
 To generate the sense ID to headword and definition index from a lexicon export, run:
 
@@ -46,13 +46,13 @@ memory on a mobile device has a corresponding cost.
 
 ## Story morphology indexes
 
-Install the Python dependency, then extract a ReadAlong or ELAN transcription
-and index its words:
+Install the sibling `mvskoke-lemmatizer` checkout, then extract a ReadAlong or
+ELAN transcription and index its words:
 
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install -r ../mus_segmenter/requirements.txt
+python -m pip install ../mvskoke-lemmatizer
 python3 tools/extract_story_text.py path/to/story.readalong
 python3 tools/build_story_index.py path/to/story.txt
 ```
@@ -60,48 +60,34 @@ python3 tools/build_story_index.py path/to/story.txt
 The extractor writes `story.txt`; for ELAN it reads the `Transcription` tier
 only (choose another tier with `--tier`). ReadAlong extraction uses `<w>`
 elements and excludes translations. The indexer writes `story.json`, mapping
-each distinct lowercase word to `{"stem": <dictionary headword or null>,
-"sense_ids": [<entry IDs>]}`. Despite the field name, the array contains the
-LIFT `<entry id>` values for the selected stem, including any entries linked
-as free variants. These IDs differ from the generated IDs used by
-`assets/sense_index.json` and cannot be looked up in that file. A matched
-entry has an ID even if it has no senses. For a combined `em` plus verb,
-`stem` contains the separated surface words and the IDs include the available
-entries for both. It prefers a direct dictionary
-headword, then an exact spelling over an accent-insensitive analysis;
-ambiguities between different stems are resolved deterministically, not
-contextually. If neither matches, it tries vowel substitutions (`v`/`a` and
-`u`/`o`), written `f` for dictionary `h`, and single versus double `c`;
-`ē`/`e` is already covered by accent-insensitive matching. The
-fewest changes win, but the result is still a candidate, not a
-verified match. Internal hyphens and apostrophes are retained; other
-punctuation separates words.
+each distinct lowercase word to its lemma, LIFT entry IDs, and English
+definitions grouped by entry ID. For example:
 
-The indexer imports the analyzer from the sibling `../mus_segmenter` checkout.
-Its `segment.py` compiles a PyFoma right-linear grammar into a bidirectional
-FST. It reads the sibling
-`../mvskoke-dictionary/lexicon/lexicon.lift` by default. Pass `--lexicon` to
-select another LIFT file. Use `--output` to name the JSON result. Multiple
-text files can be indexed in one invocation. To inspect
-analyses directly, run `python3 ../mus_segmenter/segment.py word1 word2`.
+```json
+{"punvttv": {"headword": "ponvttv",
+             "entries": {"ponvttv_entry_id": ["example definition"]}}}
+```
 
-The initial grammar models action-verb present, past, future, imperative,
-vhan and selected auxiliary forms, L/H-grade alternations, and regular
-stative forms including documented diminutive and augmentative derivations.
-It also recognizes subject `-t`, definite subject `-at` replacing final
-`e`/`ē` (including `-etv` verb headwords), direct object `-n`, selected
-verb adverbs including present endings with final `-n`, verb stems without
-final `-tv`, and initial-`e` contractions. It recognizes stative past-five
-forms, H-grade `-et`, possessive prefixes, and combined `em` plus verb forms.
-Dictionary verb phrases beginning with `etem` also match joined forms,
-including phrases that already contain `-ho-`.
-It uses LIFT grammatical categories for statives and avoids regular plural
-stative/action analyses when the dictionary marks an irregular plural, except
-for imperative `-vkēs`. It
-uses linked dual and triplural action stems where available. Other irregular
-plurals, many affixes and multiword expressions are not yet modeled. The
-rules and automatic disambiguation require linguistic review;
-an FST analysis is a candidate, not a verified translation.
+The `entries` object includes homographic entries and their linked free variants;
+entries need not have senses. Each definition list contains the entry's
+nonempty English sense definitions in dictionary order and is empty if none
+are available. These are LIFT `<entry id>` values, not the
+generated sense IDs in `assets/sense_index.json`. An unrecognized word has a
+null headword and empty entries. A lemma absent from the selected LIFT file is
+kept with empty entries and counted in the diagnostic output. The reader shows
+all available definitions for a word; words without definitions are not marked.
+The reader matches complete ReadAlong word elements or ELAN annotations, so
+individual words inside a multiword ELAN annotation are not separately indexed.
+
+The installed lemmatizer supplies the HFST analysis and fuzzy matching; its
+compiled model and the selected LIFT file should come from the same
+dictionary version. It selects one lemma, preferring an exact match and then
+the longest candidate. Internal hyphens and apostrophes are retained; other
+punctuation separates words. Results are candidates, not verified translations.
+
+The indexer reads `../mvskoke-dictionary/lexicon/lexicon.lift` by default.
+Pass `--lexicon` to select another LIFT file and `--output` to name the JSON
+result. Multiple text files can be indexed in one invocation.
 
 To index all `.readalong` and `.eaf` files recursively under
 `assets/readalongs`, run `bash tools/index_readalongs.sh` in the activated
@@ -109,6 +95,5 @@ environment. Pass `--lexicon` to that script if needed.
 It uses temporary text files and writes a JSON file beside each source. The
 extractor and indexers overwrite their output files; save any manual edits
 before rerunning. Existing story indexes are not automatically regenerated
-and may contain older sense IDs until rerun.
-These indexes are not the definition-list format currently expected by
-`wordIndexFile`, so they cannot yet be used directly by the reader.
+and may contain older formats until rerun. Set `wordIndexFile` to the generated
+filename to enable definitions in the reader.

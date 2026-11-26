@@ -1,0 +1,2262 @@
+{
+  "fort": {
+    "headword": null,
+    "entries": {}
+  },
+  "smith": {
+    "headword": null,
+    "entries": {}
+  },
+  "dec": {
+    "headword": null,
+    "entries": {}
+  },
+  "11": {
+    "headword": null,
+    "entries": {}
+  },
+  "18": {
+    "headword": null,
+    "entries": {}
+  },
+  "78": {
+    "headword": null,
+    "entries": {}
+  },
+  "my": {
+    "headword": null,
+    "entries": {}
+  },
+  "teacher": {
+    "headword": null,
+    "entries": {}
+  },
+  "mrs": {
+    "headword": null,
+    "entries": {}
+  },
+  "a": {
+    "headword": "a",
+    "entries": {
+      "a_80fa636a-7e6d-4c83-81df-714c25959ec6": [
+        "prefix indicating action directed toward the speaker or a reference point",
+        "prefix indicating location in the visible distance",
+        "prefix indicating up or off"
+      ],
+      "a_e422582e-f9b4-4c1f-a8c5-4611aafd2380": [
+        "a: the letter ‘a’"
+      ]
+    }
+  },
+  "e": {
+    "headword": "e",
+    "entries": {
+      "e_b6acaa37-d8f4-42a1-9d91-8b7337729b48": [
+        "prefix indicating ‘his’, ‘her’, ‘their’ (generally with a body part or kinship term)",
+        "prefix  indicating ‘him’, ‘her’, ‘them’ (with locatives)"
+      ],
+      "e_c9429747-113f-40a7-9928-f05f406b3b60": [
+        "e: the letter ‘e’"
+      ]
+    }
+  },
+  "w": {
+    "headword": null,
+    "entries": {}
+  },
+  "robertson": {
+    "headword": null,
+    "entries": {}
+  },
+  "hiyomat": {
+    "headword": "hiyomat",
+    "entries": {
+      "hiyomat_ba647e52-a2b2-4bcf-92b9-29001670b9ad": [
+        "now"
+      ]
+    }
+  },
+  "vm": {
+    "headword": "vm",
+    "entries": {
+      "vm_823f522b-0fce-40a4-a568-63f4d035ff78": [
+        "prefix indicating ‘my’, ‘to me’, ‘for me’, or ‘from me’"
+      ]
+    }
+  },
+  "opunvkv": {
+    "headword": "opunvkv",
+    "entries": {
+      "opunvkv_bca16f00-2f9d-4778-a8e4-74b14b3cabf5": [
+        "what is spoken: language, word, message, talk, speech, lecture, (radio) program, rumor, news, information, tale, story, voice"
+      ]
+    }
+  },
+  "mahusan": {
+    "headword": null,
+    "entries": {}
+  },
+  "es": {
+    "headword": "es",
+    "entries": {
+      "es_ef593075-e630-4e0e-ad7f-7c522ec90c54": [
+        "prefix indicating that the action is performed using a tool or material, operating a vehicle, riding a horse, or going with another",
+        "prefix used when a subject of an intransitive verb or a direct object of a transitive verb has salient parts to it (fruit, feathers, words, etc.)",
+        "prefix indicating comparison to another",
+        "prefix added to a numeral to indicate order relative to another"
+      ]
+    }
+  },
+  "cen": {
+    "headword": "cen",
+    "entries": {
+      "cen_a194eae6-ccf7-4b25-8c6e-4189f396aaf7": [
+        "variant of cem before consonants other than m and p"
+      ]
+    }
+  },
+  "coyet": {
+    "headword": "coyetv",
+    "entries": {
+      "coyetv_0deab768-1801-4bdc-88db-3e77530ea92c": [
+        "to write"
+      ]
+    }
+  },
+  "omis": {
+    "headword": null,
+    "entries": {}
+  },
+  "vnokeckv": {
+    "headword": "vnokeckv",
+    "entries": {
+      "vnokeckv_d09fe7e3-71aa-4bd8-a17d-9acaa527b4b8": [
+        "love, affection"
+      ]
+    }
+  },
+  "vhayv": {
+    "headword": null,
+    "entries": {}
+  },
+  "tate": {
+    "headword": "tate",
+    "entries": {
+      "tate_4c681ac3-9137-4237-b413-fc3c3746fcec": []
+    }
+  },
+  "toyetskat": {
+    "headword": null,
+    "entries": {}
+  },
+  "mucv": {
+    "headword": "mucv",
+    "entries": {
+      "mucv_4c924397-0ca5-4a03-8a39-1e92e6d715f0": [
+        "this time",
+        "this (evening, etc.)"
+      ]
+    }
+  },
+  "hvthiyvtke": {
+    "headword": null,
+    "entries": {}
+  },
+  "em": {
+    "headword": "em",
+    "entries": {
+      "em_63739ccf-9130-4d12-8878-18537e1e41a5": [
+        "prefix indicating ‘his/her/their’, ‘to him/her/them’, ‘for him/her/them’, or ‘from him/her/them’"
+      ]
+    }
+  },
+  "ofvt": {
+    "headword": "ofv",
+    "entries": {
+      "ofv_442c08cd-e800-467e-b3fe-79028980be8b": [
+        "in (a location, water), inside, within",
+        "in (one’s thoughts, prayers, etc.)",
+        "the inside"
+      ]
+    }
+  },
+  "on": {
+    "headword": "on",
+    "entries": {
+      "on_dd39794d-c5e9-4fcb-b725-70f6dd3a10ce": [
+        "(she/he/it) is (used in a subordinate clause)"
+      ]
+    }
+  },
+  "omat": {
+    "headword": "omat",
+    "entries": {
+      "omat_3244c24b-12ea-434b-8281-f187132a2546": [
+        "if (with a preceding sentence ending in -en /-in/)"
+      ]
+    }
+  },
+  "cv": {
+    "headword": "cv",
+    "entries": {
+      "cv_c6d4ffa7-39b6-459c-9324-15278f01cf4a": [
+        "prefix indicating ‘my’ (generally with a body part or kinship term)",
+        "prefix indicating ‘me’",
+        "prefix indicating ‘I’ (generally with an action or state that is involuntary)"
+      ]
+    }
+  },
+  "cvfeknusēt": {
+    "headword": null,
+    "entries": {}
+  },
+  "omes": {
+    "headword": "omē",
+    "entries": {
+      "omē_26843db3-8b6e-419a-b354-cbe4f18778d4": [
+        "able"
+      ],
+      "omē_f4502aa3-912c-4f50-8687-059069567e52": [
+        "like, resembling, kind of"
+      ]
+    }
+  },
+  "momen": {
+    "headword": "momen",
+    "entries": {
+      "momen_17204be4-ab16-4d1b-8a44-bf501b3e8ac5": [
+        "and, then"
+      ]
+    }
+  },
+  "takeu": {
+    "headword": null,
+    "entries": {}
+  },
+  "matvpomen": {
+    "headword": "matvpomen",
+    "entries": {
+      "matvpomen_861c0b53-66da-484e-a225-f09b43f7205d": [
+        "the same way, same amount, to the same degree"
+      ]
+    }
+  },
+  "vpokatskis": {
+    "headword": null,
+    "entries": {}
+  },
+  "omēs": {
+    "headword": "omē",
+    "entries": {
+      "omē_26843db3-8b6e-419a-b354-cbe4f18778d4": [
+        "able"
+      ],
+      "omē_f4502aa3-912c-4f50-8687-059069567e52": [
+        "like, resembling, kind of"
+      ]
+    }
+  },
+  "komiyēt": {
+    "headword": "kometv",
+    "entries": {
+      "kometv_2bceeacf-c6c0-43a6-b143-63f04470395d": [
+        "to think (a quoted thought), believe, consider, wonder, assume, guess",
+        "to want (to do something), wish, hope for, try",
+        "to think (of someone) (a quoted thought)",
+        "to hope, want (of someone) (a quoted thought)",
+        "the thought (of doing something)"
+      ]
+    }
+  },
+  "os": {
+    "headword": "os",
+    "entries": {
+      "os_8a06dbfc-5a33-4e9f-abe7-e39712a26fe7": [
+        "(she/he/it) is"
+      ]
+    }
+  },
+  "en": {
+    "headword": "en",
+    "entries": {
+      "en_ab4eb95a-89c6-4ed3-972a-c7c56fb7c15f": [
+        "variant of em before consonants other than m and p"
+      ]
+    }
+  },
+  "hommv": {
+    "headword": null,
+    "entries": {}
+  },
+  "cokv": {
+    "headword": "cokv",
+    "entries": {
+      "cokv_5a54aded-e655-4a0b-9955-d9c19ccdd873": [
+        "writing or something with writing on it, especially paper, book, letter, certificate, diploma"
+      ]
+    }
+  },
+  "sulkēn": {
+    "headword": "sulkē",
+    "entries": {
+      "sulkē_f903b787-0930-4c50-8792-d2e1479d3738": [
+        "many, much, a lot of, numerous, a bunch of, a majority of"
+      ]
+    }
+  },
+  "cem": {
+    "headword": "cem",
+    "entries": {
+      "cem_b4d2410b-3916-4856-b5ae-e3402c0da4a6": [
+        "prefix indicating ‘your’, ‘to you’, ‘for you’, or ‘from you’"
+      ]
+    }
+  },
+  "vtotiyvnks": {
+    "headword": null,
+    "entries": {}
+  },
+  "momis": {
+    "headword": "momis",
+    "entries": {
+      "momis_4c9b28c7-92ae-49ed-b273-6dd0185fdce1": [
+        "anyway, anyhow, regardless, even so"
+      ],
+      "momis_96aa90c2-8388-4d52-96bd-eb28c6f0d58e": [
+        "but, however"
+      ]
+    }
+  },
+  "hvte": {
+    "headword": "hvte",
+    "entries": {
+      "hvte_b1c27720-1673-491b-ac5a-0973015e9d18": [
+        "just now, a short time ago, recently, right then, right away",
+        "still",
+        "yet (with a negative)"
+      ]
+    }
+  },
+  "hecvko": {
+    "headword": "Hecetv",
+    "entries": {
+      "Hecetv_86b5a02a-c0bb-45b6-8db5-07d6635c9c73": [],
+      "hecetv_fc14f869-ec69-4fc5-80dd-04ba5dc1085b": [
+        "to see, look at, watch, notice",
+        "to be able to see",
+        "to attend, go to (school)",
+        "to try, see if"
+      ]
+    }
+  },
+  "emonket": {
+    "headword": null,
+    "entries": {}
+  },
+  "hvtvm": {
+    "headword": "hvtvm",
+    "entries": {
+      "hvtvm_014d126a-d157-44a9-820a-b90ff46ad6b8": [
+        "again, once more, another, another time"
+      ]
+    }
+  },
+  "vtotet": {
+    "headword": "vtotetv",
+    "entries": {
+      "vtotetv_0b4d230d-3cb9-4d2c-aa73-3560a605c61d": [
+        "to send (something or someone)",
+        "to give orders, order (someone), order (a delivery), assign, appoint, command"
+      ]
+    }
+  },
+  "ce": {
+    "headword": "ce",
+    "entries": {
+      "ce_37d14c90-3e52-4453-bf5a-afa74ed12d81": [
+        "prefix indicating ‘your’ (generally with a body part or kinship term)",
+        "prefix indicating ‘you’ (generally for a direct object or the subject of an action or state that is involuntary)"
+      ]
+    }
+  },
+  "mēkusvpkvt": {
+    "headword": "mēkusvpkv",
+    "entries": {
+      "mēkusvpkv_d2b26bda-9ce8-40e1-b492-59ad46f27c70": [
+        "prayer",
+        "(church) service"
+      ]
+    }
+  },
+  "estonkon": {
+    "headword": "estonko",
+    "entries": {
+      "estonko_680abd2c-1a03-48ee-9a17-6a65dd666d6b": [
+        "nothing is wrong, without problems, fine, okay, all right",
+        "not doing anything"
+      ]
+    }
+  },
+  "ayiyēt": {
+    "headword": "vyetv",
+    "entries": {
+      "vyetv_499dc773-d70a-4419-9767-e03ab41662a4": [
+        "to go (of one)",
+        "to pass (of time), go on for a while",
+        "the way (to go to school, etc.)",
+        "ways, culture"
+      ]
+    }
+  },
+  "nake": {
+    "headword": "nake",
+    "entries": {
+      "nake_3316759f-f84d-42bc-b78a-da90b1107e48": [
+        "what",
+        "thing, something",
+        "(with a negative) anything",
+        ": indefinite nonhuman possessor of a noun that must be possessed"
+      ]
+    }
+  },
+  "hvmkusat": {
+    "headword": null,
+    "entries": {}
+  },
+  "vkerrickv": {
+    "headword": "vkerrickv",
+    "entries": {
+      "vkerrickv_ff3852e1-7d56-42ce-bb2d-08b5a8868494": [
+        "thought, thinking, mind, idea, opinion, decision, feeling, memory, plan, conscience, heart"
+      ]
+    }
+  },
+  "vn": {
+    "headword": "vn",
+    "entries": {
+      "vn_967ad05e-a81a-4da7-99f8-45c2b93b6f67": [
+        "variant of vm before consonants other than m and p"
+      ]
+    }
+  },
+  "yvmakkuecēt": {
+    "headword": null,
+    "entries": {}
+  },
+  "heyvn": {
+    "headword": "heyv",
+    "entries": {
+      "heyv_afd8a16b-7a83-49ad-9422-242c7599e1e2": [
+        "this (book, etc.), these",
+        "this, this one, these, this place, here"
+      ]
+    }
+  },
+  "okis": {
+    "headword": "oketv",
+    "entries": {
+      "oketv_af552c97-a91f-43fd-842f-856bb92aa246": [
+        "to mean",
+        "to say",
+        "to say, speak (while doing something else) (an auxiliary verb similar to English be, but used after a verb of communication)",
+        "to speak (used with a name at the end of a letter to identify the author)",
+        "to make a noise",
+        "time, season",
+        "(one) time, instance"
+      ]
+    }
+  },
+  "este": {
+    "headword": "este",
+    "entries": {
+      "este_851ef7e6-dbe5-4f52-990c-f126f44b2be6": [
+        "person, people, human",
+        "someone",
+        "(with a negative) no one, nobody, anyone, anybody",
+        "(as a possessor) someone’s, one’s, a human (foot, etc.)"
+      ]
+    }
+  },
+  "svlvfke": {
+    "headword": "svlvfkē",
+    "entries": {
+      "svlvfkē_2e19abe6-00de-49c3-88a6-01060d788d70": [
+        "imprisoned"
+      ]
+    }
+  },
+  "sulke": {
+    "headword": "sulkē",
+    "entries": {
+      "sulkē_f903b787-0930-4c50-8792-d2e1479d3738": [
+        "many, much, a lot of, numerous, a bunch of, a majority of"
+      ]
+    }
+  },
+  "mahē": {
+    "headword": "mahē",
+    "entries": {
+      "mahē_89bc5d66-d2c8-4ed5-a556-5db0fd02a33e": [
+        "about (four, there, that time), approximately, around (a time or place)"
+      ],
+      "mahē_e4195a8e-760a-4d40-9892-5524c7909d29": [
+        "very",
+        "a great deal, often, a lot",
+        "(not) much, (not) very many"
+      ],
+      "mahē_eb57e02b-9bc5-4b67-a057-cd0a07812338": [
+        "tall (of an animate or inanimate)"
+      ]
+    }
+  },
+  "yvmv": {
+    "headword": "yvmv",
+    "entries": {
+      "yvmv_f84b7c1c-851c-43a0-932d-339351e99d6d": [
+        "this (place)",
+        "this here, this one here, this place, here"
+      ]
+    }
+  },
+  "likiyat": {
+    "headword": null,
+    "entries": {}
+  },
+  "vpokat": {
+    "headword": "vpoketv",
+    "entries": {
+      "vpoketv_82b0e61a-9021-4595-aee5-bf2de9695aaf": [
+        "to sit, be situated, exist (of three or more)",
+        "to settle, camp, stay, live, reside (somewhere, of three or more)",
+        "settlement, village, living place"
+      ]
+    }
+  },
+  "momet": {
+    "headword": "momet",
+    "entries": {
+      "momet_444e2850-fb7f-4506-865a-047ec8d83d14": [
+        "and, then"
+      ]
+    }
+  },
+  "nettv": {
+    "headword": "nettv",
+    "entries": {
+      "nettv_a345599b-4822-4d9a-a294-19869f1fc803": [],
+      "netta_ecd9fb59-711c-4e95-bffd-80c6c6932355": [
+        "day, date",
+        "day of death, final day"
+      ]
+    }
+  },
+  "omvlkvn": {
+    "headword": "omvlkv",
+    "entries": {
+      "omvlkv_dc5dfffe-a39c-40f8-97a6-5f5306e5d549": [
+        "every (one), all (of them, of it)",
+        "every"
+      ]
+    }
+  },
+  "holwahokat": {
+    "headword": "holwahokē",
+    "entries": {
+      "holwahokē_a81058f9-3233-4b27-a892-9501d6f2a318": [
+        "ugly, bad, naughty, wicked (of two or more)"
+      ]
+    }
+  },
+  "opunahoyet": {
+    "headword": "opunahoyetv",
+    "entries": {
+      "opunahoyetv_c9a74642-1b93-4804-8a38-4ec369cabc31": [
+        "to talk, speak (of two or more)"
+      ]
+    }
+  },
+  "omen": {
+    "headword": "omē",
+    "entries": {
+      "omē_26843db3-8b6e-419a-b354-cbe4f18778d4": [
+        "able"
+      ],
+      "omē_f4502aa3-912c-4f50-8687-059069567e52": [
+        "like, resembling, kind of"
+      ]
+    }
+  },
+  "vsehit": {
+    "headword": null,
+    "entries": {}
+  },
+  "omvyis": {
+    "headword": null,
+    "entries": {}
+  },
+  "estofvn": {
+    "headword": "estofv",
+    "entries": {
+      "estofv_39250b70-b088-4fdd-b584-090764fa6088": [
+        "when",
+        "what (day), how many (days, etc.)",
+        "whenever",
+        "always, forever",
+        "(with a negative) never"
+      ]
+    }
+  },
+  "wikvkeko": {
+    "headword": null,
+    "entries": {}
+  },
+  "tayuset": {
+    "headword": "tąyusē",
+    "entries": {
+      "tąyusē_ce7aee66-14a5-43c2-8760-9a8ae8dd07bf": []
+    }
+  },
+  "mvt": {
+    "headword": "mv",
+    "entries": {
+      "mv_ba18eddd-31d3-4586-89d0-750d7d89ba93": [
+        "that, the (referring to something in sight or mentioned)",
+        "that one, he, she, it, that (place), there"
+      ]
+    }
+  },
+  "tayen": {
+    "headword": "tąyen",
+    "entries": {
+      "tąyen_7877332c-ec39-4a93-ad46-92cafd98541d": []
+    }
+  },
+  "vhopvnēt": {
+    "headword": "vhopvnē",
+    "entries": {
+      "vhopvnē_38dadc92-c892-4639-aae9-bf9377a390a8": [
+        "ruins"
+      ]
+    }
+  },
+  "estohmvkot": {
+    "headword": null,
+    "entries": {}
+  },
+  "ok": {
+    "headword": null,
+    "entries": {}
+  },
+  "mvn": {
+    "headword": "mv",
+    "entries": {
+      "mv_ba18eddd-31d3-4586-89d0-750d7d89ba93": [
+        "that, the (referring to something in sight or mentioned)",
+        "that one, he, she, it, that (place), there"
+      ]
+    }
+  },
+  "vpakit": {
+    "headword": null,
+    "entries": {}
+  },
+  "liket": {
+    "headword": "liketv",
+    "entries": {
+      "liketv_020baebb-c7db-4a85-babf-4004cf045317": [
+        "to sit, be situated, exist (of a person, God, land, a town, money in the bank, or something about evenly tall, long, and wide, as of a house, a corn patch, a hill, a lake, a pond, the sun, a star, a full moon, a cloud, a box, a car, a rock, a book, a dollar bill, an acorn, a ball, a hat, a shoe, a kettle, a well, of one)",
+        "to settle, stay, live (in a house, a place), reside (of one)",
+        "residence, dwelling, place"
+      ]
+    }
+  },
+  "etimvt": {
+    "headword": "ētimv",
+    "entries": {
+      "ētimv_d0516d25-bfb7-4f57-81a0-a58379ac593d": [
+        "different, another, other",
+        "a different one, another one"
+      ]
+    }
+  },
+  "vtvrkvranen": {
+    "headword": null,
+    "entries": {}
+  },
+  "kihocen": {
+    "headword": null,
+    "entries": {}
+  },
+  "vpvlwvn": {
+    "headword": "vpvlwv",
+    "entries": {
+      "vpvlwv_2591b819-f411-4e94-a86d-cdd4cec1b7e5": [
+        "the rest (of something), remainder",
+        "some, part"
+      ]
+    }
+  },
+  "cuko": {
+    "headword": "cuko",
+    "entries": {
+      "cuko_902dd2c5-b484-453c-8414-ee18a2a65ea0": [
+        "house, home",
+        "building"
+      ]
+    }
+  },
+  "yēkcv": {
+    "headword": null,
+    "entries": {}
+  },
+  "etimvn": {
+    "headword": "ētimv",
+    "entries": {
+      "ētimv_d0516d25-bfb7-4f57-81a0-a58379ac593d": [
+        "different, another, other",
+        "a different one, another one"
+      ]
+    }
+  },
+  "vtēhohen": {
+    "headword": null,
+    "entries": {}
+  },
+  "mv": {
+    "headword": "mv",
+    "entries": {
+      "mv_ba18eddd-31d3-4586-89d0-750d7d89ba93": [
+        "that, the (referring to something in sight or mentioned)",
+        "that one, he, she, it, that (place), there"
+      ]
+    }
+  },
+  "vtvrkvranat": {
+    "headword": null,
+    "entries": {}
+  },
+  "tvlkuset": {
+    "headword": null,
+    "entries": {}
+  },
+  "yekcv": {
+    "headword": null,
+    "entries": {}
+  },
+  "mvrahkvn": {
+    "headword": null,
+    "entries": {}
+  },
+  "vpoyet": {
+    "headword": "vpoyetv",
+    "entries": {
+      "vpoyetv_f169e777-9de4-4e34-abe7-0da45d8b6d84": [
+        "to set (three or more, ashes, etc.), place, put away, pile up, make (three or more) sit, seat",
+        "to house, keep (three or more)"
+      ]
+    }
+  },
+  "omēhoyētvnket": {
+    "headword": null,
+    "entries": {}
+  },
+  "estomēt": {
+    "headword": "estometv",
+    "entries": {
+      "estometv_b7140a9a-3fed-48aa-927c-66509d939414": [
+        "to happen, happen to, become of",
+        "to do something",
+        "(with a negative) not to do (anything)",
+        "to do what"
+      ]
+    }
+  },
+  "kerrvkon": {
+    "headword": null,
+    "entries": {}
+  },
+  "etan": {
+    "headword": "ēta",
+    "entries": {
+      "ēta_667d5838-3b87-4190-819a-062869578e18": [
+        "the same (person, thing, location, amount, etc.), same way",
+        "oneself (used for emphasis)",
+        "too, also"
+      ]
+    }
+  },
+  "vpoyepet": {
+    "headword": null,
+    "entries": {}
+  },
+  "omhoyen": {
+    "headword": null,
+    "entries": {}
+  },
+  "yvmakkusen": {
+    "headword": null,
+    "entries": {}
+  },
+  "likit": {
+    "headword": null,
+    "entries": {}
+  },
+  "vtotit": {
+    "headword": null,
+    "entries": {}
+  },
+  "cē": {
+    "headword": "cē",
+    "entries": {
+      "cē_0ccb66ce-c204-4145-a5f2-d2cca00eab2e": [
+        "emphatic particle added to the ends of declarative or imperative sentences to convey a strong or sincere feeling on the part of the speaker",
+        "look!"
+      ],
+      "cē_fb5b9764-3b02-4cf2-b665-b799fa56894c": [
+        "c: the letter ‘c’"
+      ]
+    }
+  },
+  "svkopvnkv": {
+    "headword": null,
+    "entries": {}
+  },
+  "tis": {
+    "headword": "tis",
+    "entries": {
+      "tis_72483e05-24dc-4ff8-bfb6-7c5dc9fb55e0": [
+        "suffix indicating ‘even’",
+        "suffix indicating ‘also’"
+      ]
+    }
+  },
+  "vfekhonneko": {
+    "headword": "vfekhonnetv",
+    "entries": {
+      "vfekhonnetv_fe50af64-a40e-4ff7-8c9e-e7323f2c67e8": [
+        "to cease, stop at (a place)",
+        "to stay at, remain at (a place)"
+      ]
+    }
+  },
+  "tawvt": {
+    "headword": "tawv",
+    "entries": {
+      "tawv_c223035b-1107-4e35-80b5-4a30b44ec429": [
+        "first",
+        "foremost, above all (possibly implying a greater degree)"
+      ],
+      "tawv_f452a562-982b-46b7-a240-a8ce4f6244aa": [
+        "probably, maybe"
+      ]
+    }
+  },
+  "holwvkēn": {
+    "headword": "holwvkē",
+    "entries": {
+      "holwvkē_a9ce5140-6765-404b-86fa-0259af62276d": [
+        "ugly, bad, terrible, naughty, wicked"
+      ]
+    }
+  },
+  "likis": {
+    "headword": "liketv",
+    "entries": {
+      "liketv_020baebb-c7db-4a85-babf-4004cf045317": [
+        "to sit, be situated, exist (of a person, God, land, a town, money in the bank, or something about evenly tall, long, and wide, as of a house, a corn patch, a hill, a lake, a pond, the sun, a star, a full moon, a cloud, a box, a car, a rock, a book, a dollar bill, an acorn, a ball, a hat, a shoe, a kettle, a well, of one)",
+        "to settle, stay, live (in a house, a place), reside (of one)",
+        "residence, dwelling, place"
+      ]
+    }
+  },
+  "estimvn": {
+    "headword": "estimv",
+    "entries": {
+      "estimv_937aab84-5409-4bf0-93fa-c9bea9faad19": [
+        "who",
+        "someone",
+        "(with a negative) anyone, no one"
+      ]
+    }
+  },
+  "kicvkot": {
+    "headword": null,
+    "entries": {}
+  },
+  "likēpit": {
+    "headword": null,
+    "entries": {}
+  },
+  "omikv": {
+    "headword": null,
+    "entries": {}
+  },
+  "emekusvpkv": {
+    "headword": "emēkusvpkv",
+    "entries": {
+      "emēkusvpkv_8764941c-94f5-4066-a0b0-169d098b3937": []
+    }
+  },
+  "cvfēken": {
+    "headword": "fēketv",
+    "entries": {
+      "fēketv_e59834c0-cf23-4153-8a22-3b6660a72336": [
+        "to pay (something)",
+        "salary, pay, reward"
+      ]
+    }
+  },
+  "vfastvyēt": {
+    "headword": null,
+    "entries": {}
+  },
+  "mekusvpkv": {
+    "headword": "mēkusvpkv",
+    "entries": {
+      "mēkusvpkv_d2b26bda-9ce8-40e1-b492-59ad46f27c70": [
+        "prayer",
+        "(church) service"
+      ]
+    }
+  },
+  "vfastet": {
+    "headword": "vfvstetv",
+    "entries": {
+      "vfvstetv_d3aac283-db30-49b0-860f-467efc38a255": [
+        "to care for, attend to, look after, treat, serve, minister",
+        "to carry out (a law), keep (a commandment), observe, obey (a law), abide by"
+      ]
+    }
+  },
+  "omvyē": {
+    "headword": null,
+    "entries": {}
+  },
+  "tvnken": {
+    "headword": "tvnkē",
+    "entries": {
+      "tvnkē_6212680c-0dea-4182-9702-5afa33360802": [
+        "empty (of a bottle, etc.), vacant (of land), open, free"
+      ]
+    }
+  },
+  "lvste": {
+    "headword": "lvstē",
+    "entries": {
+      "lvstē_f7984ea8-35af-4f4f-91da-000b61cb7677": [
+        "black"
+      ]
+    }
+  },
+  "hvmken": {
+    "headword": "hvmken",
+    "entries": {
+      "hvmken_5ffe6bb9-08d3-4fe3-86df-4e15e3b9d17b": [
+        "one, a, an",
+        "same",
+        "other (hand, etc.), other one",
+        "next"
+      ]
+    }
+  },
+  "paksvnkē": {
+    "headword": "paksvnkē",
+    "entries": {
+      "paksvnkē_6601fd31-f29d-44c7-af9d-c6f85b93eb16": [
+        "yesterday"
+      ]
+    }
+  },
+  "aksumecihocvnks": {
+    "headword": null,
+    "entries": {}
+  },
+  "ofvn": {
+    "headword": "ofv",
+    "entries": {
+      "ofv_442c08cd-e800-467e-b3fe-79028980be8b": [
+        "in (a location, water), inside, within",
+        "in (one’s thoughts, prayers, etc.)",
+        "the inside"
+      ]
+    }
+  },
+  "omhoyvnks": {
+    "headword": null,
+    "entries": {}
+  },
+  "perro": {
+    "headword": "perro",
+    "entries": {
+      "perro_e864c5f8-90f6-4be6-9957-a14c449cb75f": [
+        "boat, ship, canoe, dugout"
+      ]
+    }
+  },
+  "omēn": {
+    "headword": "omē",
+    "entries": {
+      "omē_26843db3-8b6e-419a-b354-cbe4f18778d4": [
+        "able"
+      ],
+      "omē_f4502aa3-912c-4f50-8687-059069567e52": [
+        "like, resembling, kind of"
+      ]
+    }
+  },
+  "uewv": {
+    "headword": "uewv",
+    "entries": {
+      "uewv_c2ef98c7-3065-47ea-8ab9-0269c47956a6": [
+        "water"
+      ]
+    }
+  },
+  "facken": {
+    "headword": "fvcketv",
+    "entries": {
+      "fvcketv_7a7661de-d079-46ef-9d6e-4f6abcdc9bc2": [
+        "to fill, get full, be full"
+      ]
+    }
+  },
+  "vcahnet": {
+    "headword": "vcahnetv",
+    "entries": {
+      "vcahnetv_d353c68a-1824-4657-a969-d37b2fb256c9": [
+        "to give a pep talk"
+      ]
+    }
+  },
+  "aksumecicet": {
+    "headword": "aksomecicetv",
+    "entries": {
+      "aksomecicetv_1f3a8d92-8f59-4875-8370-a63de964f501": [
+        "to sink (one), submerge, lose in water",
+        "to baptize"
+      ]
+    }
+  },
+  "ohhvtvlakat": {
+    "headword": null,
+    "entries": {}
+  },
+  "makiyat": {
+    "headword": null,
+    "entries": {}
+  },
+  "elēcvt": {
+    "headword": "elēcv",
+    "entries": {
+      "elēcv_4936d614-e888-4b16-9a00-d505a8938b36": [
+        "killer"
+      ]
+    }
+  },
+  "vtvrkvranē": {
+    "headword": null,
+    "entries": {}
+  },
+  "ētat": {
+    "headword": "ēta",
+    "entries": {
+      "ēta_667d5838-3b87-4190-819a-062869578e18": [
+        "the same (person, thing, location, amount, etc.), same way",
+        "oneself (used for emphasis)",
+        "too, also"
+      ]
+    }
+  },
+  "ohvpayet": {
+    "headword": null,
+    "entries": {}
+  },
+  "vne": {
+    "headword": "vne",
+    "entries": {
+      "vne_5d670827-2dc9-448d-a047-70b0b14200a1": [
+        "I, me"
+      ]
+    }
+  },
+  "vc": {
+    "headword": "vc",
+    "entries": {
+      "vc_39327599-8977-470c-8592-3f073a8fc28b": [
+        "variant of cv found before v, a, and o"
+      ]
+    }
+  },
+  "vtvrhoyvranē": {
+    "headword": null,
+    "entries": {}
+  },
+  "ocat": {
+    "headword": "ocetv",
+    "entries": {
+      "ocetv_065362cf-92d0-4c26-96de-e874cb449124": [
+        "to exist (of an inanimate), for there to be",
+        "to have (a knife, a cover, faith, children, etc.), keep (something)",
+        "to have (a baby), give birth to",
+        "to have (a ball game, election, etc.), hold (a meeting)",
+        "to have (time)",
+        "for there to be a time when (someone does something)"
+      ]
+    }
+  },
+  "onvyvyēt": {
+    "headword": null,
+    "entries": {}
+  },
+  "cvrkeu": {
+    "headword": null,
+    "entries": {}
+  },
+  "matvpomēn": {
+    "headword": "matvpomēn",
+    "entries": {
+      "matvpomēn_77c8fe6a-15da-4f22-bfea-873bf2cc9130": [
+        "same way"
+      ]
+    }
+  },
+  "punayatskēt": {
+    "headword": null,
+    "entries": {}
+  },
+  "omvrēs": {
+    "headword": null,
+    "entries": {}
+  },
+  "cawvnwv": {
+    "headword": "ēwvnwv",
+    "entries": {
+      "ēwvnwv_f1e0f951-0a02-4a67-8206-dcb994a9f3ec": [
+        "his sister (of a man)"
+      ]
+    }
+  },
+  "tvlkusis": {
+    "headword": null,
+    "entries": {}
+  },
+  "vhoskvrē": {
+    "headword": null,
+    "entries": {}
+  },
+  "ocet": {
+    "headword": "ocetv",
+    "entries": {
+      "ocetv_065362cf-92d0-4c26-96de-e874cb449124": [
+        "to exist (of an inanimate), for there to be",
+        "to have (a knife, a cover, faith, children, etc.), keep (something)",
+        "to have (a baby), give birth to",
+        "to have (a ball game, election, etc.), hold (a meeting)",
+        "to have (time)",
+        "for there to be a time when (someone does something)"
+      ]
+    }
+  },
+  "cēmet": {
+    "headword": "cēme",
+    "entries": {
+      "cēme_7aa4a36c-df78-4773-b86d-4a9a509a37dd": [
+        "you"
+      ]
+    }
+  },
+  "ceccuswv": {
+    "headword": "eccuswv",
+    "entries": {
+      "eccuswv_b2f6afda-0eca-407d-adbf-d669e283d485": [
+        "her child (of a woman), her son or daughter",
+        "her sister’s child"
+      ]
+    }
+  },
+  "omēcet": {
+    "headword": "omēcetv",
+    "entries": {
+      "omēcetv_f0bde3fd-c008-4ec6-bdd2-f499b1a3a3b4": [
+        "to do"
+      ]
+    }
+  },
+  "punayetsken": {
+    "headword": null,
+    "entries": {}
+  },
+  "ēkvnv": {
+    "headword": "ēkvnv",
+    "entries": {
+      "ēkvnv_105c1649-a384-4dda-b4ce-9df1771b41a3": [
+        "land, earth, ground, area (of ground), place, country",
+        "world"
+      ]
+    }
+  },
+  "holwvketv": {
+    "headword": null,
+    "entries": {}
+  },
+  "espoyarēs": {
+    "headword": "espoyetv",
+    "entries": {
+      "espoyetv_5a5538d1-dec9-42be-8903-26ba3b814151": [
+        "to finish with (studies, etc.), complete (school, etc.), end (something), be through with",
+        "to rid (someone) of"
+      ]
+    }
+  },
+  "momof": {
+    "headword": "momof",
+    "entries": {
+      "momof_dc2c311d-5ab0-4651-bdaa-b666cc21e31f": [
+        "at that time, now then"
+      ]
+    }
+  },
+  "hvlwe": {
+    "headword": "hvlwetv",
+    "entries": {
+      "hvlwetv_ad8fb91f-efc6-4e66-adb3-245f5e578447": [
+        "to go up (as of a ball)",
+        "to be high",
+        "to be expensive"
+      ]
+    }
+  },
+  "tvlofvn": {
+    "headword": "tvlofv",
+    "entries": {
+      "tvlofv_817e363d-cc39-48d7-92ad-5ad8caefdfe2": [
+        "town"
+      ]
+    }
+  },
+  "etehēceyē": {
+    "headword": null,
+    "entries": {}
+  },
+  "ocvranis": {
+    "headword": null,
+    "entries": {}
+  },
+  "komit": {
+    "headword": null,
+    "entries": {}
+  },
+  "honrkv": {
+    "headword": null,
+    "entries": {}
+  },
+  "ociyēt": {
+    "headword": "ocetv",
+    "entries": {
+      "ocetv_065362cf-92d0-4c26-96de-e874cb449124": [
+        "to exist (of an inanimate), for there to be",
+        "to have (a knife, a cover, faith, children, etc.), keep (something)",
+        "to have (a baby), give birth to",
+        "to have (a ball game, election, etc.), hold (a meeting)",
+        "to have (time)",
+        "for there to be a time when (someone does something)"
+      ]
+    }
+  },
+  "etehoskēt": {
+    "headword": "etehosketv",
+    "entries": {
+      "etehosketv_afce9af7-73dc-4220-8f4e-6cfc2986bc1f": [
+        "to make an error"
+      ]
+    }
+  },
+  "onayiyvt": {
+    "headword": null,
+    "entries": {}
+  },
+  "ēt": {
+    "headword": "ē",
+    "entries": {
+      "ē_70afb8f5-99e1-46ff-86b9-41d144044d7b": [
+        "ē: the letter ‘ē’"
+      ]
+    }
+  },
+  "omatet": {
+    "headword": null,
+    "entries": {}
+  },
+  "hvtvwolēn": {
+    "headword": null,
+    "entries": {}
+  },
+  "kerriyvnks": {
+    "headword": null,
+    "entries": {}
+  },
+  "laksit": {
+    "headword": null,
+    "entries": {}
+  },
+  "omvkot": {
+    "headword": null,
+    "entries": {}
+  },
+  "ē": {
+    "headword": "ē",
+    "entries": {
+      "ē_70afb8f5-99e1-46ff-86b9-41d144044d7b": [
+        "ē: the letter ‘ē’"
+      ]
+    }
+  },
+  "omatēt": {
+    "headword": null,
+    "entries": {}
+  },
+  "heyv": {
+    "headword": "heyv",
+    "entries": {
+      "heyv_afd8a16b-7a83-49ad-9422-242c7599e1e2": [
+        "this (book, etc.), these",
+        "this, this one, these, this place, here"
+      ]
+    }
+  },
+  "emekusvpkvn": {
+    "headword": "emēkusvpkv",
+    "entries": {
+      "emēkusvpkv_8764941c-94f5-4066-a0b0-169d098b3937": []
+    }
+  },
+  "oh": {
+    "headword": "oh",
+    "entries": {
+      "oh_33c43779-cef8-4dd2-aeb5-2b4d20d0bb1a": [
+        "ouch"
+      ],
+      "oh_cd23c2c3-8865-4e3d-9b2f-3b73ef9cde0e": [
+        "prefix indicating that the action pertains to someone or something that is on top of or above something else",
+        "prefix indicating that the action is directed toward another"
+      ]
+    }
+  },
+  "vpvketvn": {
+    "headword": "vpvketv",
+    "entries": {
+      "vpvketv_36f4985e-b07e-4441-b96f-f32c922be0ac": [
+        "to be with, be including, be among, become a part of, be accompanied with, mix with",
+        "to marry (someone)",
+        "to be soon after, as soon as",
+        "member, associate",
+        "membership, band (of the Seminole Nation)"
+      ]
+    }
+  },
+  "ciyacet": {
+    "headword": null,
+    "entries": {}
+  },
+  "oman": {
+    "headword": null,
+    "entries": {}
+  },
+  "onkv": {
+    "headword": null,
+    "entries": {}
+  },
+  "yvtēketsken": {
+    "headword": "yvteketv",
+    "entries": {
+      "yvteketv_be610b37-806b-4423-8dc2-4f7c69b74b19": [
+        "to interpret"
+      ]
+    }
+  },
+  "fēskvlken": {
+    "headword": null,
+    "entries": {}
+  },
+  "vpvkvranis": {
+    "headword": null,
+    "entries": {}
+  },
+  "kicin": {
+    "headword": "kicetv",
+    "entries": {
+      "kicetv_6a9123e2-9308-4532-8b29-6fc11335cb02": [
+        "to tell, say to, call (something), ask (with a preceding question), order"
+      ]
+    }
+  },
+  "kērreckēs": {
+    "headword": "kerretv",
+    "entries": {
+      "kerretv_c12f1647-f37d-4cae-b1fa-0331248204e8": [
+        "to know (something, someone), know about, know (that something happened, where something happens, how to do something, if something will happen), understand, be sure, remember",
+        "to learn, find out, realize, figure out, recognize",
+        "to understand, know (a language)",
+        "knowledge"
+      ]
+    }
+  },
+  "komis": {
+    "headword": "kometv",
+    "entries": {
+      "kometv_2bceeacf-c6c0-43a6-b143-63f04470395d": [
+        "to think (a quoted thought), believe, consider, wonder, assume, guess",
+        "to want (to do something), wish, hope for, try",
+        "to think (of someone) (a quoted thought)",
+        "to hope, want (of someone) (a quoted thought)",
+        "the thought (of doing something)"
+      ]
+    }
+  },
+  "jo": {
+    "headword": null,
+    "entries": {}
+  },
+  "postoak": {
+    "headword": null,
+    "entries": {}
+  },
+  "yvtēken": {
+    "headword": "yvteketv",
+    "entries": {
+      "yvteketv_be610b37-806b-4423-8dc2-4f7c69b74b19": [
+        "to interpret"
+      ]
+    }
+  },
+  "ohkvlhoyemvtis": {
+    "headword": null,
+    "entries": {}
+  },
+  "ke": {
+    "headword": "kē",
+    "entries": {
+      "kē_0d12224c-d317-426f-86ca-543a93a5361d": [
+        "mulberry"
+      ],
+      "kē_5cdd8c85-b484-4f57-a07e-ea6cbd557701": [
+        "k: the letter ‘k’"
+      ]
+    }
+  },
+  "hvse": {
+    "headword": "hvse",
+    "entries": {
+      "hvse_bf47a2ea-310a-4a6b-9805-311d3ac2ab7c": [
+        "sun",
+        "month",
+        "celestial luminary (either the sun or moon)"
+      ]
+    }
+  },
+  "twelve": {
+    "headword": null,
+    "entries": {}
+  },
+  "omemvtis": {
+    "headword": null,
+    "entries": {}
+  },
+  "vtotiyat": {
+    "headword": null,
+    "entries": {}
+  },
+  "ohfēskvlken": {
+    "headword": "Ohfēskvlke",
+    "entries": {
+      "Ohfēskvlke_35d96030-66dc-4fb3-a019-bcf930c78bb1": [
+        "Presbyterians"
+      ]
+    }
+  },
+  "vpakis": {
+    "headword": "vpvketv",
+    "entries": {
+      "vpvketv_36f4985e-b07e-4441-b96f-f32c922be0ac": [
+        "to be with, be including, be among, become a part of, be accompanied with, mix with",
+        "to marry (someone)",
+        "to be soon after, as soon as",
+        "member, associate",
+        "membership, band (of the Seminole Nation)"
+      ]
+    }
+  },
+  "cekicit": {
+    "headword": null,
+    "entries": {}
+  },
+  "hvtosvnkēn": {
+    "headword": null,
+    "entries": {}
+  },
+  "vpeyetv": {
+    "headword": "vpeyetv",
+    "entries": {
+      "vpeyetv_395ca175-d978-411c-89e6-152e8611d0df": [
+        "to go (of three or more or of smoke)"
+      ]
+    }
+  },
+  "estoman": {
+    "headword": null,
+    "entries": {}
+  },
+  "vpaket": {
+    "headword": "vpvketv",
+    "entries": {
+      "vpvketv_36f4985e-b07e-4441-b96f-f32c922be0ac": [
+        "to be with, be including, be among, become a part of, be accompanied with, mix with",
+        "to marry (someone)",
+        "to be soon after, as soon as",
+        "member, associate",
+        "membership, band (of the Seminole Nation)"
+      ]
+    }
+  },
+  "omiyvt": {
+    "headword": "omiyv",
+    "entries": {
+      "omiyv_238aaa3b-ecfc-4a5a-a8bc-561141bf5982": [
+        "swimmer"
+      ]
+    }
+  },
+  "haks": {
+    "headword": "haks",
+    "entries": {
+      "haks_3f0be310-9574-40c9-9bc9-644134f8ada9": [
+        "marker found at the ends of sentences in older sources where it indicates a question"
+      ]
+    }
+  },
+  "kicit": {
+    "headword": null,
+    "entries": {}
+  },
+  "erkenvkv": {
+    "headword": "erkenvkv",
+    "entries": {
+      "erkenvkv_24c055d2-9979-45c7-a822-b1c1123fddb7": [
+        "preacher, minister"
+      ]
+    }
+  },
+  "pohin": {
+    "headword": "pohetv",
+    "entries": {
+      "pohetv_300013c7-86a7-434e-8e52-30635fb23ab1": [
+        "to hear, listen",
+        "to hear (something happening)",
+        "to smell"
+      ]
+    }
+  },
+  "ohkalvlke": {
+    "headword": "Ohkalvlke",
+    "entries": {
+      "Ohkalvlke_08e5082c-f774-49d5-abaf-179d81730e4d": [
+        "Methodists"
+      ]
+    }
+  },
+  "vpeyetvn": {
+    "headword": "vpeyetv",
+    "entries": {
+      "vpeyetv_395ca175-d978-411c-89e6-152e8611d0df": [
+        "to go (of three or more or of smoke)"
+      ]
+    }
+  },
+  "ometskemvt": {
+    "headword": null,
+    "entries": {}
+  },
+  "kicen": {
+    "headword": "kicetv",
+    "entries": {
+      "kicetv_6a9123e2-9308-4532-8b29-6fc11335cb02": [
+        "to tell, say to, call (something), ask (with a preceding question), order"
+      ]
+    }
+  },
+  "yvtekvt": {
+    "headword": "yvtekv",
+    "entries": {
+      "yvtekv_4b0374f5-000e-4218-9ef5-da6de1da9745": [
+        "interpreter, translator"
+      ]
+    }
+  },
+  "etehoskvtēs": {
+    "headword": "etehosketv",
+    "entries": {
+      "etehosketv_afce9af7-73dc-4220-8f4e-6cfc2986bc1f": [
+        "to make an error"
+      ]
+    }
+  },
+  "tepakēn": {
+    "headword": null,
+    "entries": {}
+  },
+  "eputvrticvranet": {
+    "headword": null,
+    "entries": {}
+  },
+  "omhos": {
+    "headword": null,
+    "entries": {}
+  },
+  "palen": {
+    "headword": "palen",
+    "entries": {
+      "palen_c865559e-7944-4f00-8619-bb27c44d01f2": [
+        "ten"
+      ]
+    }
+  },
+  "cahkepohkakuset": {
+    "headword": null,
+    "entries": {}
+  },
+  "pum": {
+    "headword": "pum",
+    "entries": {
+      "pum_c835e642-36bd-43d7-b577-152b4233aa98": [
+        "prefix (sometimes written as a separate word) indicating ‘our’, ‘to us’, ‘for us’, or ‘from us’"
+      ]
+    }
+  },
+  "vhosken": {
+    "headword": "vhosketv",
+    "entries": {
+      "vhosketv_73778f88-6ebf-4347-9518-e7e27c545e98": [
+        "to be left, left over, left alone, left by oneself, remain",
+        "leftovers"
+      ],
+      "vhosketv_e55ceba2-c95a-4fa0-88d8-ecfbe0f17f75": [
+        "to scratch at"
+      ]
+    }
+  },
+  "kaket": {
+    "headword": "kaketv",
+    "entries": {
+      "kaketv_9e00fbd4-0ac5-4ec5-8c8b-a608be02632d": [
+        "to sit, be situated, exist (of two, a large group, or something flexible, as of a coiled rope, a hide, a shirt, a dress, pants, a handkerchief, a folded sheet)",
+        "to settle, stay, live (in a place), reside (of two or a large group)"
+      ]
+    }
+  },
+  "eyaskusen": {
+    "headword": null,
+    "entries": {}
+  },
+  "oniyvranis": {
+    "headword": null,
+    "entries": {}
+  },
+  "20": {
+    "headword": null,
+    "entries": {}
+  },
+  "omof": {
+    "headword": "omof",
+    "entries": {
+      "omof_88e85f83-d07b-41a2-a4ae-50b08518fe4d": [
+        "when it is, when it was, during, in (a time), at (a time), on (a date)"
+      ]
+    }
+  },
+  "fvlite": {
+    "headword": null,
+    "entries": {}
+  },
+  "vkerkv": {
+    "headword": "vkērkv",
+    "entries": {
+      "vkērkv_6c546019-7ee5-407e-9661-045b7a5fde1c": [
+        "any measure, especially a mile, gallon, or bushel"
+      ]
+    }
+  },
+  "9": {
+    "headword": null,
+    "entries": {}
+  },
+  "pukihocēt": {
+    "headword": null,
+    "entries": {}
+  },
+  "cvna": {
+    "headword": "ena",
+    "entries": {
+      "ena_852d10d9-5c24-4a27-8e50-59cc7c36866b": [
+        "his/her body",
+        "body (of a car)"
+      ]
+    }
+  },
+  "estemerkepvranet": {
+    "headword": null,
+    "entries": {}
+  },
+  "ofv": {
+    "headword": "ofv",
+    "entries": {
+      "ofv_442c08cd-e800-467e-b3fe-79028980be8b": [
+        "in (a location, water), inside, within",
+        "in (one’s thoughts, prayers, etc.)",
+        "the inside"
+      ]
+    }
+  },
+  "puyvfekcv": {
+    "headword": "poyvfekcv",
+    "entries": {
+      "poyvfekcv_21d319cd-a793-4eb5-ba6c-a962d78e3cc5": [
+        "soul, spirit, ghost"
+      ]
+    }
+  },
+  "vpikat": {
+    "headword": "vpiketv",
+    "entries": {
+      "vpiketv_fbade76c-ca8c-4140-b9dd-16a0530fa039": [
+        "to be in, get in (a box, a vehicle, of one)",
+        "to get into, put on (one pair of pants or shorts or an item of clothing into which a body part is inserted, such as a glove, sock, shoe, bracelet, or ring), have (one) on",
+        "to put (one) in (a box, jail, etc.)",
+        "to stay on (a road, of one)"
+      ]
+    }
+  },
+  "nesvtē": {
+    "headword": "nesetv",
+    "entries": {
+      "nesetv_7fff32af-8f59-4a8f-9444-a5df33d3afa4": [
+        "to buy, buy for (a price)"
+      ]
+    }
+  },
+  "ehuten": {
+    "headword": "ehute",
+    "entries": {
+      "ehute_b7b36ef5-04c0-4596-ae1f-282bd415a04b": []
+    }
+  },
+  "ecēyeparēs": {
+    "headword": "vyepetv",
+    "entries": {
+      "vyepetv_af125e10-da1a-4207-9afb-1cfad2c68f59": [
+        "to get away (of one)"
+      ]
+    }
+  },
+  "cvfēke": {
+    "headword": "fēketv",
+    "entries": {
+      "fēketv_e59834c0-cf23-4153-8a22-3b6660a72336": [
+        "to pay (something)",
+        "salary, pay, reward"
+      ]
+    }
+  },
+  "oren": {
+    "headword": "oretv",
+    "entries": {
+      "oretv_6300f39f-78b2-4e63-b5df-8980bf320a86": [
+        "to get to, reach, become (a woman, etc.), achieve (a goal, an amount, a state, position, etc., of one)",
+        "to reach (a time or amount of time), last for (two years)",
+        "to reach for (an object)",
+        "to happen"
+      ]
+    }
+  },
+  "momekvranekis": {
+    "headword": null,
+    "entries": {}
+  },
+  "okēpiyis": {
+    "headword": null,
+    "entries": {}
+  },
+  "omēpēs": {
+    "headword": null,
+    "entries": {}
+  },
+  "etimv": {
+    "headword": "ētimv",
+    "entries": {
+      "ētimv_d0516d25-bfb7-4f57-81a0-a58379ac593d": [
+        "different, another, other",
+        "a different one, another one"
+      ]
+    }
+  },
+  "naket": {
+    "headword": "nake",
+    "entries": {
+      "nake_3316759f-f84d-42bc-b78a-da90b1107e48": [
+        "what",
+        "thing, something",
+        "(with a negative) anything",
+        ": indefinite nonhuman possessor of a noun that must be possessed"
+      ]
+    }
+  },
+  "komvken": {
+    "headword": "kometv",
+    "entries": {
+      "kometv_2bceeacf-c6c0-43a6-b143-63f04470395d": [
+        "to think (a quoted thought), believe, consider, wonder, assume, guess",
+        "to want (to do something), wish, hope for, try",
+        "to think (of someone) (a quoted thought)",
+        "to hope, want (of someone) (a quoted thought)",
+        "the thought (of doing something)"
+      ]
+    }
+  },
+  "sulkēt": {
+    "headword": "sulkē",
+    "entries": {
+      "sulkē_f903b787-0930-4c50-8792-d2e1479d3738": [
+        "many, much, a lot of, numerous, a bunch of, a majority of"
+      ]
+    }
+  },
+  "vnrvpēt": {
+    "headword": "vnrvpē",
+    "entries": {
+      "vnrvpē_fc490b1e-4562-4877-a5db-cd594e9095e6": [
+        "opposed, opposing (a law, etc.), against (a team, etc.)"
+      ]
+    }
+  },
+  "komet": {
+    "headword": "kometv",
+    "entries": {
+      "kometv_2bceeacf-c6c0-43a6-b143-63f04470395d": [
+        "to think (a quoted thought), believe, consider, wonder, assume, guess",
+        "to want (to do something), wish, hope for, try",
+        "to think (of someone) (a quoted thought)",
+        "to hope, want (of someone) (a quoted thought)",
+        "the thought (of doing something)"
+      ]
+    }
+  },
+  "estimvt": {
+    "headword": "estimv",
+    "entries": {
+      "estimv_937aab84-5409-4bf0-93fa-c9bea9faad19": [
+        "who",
+        "someone",
+        "(with a negative) anyone, no one"
+      ]
+    }
+  },
+  "vhakvn": {
+    "headword": "vhakv",
+    "entries": {
+      "vhakv_276bf56b-5e7b-454a-bedc-d4b9d9ec211b": [
+        "(in compounds) something resembling",
+        "(in compounds) making an image, copying"
+      ],
+      "vhakv_46dbb0ba-4ec5-45fd-8828-6633d4012c77": [
+        "law, rule, rites (such as baptism, etc.), commandment"
+      ]
+    }
+  },
+  "erespoyen": {
+    "headword": "respoyetv",
+    "entries": {
+      "respoyetv_9cef85c3-e734-4f02-a199-109b0c0a2258": [
+        "to finish, complete (school, for example)",
+        "to go a distance and finish (hoeing a garden, etc.)"
+      ]
+    }
+  },
+  "afvcketvn": {
+    "headword": "afvcketv",
+    "entries": {
+      "afvcketv_c0ad20b0-5e5f-4f79-9f1e-a8ba8149f1a4": [
+        "to be happy, be glad, be amused, get happy, rejoice",
+        "to play (stickball), enjoy oneself",
+        "pleasure, enjoyment, happiness, joy, fun, celebration",
+        "stickball game"
+      ]
+    }
+  },
+  "yoksv": {
+    "headword": "yoksv",
+    "entries": {
+      "yoksv_ef007bd1-c885-4d6c-9ea6-cb3afc51179a": [
+        "end (of a stick, river, line, table), top (of a tree, ball-pole), top edge (of a pot)"
+      ]
+    }
+  },
+  "sekon": {
+    "headword": "seko",
+    "entries": {
+      "seko_b2c6e050-22f8-455a-b7a3-95a1e6fe9f2b": [
+        "nonexistent, not present, not here, without, absent",
+        "not having (done, been)",
+        "spirit of someone deceased, ghost"
+      ]
+    }
+  },
+  "epoyvrēs": {
+    "headword": "epoyetv",
+    "entries": {
+      "epoyetv_f43466cd-ce03-4a63-912b-c73d693f7211": [
+        "to win"
+      ]
+    }
+  },
+  "cesvs": {
+    "headword": "esetv",
+    "entries": {
+      "esetv_0982626f-2f45-461d-9061-dc7c57e7a4a2": [
+        "to get, catch, take, pick up, carry, hold, have (one)",
+        "to take out (a comb), take off (an earring)"
+      ]
+    }
+  },
+  "estemerkvtēt": {
+    "headword": null,
+    "entries": {}
+  },
+  "kicvtēt": {
+    "headword": null,
+    "entries": {}
+  },
+  "omekv": {
+    "headword": null,
+    "entries": {}
+  },
+  "estofis": {
+    "headword": "estofis",
+    "entries": {
+      "estofis_0870c8de-f735-44de-b0fc-78e5be35451f": [
+        "always, forever",
+        "(with a negative) never",
+        "as long as"
+      ]
+    }
+  },
+  "hosekarēs": {
+    "headword": null,
+    "entries": {}
+  },
+  "apohicaket": {
+    "headword": "apohicetv",
+    "entries": {
+      "apohicetv_2e878d55-6c01-492e-9a43-5917aa9e111f": [
+        "to listen",
+        "to heed, mind"
+      ]
+    }
+  },
+  "ecēfvcecicaket": {
+    "headword": null,
+    "entries": {}
+  },
+  "arvcoken": {
+    "headword": null,
+    "entries": {}
+  },
+  "pohiyat": {
+    "headword": "hiyē",
+    "entries": {
+      "hiyē_5748b22a-9148-4eca-81a8-b38338b97993": [
+        "heat"
+      ],
+      "hiyē_ad2848ed-f048-4c64-bce6-14c49ea7b114": [
+        "hot"
+      ]
+    }
+  },
+  "afvckēt": {
+    "headword": "afvckē",
+    "entries": {
+      "afvckē_150bbc37-a280-48a3-b5eb-7e963e50886c": [
+        "happy, glad",
+        "genial, friendly"
+      ]
+    }
+  },
+  "entvlken": {
+    "headword": null,
+    "entries": {}
+  },
+  "wihketskvs": {
+    "headword": null,
+    "entries": {}
+  },
+  "hoporrenkv": {
+    "headword": "hoporrenkv",
+    "entries": {
+      "hoporrenkv_e4e9bc02-d81f-486c-89ad-a12bcff9367e": [
+        "wisdom, sense, knowledge, cunning, cleverness"
+      ]
+    }
+  },
+  "ohhvtvlaken": {
+    "headword": null,
+    "entries": {}
+  },
+  "sem": {
+    "headword": null,
+    "entries": {}
+  },
+  "punvyetskat": {
+    "headword": null,
+    "entries": {}
+  },
+  "vneu": {
+    "headword": null,
+    "entries": {}
+  },
+  "herē": {
+    "headword": "herē",
+    "entries": {
+      "herē_1fbb3138-c226-4dfb-b36b-f49bd9be3416": [
+        "good, right, of good quality",
+        "good (in taste), delicious"
+      ]
+    }
+  },
+  "tayat": {
+    "headword": "tayē",
+    "entries": {
+      "tayē_94344e3a-3166-4653-ad79-35b8cc08596e": []
+    }
+  },
+  "the": {
+    "headword": null,
+    "entries": {}
+  },
+  "letter": {
+    "headword": null,
+    "entries": {}
+  },
+  "stops": {
+    "headword": null,
+    "entries": {}
+  },
+  "here": {
+    "headword": "heretv",
+    "entries": {
+      "heretv_3f32bdd0-77c0-4aef-9576-e6a31c262616": [
+        "to be good"
+      ]
+    }
+  },
+  "incomplete": {
+    "headword": null,
+    "entries": {}
+  },
+  "at": {
+    "headword": "ē",
+    "entries": {
+      "ē_70afb8f5-99e1-46ff-86b9-41d144044d7b": [
+        "ē: the letter ‘ē’"
+      ]
+    }
+  },
+  "top": {
+    "headword": null,
+    "entries": {}
+  },
+  "of": {
+    "headword": "oh",
+    "entries": {
+      "oh_33c43779-cef8-4dd2-aeb5-2b4d20d0bb1a": [
+        "ouch"
+      ],
+      "oh_cd23c2c3-8865-4e3d-9b2f-3b73ef9cde0e": [
+        "prefix indicating that the action pertains to someone or something that is on top of or above something else",
+        "prefix indicating that the action is directed toward another"
+      ]
+    }
+  },
+  "page": {
+    "headword": null,
+    "entries": {}
+  },
+  "one": {
+    "headword": null,
+    "entries": {}
+  },
+  "there": {
+    "headword": null,
+    "entries": {}
+  },
+  "is": {
+    "headword": null,
+    "entries": {}
+  },
+  "sentence": {
+    "headword": null,
+    "entries": {}
+  },
+  "vpastvlvlk": {
+    "headword": null,
+    "entries": {}
+  },
+  "fulletv": {
+    "headword": "fulletv",
+    "entries": {
+      "fulletv_de05c3c6-4c8a-4fbd-9d85-ee2545c440db": [
+        "to be around, be about, go around, be among (of three or more)",
+        "a get-together"
+      ]
+    }
+  },
+  "maketskema": {
+    "headword": null,
+    "entries": {}
+  },
+  "antotetsken": {
+    "headword": null,
+    "entries": {}
+  },
+  "hecarēs": {
+    "headword": "Hecetv",
+    "entries": {
+      "Hecetv_86b5a02a-c0bb-45b6-8db5-07d6635c9c73": [],
+      "hecetv_fc14f869-ec69-4fc5-80dd-04ba5dc1085b": [
+        "to see, look at, watch, notice",
+        "to be able to see",
+        "to attend, go to (school)",
+        "to try, see if"
+      ]
+    }
+  },
+  "from": {
+    "headword": null,
+    "entries": {}
+  },
+  "two": {
+    "headword": null,
+    "entries": {}
+  },
+  "wasentv": {
+    "headword": null,
+    "entries": {}
+  },
+  "vpeyaten": {
+    "headword": null,
+    "entries": {}
+  },
+  "lvpkēn": {
+    "headword": "lvpkēn",
+    "entries": {
+      "lvpkēn_943a702d-2afd-468c-b504-f88df507723f": [
+        "quickly, fast"
+      ]
+    }
+  },
+  "hocefkv": {
+    "headword": "hocefkv",
+    "entries": {
+      "hocefkv_20fa69ae-7f06-481d-9128-ceb3a6e3002d": [
+        "name",
+        "title"
+      ]
+    }
+  },
+  "cokvn": {
+    "headword": "cokv",
+    "entries": {
+      "cokv_5a54aded-e655-4a0b-9955-d9c19ccdd873": [
+        "writing or something with writing on it, especially paper, book, letter, certificate, diploma"
+      ]
+    }
+  },
+  "atotarēs": {
+    "headword": "vtotetv",
+    "entries": {
+      "vtotetv_0b4d230d-3cb9-4d2c-aa73-3560a605c61d": [
+        "to send (something or someone)",
+        "to give orders, order (someone), order (a delivery), assign, appoint, command"
+      ]
+    }
+  },
+  "new": {
+    "headword": null,
+    "entries": {}
+  },
+  "york": {
+    "headword": null,
+    "entries": {}
+  },
+  "atotetsken": {
+    "headword": "vtotetv",
+    "entries": {
+      "vtotetv_0b4d230d-3cb9-4d2c-aa73-3560a605c61d": [
+        "to send (something or someone)",
+        "to give orders, order (someone), order (a delivery), assign, appoint, command"
+      ]
+    }
+  },
+  "skip": {
+    "headword": null,
+    "entries": {}
+  },
+  "three": {
+    "headword": null,
+    "entries": {}
+  },
+  "yomusen": {
+    "headword": "yomē",
+    "entries": {
+      "yomē_6732e27e-83bb-49dc-a4bc-8dbee8cb8f62": [
+        "like this"
+      ]
+    }
+  },
+  "vtotis": {
+    "headword": "vtotetv",
+    "entries": {
+      "vtotetv_0b4d230d-3cb9-4d2c-aa73-3560a605c61d": [
+        "to send (something or someone)",
+        "to give orders, order (someone), order (a delivery), assign, appoint, command"
+      ]
+    }
+  },
+  "cate": {
+    "headword": "catetv",
+    "entries": {
+      "catetv_baaf8fd8-7947-49f7-a9a6-c6627efbe6f0": [
+        "to be red, turn red",
+        "to blush",
+        "to bleed"
+      ]
+    }
+  },
+  "opunvkvn": {
+    "headword": "opunvkv",
+    "entries": {
+      "opunvkv_bca16f00-2f9d-4778-a8e4-74b14b3cabf5": [
+        "what is spoken: language, word, message, talk, speech, lecture, (radio) program, rumor, news, information, tale, story, voice"
+      ]
+    }
+  },
+  "antotetskvrēs": {
+    "headword": null,
+    "entries": {}
+  },
+  "j": {
+    "headword": null,
+    "entries": {}
+  },
+  "r": {
+    "headword": null,
+    "entries": {}
+  }
+}

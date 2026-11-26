@@ -1,103 +1,153 @@
 import json
 import os
-import shutil
+from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import unittest
-from pathlib import Path
+from unittest.mock import patch
 
-from build_story_index import build_index
+from build_story_index import build_index, read_dictionary, tokenize
 from extract_story_text import extract_text
-from mus_segmenter import segment
-from mus_segmenter.segment import Morphology, h_grade, l_grade
 
 
 TOOLS = Path(__file__).parent
 LIFT = """<lift>
-<entry id="like"><lexical-unit><form lang="mus"><text>liketv</text></form></lexical-unit>
-<relation type="EntryDu" ref="kaketv"/>
-<sense id="one"><grammatical-info value="verb"/></sense>
-<sense id="aaa-second"><grammatical-info value="verb"/></sense></entry>
-<entry id="kaketv"><lexical-unit><form lang="mus"><text>kaketv</text></form></lexical-unit>
-<sense id="kake"><grammatical-info value="verb"/></sense></entry>
-<entry id="he"><lexical-unit><form lang="mus"><text>hē</text></form></lexical-unit>
-<sense id="three"><grammatical-info value="noun"/></sense></entry>
-<entry id="ome"><lexical-unit><form lang="mus"><text>omē</text></form></lexical-unit>
-<sense id="four"><grammatical-info value="adjective"/></sense></entry>
-<entry id="punvn"><lexical-unit><form lang="mus"><text>punvnetv</text></form></lexical-unit>
-<sense id="five"><grammatical-info value="verb"/></sense></entry>
-<entry id="hvok"><lexical-unit><form lang="mus"><text>hvokē</text></form></lexical-unit>
-<sense id="six"><grammatical-info value="adjective"/></sense></entry>
-<entry id="no-sense"><lexical-unit><form lang="mus"><text>nene</text></form></lexical-unit></entry>
+<entry id="night1"><lexical-unit><form lang="mus"><text>nerē</text></form></lexical-unit>
+<sense><definition><form lang="en"><text>night <span>time</span></text></form>
+<form lang="mus"><text>not English</text></form></definition></sense>
+<sense><definition><form lang="en"><text>darkness</text></form></definition></sense>
+<relation type="_component-lexeme" ref="variant">
+<trait name="variant-type" value="Free Variant"/></relation></entry>
+<entry id="night2"><lexical-unit><form lang="mus"><text>nerē</text></form></lexical-unit>
+<sense><definition><form lang="en"><text>another night</text></form></definition></sense></entry>
+<entry id="variant"><lexical-unit><form lang="mus"><text>other</text></form></lexical-unit>
+<relation type="_component-lexeme" ref="night1">
+<trait name="variant-type" value="Free Variant"/></relation></entry>
+<entry id="pon"><lexical-unit><form lang="mus"><text>ponvttv</text></form></lexical-unit></entry>
+<entry id="see"><lexical-unit><form lang="mus"><text>hecetv</text></form></lexical-unit></entry>
 </lift>"""
 
 
 class StoryIndexTests(unittest.TestCase):
     def setUp(self):
-        self.directory = tempfile.TemporaryDirectory()
-        self.addCleanup(self.directory.cleanup)
-        self.root = Path(self.directory.name)
+        directory = tempfile.TemporaryDirectory()
+        self.addCleanup(directory.cleanup)
+        self.root = Path(directory.name)
         self.lift = self.root / "dictionary.lift"
         self.lift.write_text(LIFT, encoding="utf-8")
-        self.analyzer = Morphology(self.lift)
 
-    def test_analysis_exact_folded_and_missing(self):
-        result = build_index("HĒ, he\u0304! HE nene unknown.", self.analyzer)
-        self.assertEqual(result, {
-            "hē": {"stem": "hē", "sense_ids": ["he"]},
-            "he": {"stem": "hē", "sense_ids": ["he"]},
-            "nene": {"stem": "nene", "sense_ids": ["no-sense"]},
-            "unknown": {"stem": None, "sense_ids": []},
+    def test_dictionary_collects_homographs_and_free_variants(self):
+        dictionary = read_dictionary(self.lift)
+        self.assertEqual(dictionary["nerē"], {
+            "night1": ["night time", "darkness"], "night2": ["another night"], "variant": [],
         })
+        self.assertEqual(dictionary["other"], {
+            "variant": [], "night1": ["night time", "darkness"],
+        })
+        self.assertEqual(dictionary["ponvttv"], {"pon": []})
 
-    def test_fst_models_affixes_and_stem_alternations_bidirectionally(self):
-        for surface in ("likes", "likis", "likarēs", "likvs", "likvhanes", "lihkes", "liket"):
-            self.assertEqual(self.analyzer.analyze(surface), ("liketv", ["like"]), surface)
-            self.assertIn(surface, self.analyzer.fst.generate("liketv"))
-        self.assertEqual(self.analyzer.analyze("punanes"), ("punvnetv", ["punvn"]))
-        self.assertEqual(self.analyzer.analyze("omēs"), ("omē", ["ome"]))
-        self.assertEqual(self.analyzer.analyze("vcomēs"), ("omē", ["ome"]))
-        self.assertEqual(self.analyzer.analyze("hvokusē"), ("hvokē", ["hvok"]))
-        self.assertEqual(self.analyzer.analyze("hvokuses"), ("hvokē", ["hvok"]))
-        self.assertEqual(self.analyzer.analyze("kakes"), ("liketv", ["like"]))
-        self.assertEqual(self.analyzer.analyze("likonsense"), (None, []))
-        self.assertNotIn("liketv", self.analyzer.fst.analyze("likakes"))
-        self.assertEqual(self.analyzer.analyze("likatskes"), (None, []))
-        self.assertEqual(self.analyzer.analyze("hēs"), (None, []))
-
-    def test_analysis_returns_entry_ids_for_exact_and_inflected_words(self):
-        result = build_index("liketv likes", self.analyzer)
-        expected = {"stem": "liketv", "sense_ids": ["like"]}
-        self.assertEqual(result["liketv"], expected)
-        self.assertEqual(result["likes"], expected)
-        result["liketv"]["sense_ids"].clear()
-        self.assertEqual(result["likes"]["sense_ids"], ["like"])
-
-    def test_rejects_missing_or_duplicate_lift_sense_ids(self):
-        self.lift.write_text(LIFT.replace('id="one"', ''), encoding="utf-8")
-        with self.assertRaisesRegex(ValueError, "missing sense id"):
-            Morphology(self.lift)
-        self.lift.write_text(LIFT.replace('id="aaa-second"', 'id="one"'), encoding="utf-8")
-        with self.assertRaisesRegex(ValueError, "duplicate sense id"):
-            Morphology(self.lift)
-
-    def test_reads_ids_across_homographic_entries(self):
-        extra = (
-            '<entry id="like2"><lexical-unit><form lang="mus"><text>liketv</text></form>'
-            '</lexical-unit><sense id="other"/></entry>'
+    def test_tokenization_normalizes_and_preserves_internal_punctuation(self):
+        self.assertEqual(
+            list(tokenize("HĒ, he\u0304! ’s-vyetv. ‘word’")),
+            ["hē", "hē", "s-vyetv", "word"],
         )
-        self.lift.write_text(LIFT.replace("</lift>", extra + "</lift>"), encoding="utf-8")
-        self.assertEqual(Morphology(self.lift).analyze("liketv"), ("liketv", ["like", "like2"]))
 
-    def test_grade_rules_handle_diphthongs_and_consonant_clusters(self):
-        self.assertEqual(l_grade("punvn"), "punan")
-        self.assertEqual(l_grade("homp"), "homp")
-        self.assertEqual(l_grade("hopue"), "hopue")
-        self.assertEqual(h_grade("hopuec"), ("hopuehc", False))
-        self.assertEqual(h_grade("vok"), ("vwik", False))
-        self.assertEqual(h_grade("homp"), ("homip", False))
-        self.assertEqual(h_grade("lik"), ("lihk", True))
+    def test_dictionary_rejects_missing_or_duplicate_entry_ids(self):
+        for contents, error in (
+            ("<lift><entry/></lift>", "missing entry id"),
+            ('<lift><entry id="same"/><entry id="same"/></lift>', "duplicate entry id"),
+            ("<lift/>", "no Mvskoke headwords"),
+        ):
+            with self.subTest(contents=contents):
+                self.lift.write_text(contents, encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, error):
+                    read_dictionary(self.lift)
+
+    def test_missing_free_variant_is_reported(self):
+        self.lift.write_text(LIFT.replace('ref="variant"', 'ref="missing"'), encoding="utf-8")
+        with self.assertWarnsRegex(UserWarning, "references missing entry"):
+            dictionary = read_dictionary(self.lift)
+        self.assertEqual(list(dictionary["nerē"]), ["night1", "night2"])
+
+    def test_index_maps_selected_lemmas_and_keeps_unmatched_words(self):
+        dictionary = read_dictionary(self.lift)
+        results = {
+            "nere": ["NERĒ"], "neret": ["nerē"], "unmatched": ["missing"],
+            "unknown": [],
+        }
+        with patch("build_story_index.lemmatize", side_effect=lambda word: results[word]) as lookup:
+            index = build_index("Nere, nere NERET unmatched unknown", dictionary)
+        self.assertEqual(lookup.call_count, 4)
+        self.assertEqual(index, {
+            "nere": {"lemma": "NERĒ", "id": ["night1", "night2", "variant"],
+                     "definitions": {"night1": ["night time", "darkness"],
+                                     "night2": ["another night"], "variant": []}},
+            "neret": {"lemma": "nerē", "id": ["night1", "night2", "variant"],
+                      "definitions": {"night1": ["night time", "darkness"],
+                                      "night2": ["another night"], "variant": []}},
+            "unmatched": {"lemma": "missing", "id": [], "definitions": {}},
+            "unknown": {"lemma": None, "id": [], "definitions": {}},
+        })
+        index["nere"]["id"].clear()
+        index["nere"]["definitions"]["night1"].clear()
+        self.assertEqual(index["neret"]["id"], ["night1", "night2", "variant"])
+        self.assertEqual(index["neret"]["definitions"]["night1"], ["night time", "darkness"])
+        self.assertEqual(dictionary["nerē"]["night1"], ["night time", "darkness"])
+
+    def test_cli_uses_real_lemmatizer_and_protects_inputs(self):
+        source = self.root / "story.txt"
+        source.write_text("Punvttv neret hēces zzqxx", encoding="utf-8")
+        output = self.root / "story.json"
+        command = [
+            sys.executable, str(TOOLS / "build_story_index.py"), str(source),
+            "--lexicon", str(self.lift), "--output", str(output),
+        ]
+        result = subprocess.run(command, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(json.loads(output.read_text(encoding="utf-8")), {
+            "punvttv": {"lemma": "ponvttv", "id": ["pon"], "definitions": {"pon": []}},
+            "neret": {"lemma": "nerē", "id": ["night1", "night2", "variant"],
+                      "definitions": {"night1": ["night time", "darkness"],
+                                      "night2": ["another night"], "variant": []}},
+            "hēces": {"lemma": "Hecetv", "id": ["see"], "definitions": {"see": []}},
+            "zzqxx": {"lemma": None, "id": [], "definitions": {}},
+        })
+        self.assertIn("1 without lemmas, 1 without entry IDs", result.stderr)
+        linked_output = self.root / "hardlink.json"
+        os.link(source, linked_output)
+        for protected in (self.lift, source, linked_output):
+            with self.subTest(protected=protected):
+                result = subprocess.run(command[:-1] + [str(protected)], capture_output=True, text=True)
+                self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(source.read_text(encoding="utf-8"), "Punvttv neret hēces zzqxx")
+        self.assertEqual(self.lift.read_text(encoding="utf-8"), LIFT)
+
+    def test_cli_batch_and_colliding_output_names(self):
+        first = self.root / "one.txt"
+        second = self.root / "two.txt"
+        first.write_text("nere", encoding="utf-8")
+        second.write_text("punvttv", encoding="utf-8")
+        command = [
+            sys.executable, str(TOOLS / "build_story_index.py"), str(first), str(second),
+            "--lexicon", str(self.lift),
+        ]
+        result = subprocess.run(command, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(
+            json.loads((self.root / "two.json").read_text(encoding="utf-8")),
+            {"punvttv": {"lemma": "ponvttv", "id": ["pon"], "definitions": {"pon": []}}},
+        )
+        collision = self.root / "one.md"
+        collision.write_text("unchanged", encoding="utf-8")
+        result = subprocess.run(
+            [sys.executable, str(TOOLS / "build_story_index.py"), str(first), str(collision),
+             "--lexicon", str(self.lift)],
+            capture_output=True, text=True,
+        )
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("outputs must be distinct", result.stderr)
+        self.assertEqual(collision.read_text(encoding="utf-8"), "unchanged")
 
     def test_extracts_only_readalong_words_and_selected_elan_tier(self):
         path = self.root / "story.xml"
@@ -120,57 +170,6 @@ class StoryIndexTests(unittest.TestCase):
         self.assertEqual(extract_text(path, "Translation"), "Hello!\n")
         with self.assertRaisesRegex(ValueError, "expected exactly one ELAN tier"):
             extract_text(path, "missing")
-
-    def test_cli_writes_named_json_and_rejects_input_overwrite(self):
-        source = self.root / "story.txt"
-        source.write_text("Likes mystery", encoding="utf-8")
-        command = [
-            sys.executable, str(TOOLS / "build_story_index.py"), str(source),
-            "--lexicon", str(self.lift),
-        ]
-        result = subprocess.run(command, capture_output=True, text=True)
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(json.loads((self.root / "story.json").read_text()), {
-            "likes": {"stem": "liketv", "sense_ids": ["like"]},
-            "mystery": {"stem": None, "sense_ids": []},
-        })
-        result = subprocess.run(command + ["--output", str(self.lift)], capture_output=True, text=True)
-        self.assertNotEqual(result.returncode, 0)
-        self.assertEqual(self.lift.read_text(encoding="utf-8"), LIFT)
-
-    def test_batch_recurses_and_detects_colliding_stems(self):
-        tools = self.root / "app" / "tools"
-        stories = self.root / "app" / "assets" / "readalongs"
-        tools.mkdir(parents=True)
-        (stories / "nested").mkdir(parents=True)
-        for name in ("index_readalongs.sh", "build_story_index.py", "extract_story_text.py"):
-            shutil.copy(TOOLS / name, tools / name)
-        segmenter = self.root / "mus_segmenter"
-        segmenter.mkdir()
-        shutil.copy(Path(segment.__file__), segmenter / "segment.py")
-        activation = segmenter / ".venv" / "bin" / "activate"
-        activation.parent.mkdir(parents=True)
-        activation.write_text("", encoding="utf-8")
-        (stories / "nested" / "story.readalong").write_text(
-            "<read-along><w>Likes</w></read-along>", encoding="utf-8"
-        )
-        command = ["bash", str(tools / "index_readalongs.sh"), "--lexicon", str(self.lift)]
-        env = dict(os.environ, PATH=str(Path(sys.executable).parent) + os.pathsep + os.environ["PATH"])
-        result = subprocess.run(command, capture_output=True, text=True, env=env, cwd=tools)
-        self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertTrue((stories / "nested" / "story.json").exists(), result.stdout + result.stderr)
-        self.assertEqual(
-            json.loads((stories / "nested" / "story.json").read_text()),
-            {"likes": {"stem": "liketv", "sense_ids": ["like"]}},
-        )
-        (stories / "nested" / "story.eaf").write_text(
-            '<ANNOTATION_DOCUMENT><TIER TIER_ID="Transcription">'
-            "<ANNOTATION_VALUE>Hello</ANNOTATION_VALUE></TIER></ANNOTATION_DOCUMENT>",
-            encoding="utf-8",
-        )
-        result = subprocess.run(command, capture_output=True, text=True, env=env, cwd=tools)
-        self.assertNotEqual(result.returncode, 0)
-        self.assertIn("Multiple source files", result.stderr)
 
 
 if __name__ == "__main__":
