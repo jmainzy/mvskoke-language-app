@@ -111,30 +111,30 @@ class ContentPageManager extends ChangeNotifier {
           'and optional string definition.',
         );
       }
-      final wordDefinitions = <String>[];
-      for (final value in (entry['entries'] as Map<String, dynamic>).values) {
+      final entries = entry['entries'] as Map<String, dynamic>;
+      for (final value in entries.values) {
         if (value is! List ||
             value.any((definition) => definition is! String)) {
           throw const FormatException(
             'Each dictionary entry must contain a list of definitions.',
           );
         }
-        wordDefinitions.addAll(
-          value.cast<String>().where((text) => text.trim().isNotEmpty),
-        );
       }
+      final headword = entry['headword'] as String?;
       final definition = entry['definition'] as String?;
-      if (wordDefinitions.isNotEmpty ||
-          (definition != null && definition.trim().isNotEmpty)) {
-        definitions[word.key.toLowerCase()] = Word(
-          headword: entry['headword'] as String? ?? word.key,
-          entries: {
-            for (var e in (entry['entries'] as Map<String, dynamic>).entries)
-              e.key: (e.value as List).cast<String>(),
-          },
-          definition: definition,
-        );
+      if (headword == null ||
+          (entries.isEmpty &&
+              (definition == null || definition.trim().isEmpty))) {
+        continue;
       }
+      definitions[word.key.toLowerCase()] = Word(
+        headword: headword,
+        entries: {
+          for (var e in entries.entries)
+            e.key: (e.value as List).cast<String>(),
+        },
+        definition: definition,
+      );
     }
     return definitions;
   }

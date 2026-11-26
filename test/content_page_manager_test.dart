@@ -1,17 +1,21 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:typed_data';
+import 'dart:io';
 
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:mvskoke_language_app/models/content_item.dart';
 import 'package:mvskoke_language_app/models/media_item.dart';
+import 'package:mvskoke_language_app/models/word.dart';
 import 'package:mvskoke_language_app/services/content_service.dart';
 import 'package:mvskoke_language_app/services/service_locator.dart';
 import 'package:mvskoke_language_app/services/store_service.dart';
 import 'package:mvskoke_language_app/ui/content/content_page_manager.dart';
 import 'package:mvskoke_language_app/ui/content/word_widget.dart';
+import 'package:mvskoke_language_app/ui/components/video_player.dart';
+import 'package:readalong/readalong.dart';
 
 class _ContentService extends ContentService {
   _ContentService(this.item);
@@ -65,39 +69,88 @@ void main() {
     }
   });
 
-  test(
-    'loads definitions from all entries and omits unavailable words',
-    () async {
-      sl.registerSingleton<ContentService>(
-        _ContentService(
-          Future.value(
-            ContentItem(
-              id: 'chipbear',
-              title: 'Chipbear',
-              textFile: 'chipbear.readalong',
-            ),
+  test('highlights words with a headword and an entry', () async {
+    sl.registerSingleton<ContentService>(
+      _ContentService(
+        Future.value(
+          ContentItem(
+            id: 'chipbear',
+            title: 'Chipbear',
+            textFile: 'chipbear.readalong',
           ),
         ),
+      ),
+    );
+    final manager = ContentPageManager();
+    addTearDown(manager.dispose);
+    var notifications = 0;
+    manager.addListener(() => notifications++);
+    await manager.getContentItem('chipbear');
+
+    expect(notifications, 1);
+    expect(manager.getWord(' PUNVTTV ')?.entries.values.expand((e) => e), [
+      'animal, game',
+    ]);
+    expect(manager.getWord('nettv')?.entries.values.expand((e) => e), [
+      'day, date',
+      'day of death, final day',
+    ]);
+    expect(manager.getWord('tepakat'), isNull);
+    expect(manager.getWord('estowē')?.entries.values.expand((e) => e), isEmpty);
+    expect(manager.indexedWords, contains('punvttv'));
+    expect(manager.indexedWords, isNot(contains('tepakat')));
+    expect(manager.indexedWords, contains('estowē'));
+  });
+
+  test(
+    'filters indexes by headword and entry or fallback definition',
+    () async {
+      final messenger =
+          TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger;
+      messenger.setMockMessageHandler('flutter/assets', (message) async {
+        final bytes = Uint8List.fromList(
+          utf8.encode(
+            jsonEncode({
+              'entry': {
+                'headword': 'root',
+                'entries': {'id': []},
+              },
+              'fallback': {
+                'headword': 'root',
+                'entries': {},
+                'definition': 'meaning',
+              },
+              'unknown': {'headword': null, 'entries': {}},
+              'null_with_entry': {
+                'headword': null,
+                'entries': {
+                  'id': ['meaning'],
+                },
+              },
+              'null_with_definition': {
+                'headword': null,
+                'entries': {},
+                'definition': 'meaning',
+              },
+              'missing': {'headword': 'root', 'entries': {}},
+              'blank': {'headword': 'root', 'entries': {}, 'definition': '  '},
+            }),
+          ),
+        );
+        return ByteData.sublistView(bytes);
+      });
+      addTearDown(
+        () => messenger.setMockMessageHandler('flutter/assets', null),
+      );
+      sl.registerSingleton<ContentService>(
+        _ContentService(Future.value(ContentItem(id: 'test', title: 'Test'))),
       );
       final manager = ContentPageManager();
       addTearDown(manager.dispose);
-      var notifications = 0;
-      manager.addListener(() => notifications++);
-      await manager.getContentItem('chipbear');
-
-      expect(notifications, 1);
-      expect(manager.getWord(' PUNVTTV ')?.entries.values.expand((e) => e), [
-        'animal, game',
-      ]);
-      expect(manager.getWord('nettv')?.entries.values.expand((e) => e), [
-        'day, date',
-        'day of death, final day',
-      ]);
-      expect(manager.getWord('tepakat'), isNull);
-      expect(manager.getWord('estowē'), isNull);
-      expect(manager.indexedWords, contains('punvttv'));
-      expect(manager.indexedWords, isNot(contains('tepakat')));
-      expect(manager.indexedWords, isNot(contains('estowē')));
+      final index = await manager.getWordIndex('filter-test.json');
+      expect(index.keys, unorderedEquals(['entry', 'fallback']));
+      expect(index['entry']?.entries, {'id': <String>[]});
+      expect(index['fallback']?.definition, 'meaning');
     },
   );
 
@@ -196,6 +249,76 @@ void main() {
       expect(manager.playbackController, isNotNull);
     });
   }
+
+  testWidgets('a real indexed ELAN word opens its entry without seeking', (
+    tester,
+  ) async {
+    sl.registerSingleton<ContentService>(
+      _ContentService(
+        Future.value(
+          ContentItem(id: 'video', title: 'Video', textFile: 'mus16051.eaf'),
+        ),
+      ),
+    );
+    final manager = ContentPageManager();
+    addTearDown(manager.dispose);
+    await tester.runAsync(() => manager.getContentItem('video'));
+    final controller = VimeoPlaybackController(
+      initialPosition: const Duration(seconds: 10),
+    );
+    addTearDown(controller.dispose);
+    final xml = File('assets/readalongs/mus16051.eaf').readAsStringSync();
+    Word? selected;
+    await tester.pumpWidget(
+      MaterialApp(
+        home: StatefulBuilder(
+          builder: (context, setState) => Column(
+            children: [
+              Expanded(
+                child: ReadAlong(
+                  xml: xml,
+                  playbackController: controller,
+                  indexedWords: manager.indexedWords.toSet(),
+                  onWordTap: (word, _) =>
+                      setState(() => selected = manager.getWord(word)),
+                ),
+              ),
+              if (selected != null) WordWidget(word: selected!),
+            ],
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    final finder = find.byWidgetPredicate(
+      (widget) =>
+          widget is RichText &&
+          widget.text.toPlainText().startsWith('Hēsci! Hiyowat'),
+    );
+    final render = tester.renderObject<RenderParagraph>(finder);
+    final box = render
+        .getBoxesForSelection(
+          const TextSelection(baseOffset: 7, extentOffset: 14),
+        )
+        .first;
+    await tester.tapAt(render.localToGlobal(box.toRect().center));
+    await tester.pump();
+    expect(find.text('now'), findsOneWidget);
+    expect(controller.position, const Duration(seconds: 10));
+    expect(controller.state.playing, isFalse);
+    final text = tester.widget<Text>(
+      find.byWidgetPredicate(
+        (widget) =>
+            widget is Text &&
+            (widget.textSpan?.toPlainText().startsWith('Hēsci! Hiyowat') ??
+                false),
+      ),
+    );
+    final annotation = (text.textSpan as TextSpan).children!.first as TextSpan;
+    expect((annotation.children!.first as TextSpan).style?.color, isNull);
+    expect(manager.indexedWords, isNot(contains('hēsci')));
+    await tester.pumpWidget(const SizedBox.shrink());
+  });
 
   test('continues loading a story without an index asset', () async {
     sl.registerSingleton<ContentService>(

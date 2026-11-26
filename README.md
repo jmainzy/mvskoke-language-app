@@ -76,9 +76,11 @@ are available. These are LIFT `<entry id>` values, not the
 generated sense IDs in `assets/sense_index.json`. An unrecognized word has a
 null headword and empty entries. A lemma absent from the selected LIFT file is
 kept with empty entries and counted in the diagnostic output. The reader shows
-all available definitions for a word; words without definitions are not marked.
-The reader matches complete ReadAlong word elements or ELAN annotations, so
-individual words inside a multiword ELAN annotation are not separately indexed.
+all available definitions for a word. Words are highlighted when their headword
+is present and they have an entry ID or a nonempty override definition. An entry
+ID may have no definitions. A word in a multiword ELAN annotation
+opens its entry without seeking because the annotation only has phrase timing;
+an individually aligned word still seeks and plays.
 
 The installed lemmatizer supplies the HFST analysis and fuzzy matching; its
 compiled model and the selected LIFT file should come from the same
