@@ -1,20 +1,14 @@
 import 'dart:async';
-import 'dart:convert';
 
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
-import 'package:flutter/services.dart';
-import 'package:just_audio/just_audio.dart' hide PlayerState, ProcessingState;
 import 'package:logger/logger.dart';
-import 'package:mvskoke_language_app/models/content_item.dart';
 import 'package:mvskoke_language_app/models/media_item.dart';
-import 'package:mvskoke_language_app/services/content_service.dart';
-import 'package:mvskoke_language_app/services/service_locator.dart';
-import 'package:mvskoke_language_app/services/store_service.dart';
 import 'package:mvskoke_language_app/ui/components/reader_chrome_scope.dart';
 import 'package:mvskoke_language_app/ui/components/video_player.dart';
+import 'package:mvskoke_language_app/ui/content/content_page_manager.dart';
+import 'package:mvskoke_language_app/ui/content/word_widget.dart';
 import 'package:mvskoke_language_app/utilities/dimens.dart';
-import 'package:mvskoke_language_app/utilities/utils.dart';
 import 'package:readalong/readalong.dart';
 
 Logger log = Logger();
@@ -73,21 +67,10 @@ class ContentPage extends StatefulWidget {
 }
 
 class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
-  final contentService = sl<ContentService>();
-  late Future<ContentItem?> contentItemFuture;
-  Future<String?>? _videoUrlFuture;
-  VimeoPlaybackController? _vimeoPlaybackController;
-  StreamSubscription<Duration>? _videoPositionSubscription;
-  StreamSubscription<PlayerState>? _videoStateSubscription;
-  Timer? _progressSaveTimer;
-  Duration? _latestVideoPosition;
-  MediaObject? mediaItem;
-  AudioSource? audioSource;
+  var manager = ContentPageManager();
   late ValueNotifier<bool> _chromeVisibility;
   bool? _wasActive;
   bool? _wasLandscape;
-  String title = '';
-  Map<String, String> _wordDefinitions = const {};
   OverlayEntry? _wordDefinitionOverlay;
   int _readerPageIndex = 0;
 
@@ -95,7 +78,19 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
   initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    contentItemFuture = getContentItem();
+    manager.contentItemFuture = manager.getContentItem(widget.contentId);
+  }
+
+  @override
+  void didUpdateWidget(covariant ContentPage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.contentId != widget.contentId) {
+      _hideWordDefinition();
+      _readerPageIndex = 0;
+      manager.dispose();
+      manager = ContentPageManager();
+      manager.contentItemFuture = manager.getContentItem(widget.contentId);
+    }
   }
 
   @override
@@ -119,7 +114,7 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
         state == AppLifecycleState.paused ||
         state == AppLifecycleState.hidden ||
         state == AppLifecycleState.detached) {
-      unawaited(_saveVideoProgress());
+      unawaited(manager.saveVideoProgress());
     }
   }
 
@@ -141,80 +136,12 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
   void dispose() {
     _hideWordDefinition();
     WidgetsBinding.instance.removeObserver(this);
-    _progressSaveTimer?.cancel();
-    unawaited(_videoPositionSubscription?.cancel());
-    unawaited(_videoStateSubscription?.cancel());
-    unawaited(_saveVideoProgress());
-    _vimeoPlaybackController?.dispose();
+    manager.dispose();
     super.dispose();
   }
 
   void _toggleReaderChrome() {
     _chromeVisibility.value = !_chromeVisibility.value;
-  }
-
-  Future<ContentItem?> getContentItem() async {
-    final item = await contentService.getContentById(widget.contentId);
-    log.i('getContentItem: item = $item');
-    title = item?.title ?? '';
-    if (item?.wordIndexFile case final indexFile?) {
-      final source = await rootBundle.loadString(
-        'assets/readalongs/$indexFile',
-      );
-      final entries = jsonDecode(source);
-      if (entries is! List) {
-        throw const FormatException('Word index must be a list of objects.');
-      }
-      final definitions = <String, String>{};
-      for (final entry in entries) {
-        if (entry is! Map ||
-            entry.length != 1 ||
-            entry.keys.single is! String ||
-            entry.values.single is! String) {
-          throw const FormatException(
-            'Each word index entry must contain one word and definition.',
-          );
-        }
-        definitions[(entry.keys.single as String).toLowerCase()] =
-            entry.values.single as String;
-      }
-      _wordDefinitions = definitions;
-    }
-    if (item?.mediaId != null && item!.mediaId!.isNotEmpty) {
-      mediaItem = await contentService.getMediaById(item.mediaId!);
-      if (mediaItem?.mediaType == MediaType.video && mediaItem?.uri != null) {
-        final embedUrl = Utils.getVimeoEmbedUrl(mediaItem!.uri!);
-        if (embedUrl != null) {
-          final progress = sl<StoreService>().getVideoProgress(item.id);
-          _latestVideoPosition = progress?.position ?? Duration.zero;
-          _vimeoPlaybackController = VimeoPlaybackController(
-            initialPosition: _latestVideoPosition!,
-          );
-          _videoPositionSubscription = _vimeoPlaybackController!.positionStream
-              .listen(_handleVideoPosition);
-          _videoStateSubscription = _vimeoPlaybackController!.stateStream
-              .listen((state) {
-                if (state.processingState == ProcessingState.completed ||
-                    !state.playing) {
-                  unawaited(_saveVideoProgress());
-                }
-              });
-        } else {
-          _videoUrlFuture = Utils.getVideoUrl(mediaItem!.uri!);
-        }
-      } else {
-        audioSource = await contentService.getAudioSource(item.mediaId!);
-      }
-    }
-    return item;
-  }
-
-  void _handleVideoPosition(Duration position) {
-    _latestVideoPosition = position;
-    _progressSaveTimer ??= Timer(const Duration(seconds: 5), () {
-      _progressSaveTimer = null;
-      unawaited(_saveVideoProgress());
-    });
   }
 
   void _handleReaderPosition(ReadAlongPosition position) {
@@ -231,8 +158,6 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
   }
 
   void _showWordDefinition(String word, Rect bounds) {
-    final definition = _wordDefinitions[word.trim().toLowerCase()];
-    if (definition == null) return;
     _hideWordDefinition();
     final overlay = Overlay.of(context);
     final overlayBox = overlay.context.findRenderObject() as RenderBox;
@@ -247,33 +172,9 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
             rect,
             MediaQuery.paddingOf(overlayContext),
           ),
-          child: TapRegion(
-            onTapOutside: (_) => _hideWordDefinition(),
-            child: Material(
-              key: const ValueKey('word-definition'),
-              elevation: 8,
-              borderRadius: BorderRadius.circular(8),
-              clipBehavior: Clip.antiAlias,
-              child: InkWell(
-                onTap: _hideWordDefinition,
-                child: Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          word,
-                          style: Theme.of(context).textTheme.titleMedium,
-                        ),
-                        Text(definition),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
+          child: WordWidget(
+            word: manager.getWord(word)!,
+            onHide: _hideWordDefinition,
           ),
         ),
       ),
@@ -281,38 +182,14 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
     overlay.insert(_wordDefinitionOverlay!);
   }
 
-  Future<void> _saveVideoProgress() async {
-    final controller = _vimeoPlaybackController;
-    final position = _latestVideoPosition;
-    if (controller == null ||
-        position == null ||
-        mediaItem?.mediaType != MediaType.video) {
-      return;
-    }
-
-    try {
-      await sl<StoreService>().saveVideoProgress(
-        widget.contentId,
-        position: position,
-        duration: controller.duration,
-      );
-    } catch (error, stackTrace) {
-      log.e(
-        'Unable to save video progress',
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-  }
-
   Widget _buildVideoPlayer() {
-    final media = mediaItem;
+    final media = manager.mediaItem;
     final sourceUrl = media?.uri;
     if (media?.mediaType != MediaType.video || sourceUrl == null) {
       return const SizedBox.shrink();
     }
 
-    return VideoPlayer(url: sourceUrl, controller: _vimeoPlaybackController!);
+    return VideoPlayer(url: sourceUrl, controller: manager.playbackController!);
   }
 
   @override
@@ -321,11 +198,18 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
     return AnimatedBuilder(
       animation: _chromeVisibility,
       builder: (context, _) => Scaffold(
-        appBar: appBarVisible ? AppBar(title: Text(title)) : null,
+        appBar: appBarVisible
+            ? AppBar(
+                title: FutureBuilder(
+                  future: manager.contentItemFuture,
+                  builder: (context, snapshot) => Text(manager.title),
+                ),
+              )
+            : null,
         body: Stack(
           children: [
             FutureBuilder(
-              future: contentItemFuture,
+              future: manager.contentItemFuture,
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return const Center(child: CircularProgressIndicator());
@@ -336,9 +220,9 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
                 } else {
                   final contentItem = snapshot.data!;
                   final infoTitle =
-                      mediaItem?.performer != null &&
-                          mediaItem!.performer!.isNotEmpty
-                      ? '${contentItem.title} reading by ${mediaItem!.performer}'
+                      manager.mediaItem?.performer != null &&
+                          manager.mediaItem!.performer!.isNotEmpty
+                      ? '${contentItem.title} reading by ${manager.mediaItem!.performer}'
                       : null;
                   final videoPlayer = _buildVideoPlayer();
                   final safePadding = MediaQuery.paddingOf(context).bottom; // Will cause a rebuild only if padding changes (requires Flutter > 3.10)
@@ -351,16 +235,16 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
                                 xmlAsset:
                                     'assets/readalongs/${contentItem.textFile}',
                                 imagesFolder: 'assets/images',
-                                audioSource: audioSource,
-                                playbackController: _vimeoPlaybackController,
+                                audioSource: manager.audioSource,
+                                playbackController: manager.playbackController,
                                 audioTitle: infoTitle,
                                 onReaderSurfaceTap: _toggleReaderChrome,
                                 onPositionChanged: _handleReaderPosition,
-                                indexedWords: _wordDefinitions.keys.toSet(),
+                                indexedWords: manager.indexedWords.toSet(),
                                 onWordTap: _showWordDefinition,
                               ),
                             ),
-                            mediaItem?.mediaType != MediaType.video
+                            manager.mediaItem?.mediaType != MediaType.video
                                 ? SizedBox(
                                     height: safePadding + Dimens.marginLarge,
                                     child: Container(
@@ -376,9 +260,9 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
                   final showSideBySide =
                       MediaQuery.orientationOf(context) ==
                           Orientation.landscape &&
-                      mediaItem?.mediaType == MediaType.video;
+                      manager.mediaItem?.mediaType == MediaType.video;
 
-                  if (mediaItem?.mediaType == MediaType.video) {
+                  if (manager.mediaItem?.mediaType == MediaType.video) {
                     return Flex(
                       direction: showSideBySide
                           ? Axis.horizontal
@@ -406,7 +290,9 @@ class ContentPageState extends State<ContentPage> with WidgetsBindingObserver {
 
                   return Column(
                     children: [
-                      videoPlayer,
+                      manager.mediaItem?.mediaType == MediaType.video
+                          ? videoPlayer
+                          : SizedBox.shrink(),
                       Expanded(child: reader),
                     ],
                   );

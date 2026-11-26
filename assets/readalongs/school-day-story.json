@@ -1,0 +1,180 @@
+{
+  "hesci": {
+    "stem": null,
+    "sense_ids": []
+  },
+  "cokv": {
+    "stem": "cokv",
+    "sense_ids": [
+      "833df8ca-493d-491f-9337-0e4649929b07"
+    ]
+  },
+  "hēcv": {
+    "stem": null,
+    "sense_ids": []
+  },
+  "towis": {
+    "stem": null,
+    "sense_ids": []
+  },
+  "mucv": {
+    "stem": "mucv",
+    "sense_ids": [
+      "98e0a84b-1c90-4f06-a538-d8db07cd6a0e",
+      "d8d0cf6f-004e-499d-b1f5-6ded62c06615"
+    ]
+  },
+  "nettv": {
+    "stem": "nettv",
+    "sense_ids": []
+  },
+  "mvnte": {
+    "stem": "Mvnte",
+    "sense_ids": [
+      "1894b516-d92a-46bf-9cdb-5e92ac3a45a0"
+    ]
+  },
+  "tos": {
+    "stem": null,
+    "sense_ids": []
+  },
+  "mvhakv": {
+    "stem": "mvhakv",
+    "sense_ids": [
+      "2cc399e4-db3c-4e67-8049-6b6c91a5d59b"
+    ]
+  },
+  "cukon": {
+    "stem": null,
+    "sense_ids": []
+  },
+  "ayis": {
+    "stem": "vyetv",
+    "sense_ids": [
+      "3e170f94-9fd9-4c1c-9b37-7712eea84f69",
+      "b76fca32-6146-45e0-9b14-a998caa01792",
+      "7de4e326-a5dc-47d2-8c11-bb0c147bbae1",
+      "a77c6af4-0418-4c2a-85c6-1e614a544734"
+    ]
+  },
+  "mvhayv": {
+    "stem": "mvhayv",
+    "sense_ids": [
+      "879c87ca-fdcf-4aae-90c7-af5de3708381"
+    ]
+  },
+  "lopicē": {
+    "stem": "lopicē",
+    "sense_ids": [
+      "ab8102a9-cf1b-45fd-bff6-4807d5168362",
+      "54ecc878-f09d-41b1-aa40-7ab19eca1ffa"
+    ]
+  },
+  "likepvs": {
+    "stem": "liketv",
+    "sense_ids": [
+      "e39a8d5d-ddd6-4c4a-b53b-0095643372dc",
+      "41d5d189-06a4-4118-9dad-08cb6673c511",
+      "352c7f6d-454b-497a-ae6e-1ad7e7940038"
+    ]
+  },
+  "hē̜ren": {
+    "stem": "hę̄ren",
+    "sense_ids": [
+      "2fc15107-dfc4-4d12-bb9c-9af4d4bdac8b",
+      "75146064-924d-445a-8b0d-e77d5bb7b7cd"
+    ]
+  },
+  "mapohecvs": {
+    "stem": null,
+    "sense_ids": []
+  },
+  "hvwecvs": {
+    "stem": "hvwecetv",
+    "sense_ids": [
+      "b34ca152-972a-4a72-856a-ebb2eaafd592"
+    ]
+  },
+  "naken": {
+    "stem": null,
+    "sense_ids": []
+  },
+  "maka": {
+    "stem": null,
+    "sense_ids": []
+  },
+  "akhottvs": {
+    "stem": "akhottetv",
+    "sense_ids": [
+      "54256185-d0bc-4f84-b273-a57cfd753485"
+    ]
+  },
+  "acvwvks": {
+    "stem": "acvwetv",
+    "sense_ids": [
+      "0056adcb-09db-4ebf-8f8b-8e3acf9906fd",
+      "70763446-ecb1-4f7f-8895-ab488efe2fbb"
+    ]
+  },
+  "yekcēn": {
+    "stem": "yekcēn",
+    "sense_ids": [
+      "3c193614-2d22-4af3-8bfb-5e4beebb1815"
+    ]
+  },
+  "vtotkētowis": {
+    "stem": null,
+    "sense_ids": []
+  },
+  "hompvkēs": {
+    "stem": "hompetv",
+    "sense_ids": [
+      "41a781e5-27f7-4d87-b35a-300963d16f4e",
+      "6a151596-7970-4597-a27b-1758494221f5",
+      "c09d1c84-d074-442d-9083-c81d4abb34dc"
+    ]
+  },
+  "fettv": {
+    "stem": "fettv",
+    "sense_ids": [
+      "1fcf2e9f-8a0b-4222-9821-2070df98f45c",
+      "e8eb1589-6a1c-46d4-9b45-a22178ab87d6",
+      "4c7df492-3c4e-4244-9050-1d93d0f50bd6"
+    ]
+  },
+  "ossvs": {
+    "stem": "ossetv",
+    "sense_ids": [
+      "1d205b76-e26e-4786-904d-4071827c611b",
+      "5b3aca3c-2622-4c11-91ee-948e767072f9",
+      "d65591c6-8372-4183-ad11-41b00cfe4d57"
+    ]
+  },
+  "ayet": {
+    "stem": "vyetv",
+    "sense_ids": [
+      "3e170f94-9fd9-4c1c-9b37-7712eea84f69",
+      "b76fca32-6146-45e0-9b14-a998caa01792",
+      "7de4e326-a5dc-47d2-8c11-bb0c147bbae1",
+      "a77c6af4-0418-4c2a-85c6-1e614a544734"
+    ]
+  },
+  "akkopvnvs": {
+    "stem": "akkopvnetv",
+    "sense_ids": []
+  },
+  "nuckv": {
+    "stem": "nuckv",
+    "sense_ids": [
+      "30dd4ca7-dc41-4577-b133-8667caf262c2"
+    ]
+  },
+  "cvyacetos": {
+    "stem": null,
+    "sense_ids": []
+  },
+  "kerrecca": {
+    "stem": null,
+    "sense_ids": []
+  }
+}
